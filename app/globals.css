@@ -1,26 +1,230 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-bg: #fafaf7;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f4f2ec;
+  --color-surface-deep: #efebe2;
+  --color-ink: #0a0a0a;
+  --color-ink-dark: #1a1a1a;
+  --color-ink-muted: #4a4a48;
+  --color-ink-subtle: #8a8a86;
+  --color-line: #e8e5dd;
+  --color-line-soft: #f0ede5;
+  --color-accent: #ff6b1a;
+  --color-accent-deep: #e55400;
+  --color-accent-soft: #fff1e8;
+  --color-success: #1f7a4d;
+  --color-success-soft: #e8f2ec;
+
+  --font-display: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-mono), ui-monospace, monospace;
+  --font-serif: var(--font-serif), ui-serif, Georgia, serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --ease-out-expo: cubic-bezier(0.22, 1, 0.36, 1);
+  --shadow-soft: 0 1px 2px rgba(10, 10, 10, 0.04), 0 8px 24px rgba(10, 10, 10, 0.06);
+  --shadow-lift: 0 1px 2px rgba(10, 10, 10, 0.05), 0 18px 40px rgba(10, 10, 10, 0.09);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  font-feature-settings: "ss01", "cv11";
+  letter-spacing: -0.01em;
+  line-height: 1.65;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+/* ---------- Display type ---------- */
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+.label-mono {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-ink-subtle);
+}
+
+/* ---------- Scroll reveal ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 700ms var(--ease-out-expo),
+    transform 700ms var(--ease-out-expo);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- Utility: hairline divider ---------- */
+.hairline {
+  border: 1px solid var(--color-line);
+}
+
+/* ---------- Pulse ring around play button ---------- */
+@keyframes ring-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 107, 26, 0.45);
+  }
+  70% {
+    box-shadow: 0 0 0 22px rgba(255, 107, 26, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 107, 26, 0);
+  }
+}
+
+.play-ring {
+  animation: ring-pulse 2.4s var(--ease-out-expo) infinite;
+}
+
+/* ---------- Story-page helpers ---------- */
+.font-serif {
+  font-family: var(--font-serif);
+  font-style: italic;
+  letter-spacing: -0.005em;
+}
+
+@keyframes scroll-pulse {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scaleY(0.6);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+.scroll-indicator {
+  animation: scroll-pulse 2.4s var(--ease-out-expo) infinite;
+  transform-origin: top;
+}
+
+.draw-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.draw-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0.05em;
+  height: 3px;
+  width: 0;
+  background: var(--color-accent);
+  transition: width 800ms var(--ease-out-expo);
+}
+
+.draw-underline.is-visible::after,
+.reveal.is-visible .draw-underline::after {
+  width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .draw-underline::after {
+    width: 100%;
+    transition: none;
+  }
+  .scroll-indicator {
+    animation: none;
+    opacity: 0.6;
+  }
+}
+
+/* ---------- Dashboard first-load reveal ---------- */
+@keyframes dash-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dash-fade {
+  opacity: 0;
+  animation: dash-fade-up 280ms var(--ease-out-expo) forwards;
+  animation-delay: var(--dash-delay, 0ms);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dash-fade {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ---------- Progress bar fill animation ---------- */
+@keyframes progress-fill {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(var(--progress-target, 1));
+  }
+}
+
+/* ---------- Marquee ---------- */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: marquee 32s linear infinite;
+}
+
+/* ---------- Focus rings ---------- */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
 }
