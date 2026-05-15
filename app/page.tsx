@@ -10,7 +10,6 @@ import { Nav } from "./components/nav";
 import { Pillars } from "./components/pillars";
 import { Pricing } from "./components/pricing";
 import { Problem } from "./components/problem";
-import { Proof } from "./components/proof";
 import { SocialProof } from "./components/social-proof";
 
 export default function Home() {
@@ -22,7 +21,6 @@ export default function Home() {
         <SocialProof />
         <Problem />
         <Pillars />
-        <Proof />
         <Curriculum />
         <Mentorship />
         <Community />

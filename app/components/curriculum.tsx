@@ -5,104 +5,153 @@ const modules = [
   {
     id: "m1",
     numeral: "01",
-    title: "Foundations — How Amazon Actually Works in 2026",
-    meta: "What's changed, what hasn't, and what to ignore.",
+    title: "Foundations: The FBA Reality",
+    meta: "Understanding the 2026 landscape and the lean launch philosophy.",
     body: (
       <>
         <ul className="list-disc pl-5 space-y-2">
           <li>The 2026 Amazon landscape: what's broken, what's quietly working.</li>
-          <li>Marketplace economics — fees, margins, and what a real business looks like.</li>
-          <li>Product categories I avoid (and why I keep avoiding them).</li>
-          <li>Compliance, brand registry, and the boring stuff that saves you later.</li>
+          <li>FBA is infrastructure, not a business model - understanding the mechanics.</li>
+          <li>Mindset: why "progress beats perfection" in your first 90 days.</li>
+          <li>Compliance and the boring stuff that saves your account later.</li>
         </ul>
-        <p className="mt-4 label-mono">7 lessons · 92 minutes</p>
+        <p className="mt-4 label-mono">Duration: 2 hours</p>
       </>
     ),
   },
   {
     id: "m2",
     numeral: "02",
-    title: "Product Research That Doesn't Lie",
-    meta: "How I find products in 2026 — beyond the tools.",
+    title: "Lean Setup: Individual Seller",
+    meta: "Start selling without monthly fees or complex company structures.",
     body: (
       <>
         <ul className="list-disc pl-5 space-y-2">
-          <li>The two-step research method I use weekly on my own business.</li>
-          <li>Reading demand without trusting Helium 10 numbers blindly.</li>
-          <li>Differentiation: how to win without inventing a category.</li>
-          <li>The kill-criteria checklist — when to walk away early.</li>
-          <li>Live walkthrough: me finding a product in real time.</li>
+          <li>Registering correctly to avoid the £30/mo "Professional" trap.</li>
+          <li>Identity verification: documents you need to get approved fast.</li>
+          <li>A tour of Seller Central - your new business control panel.</li>
+          <li>Common setup mistakes that get new accounts suspended.</li>
         </ul>
-        <p className="mt-4 label-mono">9 lessons · 2h 15m</p>
+        <p className="mt-4 label-mono">Duration: 2 hours</p>
       </>
     ),
   },
   {
     id: "m3",
     numeral: "03",
-    title: "Sourcing & Supplier Negotiation",
-    meta: "From first contact to landed inventory.",
+    title: "Product Research That Doesn't Lie",
+    meta: "How I find products in 2026 - beyond just trusting tools.",
     body: (
       <>
         <ul className="list-disc pl-5 space-y-2">
-          <li>Finding suppliers (Alibaba, Yiwu, factory directs, vetted lists).</li>
-          <li>The first-contact message that gets responses.</li>
-          <li>Negotiation scripts I actually use — including for MOQs.</li>
-          <li>Sample-to-PO playbook: protecting yourself at every stage.</li>
-          <li>Inspection, freight, and the customs gotchas.</li>
+          <li>Shelf-shop sourcing: finding opportunities in physical discount stores.</li>
+          <li>The 5-point validation check: will this actually sell at a profit?</li>
+          <li>The Bundle Strategy: creating unique listings without inventing a product.</li>
+          <li>Logging your 3 candidates: data-backed selection over guesswork.</li>
         </ul>
-        <p className="mt-4 label-mono">8 lessons · 2h 30m</p>
+        <p className="mt-4 label-mono">Duration: 1 week</p>
       </>
     ),
   },
   {
     id: "m4",
     numeral: "04",
-    title: "Listing, Photography & Ranking",
-    meta: "Build a listing that actually converts.",
+    title: "Listing Creation & Compliance",
+    meta: "Build a shop window that stops the scroll and converts.",
     body: (
       <>
         <ul className="list-disc pl-5 space-y-2">
-          <li>The 7-part listing structure I use on every SKU.</li>
-          <li>Photography briefs that don't waste your photographer's time.</li>
-          <li>A+ content patterns that move conversion 8–12%.</li>
-          <li>Ranking strategy in the post-keyword-stuffing era.</li>
+          <li>The 7-part listing anatomy: what customers actually read.</li>
+          <li>Writing titles, bullets, and descriptions that the algorithm loves.</li>
+          <li>Lean photography: getting professional shots with just your phone.</li>
+          <li>GTIN exemptions: listing products without buying expensive barcodes.</li>
         </ul>
-        <p className="mt-4 label-mono">6 lessons · 1h 45m</p>
+        <p className="mt-4 label-mono">Duration: 48 hours</p>
       </>
     ),
   },
   {
     id: "m5",
     numeral: "05",
-    title: "PPC Without Burning Money",
-    meta: "Ad spend that compounds, not bleeds.",
+    title: "Shipping & Logistics: Sending to Amazon",
+    meta: "From your living room to the FBA warehouse.",
     body: (
       <>
         <ul className="list-disc pl-5 space-y-2">
-          <li>Day-1 launch ads — exactly how I structure them.</li>
-          <li>Reading your ad reports without losing weekends.</li>
-          <li>Budget allocation across the launch / scale / mature stages.</li>
-          <li>The ACOS targets I actually use (not the ones gurus quote).</li>
+          <li>Creating your first FBA shipment in Seller Central.</li>
+          <li>Box labels, product labels, and Amazon's strict prep rules.</li>
+          <li>Dealing with freight, couriers, and the customs "gotchas."</li>
+          <li>Tracking your inventory until it hits "Active" status.</li>
         </ul>
-        <p className="mt-4 label-mono">7 lessons · 1h 50m</p>
+        <p className="mt-4 label-mono">Duration: 2 weeks</p>
       </>
     ),
   },
   {
     id: "m6",
     numeral: "06",
-    title: "Scaling, Systems & Selling Smart",
-    meta: "Build a business, not a job.",
+    title: "Launching a Brand",
+    meta: "Transitioning from a reseller to a protected brand owner.",
     body: (
       <>
         <ul className="list-disc pl-5 space-y-2">
-          <li>SOPs, VAs, and the order I hired in.</li>
-          <li>Inventory math: forecasting, IPI, avoiding stockouts.</li>
-          <li>Building toward an exit (or not) — what brokers actually look for.</li>
-          <li>What I'd do if I had to start over today.</li>
+          <li>When to level up: the specific signals that say you're ready.</li>
+          <li>Setting up a Ltd Company and business banking the right way.</li>
+          <li>Naming, logo design, and building a cohesive brand identity.</li>
+          <li>Filing your trademark and getting approved for Brand Registry.</li>
         </ul>
-        <p className="mt-4 label-mono">8 lessons · 2h 10m</p>
+        <p className="mt-4 label-mono">Duration: 3-6 months</p>
+      </>
+    ),
+  },
+  {
+    id: "m7",
+    numeral: "07",
+    title: "Marketing: Scaling with Brand Tools",
+    meta: "Unlocking the tools that separate amateurs from pros.",
+    body: (
+      <>
+        <ul className="list-disc pl-5 space-y-2">
+          <li>A+ Content: building rich, visual product descriptions.</li>
+          <li>The Vine Program: getting your first 30 honest reviews fast.</li>
+          <li>PPC Basics: Sponsored Products, Brands, and Display ads.</li>
+          <li>Reading performance data without losing your mind.</li>
+        </ul>
+        <p className="mt-4 label-mono">Duration: 1 month</p>
+      </>
+    ),
+  },
+  {
+    id: "m8",
+    numeral: "08",
+    title: "Expansion: Multi-Channel & Global",
+    meta: "Taking your system beyond a single product and marketplace.",
+    body: (
+      <>
+        <ul className="list-disc pl-5 space-y-2">
+          <li>Inventory math: forecasting and avoiding the stockout death-spiral.</li>
+          <li>Adding SKU #2: should it be a variation or a new category?</li>
+          <li>Opening EU and US markets: the legal and logistical roadmap.</li>
+          <li>Building an exit-ready business: what brokers actually value.</li>
+        </ul>
+        <p className="mt-4 label-mono">Duration: 2 weeks</p>
+      </>
+    ),
+  },
+  {
+    id: "m9",
+    numeral: "09",
+    title: "Maintenance: Long-Term Health",
+    meta: "Protecting your asset and keeping the machine running.",
+    body: (
+      <>
+        <ul className="list-disc pl-5 space-y-2">
+          <li>The 90-minute Weekly Maintenance Checklist.</li>
+          <li>Account Health: monitoring ODR and avoiding suspensions.</li>
+          <li>Dealing with IP complaints and "Inauthentic" flags.</li>
+          <li>The compounding advantage of a multi-product brand.</li>
+        </ul>
+        <p className="mt-4 label-mono">Duration: Ongoing</p>
       </>
     ),
   },
@@ -121,13 +170,13 @@ export function Curriculum() {
           </Reveal>
           <Reveal delay={80}>
             <h2 className="mt-5 font-display font-medium tracking-[-0.02em] leading-[1.05] text-[clamp(2rem,4.5vw,4rem)]">
-              Six modules. One system. Built by Jakub.
+              Nine modules. One system. Built by Jakub.
             </h2>
           </Reveal>
           <Reveal delay={160}>
             <p className="mt-5 text-[clamp(1.05rem,1.4vw,1.25rem)] leading-[1.55] text-ink-muted">
               The Elite FBA curriculum is the same workflow I run on my own
-              business &mdash; nothing held back, nothing decorative.
+              business - nothing held back, nothing decorative.
             </p>
           </Reveal>
         </div>

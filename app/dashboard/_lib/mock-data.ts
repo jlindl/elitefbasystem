@@ -1,4 +1,4 @@
-export const student = {
+﻿export const student = {
   firstName: "Sarah",
   fullName: "Sarah Mitchell",
   initials: "SM",

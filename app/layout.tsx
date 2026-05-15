@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import {
   Inter,
   Inter_Tight,
@@ -33,9 +33,9 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "Jakub — Real Amazon FBA Mentorship",
+  title: "Jakub - Real Amazon FBA Mentorship",
   description:
-    "Direct 1-to-1 mentorship from a full-time Amazon seller. The Elite FBA system, taught personally — not a recycled guru course.",
+    "Direct 1-to-1 mentorship from a full-time Amazon seller. The Elite FBA system, taught personally - not a recycled guru course.",
 };
 
 export default function RootLayout({

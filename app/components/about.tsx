@@ -1,9 +1,9 @@
 import { Reveal } from "./reveal";
 
 const stats = [
-  { number: "7", label: "Years selling on Amazon", accent: false },
-  { number: "$4.2M", label: "Lifetime revenue", accent: true },
-  { number: "23", label: "Active SKUs", accent: false },
+  { number: "6", label: "Years e-commerce experience", accent: false },
+  { number: "2", label: "Years selling on Amazon", accent: false },
+  { number: "50+", label: "Active listings", accent: true },
 ];
 
 export function About() {
@@ -15,8 +15,8 @@ export function About() {
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden hairline shadow-[var(--shadow-soft)]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="https://placehold.co/800x1000/F4F2EC/0A0A0A/png?text=Jakub+at+the+warehouse"
-                alt="[IMAGE: Jakub at his desk / warehouse / packaging products]"
+                src="/jakub%20portrait.jpeg"
+                alt="Jakub at the warehouse"
                 loading="lazy"
                 decoding="async"
                 className="h-full w-full object-cover"
@@ -39,32 +39,44 @@ export function About() {
                 <p>
                   I run a real Amazon FBA business every day. I&rsquo;m
                   ordering inventory, refining listings, fighting suppression
-                  notices, and staring at PPC reports &mdash; same as my
-                  students. I&rsquo;m not a retired seller. I&rsquo;m not a
-                  coach pretending to be one.
+                  notices, and staring at PPC reports, the same as my students.
+                  I&rsquo;m not a retired seller. I&rsquo;m not a coach
+                  pretending to be one.
                 </p>
               </Reveal>
               <Reveal delay={200}>
                 <p>
-                  I started selling at 19 with money I&rsquo;d saved from a
-                  warehouse job. It went badly. The second product went
-                  worse. The system I teach now is the one I had to build
-                  to survive years three through seven, and it&rsquo;s still
-                  the one I trust.
+                  I&rsquo;ve been an entrepreneur since I was a kid. If there
+                  was a margin to be made, I was there, selling sweets in the
+                  school corridor or flipping phone cases on eBay. I&rsquo;ve
+                  cycled through 100 different business ideas, but everything
+                  changed when I applied that &ldquo;buy and sell&rdquo; hustle
+                  to the Amazon FBA framework.
                 </p>
               </Reveal>
               <Reveal delay={260}>
                 <p>
-                  I&rsquo;m teaching now not because I stopped selling
-                  &mdash; but because I want to build a team. People I
-                  actually know. People I&rsquo;d call. That&rsquo;s why I
-                  keep this small, and that&rsquo;s why this isn&rsquo;t a
-                  course.
+                  I started this business with capital saved from my 9-5 job. I
+                  built the systems on the side, refined the sourcing model, and
+                  didn&rsquo;t quit until the income was steady enough to
+                  replace my salary. I didn&rsquo;t get lucky with a
+                  &ldquo;viral&rdquo; product; I built a repeatable process that
+                  works.
+                </p>
+              </Reveal>
+              <Reveal delay={320}>
+                <p>
+                  I&rsquo;m teaching now not because I&rsquo;ve stopped selling,
+                  but because I want to build a network of sharp operators.
+                  I&rsquo;m looking for people who value execution over theory.
+                  That&rsquo;s why I keep the group small, and that&rsquo;s why
+                  this isn&rsquo;t just a course; it&rsquo;s the blueprint I use
+                  every morning.
                 </p>
               </Reveal>
             </div>
 
-            <Reveal delay={320}>
+            <Reveal delay={380}>
               <dl className="mt-12 grid grid-cols-3 gap-6 md:gap-10 max-w-[600px]">
                 {stats.map((s) => (
                   <div

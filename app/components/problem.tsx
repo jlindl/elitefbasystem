@@ -1,11 +1,11 @@
-import { MessageOff, TrendingDown, XCircle } from "./icons";
+﻿import { MessageOff, TrendingDown, XCircle } from "./icons";
 import { Reveal } from "./reveal";
 
 const cards = [
   {
     icon: XCircle,
     title: "Outdated Tactics",
-    body: "The 2019 playbook doesn't work in the 2026 marketplace. New algorithms, new ad surfaces, new compliance &mdash; you'll waste money on dead strategies.",
+    body: "The 2019 playbook doesn't work in the 2026 marketplace. New algorithms, new ad surfaces, new compliance - you'll waste money on dead strategies.",
   },
   {
     icon: MessageOff,
@@ -15,7 +15,7 @@ const cards = [
   {
     icon: TrendingDown,
     title: "Vanity Metrics",
-    body: "Revenue screenshots that hide losses. Course sellers dressed as sellers. The numbers look great because they're carefully chosen, not real.",
+    body: "Revenue screenshots that hide losses. Course gurus dressed as sellers. The numbers look great because they're carefully chosen, not real.",
   },
 ];
 
@@ -33,7 +33,7 @@ export function Problem() {
             <p className="mt-6 text-[clamp(1.05rem,1.4vw,1.25rem)] leading-[1.55] text-ink-muted">
               They sold one product in 2019, made a course, and disappeared into
               Lamborghini commercials. Their tactics are dead. Their screenshots
-              are old. Their advice will lose you money &mdash; and you&rsquo;ll
+              are old. Their advice will lose you money - and you&rsquo;ll
               never speak to them again after you swipe your card.
             </p>
           </Reveal>
@@ -58,6 +58,14 @@ export function Problem() {
             );
           })}
         </div>
+
+        <Reveal delay={400}>
+          <div className="mt-16 md:mt-24 text-center">
+            <p className="font-display text-[clamp(1.75rem,4vw,3rem)] font-medium tracking-tight text-ink leading-[1.2]">
+              This is not the case with the Elite FBA System.
+            </p>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

@@ -1,0 +1,2628 @@
+[
+  {
+    "id": "29b20c1c-884d-8077-b9c5-e7e5d68384e8",
+    "name": "Module 1 - The FBA Model",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "content": "Script: "
+      },
+      {
+        "type": "heading_2",
+        "content": "FBA Course Introduction Script"
+      },
+      {
+        "type": "paragraph",
+        "content": "Opening"
+      },
+      {
+        "type": "paragraph",
+        "content": "“Welcome."
+      },
+      {
+        "type": "paragraph",
+        "content": "If you’re watching this, you’ve already taken the first step into building a real Amazon FBA business."
+      },
+      {
+        "type": "paragraph",
+        "content": "This isn’t a theory course or guru playbook, but a system built from actually selling on Amazon and learning what works the hard way."
+      },
+      {
+        "type": "paragraph",
+        "content": "It comes from trial and error. From launching products that didn’t work, spending money where I shouldn’t have, making mistakes with stock, pricing, listings, and timing."
+      },
+      {
+        "type": "paragraph",
+        "content": "I’ve thrown money in the mud so you don’t have to."
+      },
+      {
+        "type": "paragraph",
+        "content": "Every step in this course exists because something went wrong at some point, and I had to fix it. The goal here is to shortcut that learning curve, avoid the common traps, and help you make smarter decisions from day one."
+      },
+      {
+        "type": "paragraph",
+        "content": "What FBA Actually Is"
+      },
+      {
+        "type": "paragraph",
+        "content": "“Amazon FBA stands for Fulfilled by Amazon."
+      },
+      {
+        "type": "paragraph",
+        "content": "In simple terms, you send your products to Amazon’s warehouses, and they handle storage, shipping, customer service, and returns."
+      },
+      {
+        "type": "paragraph",
+        "content": "But here’s the important part."
+      },
+      {
+        "type": "paragraph",
+        "content": "FBA is not a business model by itself. It’s infrastructure."
+      },
+      {
+        "type": "paragraph",
+        "content": "The business is everything else. Product selection, positioning, pricing, compliance, and scaling. That’s what this course focuses on.”"
+      },
+      {
+        "type": "paragraph",
+        "content": "What This Course Is and Isn’t"
+      },
+      {
+        "type": "paragraph",
+        "content": "“This is not a get-rich-quick course."
+      },
+      {
+        "type": "paragraph",
+        "content": "You won’t find screenshots, Lamborghinis, or overnight success stories here."
+      },
+      {
+        "type": "paragraph",
+        "content": "What you will find is a practical, low-risk way to start selling on Amazon without burning cash or guessing.”"
+      },
+      {
+        "type": "paragraph",
+        "content": "The Core Method"
+      },
+      {
+        "type": "paragraph",
+        "content": "“The method I teach is the exact path I used."
+      },
+      {
+        "type": "paragraph",
+        "content": "We start lean as an individual seller."
+      },
+      {
+        "type": "paragraph",
+        "content": "We validate products before committing serious money."
+      },
+      {
+        "type": "paragraph",
+        "content": "We use real-world shelf research, not just software."
+      },
+      {
+        "type": "paragraph",
+        "content": "We create unique bundles to avoid direct competition."
+      },
+      {
+        "type": "paragraph",
+        "content": "We launch under a Generic brand to test demand properly."
+      },
+      {
+        "type": "paragraph",
+        "content": "Only once the numbers make sense do we scale."
+      },
+      {
+        "type": "paragraph",
+        "content": "That’s when we move into a limited company, trademarks, Brand Registry, and real brand building.”"
+      },
+      {
+        "type": "paragraph",
+        "content": "What You’ll Learn Inside"
+      },
+      {
+        "type": "paragraph",
+        "content": "“Inside the course, you’ll learn:"
+      },
+      {
+        "type": "paragraph",
+        "content": "How to start correctly as an individual seller"
+      },
+      {
+        "type": "paragraph",
+        "content": "How to find product opportunities in physical shops"
+      },
+      {
+        "type": "paragraph",
+        "content": "How to spot demand, gaps, and poor listings"
+      },
+      {
+        "type": "paragraph",
+        "content": "How to create compliant bundles and get GTIN exemptions"
+      },
+      {
+        "type": "paragraph",
+        "content": "How to launch your first ASIN properly"
+      },
+      {
+        "type": "paragraph",
+        "content": "How to read performance data without overreacting"
+      },
+      {
+        "type": "paragraph",
+        "content": "How to know when a product is worth scaling"
+      },
+      {
+        "type": "paragraph",
+        "content": "And how to turn proof of concept into a protected brand”"
+      },
+      {
+        "type": "paragraph",
+        "content": "How to Use This Course"
+      },
+      {
+        "type": "paragraph",
+        "content": "“This course is designed to be followed in order."
+      },
+      {
+        "type": "paragraph",
+        "content": "Don’t skip ahead. Don’t rush to launch."
+      },
+      {
+        "type": "paragraph",
+        "content": "Each module builds on the previous one, and every step is there to reduce risk and protect your account.”"
+      },
+      {
+        "type": "paragraph",
+        "content": "Mindset and Expectations"
+      },
+      {
+        "type": "paragraph",
+        "content": "“Progress beats perfection."
+      },
+      {
+        "type": "paragraph",
+        "content": "Your first product doesn’t need to be special. It needs to work."
+      },
+      {
+        "type": "paragraph",
+        "content": "Most people fail because they overthink or overinvest too early."
+      },
+      {
+        "type": "paragraph",
+        "content": "This system is about doing the opposite. Prove demand first, then scale.”"
+      },
+      {
+        "type": "paragraph",
+        "content": "Closing"
+      },
+      {
+        "type": "paragraph",
+        "content": "“If you follow the process, stay compliant, and focus on execution, this course can take you from zero to your first profitable FBA product the right way."
+      },
+      {
+        "type": "paragraph",
+        "content": "Let’s get started.”"
+      }
+    ]
+  },
+  {
+    "id": "29b20c1c-884d-8066-a004-d51fa41bb93d",
+    "name": "Module 2 - Opening your first Seller Account",
+    "blocks": [
+      {
+        "type": "heading_1",
+        "content": "The Foundation: Your Seller Account"
+      },
+      {
+        "type": "paragraph",
+        "content": "Opening an Amazon Seller account seems simple, but it is the first major hurdle where many beginners fail. Amazon's verification bots are ruthless. One typo or mismatched address can result in an immediate suspension before you even list a product."
+      },
+      {
+        "type": "paragraph",
+        "content": "In this module, we will ensure you get approved on the first try so you can start sourcing immediately."
+      },
+      {
+        "type": "heading_2",
+        "content": "1. Individual vs. Professional Plan"
+      },
+      {
+        "type": "paragraph",
+        "content": "Amazon offers two selling plans. Here is the golden rule: Start with the Individual plan."
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Individual Plan: No monthly fee. You pay £0.75 per item sold. Perfect for the 'Lean' phase."
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Professional Plan: £25/month (excl. VAT). Necessary once you sell 35+ items a month or want to win the Buy Box."
+      },
+      {
+        "type": "pro_tip",
+        "content": "You can upgrade to Professional at any time with one click in your Seller Central settings. Save your money while you are learning and sourcing your first products."
+      },
+      {
+        "type": "heading_2",
+        "content": "2. The 'Exact Match' Rule"
+      },
+      {
+        "type": "warning",
+        "content": "CRITICAL: Every single document you provide to Amazon must match EXACTLY. Character for character."
+      },
+      {
+        "type": "paragraph",
+        "content": "If your bank statement says '123 Main St, Apt 4' and you type 'Apt 4, 123 Main Street' into Amazon, the automated system will reject you. The bots do not have common sense. Copy your address exactly as it appears on your official documents."
+      },
+      {
+        "type": "heading_2",
+        "content": "3. The Verification Checklist"
+      },
+      {
+        "type": "paragraph",
+        "content": "Before you click 'Register', gather the following documents. Do not start the process without them."
+      },
+      {
+        "type": "to_do",
+        "content": "A valid Passport or Driver's License (Check the expiry date!)"
+      },
+      {
+        "type": "to_do",
+        "content": "A Bank Statement issued within the last 90 days (Must show your name and address clearly)"
+      },
+      {
+        "type": "to_do",
+        "content": "A chargeable credit or debit card (Monzo/Starling work fine, but physical high-street banks are preferred if possible)"
+      },
+      {
+        "type": "to_do",
+        "content": "A dedicated email address (e.g., yourname.fba@gmail.com) so you don't miss important account updates."
+      },
+      {
+        "type": "heading_2",
+        "content": "4. The Video Verification Call"
+      },
+      {
+        "type": "paragraph",
+        "content": "Amazon now requires a short video call to verify your identity. This is to stop fraudulent sellers. It takes 5 minutes."
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Have your physical ID and printed/digital bank statement ready in your hand."
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Ensure you are in a well-lit room with a stable internet connection."
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "The associate will ask you to hold your ID next to your face and tilt it to show the holograms."
+      },
+      {
+        "type": "heading_2",
+        "content": "Action Steps for This Week"
+      },
+      {
+        "type": "to_do",
+        "content": "Create your dedicated Amazon email address."
+      },
+      {
+        "type": "to_do",
+        "content": "Download your latest bank statement as a PDF."
+      },
+      {
+        "type": "to_do",
+        "content": "Register for an Individual Amazon Seller account at sell.amazon.co.uk."
+      },
+      {
+        "type": "to_do",
+        "content": "Complete the identity verification process."
+      },
+      {
+        "type": "to_do",
+        "content": "Set up a 2-Step Verification app (like Google Authenticator) to secure your account."
+      }
+    ]
+  },
+  {
+    "id": "29b20c1c-884d-80fe-9004-dc3735899118",
+    "name": "Module 3 - Product Research",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "content": "💡 The Goal"
+      },
+      {
+        "type": "paragraph",
+        "content": "To identify low-risk products or combinations that already have proven demand — such as poor listings, low stock, or missing bundles."
+      },
+      {
+        "type": "paragraph",
+        "content": "This approach flips the traditional “software-only” model on its head."
+      },
+      {
+        "type": "paragraph",
+        "content": "🗒️ Checklist"
+      },
+      {
+        "type": "to_do",
+        "content": "Visit 2–3 physical stores (Can be online)"
+      },
+      {
+        "type": "to_do",
+        "content": "Find 3 individual items that sell well on Amazon"
+      },
+      {
+        "type": "to_do",
+        "content": "Identify 2 potential bundle ideas (complementary items that could be listed together)"
+      },
+      {
+        "type": "to_do",
+        "content": "Log everything into your Product Research Sheet (name, price, profit, reviews, etc.)"
+      },
+      {
+        "type": "to_do",
+        "content": "Choose your favourite product idea to use in Module 4 – Creating Your First Listing"
+      },
+      {
+        "type": "paragraph",
+        "content": "🧠 Why This Works"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Instant proof of demand → if a product is sold in major UK shops, people are already buying it."
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Local advantage → most sellers never step outside online tools."
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Unique bundles → combining complementary retail products creates your own ASIN and USP."
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Low starting cost → you can test ideas with £20–£50 total spend."
+      },
+      {
+        "type": "heading_3",
+        "content": "🛒 Go to shops like:"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "The Range"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Tesco/Asda"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Poundland"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "B&Q"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "TK Maxx (beauty/homeware section)"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Other Major Retailers"
+      },
+      {
+        "type": "heading_3",
+        "content": "🔍 When scanning shelves, ask yourself:"
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "Is this already listed on Amazon?"
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "What’s the BSR (Best Seller Rank)?"
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "Are there poor listings?"
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "Could I bundle this with something else?"
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "Is it light and easy to ship?"
+      },
+      {
+        "type": "paragraph",
+        "content": "✅ Easy Wins"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Existing listings with poor images"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Consistent but under-optimised listings"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Products always “Currently Unavailable”"
+      },
+      {
+        "type": "paragraph",
+        "content": "⚠️ Avoid"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Licensed or large - brand items (copyright risk)"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Food or health products without manufacturer details"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Fragile, liquid or heavy items (higher FBA Fees)"
+      },
+      {
+        "type": "heading_2",
+        "content": "💡 Example Opportunity"
+      },
+      {
+        "type": "paragraph",
+        "content": "You’re in Tesco and notice a shelf of car care products."
+      },
+      {
+        "type": "paragraph",
+        "content": "Two stand out:"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Dashboard Cleaner Spray (500 ml) – £2.49"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Dashboard Cleaning Wipes (20 pack) – £2.49"
+      },
+      {
+        "type": "paragraph",
+        "content": "Both have separate Amazon listings with steady sales and average reviews."
+      },
+      {
+        "type": "paragraph",
+        "content": "Neither listing offers a combined “interior cleaning kit.” This is where we shine."
+      },
+      {
+        "type": "paragraph",
+        "content": "You create a new bundle as:"
+      },
+      {
+        "type": "quote",
+        "content": "“Car Care Essentials Duo – Glass Cleaner + Dashboard Wipes”"
+      },
+      {
+        "type": "paragraph",
+        "content": "This gives you:"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "A unique ASIN (through GTIN exemption)"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "A clear use-case bundle customers instantly understand"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "A safe, everyday product that shows how bundling works - without entering sensitive niches like skincare or supplements"
+      },
+      {
+        "type": "heading_2",
+        "content": ""
+      }
+    ]
+  },
+  {
+    "id": "29b20c1c-884d-8020-901c-e9c36fb64c9c",
+    "name": "Module 4 - Listing Creation",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "content": "📦 Module 4 – Creating Your First Listing (Generic ASIN Method)"
+      },
+      {
+        "type": "paragraph",
+        "content": "It’s time to bring your product idea to life on Amazon, testing demand, keywords and profit margins."
+      },
+      {
+        "type": "heading_3",
+        "content": "🎯 Lesson 1 – Why We List Under “Generic”"
+      },
+      {
+        "type": "paragraph",
+        "content": "The goal is to get live on Amazon fast and test demand — not to build a brand yet."
+      },
+      {
+        "type": "paragraph",
+        "content": "Most new sellers wait months trying to design logos and order packaging."
+      },
+      {
+        "type": "paragraph",
+        "content": "We don’t do that here."
+      },
+      {
+        "type": "paragraph",
+        "content": "By listing under the “Generic” brand, you can:"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "✅ Skip GTINs and UPC codes using GTIN exemption"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "✅ Avoid trademark or Brand Registry requirements"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "✅ Focus purely on testing demand"
+      },
+      {
+        "type": "paragraph",
+        "content": "💬 Think of this as your “proof of concept” stage."
+      },
+      {
+        "type": "paragraph",
+        "content": "Once you confirm sales, then you can form your Ltd company, apply for a trademark, and rebrand the listing under your own name. (Module 6)"
+      },
+      {
+        "type": "heading_3",
+        "content": "🧾 Lesson 2 – Creating the Listing"
+      },
+      {
+        "type": "paragraph",
+        "content": "Let’s create your first ASIN."
+      },
+      {
+        "type": "heading_3",
+        "content": "🧩 Add a New Product"
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "Go to Inventory → Add a Product → Create a New Listing"
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "Select your product category"
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "Under Brand Name → type Generic"
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "Under Product ID Type → select GTIN Exemption"
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "Fill out:"
+      },
+      {
+        "type": "paragraph",
+        "content": "Tip: When you’ve written your description, paste it into: https://www.sellerapp.com/amazon-product-description-editor.html"
+      },
+      {
+        "type": "paragraph",
+        "content": "Once you have the HTML version, paste this into the Amazon description area."
+      },
+      {
+        "type": "paragraph",
+        "content": "This ensures that your description is formatted correctly, ensuring that it looks professional and appealing to customers."
+      },
+      {
+        "type": "heading_3",
+        "content": "📝 Example Listing (Car Care Duo)"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Title: Car Care Essentials Duo – Glass Cleaner & Dashboard Wipes (Generic Brand)"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Bullet Points:"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Description:"
+      },
+      {
+        "type": "heading_3",
+        "content": "📸 Lesson 4 – Taking Product Photos"
+      },
+      {
+        "type": "paragraph",
+        "content": "You don’t need professional photography yet — just clean, compliant, and clear images."
+      },
+      {
+        "type": "heading_3",
+        "content": "✅ Photo Requirements"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Pure white background (you can remove background using Canva or Remove.bg)"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Product fills 85% of the frame"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "No watermarks, logos, or text overlays"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Show everything included in the bundle"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Include 1 image of product + packaging together (Amazon requirement for GTIN exemption)"
+      },
+      {
+        "type": "heading_3",
+        "content": "📷 Tip"
+      },
+      {
+        "type": "paragraph",
+        "content": "Use your phone in natural lighting."
+      },
+      {
+        "type": "paragraph",
+        "content": "A £10 white foam board and daylight can produce excellent photos for testing."
+      },
+      {
+        "type": "heading_3",
+        "content": "💰 Lesson 5 – Pricing & Launch"
+      },
+      {
+        "type": "paragraph",
+        "content": "Price for motion, not maximum profit."
+      },
+      {
+        "type": "paragraph",
+        "content": "When testing Generic listings, your goal is to move stock and learn."
+      },
+      {
+        "type": "paragraph",
+        "content": "Aim for a small but noticeable gap below similar listings — just enough to attract clicks."
+      },
+      {
+        "type": "paragraph",
+        "content": "💡 Example:"
+      },
+      {
+        "type": "paragraph",
+        "content": "If competitors are at £9.99 → list yours at £8.49 to start."
+      },
+      {
+        "type": "paragraph",
+        "content": "Once you sell your first 10–20 units and see consistent sales, you can:"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Raise your price slightly"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Reorder stock"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Start thinking about branding & packaging for your trademark phase"
+      },
+      {
+        "type": "heading_3",
+        "content": "⚠️ Lesson 6 – Compliance & Common Mistakes"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "❌ Using branded items without modification (don’t list “Dettol Bundle” under Generic)"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "✅ Always create your own ASIN, never hijack an existing one"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "❌ Forgetting packaging photo (Amazon can reject GTIN exemption)"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "✅ Keep your packaging simple — plain polybag or small box with an FNSKU label is fine"
+      },
+      {
+        "type": "heading_3",
+        "content": "✅ What To Do Next"
+      },
+      {
+        "type": "heading_3",
+        "content": "🗒️ Checklist"
+      },
+      {
+        "type": "to_do",
+        "content": "Apply for GTIN exemption under your chosen category"
+      },
+      {
+        "type": "to_do",
+        "content": "Take clear photos of your product and packaging"
+      },
+      {
+        "type": "to_do",
+        "content": "Create a new listing under the Generic brand"
+      },
+      {
+        "type": "to_do",
+        "content": "Set competitive pricing"
+      },
+      {
+        "type": "to_do",
+        "content": "Prepare your FBA shipment for Amazon (we’ll cover this next)"
+      },
+      {
+        "type": "heading_3",
+        "content": "📎 Optional Downloads"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "📄 GTIN Exemption & Listing Guide (PDF)"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "🖼️ Photo Compliance Reference Sheet"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "🧾 Listing Copy Template (Editable)"
+      },
+      {
+        "type": "heading_3",
+        "content": "🎓 End of Module 4 Summary"
+      },
+      {
+        "type": "paragraph",
+        "content": "You’ve now learned how to create a fully compliant, barcode-free listing under Generic, test your bundle idea, and get real data before investing in a brand."
+      },
+      {
+        "type": "paragraph",
+        "content": "Next up → Module 5: Turning Proof of Concept Into a Real Brand — where we’ll form your Ltd company, register your trademark, and apply for Brand Registry."
+      }
+    ]
+  },
+  {
+    "id": "29b20c1c-884d-8036-b117-fb46fa089178",
+    "name": "Module 5 - Sending to Amazon",
+    "blocks": [
+      {
+        "type": "heading_1",
+        "content": "🚚 Module 5 – Sending Your Product to Amazon FBA"
+      },
+      {
+        "type": "quote",
+        "content": "It’s time to make your listing real — by sending your product to Amazon’s warehouse and going live for the first time."
+      },
+      {
+        "type": "heading_2",
+        "content": "🎯 Lesson 1 – Understanding How FBA Works"
+      },
+      {
+        "type": "quote",
+        "content": "FBA (Fulfilled by Amazon) means Amazon stores, picks, packs, and ships your product for you."
+      },
+      {
+        "type": "heading_3",
+        "content": "🧠 In simple terms:"
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "You create your listing (done ✅)"
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "You send your inventory to an Amazon warehouse"
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "Amazon stores your stock"
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "When someone orders → Amazon handles delivery, returns, and customer service"
+      },
+      {
+        "type": "heading_3",
+        "content": "✅ Benefits of FBA:"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Prime-eligible listings (higher conversion rate)"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Automatic trust from buyers"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Hands-off logistics"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Low starting effort (you can send as few as 5–10 units)"
+      },
+      {
+        "type": "paragraph",
+        "content": "💬 Your goal for this stage:"
+      },
+      {
+        "type": "paragraph",
+        "content": "Get your first units to Amazon, learn the process, and make sure your first FBA shipment is smooth."
+      },
+      {
+        "type": "heading_2",
+        "content": "📦 Lesson 2 – Preparing Your Product"
+      },
+      {
+        "type": "quote",
+        "content": "Amazon’s golden rule: every product must be barcode-scannable and safely packaged."
+      },
+      {
+        "type": "heading_3",
+        "content": "🧴 Packaging Checklist"
+      },
+      {
+        "type": "to_do",
+        "content": "Product is sealed and clean"
+      },
+      {
+        "type": "to_do",
+        "content": "All components of the bundle are inside one bag or box"
+      },
+      {
+        "type": "to_do",
+        "content": "Packaging is plain and professional (no trademarked logos)"
+      },
+      {
+        "type": "to_do",
+        "content": "Add a small “Sold & Packaged by [Your Name]” sticker if possible"
+      },
+      {
+        "type": "to_do",
+        "content": "Include FNSKU label (Amazon’s barcode) on the outside of the packaging"
+      },
+      {
+        "type": "heading_3",
+        "content": "🔖 FNSKU Label"
+      },
+      {
+        "type": "paragraph",
+        "content": "After you create your FBA shipment, Amazon will generate a unique barcode (FNSKU) for each SKU."
+      },
+      {
+        "type": "paragraph",
+        "content": "Print it using:"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Regular printer + cut them out  (for small batches)"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Label paper (once you scale)"
+      },
+      {
+        "type": "quote",
+        "content": "Each individual product needs its own FNSKU for Amazon to understand what it is — not just the box or bag."
+      },
+      {
+        "type": "heading_2",
+        "content": "🧾 Lesson 3 – Creating the FBA Shipment"
+      },
+      {
+        "type": "quote",
+        "content": "Once your listing exists, you can convert it to FBA and send stock to Amazon."
+      },
+      {
+        "type": "heading_3",
+        "content": "Step-by-Step"
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "Go to Inventory → Manage All Inventory"
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "Find your product → click “Send/Replenish Inventory”"
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "Choose:"
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "Enter your ship-from address (home or office)"
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "Select “Small Parcel Delivery (SPD)”"
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "Choose your carrier (Amazon Partnered or own courier)."
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "Enter your box weight & dimensions."
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "Confirm and click “Print Box Labels.”"
+      },
+      {
+        "type": "paragraph",
+        "content": "📦 Label Placement"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Place one FNSKU on each unit."
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Place one box label (with “FBA” and “UPS” barcodes) on each carton."
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Make sure they’re not covered by tape or seams."
+      },
+      {
+        "type": "heading_2",
+        "content": "🧰 Lesson 4 – Shipping Options & Costs"
+      },
+      {
+        "type": "quote",
+        "content": "Amazon’s partnered UPS service is by far the easiest way to start."
+      },
+      {
+        "type": "heading_3",
+        "content": "💡 Example:"
+      },
+      {
+        "type": "paragraph",
+        "content": "Sending 1 small carton (5 kg) via UPS Partnered:"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Cost: around £2–£5 total"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Delivery time: 3-5 days"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Amazon auto-updates when received"
+      },
+      {
+        "type": "paragraph",
+        "content": "You can book collection or drop off at any UPS Access Point. Same goes if you choose DPD."
+      },
+      {
+        "type": "heading_3",
+        "content": "⚠️ Shipping Tips"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Use strong boxes — no gaps or rattling."
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Add bubble wrap or kraft paper for protection."
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Never reuse branded boxes (Amazon can reject them)."
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Avoid mixing products in the same carton (one ASIN/FNSKU per box ideally)."
+      },
+      {
+        "type": "heading_2",
+        "content": "🕒 Lesson 5 – What Happens After You Ship"
+      },
+      {
+        "type": "paragraph",
+        "content": "Once Amazon receives your stock:"
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "Your listing status changes from “Inactive – Out of Stock” to “Active.”"
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "Units enter FC (Fulfilment Centre) processing (takes 24–72 hours)."
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "You’ll start seeing your inventory count and Buy Box price live."
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "Congratulations — you’re now officially selling on Amazon. 🎉"
+      },
+      {
+        "type": "heading_2",
+        "content": "⚠️ Lesson 6 – Common Issues to Avoid"
+      },
+      {
+        "type": "paragraph",
+        "content": "❌ Incorrect or missing labels"
+      },
+      {
+        "type": "paragraph",
+        "content": "✅ Double-check FNSKU placement before sealing the box."
+      },
+      {
+        "type": "paragraph",
+        "content": "❌ Sending restricted items"
+      },
+      {
+        "type": "paragraph",
+        "content": "✅ Always re-check Amazon’s category rules before shipping."
+      },
+      {
+        "type": "paragraph",
+        "content": "❌ Damaged packaging"
+      },
+      {
+        "type": "paragraph",
+        "content": "✅ Amazon will reject items that look used, dented, or dirty."
+      },
+      {
+        "type": "paragraph",
+        "content": "❌ Oversized boxes"
+      },
+      {
+        "type": "paragraph",
+        "content": "✅ Keep under 63.5 cm (25 in) per side and under 15 kg unless otherwise allowed."
+      },
+      {
+        "type": "heading_2",
+        "content": "✅ What To Do Next"
+      },
+      {
+        "type": "paragraph",
+        "content": "🗒️ FBA Shipment Checklist"
+      },
+      {
+        "type": "to_do",
+        "content": "Convert listing to FBA"
+      },
+      {
+        "type": "to_do",
+        "content": "Print and attach FNSKU labels to each unit"
+      },
+      {
+        "type": "to_do",
+        "content": "Pack your products safely (one ASIN per box)"
+      },
+      {
+        "type": "to_do",
+        "content": "Create your shipment in Seller Central"
+      },
+      {
+        "type": "to_do",
+        "content": "Print and attach box labels"
+      },
+      {
+        "type": "to_do",
+        "content": "Ship using Amazon Partnered UPS"
+      },
+      {
+        "type": "quote",
+        "content": "💬 Tip: Track your first shipment daily — seeing “Delivered to Fulfilment Centre” is the best motivation you’ll ever get."
+      }
+    ]
+  },
+  {
+    "id": "29b20c1c-884d-800a-aa57-fa9e013b0da9",
+    "name": "Module 6 - Launching a Brand",
+    "blocks": [
+      {
+        "type": "heading_1",
+        "content": "🏗️ Module 6 – Turning Proof of Concept Into a Real Brand"
+      },
+      {
+        "type": "quote",
+        "content": "You’ve proven people want your product — now it’s time to turn that into something permanent. This is the biggest step in the entire system, and it’s not a one-day job. Expect this phase to take several weeks to a few months. Go slowly, stay organised, and reach out if you’re unsure — I’m happy to guide you through any part of it."
+      },
+      {
+        "type": "heading_2",
+        "content": "🕰️ Before You Start"
+      },
+      {
+        "type": "paragraph",
+        "content": "This module takes time."
+      },
+      {
+        "type": "paragraph",
+        "content": "Each stage — company formation, trademark registration, brand approval — has waiting periods built in."
+      },
+      {
+        "type": "paragraph",
+        "content": "💬 Average total: ~ 6–10 weeks"
+      },
+      {
+        "type": "paragraph",
+        "content": "⏳ Don’t rush — treat it like building foundations for the rest of your FBA journey."
+      },
+      {
+        "type": "heading_2",
+        "content": "🎯 Lesson 1 – Knowing When You’re Ready to Build a Brand"
+      },
+      {
+        "type": "quote",
+        "content": "If you’re selling consistently and customers clearly like what you’re offering, you’ve earned the right to build something bigger."
+      },
+      {
+        "type": "heading_3",
+        "content": "💡 Signs You’re Ready"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "You’ve sold 30 + units of your test product."
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "You’ve had repeat orders or stable weekly sales."
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "You understand your fees and margins."
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "You’ve handled at least one FBA shipment confidently."
+      },
+      {
+        "type": "paragraph",
+        "content": "If you’re still unsure, message me first — I can help you decide whether to push forward or gather a little more data."
+      },
+      {
+        "type": "heading_2",
+        "content": "🏢 Lesson 2 – Forming Your Limited Company"
+      },
+      {
+        "type": "quote",
+        "content": "A limited company legally separates you from your business. It’s your “official identity” on Amazon."
+      },
+      {
+        "type": "heading_3",
+        "content": "Step-by-Step"
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "Go to: gov.uk/limited-company-formation"
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "Choose a name that reflects your brand direction."
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "Registered office: home or virtual address."
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "Add yourself as Director + Shareholder."
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "Pay £50 to register online."
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "Wait for your Company Number and Certificate of Incorporation (usually 24 hrs)."
+      },
+      {
+        "type": "heading_3",
+        "content": "Why This Matters"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Lets you open a business bank account."
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Protects your personal finances."
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Makes Amazon and suppliers treat you as legitimate."
+      },
+      {
+        "type": "paragraph",
+        "content": "🗣️ If you need help choosing a name or deciding between your own name vs brand name, check with me before submitting."
+      },
+      {
+        "type": "heading_2",
+        "content": "🏦 Lesson 3 – Setting Up a Business Bank Account"
+      },
+      {
+        "type": "paragraph",
+        "content": "Once your company is live:"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Apply with Starling, Monzo, Tide, or Revolut Business."
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Use your company name to match your Amazon account later."
+      },
+      {
+        "type": "heading_3",
+        "content": "Why It’s Important"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Keeps business income separate from personal."
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Simplifies accounting + tax returns."
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Adds professionalism when paying suppliers or applying for insurance."
+      },
+      {
+        "type": "paragraph",
+        "content": "⏳ Banks may take a week or more to approve — don’t panic."
+      },
+      {
+        "type": "heading_2",
+        "content": "™️ Lesson 4 – Registering Your Trademark"
+      },
+      {
+        "type": "quote",
+        "content": "This step gives you ownership of your brand name — no one else can legally sell under it."
+      },
+      {
+        "type": "heading_3",
+        "content": "Step-by-Step"
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "Go to gov.uk/how-to-register-a-trade-mark."
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "Search your brand name — ensure it’s unique."
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "Pick your classes (product types)."
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "File your application (£170 + £50 per extra class)."
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "Upload your logo or plain text name."
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "Wait 8–12 weeks for review and opposition period."
+      },
+      {
+        "type": "heading_3",
+        "content": "Why It Matters"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Legally protects your name."
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Required for Amazon Brand Registry."
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Adds resale and credibility value to your business."
+      },
+      {
+        "type": "paragraph",
+        "content": "⚠️ Common Pitfalls"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Similar existing name → rejection."
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Wrong class → you’ll have to re-file."
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Complex logos → harder to protect."
+      },
+      {
+        "type": "paragraph",
+        "content": "🗣️ If you’re unsure which class to choose, ask me before you submit — I can help check your category."
+      },
+      {
+        "type": "heading_2",
+        "content": "🪪 Lesson 5 – Applying for Amazon Brand Registry"
+      },
+      {
+        "type": "quote",
+        "content": "This is where Amazon recognises you as a verified brand owner."
+      },
+      {
+        "type": "heading_3",
+        "content": "Step-by-Step"
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "Visit brandservices.amazon.co.uk."
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "Click “Enroll a New Brand.”"
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "Provide:"
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "Submit → wait 3–5 days for verification."
+      },
+      {
+        "type": "heading_3",
+        "content": "Why It Matters"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Unlocks A+ Content and Storefronts."
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Gives access to Brand Analytics, Vine Reviews, and Sponsored Brand Ads."
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Prevents hijackers listing under your ASINs."
+      },
+      {
+        "type": "paragraph",
+        "content": "💬 If your application gets rejected or delayed, message me — I’ve dealt with most of the common errors before."
+      },
+      {
+        "type": "heading_2",
+        "content": "🎨 Lesson 6 – Creating Your Brand Identity"
+      },
+      {
+        "type": "quote",
+        "content": "Branding makes your store look real. You don’t need to be a designer — just stay consistent."
+      },
+      {
+        "type": "heading_3",
+        "content": "What You’ll Need"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Logo – simple, clear, readable at thumbnail size."
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Colour Scheme – pick 2–3 colours you’ll use everywhere."
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Basic Packaging – stickers or printed inserts showing your logo."
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "A+ Images – lifestyle shots and comparison charts."
+      },
+      {
+        "type": "heading_3",
+        "content": "Why It Matters"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Builds customer trust instantly."
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Improves conversion rate → higher sales."
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Reinforces your brand when you expand into new products."
+      },
+      {
+        "type": "paragraph",
+        "content": "🗣️ If you want help designing packaging or logo ideas, send them to me for feedback before printing."
+      },
+      {
+        "type": "heading_2",
+        "content": "💰 Lesson 7 – Upgrading Your Amazon Seller Account"
+      },
+      {
+        "type": "quote",
+        "content": "Now that you’re operating as a company, it’s time to upgrade to the Professional Plan (£30 / month)."
+      },
+      {
+        "type": "heading_3",
+        "content": "How to Do It"
+      },
+      {
+        "type": "paragraph",
+        "content": "Seller Central → Settings → Account Info → Upgrade Account."
+      },
+      {
+        "type": "heading_3",
+        "content": "Why It Matters"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Access Brand Analytics & Bulk Uploads."
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Run Sponsored Brand Ads."
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "View advanced sales data."
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Save fees if you sell 40 + units / month."
+      },
+      {
+        "type": "heading_2",
+        "content": "🧭 Managing the Timeline"
+      }
+    ]
+  },
+  {
+    "id": "29b20c1c-884d-803e-9042-e3e931f99b0b",
+    "name": "Module 7 - Marketing",
+    "blocks": [
+      {
+        "type": "heading_1",
+        "content": "🚀 Module 7 – Scaling Your Brand: PPC, Keywords, Helium 10 & A+ Content"
+      },
+      {
+        "type": "quote",
+        "content": "You’re now a registered brand. This module shows you how to make your listing visible, trustworthy, and profitable — using the exact tools real Amazon brands use today."
+      },
+      {
+        "type": "heading_1",
+        "content": "🎯 LESSON 1 — Understanding Visibility vs Conversion"
+      },
+      {
+        "type": "paragraph",
+        "content": "Before we jump into PPC and keywords, you need to understand two sides of Amazon success:"
+      },
+      {
+        "type": "heading_2",
+        "content": "1️⃣ Visibility — can people find your product?"
+      },
+      {
+        "type": "paragraph",
+        "content": "This is where keywords and PPC come in."
+      },
+      {
+        "type": "paragraph",
+        "content": "People must SEE your listing before they can buy it."
+      },
+      {
+        "type": "heading_2",
+        "content": "2️⃣ Conversion — do people buy once they see it?"
+      },
+      {
+        "type": "paragraph",
+        "content": "This is where A+ content, images, reviews, and trust come in."
+      },
+      {
+        "type": "paragraph",
+        "content": "A listing can fail in two ways:"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Lots of traffic but no purchases → conversion problem"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Great listing but nobody sees it → visibility problem"
+      },
+      {
+        "type": "paragraph",
+        "content": "Scaling means improving both."
+      },
+      {
+        "type": "paragraph",
+        "content": "I’ll show you how to fix each one step-by-step."
+      },
+      {
+        "type": "heading_1",
+        "content": "🧱 LESSON 2 — Keywords: The Core of Amazon’s Algorithm"
+      },
+      {
+        "type": "quote",
+        "content": "Think of keywords as the “language” Amazon uses to understand what you’re selling."
+      },
+      {
+        "type": "paragraph",
+        "content": "Amazon doesn’t magically know your product."
+      },
+      {
+        "type": "paragraph",
+        "content": "It only knows what you tell it through:"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Your title"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Your bullets"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Your description"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Your backend keywords"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Your PPC keywords"
+      },
+      {
+        "type": "heading_2",
+        "content": "🌍 Real Example"
+      },
+      {
+        "type": "paragraph",
+        "content": "Imagine you sell a Car Interior Cleaning Duo."
+      },
+      {
+        "type": "paragraph",
+        "content": "Amazon won’t automatically connect you to searches like:"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "“car cleaning kit”"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "“dashboard cleaner”"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "“interior wipes for car”"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "“glass cleaner for car”"
+      },
+      {
+        "type": "paragraph",
+        "content": "You must tell Amazon:\n“This is what my product is relevant for.”"
+      },
+      {
+        "type": "heading_3",
+        "content": "So the rule is simple:"
+      },
+      {
+        "type": "quote",
+        "content": "If you’re not ranking for the right keywords, nobody can buy your product."
+      },
+      {
+        "type": "heading_2",
+        "content": "📌 How to find the right keywords (beginner version)"
+      },
+      {
+        "type": "paragraph",
+        "content": "Use Helium 10 → Cerebro"
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "Copy a competitor’s ASIN"
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "Paste it into Cerebro"
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "Sort by Search Volume"
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "Choose keywords that clearly apply to YOUR bundle"
+      },
+      {
+        "type": "paragraph",
+        "content": "👉 Beginners only need 10–20 strong keywords."
+      },
+      {
+        "type": "paragraph",
+        "content": "Don’t overthink it."
+      },
+      {
+        "type": "heading_1",
+        "content": "🧱 LESSON 3 — Helium 10: Your Beginner-Friendly Toolkit"
+      },
+      {
+        "type": "quote",
+        "content": "This is the tool that helped me build my company — and it removes guesswork."
+      },
+      {
+        "type": "paragraph",
+        "content": "Here’s EXACTLY what beginners should use:"
+      },
+      {
+        "type": "heading_2",
+        "content": "1. Cerebro → find high-volume keywords"
+      },
+      {
+        "type": "paragraph",
+        "content": "Paste in competitors → pull their keywords → pick the best ones."
+      },
+      {
+        "type": "heading_2",
+        "content": "2. Spreadsheet → helps you stay organised"
+      },
+      {
+        "type": "paragraph",
+        "content": "Organise your top keywords in a Spreadsheet/Document, will help you understand exactly which ones to use"
+      },
+      {
+        "type": "heading_2",
+        "content": "3. ChatGPT → helps you write an optimised title & bullets"
+      },
+      {
+        "type": "paragraph",
+        "content": "Paste your keyword list → writes your title, description and bullet points → ensures all keywords are being used effectively."
+      },
+      {
+        "type": "heading_2",
+        "content": ""
+      },
+      {
+        "type": "heading_1",
+        "content": "🎨 LESSON 4 — A+ Content: Turning Your Listing Into a Brand"
+      },
+      {
+        "type": "quote",
+        "content": "Amazon users buy with their eyes. A+ content makes them trust you instantly."
+      },
+      {
+        "type": "heading_3",
+        "content": "What A+ content really does:"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Makes your listing look premium"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Increases conversion (5%–20%)"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Helps buyers understand the product"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Shows professionalism"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Helps justify higher prices"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Helps you outrank generic sellers"
+      },
+      {
+        "type": "heading_3",
+        "content": "What to include:"
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "A Brand Banner"
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "Feature Blocks"
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "Lifestyle Photos"
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "Comparison Chart"
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "Short copy"
+      },
+      {
+        "type": "heading_3",
+        "content": "What NOT to do:"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Don’t repeat your bullets"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Don’t add walls of text"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Don’t keyword spam"
+      },
+      {
+        "type": "quote",
+        "content": "The goal is trust, not SEO."
+      },
+      {
+        "type": "heading_1",
+        "content": "💸 LESSON 5 — PPC: The Engine That Drives Visibility"
+      },
+      {
+        "type": "paragraph",
+        "content": "Most beginners think PPC is about “making sales.”"
+      },
+      {
+        "type": "paragraph",
+        "content": "Not true."
+      },
+      {
+        "type": "heading_3",
+        "content": "PPC has ONE job:"
+      },
+      {
+        "type": "quote",
+        "content": "Help Amazon understand what your listing is relevant for."
+      },
+      {
+        "type": "paragraph",
+        "content": "Once Amazon understands you, it will:"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "rank you higher"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "show you more often"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "reduce your PPC costs"
+      },
+      {
+        "type": "heading_2",
+        "content": "📌 How PPC actually works"
+      },
+      {
+        "type": "paragraph",
+        "content": "You bid for keywords → Amazon shows your product → you pay only if someone clicks."
+      },
+      {
+        "type": "heading_3",
+        "content": "For beginners, there are two PPC stages:"
+      },
+      {
+        "type": "heading_2",
+        "content": "Stage 1 — Data Collection (Week 1–2)"
+      },
+      {
+        "type": "paragraph",
+        "content": "Use an Automatic Campaign"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Amazon chooses keywords"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "You learn what shoppers use to find your product"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Set £5–£10/day"
+      },
+      {
+        "type": "heading_2",
+        "content": "Stage 2 — Manual Campaign (Week 3+)"
+      },
+      {
+        "type": "paragraph",
+        "content": "Use the data Amazon gives you"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Add ONLY the keywords that converted"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Exclude unprofitable ones"
+      },
+      {
+        "type": "heading_3",
+        "content": "Basic Numbers to Aim For:"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Click-Through Rate (CTR): 0.3 – 1%+"
+      }
+    ]
+  },
+  {
+    "id": "29b20c1c-884d-80b1-aae2-c5ce97cd2fec",
+    "name": "Module 8 - Expansion",
+    "blocks": [
+      {
+        "type": "heading_1",
+        "content": "🌍 MODULE 8 — Expanding Beyond Amazon"
+      },
+      {
+        "type": "quote",
+        "content": "Once you’ve validated your product, built your brand, and created a stable Amazon listing, it’s time to grow beyond a single platform. In this module, you’ll learn how to expand safely and strategically into eBay, TikTok Shop, and your own Shopify website — without overwhelming yourself."
+      },
+      {
+        "type": "heading_1",
+        "content": "🎯 Lesson 1 — Why Expand Beyond Amazon?"
+      },
+      {
+        "type": "paragraph",
+        "content": "Most new sellers make the mistake of thinking:"
+      },
+      {
+        "type": "paragraph",
+        "content": "“Amazon is enough.”"
+      },
+      {
+        "type": "paragraph",
+        "content": "And yes — Amazon is huge, powerful, and absolutely the best place to start."
+      },
+      {
+        "type": "paragraph",
+        "content": "But it is also a platform you do not own."
+      },
+      {
+        "type": "paragraph",
+        "content": "By expanding into additional channels, you gain:"
+      },
+      {
+        "type": "heading_3",
+        "content": "1️⃣ More sales, without more products"
+      },
+      {
+        "type": "paragraph",
+        "content": "You don’t need to find new items — you simply place your existing product in new marketplaces."
+      },
+      {
+        "type": "heading_3",
+        "content": "2️⃣ Lower risk"
+      },
+      {
+        "type": "paragraph",
+        "content": "If Amazon slows down or flags your listing for a day, your other channels keep selling."
+      },
+      {
+        "type": "heading_3",
+        "content": "3️⃣ Stronger brand legitimacy"
+      },
+      {
+        "type": "paragraph",
+        "content": "Buyers trust brands they see across multiple platforms."
+      },
+      {
+        "type": "heading_3",
+        "content": "4️⃣ Long-term stability"
+      },
+      {
+        "type": "paragraph",
+        "content": "The more platforms you’re on, the more your brand grows outside of Amazon’s control."
+      },
+      {
+        "type": "heading_3",
+        "content": "5️⃣ Higher business valuation"
+      },
+      {
+        "type": "paragraph",
+        "content": "Multi-channel brands are worth far more if you ever sell your business in the future."
+      },
+      {
+        "type": "heading_1",
+        "content": "🧩 Lesson 2 — The Three Expansion Channels"
+      },
+      {
+        "type": "paragraph",
+        "content": "You will learn three beginner-friendly expansion paths that are realistic, manageable, and directly aligned with how I built my empire:"
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "eBay – simple, low-effort extra sales"
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "TikTok Shop – viral potential & creator-driven sales"
+      },
+      {
+        "type": "numbered_list_item",
+        "content": "Shopify Website – your long-term brand home"
+      },
+      {
+        "type": "paragraph",
+        "content": "Let’s go through them in order."
+      },
+      {
+        "type": "heading_1",
+        "content": "🛒 Lesson 3 — Expanding to eBay (BEGINNER-FRIENDLY)"
+      },
+      {
+        "type": "quote",
+        "content": "The easiest expansion method. Great for extra organic sales and clearing Amazon stock."
+      },
+      {
+        "type": "heading_2",
+        "content": "💡 Why eBay Works So Well for Beginners"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "No ads required"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "No branding requirements"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Instant listings"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Lower competition"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Fast payouts"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Very beginner friendly"
+      },
+      {
+        "type": "paragraph",
+        "content": "eBay buyers LOVE bundles, multi-packs, and useful everyday items."
+      },
+      {
+        "type": "heading_2",
+        "content": "🧱 Step-by-Step: Launching on eBay"
+      },
+      {
+        "type": "heading_3",
+        "content": "1️⃣ Create an eBay Business Account"
+      },
+      {
+        "type": "paragraph",
+        "content": "Use your Ltd company:"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Company name"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Business bank account"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Business address"
+      },
+      {
+        "type": "heading_3",
+        "content": "2️⃣ Copy Your Listing from Amazon"
+      },
+      {
+        "type": "paragraph",
+        "content": "Reuse:"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Title"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Photos"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Description"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Bundle name"
+      },
+      {
+        "type": "paragraph",
+        "content": "Just format it slightly cleaner for eBay’s layout."
+      },
+      {
+        "type": "heading_3",
+        "content": "3️⃣ Price Your Item"
+      },
+      {
+        "type": "paragraph",
+        "content": "Remember eBay fees are usually lower than Amazon’s."
+      },
+      {
+        "type": "paragraph",
+        "content": "You can:"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Match your Amazon price"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "OR even go slightly higher (eBay customers pay more for convenience)"
+      },
+      {
+        "type": "heading_3",
+        "content": "4️⃣ Choose a Fulfilment Method"
+      },
+      {
+        "type": "paragraph",
+        "content": "You have two easy options:"
+      },
+      {
+        "type": "heading_3",
+        "content": "Option A — Self-Ship (Cheap but manual)"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Pack orders yourself"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Drop off at Royal Mail"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Higher margin"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "More work"
+      },
+      {
+        "type": "heading_3",
+        "content": "Option B — Amazon MCF (Multi-Channel Fulfilment)"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Amazon ships your eBay orders"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Delivered fast through Amazon logistics"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Extremely easy"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Slightly higher fulfilment cost"
+      },
+      {
+        "type": "paragraph",
+        "content": "Beginners should start with MCF for simplicity."
+      },
+      {
+        "type": "heading_1",
+        "content": "🎥 Lesson 4 — Expanding to TikTok Shop"
+      },
+      {
+        "type": "quote",
+        "content": "A visual platform with explosive sales potential — perfect for bundles or colourful products."
+      },
+      {
+        "type": "heading_2",
+        "content": "💡 Why TikTok Is Powerful"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Videos go viral without followers"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Creators can promote your product"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Impulse buying is high"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Younger audiences LOVE bundles"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "No advertising budget needed to start"
+      },
+      {
+        "type": "paragraph",
+        "content": "TikTok Shop is perfect for visually appealing products, satisfying demonstrations, and skincare/beauty — but still works for many niches if filmed correctly."
+      },
+      {
+        "type": "heading_2",
+        "content": "🧱 Step-by-Step: Launching on TikTok Shop"
+      },
+      {
+        "type": "heading_3",
+        "content": "1️⃣ Apply for a TikTok Shop Seller Account"
+      },
+      {
+        "type": "paragraph",
+        "content": "Use:"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Your Ltd company"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Your business documents"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Your trademark if ready"
+      },
+      {
+        "type": "paragraph",
+        "content": "Approval usually takes 1–3 days."
+      },
+      {
+        "type": "heading_3",
+        "content": "2️⃣ Add Your Product"
+      },
+      {
+        "type": "paragraph",
+        "content": "Use:"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Clear white-background photos"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Lifestyle images"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Short, punchy product title"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Simple description"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Your brand name"
+      },
+      {
+        "type": "heading_3",
+        "content": "3️⃣ Choose a Content Strategy"
+      },
+      {
+        "type": "paragraph",
+        "content": "You have three entry-level options:"
+      },
+      {
+        "type": "heading_3",
+        "content": "Option 1 — Create Your Own Videos"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Show the product in use"
+      }
+    ]
+  },
+  {
+    "id": "29b20c1c-884d-8021-9cc4-c50dc9b44a01",
+    "name": "Module 9 - Long-Term Maintenance",
+    "blocks": [
+      {
+        "type": "heading_1",
+        "content": "🔧 MODULE 9 — Long-Term Maintenance & Keeping Your Amazon Business Healthy"
+      },
+      {
+        "type": "quote",
+        "content": "You’ve launched, built a brand, scaled your listings, and expanded your channels. Now it’s time to maintain everything. This module teaches you how to keep sales consistent, avoid Amazon issues, monitor stock, and continue growing month after month."
+      },
+      {
+        "type": "heading_1",
+        "content": "🎯 Lesson 1 — What long-term maintenance actually means"
+      },
+      {
+        "type": "paragraph",
+        "content": "Most new sellers believe Amazon = passive."
+      },
+      {
+        "type": "paragraph",
+        "content": "But the reality is:"
+      },
+      {
+        "type": "quote",
+        "content": "Amazon is semi-passive IF you maintain it correctly."
+      },
+      {
+        "type": "paragraph",
+        "content": "Your job now is to:"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Keep your listing healthy"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Keep your stock flowing"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Keep your brand protected"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Keep your PPC profitable"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Keep your customers satisfied"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Keep Amazon happy"
+      },
+      {
+        "type": "paragraph",
+        "content": "Maintenance is simple — but it must be consistent."
+      },
+      {
+        "type": "heading_1",
+        "content": "🔁 Lesson 2 — Weekly Maintenance Checklist"
+      },
+      {
+        "type": "quote",
+        "content": "This is the routine that kept my store stable and growing."
+      },
+      {
+        "type": "paragraph",
+        "content": "Do these once a week:"
+      },
+      {
+        "type": "heading_3",
+        "content": "1️⃣ Check Account Health"
+      },
+      {
+        "type": "paragraph",
+        "content": "Go to:"
+      },
+      {
+        "type": "paragraph",
+        "content": "Seller Central → Performance → Account Health"
+      },
+      {
+        "type": "paragraph",
+        "content": "Look for:"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Policy warnings"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Performance notifications"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Listing suppressions"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Intellectual property complaints"
+      },
+      {
+        "type": "paragraph",
+        "content": "Fix anything QUICKLY."
+      },
+      {
+        "type": "paragraph",
+        "content": "Amazon cares more about compliance than anything else."
+      },
+      {
+        "type": "heading_3",
+        "content": "2️⃣ Check PPC performance"
+      },
+      {
+        "type": "paragraph",
+        "content": "Go to:"
+      },
+      {
+        "type": "paragraph",
+        "content": "Advertising → Campaign Manager"
+      },
+      {
+        "type": "paragraph",
+        "content": "Look at:"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "ACOS"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Click-through rate"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "High-spend keywords with no sales"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Converting search terms"
+      },
+      {
+        "type": "paragraph",
+        "content": "Pause:"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Wasting keywords"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Bad performers"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Irrelevant search terms"
+      },
+      {
+        "type": "paragraph",
+        "content": "Boost:"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Keywords that convert consistently"
+      },
+      {
+        "type": "heading_3",
+        "content": "3️⃣ Check inventory levels"
+      },
+      {
+        "type": "paragraph",
+        "content": "Go to:"
+      },
+      {
+        "type": "paragraph",
+        "content": "Inventory → FBA Inventory"
+      },
+      {
+        "type": "paragraph",
+        "content": "Check:"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Units left"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Inventory age"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Low-stock alerts"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Excess inventory notices"
+      },
+      {
+        "type": "paragraph",
+        "content": "Reorder BEFORE stockouts."
+      },
+      {
+        "type": "paragraph",
+        "content": "Stockouts kill your ranking and PPC performance."
+      },
+      {
+        "type": "heading_3",
+        "content": "4️⃣ Check customer messages / reviews"
+      },
+      {
+        "type": "paragraph",
+        "content": "Reply to any customer questions."
+      },
+      {
+        "type": "paragraph",
+        "content": "Acknowledge new reviews."
+      },
+      {
+        "type": "paragraph",
+        "content": "Identify repeat complaints."
+      },
+      {
+        "type": "paragraph",
+        "content": "Improve your bundle/packaging if needed."
+      },
+      {
+        "type": "heading_3",
+        "content": "5️⃣ Check your Shopify/eBay/TikTok orders"
+      },
+      {
+        "type": "paragraph",
+        "content": "Make sure:"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "No orders are stuck"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Shipping is fulfilled (if self-shipping)"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "MCF orders processed correctly"
+      },
+      {
+        "type": "paragraph",
+        "content": "A multi-channel brand = multi-channel responsibility."
+      },
+      {
+        "type": "heading_1",
+        "content": "📅 Lesson 3 — Monthly Maintenance Routine"
+      },
+      {
+        "type": "paragraph",
+        "content": "Once a month, you should:"
+      },
+      {
+        "type": "heading_3",
+        "content": "1️⃣ Review your profits"
+      },
+      {
+        "type": "paragraph",
+        "content": "Use:"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Seller Central Payments"
+      },
+      {
+        "type": "paragraph",
+        "content": "Check:"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "ROI"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Margin"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "FBA fees"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Ad spend"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Net payout"
+      },
+      {
+        "type": "paragraph",
+        "content": "Make sure you’re not losing money anywhere without noticing."
+      },
+      {
+        "type": "heading_3",
+        "content": "2️⃣ Update your listings (light optimisation)"
+      },
+      {
+        "type": "paragraph",
+        "content": "You can update:"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Title"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Bullets"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "A+ content"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Backend keywords"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Images"
+      },
+      {
+        "type": "paragraph",
+        "content": "Update one thing at a time."
+      },
+      {
+        "type": "paragraph",
+        "content": "Track changes."
+      },
+      {
+        "type": "paragraph",
+        "content": "Avoid huge rewrites."
+      },
+      {
+        "type": "heading_3",
+        "content": "3️⃣ Check your competitors"
+      },
+      {
+        "type": "paragraph",
+        "content": "Look at:"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Their pricing"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "New images"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "New A+ content"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "New bundles"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Their PPC behaviour (keywords they rank for)"
+      }
+    ]
+  }
+]

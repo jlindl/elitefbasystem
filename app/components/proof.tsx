@@ -14,7 +14,7 @@ const testimonials = [
     name: "Marcus T.",
     initials: "MT",
     quote:
-      "Hit my first profitable launch in week 11. What blew me away wasn't the system — it was the team. Three people in the group helped me debug a customs problem in one afternoon.",
+      "Hit my first profitable launch in week 11. What blew me away wasn't the system - it was the team. Three people in the group helped me debug a customs problem in one afternoon.",
     result: "$2,400/mo profit · 4 months in",
     months: "6",
     img: "https://placehold.co/640x640/F4F2EC/0A0A0A/png?text=Screenshot",
@@ -23,36 +23,9 @@ const testimonials = [
     name: "Elena R.",
     initials: "ER",
     quote:
-      "I came in skeptical. The thing that won me over was Jakub showing me his own losses — actual screenshots, actual SKUs that flopped. Honesty I'd never seen from anyone selling FBA.",
+      "I came in skeptical. The thing that won me over was Jakub showing me his own losses - actual screenshots, actual SKUs that flopped. Honesty I'd never seen from anyone selling FBA.",
     result: "$8,100/mo profit · 11 months in",
     months: "12",
-    img: "https://placehold.co/640x640/F4F2EC/0A0A0A/png?text=Screenshot",
-  },
-  {
-    name: "Daniel O.",
-    initials: "DO",
-    quote:
-      "We had a meetup in Lisbon last spring. I went home with a supplier contact that has saved me about 18% on landed cost. That alone paid for the program five times over.",
-    result: "$12,000/mo profit · 14 months in",
-    months: "14",
-    img: "https://placehold.co/640x640/F4F2EC/0A0A0A/png?text=Screenshot",
-  },
-  {
-    name: "Priya N.",
-    initials: "PN",
-    quote:
-      "I texted Jakub at 9pm on a Sunday because a supplier was bouncing my MOQ. He replied in twelve minutes. That's the part no other course tells you about.",
-    result: "$3,800/mo profit · 7 months in",
-    months: "9",
-    img: "https://placehold.co/640x640/F4F2EC/0A0A0A/png?text=Screenshot",
-  },
-  {
-    name: "Tom W.",
-    initials: "TW",
-    quote:
-      "What I didn't expect was friendship. I joined for the system. I stayed because for the first time, I have people who actually understand what I do all day.",
-    result: "$5,500/mo profit · 9 months in",
-    months: "10",
     img: "https://placehold.co/640x640/F4F2EC/0A0A0A/png?text=Screenshot",
   },
 ];
@@ -73,7 +46,7 @@ export function Proof() {
           <Reveal delay={160}>
             <p className="mt-5 text-[clamp(1.05rem,1.4vw,1.25rem)] leading-[1.55] text-ink-muted">
               Modest numbers, real timelines, real people. The kind of results
-              you can actually replicate &mdash; not the kind you put on a
+              you can actually replicate - not the kind you put on a
               Lamborghini.
             </p>
           </Reveal>

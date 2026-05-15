@@ -8,7 +8,7 @@ const links = [
   { href: "/my-story", label: "My Story" },
   { href: "/#mentorship", label: "Mentorship" },
   { href: "/#community", label: "Community" },
-  { href: "/#results", label: "Results" },
+  { href: "/results", label: "Results" },
   { href: "/#about", label: "About" },
   { href: "/#faq", label: "FAQ" },
 ];
@@ -79,13 +79,7 @@ export function Nav() {
           >
             Log in
           </button>
-          <button
-            type="button"
-            onClick={() => openAuth("signup")}
-            className="hidden md:inline-flex h-10 items-center rounded-full border border-line bg-surface px-4 text-[0.9rem] font-medium text-ink hover:-translate-y-px hover:border-ink/20 transition-all duration-200"
-          >
-            Sign up
-          </button>
+
           <a
             href="/#apply"
             className="inline-flex h-10 items-center rounded-full bg-accent px-5 text-[0.9rem] font-medium text-white shadow-[0_1px_2px_rgba(10,10,10,0.06)] transition-all duration-200 hover:-translate-y-px hover:bg-accent-deep hover:shadow-[0_4px_14px_rgba(255,107,26,0.35)] ml-1 md:ml-2"
@@ -145,16 +139,7 @@ export function Nav() {
             >
               Apply Now
             </a>
-            <button
-              type="button"
-              onClick={() => {
-                setOpen(false);
-                openAuth("signup");
-              }}
-              className="inline-flex h-12 items-center justify-center rounded-full border border-line bg-surface px-5 text-base font-medium text-ink"
-            >
-              Sign up
-            </button>
+
             <button
               type="button"
               onClick={() => {

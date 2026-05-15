@@ -2,13 +2,14 @@ import { Check } from "./icons";
 import { Reveal } from "./reveal";
 
 const includes = [
-  "The full Elite FBA curriculum (6 modules)",
+  "Full access to the Elite FBA course",
+  "9 learning modules & video walkthroughs",
   "Weekly 1-to-1 calls with Jakub",
-  "Full-time direct messaging support",
-  "Access to the private team community",
-  "In-person meetups & events",
+  "Direct messaging - full-time support",
+  "Live launches & listing teardowns",
+  "Every SOP, script & template I use",
+  "Private team community + meetups",
   "Lifetime updates as Amazon evolves",
-  "Real screenshots, real SOPs, real templates",
 ];
 
 export function Pricing() {
@@ -30,7 +31,7 @@ export function Pricing() {
           <Reveal delay={160}>
             <p className="mt-5 text-[clamp(1.05rem,1.4vw,1.25rem)] leading-[1.55] text-ink-muted">
               Because mentorship is real, I can only take a small number of
-              students at a time. Apply below &mdash; if it&rsquo;s a fit,
+              students at a time. Apply below - if it&rsquo;s a fit,
               we&rsquo;ll talk.
             </p>
           </Reveal>
@@ -53,11 +54,11 @@ export function Pricing() {
 
               <div className="mt-8 flex items-baseline gap-2">
                 <span className="font-display text-[3rem] md:text-[3.5rem] font-semibold tracking-[-0.025em] leading-none">
-                  $[X,XXX]
+                  £600
                 </span>
               </div>
               <p className="mt-2 text-[0.85rem] text-ink-subtle">
-                Pay in full or 3 installments
+                or 3 × £200 · interest-free
               </p>
 
               <ul className="mt-8 space-y-3">
@@ -81,7 +82,7 @@ export function Pricing() {
               </a>
 
               <p className="mt-5 text-center font-mono text-[0.7rem] tracking-[0.1em] uppercase text-ink-subtle">
-                Application required · 30-day money-back guarantee
+                Application required
               </p>
             </div>
           </div>

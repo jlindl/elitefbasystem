@@ -1,6 +1,7 @@
 "use client";
 
 import { useActionState, useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { useFormStatus } from "react-dom";
 import {
   signInWithMagicLink,
@@ -29,6 +30,11 @@ export function SignInModal({
 }) {
   const [tab, setTab] = useState<AuthTab>(initialTab);
   const [useMagic, setUseMagic] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // sync external initialTab when modal opens
   useEffect(() => {
@@ -52,14 +58,14 @@ export function SignInModal({
     };
   }, [open, onClose]);
 
-  if (!open) return null;
+  if (!open || !mounted) return null;
 
-  return (
+  return createPortal(
     <div
       role="dialog"
       aria-modal="true"
       aria-label={tab === "login" ? "Log in" : "Sign up"}
-      className="fixed inset-0 z-[60] flex items-end md:items-center justify-center"
+      className="fixed inset-0 z-[60] flex items-center justify-center"
     >
       <button
         type="button"
@@ -78,31 +84,7 @@ export function SignInModal({
           <X size={16} />
         </button>
 
-        {/* tabs */}
-        <div
-          role="tablist"
-          aria-label="Authentication"
-          className="inline-flex p-1 rounded-full bg-surface-alt"
-        >
-          <TabButton
-            active={tab === "login"}
-            onClick={() => {
-              setTab("login");
-              setUseMagic(false);
-            }}
-          >
-            Log in
-          </TabButton>
-          <TabButton
-            active={tab === "signup"}
-            onClick={() => {
-              setTab("signup");
-              setUseMagic(false);
-            }}
-          >
-            Sign up
-          </TabButton>
-        </div>
+
 
         <div className="mt-6">
           {tab === "login" && !useMagic && (
@@ -122,7 +104,8 @@ export function SignInModal({
           )}
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }
 
@@ -211,22 +194,20 @@ function LoginPasswordForm({
         <p className="mt-4 text-[0.85rem] text-accent-deep">{state.message}</p>
       )}
 
-      <div className="mt-5 flex items-center justify-between text-[0.8rem] text-ink-muted">
+      <div className="mt-5 flex items-center justify-between">
         <button
           type="button"
           onClick={onSwitchToMagic}
-          className="underline decoration-line underline-offset-4 hover:text-ink hover:decoration-ink/40 transition-colors"
+          className="text-[0.8rem] text-ink-muted underline decoration-line underline-offset-4 hover:text-ink hover:decoration-ink/40 transition-colors"
         >
           Email me a magic link
         </button>
-        <button
-          type="button"
-          onClick={onSwitchToSignup}
-          className="hover:text-ink transition-colors"
+        <a
+          href="/#apply"
+          className="inline-flex h-9 items-center rounded-full bg-accent px-4 text-[0.85rem] font-medium text-white shadow-[0_1px_2px_rgba(10,10,10,0.06)] transition-all duration-200 hover:-translate-y-px hover:bg-accent-deep hover:shadow-[0_4px_14px_rgba(255,107,26,0.35)]"
         >
-          New here?{" "}
-          <span className="text-ink font-medium">Create account</span>
-        </button>
+          Apply Now
+        </a>
       </div>
     </>
   );
@@ -343,7 +324,7 @@ function MagicLinkForm({
         Email me a link.
       </h2>
       <p className="mt-2 text-[0.95rem] text-ink-muted leading-[1.55]">
-        No password &mdash; we&rsquo;ll send you a one-tap sign-in link.
+        No password - we&rsquo;ll send you a one-tap sign-in link.
       </p>
 
       <form action={formAction} className="mt-6 space-y-3">

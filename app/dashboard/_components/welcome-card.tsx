@@ -1,4 +1,4 @@
-import { ArrowRight } from "@/app/components/icons";
+﻿import { ArrowRight } from "@/app/components/icons";
 import { progress, student, upNext } from "../_lib/mock-data";
 import { Card } from "./ui/card";
 import { ProgressBar } from "./ui/progress-bar";
@@ -48,7 +48,7 @@ export function WelcomeCard() {
             />
           </a>
           <p className="mt-3 font-mono text-[0.7rem] tracking-[0.08em] uppercase text-ink-subtle text-center md:text-left">
-            Module {next.moduleNumber} · Lesson {next.lessonNumber} —{" "}
+            Module {next.moduleNumber} · Lesson {next.lessonNumber} -{" "}
             {next.lessonTitle}
           </p>
         </div>

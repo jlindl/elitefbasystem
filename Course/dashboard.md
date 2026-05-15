@@ -1,4 +1,4 @@
-# Claude Code Build Prompt: PoundMart FBA Member Dashboard
+﻿# Claude Code Build Prompt: PoundMart FBA Member Dashboard
 
 > **Read this entire file before you start writing code.** It defines the scope, the design system, the component structure, and the build order. Stick to the spec. Ask me before deviating.
 
@@ -6,7 +6,7 @@
 
 ## What you're building
 
-A single, focused **member dashboard** screen for **PoundMart FBA** — an Amazon FBA coaching course run by Jakub. This is the page a student sees the moment they log in. Just this one screen. Not the marketing site, not the lesson view, not the modules index — those are separate builds.
+A single, focused **member dashboard** screen for **PoundMart FBA** - an Amazon FBA coaching course run by Jakub. This is the page a student sees the moment they log in. Just this one screen. Not the marketing site, not the lesson view, not the modules index - those are separate builds.
 
 The dashboard's job is simple: tell the student where they are in the course, what to do next, and give them quick access to their tools, their mentor, and their team. Clean. Calm. Navigable.
 
@@ -74,19 +74,19 @@ In `app/globals.css`, define these CSS custom properties and use them via Tailwi
   --color-line: #E8E5DD;
   --color-line-soft: #F0EDE5;
 
-  /* Accent — orange, used VERY sparingly */
+  /* Accent - orange, used VERY sparingly */
   --color-accent: #FF6B1A;
   --color-accent-deep: #E55400;
   --color-accent-soft: #FFF1E8;
 
-  /* Success — only for completed states */
+  /* Success - only for completed states */
   --color-success: #1F7A4D;
   --color-success-soft: #E8F2EC;
 }
 ```
 
 **Strict orange usage rules:**
-- The "Continue where you left off" primary CTA — that's it for filled buttons.
+- The "Continue where you left off" primary CTA - that's it for filled buttons.
 - The current-progress bar fill.
 - The active sidebar item's left border accent (2px wide).
 - Small accents in user avatar / initials chip.
@@ -120,13 +120,13 @@ In `app/globals.css`, define these CSS custom properties and use them via Tailwi
 - Hover transitions: 150ms ease.
 - Card hover: border color shifts to `--color-ink-subtle`. No transform, no shadow change.
 - First-load reveal: cards fade-in from 8px below their final position, 200ms duration, 60ms stagger. Once. Not on re-renders.
-- Honor `prefers-reduced-motion` everywhere — disable transforms, keep opacity.
+- Honor `prefers-reduced-motion` everywhere - disable transforms, keep opacity.
 
 ---
 
 ## Mock data shape
 
-In `lib/mockData.ts`, export this. Use TypeScript types. The dashboard reads from here only — no API calls.
+In `lib/mockData.ts`, export this. Use TypeScript types. The dashboard reads from here only - no API calls.
 
 ```typescript
 export const student = {
@@ -238,26 +238,26 @@ export const teamMoments = [
 
 ## Component-by-component build order
 
-Build in this order. Each component is small and focused. Don't try to build the whole thing in one shot — get each piece right.
+Build in this order. Each component is small and focused. Don't try to build the whole thing in one shot - get each piece right.
 
 ### Step 1: Set up the project shell
 
 1. Initialize Next.js, install deps, configure Tailwind v4 + fonts.
-2. Build `app/layout.tsx` — apply fonts, set body to `bg-[var(--color-bg)] text-[var(--color-ink)]`.
-3. Build `app/page.tsx` — simple redirect to `/dashboard`.
+2. Build `app/layout.tsx` - apply fonts, set body to `bg-[var(--color-bg)] text-[var(--color-ink)]`.
+3. Build `app/page.tsx` - simple redirect to `/dashboard`.
 4. Define design tokens in `globals.css`.
 5. Verify the dev server runs and the background is the warm off-white.
 
 ### Step 2: Build the AppShell + Sidebar
 
-`components/layout/AppShell.tsx` — wraps the sidebar and the main content. Flex layout: sidebar left, main content right.
+`components/layout/AppShell.tsx` - wraps the sidebar and the main content. Flex layout: sidebar left, main content right.
 
-`components/layout/Sidebar.tsx` — the persistent left navigation. Build this carefully:
+`components/layout/Sidebar.tsx` - the persistent left navigation. Build this carefully:
 
-**Top:** `PoundMart.` wordmark. Heading font, weight 600. A small orange dot after the period (not the period itself — an extra `<span>` styled as an orange dot, 6px diameter). 24px padding around the wordmark area. Hairline divider below.
+**Top:** `PoundMart.` wordmark. Heading font, weight 600. A small orange dot after the period (not the period itself - an extra `<span>` styled as an orange dot, 6px diameter). 24px padding around the wordmark area. Hairline divider below.
 
 **Primary nav** (each item: 36px tall, 14px text, Lucide icon left at 18px, label right):
-- Dashboard (icon: `LayoutGrid`) — **active state**
+- Dashboard (icon: `LayoutGrid`) - **active state**
 - Modules (icon: `BookOpen`)
 - My Tools (icon: `Wrench`)
 - Mentorship (icon: `MessageCircle`)
@@ -278,17 +278,17 @@ Active item styling: `bg-[var(--color-surface-alt)]`, text in `--color-ink`, plu
 - Small `ChevronUp` icon for menu (non-functional for now).
 - Hairline divider above the user card.
 
-For the only "active" route (Dashboard), use a hardcoded `pathname === '/dashboard'` check via `usePathname()`. The other nav items are non-functional links for now — `href="#"`.
+For the only "active" route (Dashboard), use a hardcoded `pathname === '/dashboard'` check via `usePathname()`. The other nav items are non-functional links for now - `href="#"`.
 
-**Mobile behavior:** Below 768px, sidebar hides off-screen by default. Add a hamburger button that toggles a `translateX` slide-in. Add a backdrop overlay when open. Keep this simple — useState in the AppShell.
+**Mobile behavior:** Below 768px, sidebar hides off-screen by default. Add a hamburger button that toggles a `translateX` slide-in. Add a backdrop overlay when open. Keep this simple - useState in the AppShell.
 
 ### Step 3: Build the reusable UI primitives
 
-`components/ui/Card.tsx` — a basic white card. Props: `children`, `className?`. Default: `bg-[var(--color-surface)] border border-[var(--color-line)] rounded-2xl p-6`.
+`components/ui/Card.tsx` - a basic white card. Props: `children`, `className?`. Default: `bg-[var(--color-surface)] border border-[var(--color-line)] rounded-2xl p-6`.
 
-`components/ui/ProgressBar.tsx` — a thin horizontal progress bar. Props: `percent`, `className?`. 4px tall, rounded, `--color-line` track, `--color-accent` fill, fill animates from 0 to target on first mount over 600ms.
+`components/ui/ProgressBar.tsx` - a thin horizontal progress bar. Props: `percent`, `className?`. 4px tall, rounded, `--color-line` track, `--color-accent` fill, fill animates from 0 to target on first mount over 600ms.
 
-`components/ui/StatusPill.tsx` — a small uppercase-mono pill. Props: `status: 'locked' | 'start' | 'in-progress' | 'complete'`. Each status has its own background + text combo:
+`components/ui/StatusPill.tsx` - a small uppercase-mono pill. Props: `status: 'locked' | 'start' | 'in-progress' | 'complete'`. Each status has its own background + text combo:
 - locked: `--color-surface-alt` bg, `--color-ink-subtle` text, label `LOCKED`
 - start: `--color-surface-alt` bg, `--color-ink` text, label `START`
 - in-progress: `--color-accent-soft` bg, `--color-accent` text, label `IN PROGRESS`
@@ -306,15 +306,15 @@ A single horizontal card spanning the full content width.
 
 **Left column:**
 - Tiny mono label: `WELCOME BACK` in `--color-ink-subtle`.
-- Heading: `Hi, {firstName}.` — 1.875rem, weight 500.
-- Context line: `You're 4 modules in. Let's keep building.` — body color `--color-ink-muted`.
+- Heading: `Hi, {firstName}.` - 1.875rem, weight 500.
+- Context line: `You're 4 modules in. Let's keep building.` - body color `--color-ink-muted`.
 - Below context, a horizontal cluster: `<ProgressBar percent={44} />` (240px wide) sitting next to a mono caps label `4 / 9 MODULES · 44% COMPLETE`. 12px gap between bar and label. Vertical alignment center.
 
 **Right column:**
-- A primary CTA button — full-width-of-this-column.
+- A primary CTA button - full-width-of-this-column.
 - Background: `--color-accent`. Text: white. Padding: 16px 24px. Rounded 12px. Font weight 500.
 - Label: `Continue where you left off →` (the arrow can be a Lucide `ArrowRight` icon at 16px).
-- Below the button, a small line in `--color-ink-subtle`, mono small caps: `MODULE 4 · LESSON 2 — WRITING YOUR BULLET POINTS`.
+- Below the button, a small line in `--color-ink-subtle`, mono small caps: `MODULE 4 · LESSON 2 - WRITING YOUR BULLET POINTS`.
 - Hover: background shifts to `--color-accent-deep`, transition 150ms.
 
 **Mobile layout:** Stack vertically. Heading first, progress next, CTA full-width at the bottom.
@@ -348,7 +348,7 @@ A `Card` with two stacked sections separated by a hairline divider.
 
 **Bottom half:**
 - Mono small caps subtitle: `DIRECT MESSAGE`.
-- A small message preview block: italic muted text — `"Last message from Jakub: Sent through your draft listing. Will review by Wed 👍"`. Max 2 lines, ellipsize after.
+- A small message preview block: italic muted text - `"Last message from Jakub: Sent through your draft listing. Will review by Wed 👍"`. Max 2 lines, ellipsize after.
 - Below, a primary orange ghost button: orange text (`--color-accent`), no fill, `Open chat →`. Hover shifts text to `--color-accent-deep`.
 
 #### Two-column row container
@@ -375,7 +375,7 @@ A section with a header and 3 tool cards.
 
 **Three tool cards in a row** (1 column mobile, 3 column desktop, gap 16px). Each tool card uses the `Card` primitive:
 
-- **Top:** Tool icon — 32px square, `bg-[var(--color-surface-alt)]`, rounded 8px, Lucide icon (24px), `--color-ink` color.
+- **Top:** Tool icon - 32px square, `bg-[var(--color-surface-alt)]`, rounded 8px, Lucide icon (24px), `--color-ink` color.
 - 12px gap.
 - **Tool name:** body weight 500, 1rem.
 - **Description:** one sentence, `--color-ink-muted`, 0.875rem.
@@ -414,7 +414,7 @@ At the bottom of `app/dashboard/page.tsx`, after all sections:
 
 ### Step 5: Assemble the dashboard page
 
-`app/dashboard/page.tsx` — wraps everything in `AppShell`, then renders sections in order:
+`app/dashboard/page.tsx` - wraps everything in `AppShell`, then renders sections in order:
 
 ```tsx
 <AppShell>
@@ -431,7 +431,7 @@ At the bottom of `app/dashboard/page.tsx`, after all sections:
 </AppShell>
 ```
 
-(Adjust outer padding for mobile — `px-4 md:px-10`.)
+(Adjust outer padding for mobile - `px-4 md:px-10`.)
 
 ---
 
@@ -441,16 +441,16 @@ At the bottom of `app/dashboard/page.tsx`, after all sections:
 - All interactive elements have a visible focus state: `focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:outline-none`.
 - The sidebar uses `<nav>` and `<ul>` / `<li>`.
 - The main content uses `<main>`.
-- All progress states have text equivalents (mono labels) — never communicated through color alone.
-- WCAG AA contrast: ink on bg ≥ 4.5:1 (it is — verify with a tool).
-- `prefers-reduced-motion` honored — wrap all transforms in a media query that disables them when the user has reduced motion enabled.
+- All progress states have text equivalents (mono labels) - never communicated through color alone.
+- WCAG AA contrast: ink on bg ≥ 4.5:1 (it is - verify with a tool).
+- `prefers-reduced-motion` honored - wrap all transforms in a media query that disables them when the user has reduced motion enabled.
 
 ---
 
 ## What NOT to do
 
 - Don't add a hero banner, marketing testimonials, or "join the community!" CTAs. The student is already in.
-- Don't use orange as a decorative color — only for the primary CTA, the progress fill, the active sidebar accent, and the user avatar accent.
+- Don't use orange as a decorative color - only for the primary CTA, the progress fill, the active sidebar accent, and the user avatar accent.
 - Don't add icons to every card just to fill space. The dashboard is intentionally restrained.
 - Don't add scroll-linked animations or parallax. This is a workspace, not a marketing page.
 - Don't make the cards lift or scale on hover. Just a subtle border color shift.

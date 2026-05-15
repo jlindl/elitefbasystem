@@ -1,4 +1,4 @@
-import { teamMoments, type TeamMoment } from "../_lib/mock-data";
+﻿import { teamMoments, type TeamMoment } from "../_lib/mock-data";
 import { Card } from "./ui/card";
 
 export function TeamPanel() {

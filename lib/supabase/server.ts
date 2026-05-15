@@ -1,4 +1,4 @@
-import { createServerClient } from "@supabase/ssr";
+﻿import { createServerClient } from "@supabase/ssr";
 import { cookies } from "next/headers";
 
 export async function createSupabaseServerClient() {
@@ -24,7 +24,7 @@ export async function createSupabaseServerClient() {
             cookieStore.set(name, value, options);
           }
         } catch {
-          // Called from a Server Component — ignore. Auth-mutating calls
+          // Called from a Server Component - ignore. Auth-mutating calls
           // happen inside Server Actions / Route Handlers where set works.
         }
       },

@@ -22,9 +22,9 @@ type NavItem = {
 
 const primary: NavItem[] = [
   { label: "Dashboard", href: "/dashboard", Icon: LayoutGrid },
-  { label: "Modules", href: "#", Icon: BookOpen },
+  { label: "Modules", href: "/dashboard/modules", Icon: BookOpen },
   { label: "My Tools", href: "#", Icon: Wrench },
-  { label: "Mentorship", href: "#", Icon: MessageCircle },
+  { label: "AI Partner", href: "/dashboard#ai-partner", Icon: MessageCircle },
   { label: "The Team", href: "#", Icon: Users },
   { label: "Resources", href: "#", Icon: Library },
 ];

@@ -1,4 +1,4 @@
-import { ArrowRight } from "./icons";
+﻿import { ArrowRight } from "./icons";
 import { Reveal } from "./reveal";
 
 export function FinalCta() {
@@ -15,7 +15,7 @@ export function FinalCta() {
             <h2 className="mt-7 font-display font-medium tracking-[-0.025em] leading-[1.02] text-[clamp(2.5rem,7vw,6rem)]">
               Stop watching FBA on YouTube.
               <br />
-              <span className="text-accent">Start building it &mdash; with a team.</span>
+              <span className="text-accent">Start building it - with a team.</span>
             </h2>
           </Reveal>
           <Reveal delay={200}>

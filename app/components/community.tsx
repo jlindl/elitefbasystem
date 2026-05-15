@@ -5,7 +5,7 @@ const items = [
   "Curated, small group",
   "Real friendships, not networking",
   "Suppliers, wins, and losses shared openly",
-  "In-person meetups (not just Discord)",
+  "In-person meetups (not just online)",
 ];
 
 export function Community() {
@@ -27,7 +27,7 @@ export function Community() {
           <Reveal delay={160}>
             <p className="mt-5 text-[clamp(1.05rem,1.4vw,1.25rem)] leading-[1.55] text-ink-muted">
               The hardest part of building an Amazon business isn&rsquo;t the
-              work. It&rsquo;s doing it alone &mdash; at your laptop, at
+              work. It&rsquo;s doing it alone - at your laptop, at
               midnight, wondering if anyone else is figuring this out too. So
               we built a team.
             </p>
@@ -35,27 +35,65 @@ export function Community() {
         </div>
 
         <div className="mt-16 grid md:grid-cols-12 gap-10">
-          <div className="md:col-span-7 space-y-4">
-            <Reveal>
-              <MessageCard
-                avatar="MK"
-                name="Maya K."
-                time="Mon · 3:42 PM"
-                body="Just hit my first $5K month 🎉 honestly couldn't have done it without this group. Special thanks to whoever recommended that Yiwu rep three weeks ago."
-              />
-            </Reveal>
-            <Reveal delay={120}>
-              <PhotoCard label="[IMAGE: Community meetup, London 2026]" />
-            </Reveal>
-            <Reveal delay={240}>
-              <MessageCard
-                avatar="JR"
-                name="Jordan R."
-                time="Tue · 11:08 AM"
-                body="Anyone got experience with this supplier in Yiwu? Got a quote that feels off and I'd rather not eat the MOQ if it's a red flag."
-                replies={4}
-              />
-            </Reveal>
+          <div className="md:col-span-7">
+            <div className="grid sm:grid-cols-2 gap-5">
+              <Reveal delay={100}>
+                <div className="h-full rounded-2xl bg-surface hairline p-8 shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-lift)]">
+                  <div className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-accent-soft text-accent mb-6">
+                    <Check size={20} />
+                  </div>
+                  <h4 className="font-display text-[1.25rem] font-semibold tracking-[-0.015em] mb-3">
+                    No Gatekeeping
+                  </h4>
+                  <p className="text-[0.95rem] text-ink-muted leading-[1.6]">
+                    If a supplier is good, the team knows. We share contact
+                    info, negotiation threads, and pricing openly.
+                  </p>
+                </div>
+              </Reveal>
+              <Reveal delay={200}>
+                <div className="h-full rounded-2xl bg-surface hairline p-8 shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-lift)]">
+                  <div className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-accent-soft text-accent mb-6">
+                    <Check size={20} />
+                  </div>
+                  <h4 className="font-display text-[1.25rem] font-semibold tracking-[-0.015em] mb-3">
+                    Real-Time Support
+                  </h4>
+                  <p className="text-[0.95rem] text-ink-muted leading-[1.6]">
+                    Launch day jitters or customs hold-ups? The group is active
+                    daily to troubleshoot problems in minutes, not days.
+                  </p>
+                </div>
+              </Reveal>
+              <Reveal delay={300}>
+                <div className="h-full rounded-2xl bg-surface hairline p-8 shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-lift)]">
+                  <div className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-accent-soft text-accent mb-6">
+                    <Check size={20} />
+                  </div>
+                  <h4 className="font-display text-[1.25rem] font-semibold tracking-[-0.015em] mb-3">
+                    Shared Wins
+                  </h4>
+                  <p className="text-[0.95rem] text-ink-muted leading-[1.6]">
+                    We celebrate every milestone - from your first unit sold to
+                    your first £10k month. Business is better together.
+                  </p>
+                </div>
+              </Reveal>
+              <Reveal delay={400}>
+                <div className="h-full rounded-2xl bg-surface hairline p-8 shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-lift)]">
+                  <div className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-accent-soft text-accent mb-6">
+                    <Check size={20} />
+                  </div>
+                  <h4 className="font-display text-[1.25rem] font-semibold tracking-[-0.015em] mb-3">
+                    Direct Feedback
+                  </h4>
+                  <p className="text-[0.95rem] text-ink-muted leading-[1.6]">
+                    Get honest eyes on your product candidates and listings
+                    before you spend a penny on inventory.
+                  </p>
+                </div>
+              </Reveal>
+            </div>
           </div>
 
           <div className="md:col-span-5">
@@ -63,7 +101,7 @@ export function Community() {
               <div className="space-y-5 text-[1rem] md:text-[1.05rem] leading-[1.7] text-ink-muted">
                 <p>
                   Every member is hand-picked. We keep the group small on
-                  purpose &mdash; small enough that I know everyone&rsquo;s
+                  purpose - small enough that I know everyone&rsquo;s
                   name, what they&rsquo;re selling, and where they&rsquo;re
                   stuck. There&rsquo;s no pyramid, no upsells, no
                   &ldquo;tiers.&rdquo;
@@ -71,8 +109,8 @@ export function Community() {
                 <p>
                   What you actually get: people who&rsquo;ll text you when your
                   launch goes live, share suppliers without gatekeeping, and
-                  pick you up when a product flops. We meet up in person too
-                  &mdash; because the best stuff happens off Discord.
+                  pick you up when a product flops. We meet up occasionally in
+                  person too - because the best stuff happens offline.
                 </p>
               </div>
             </Reveal>
@@ -98,75 +136,11 @@ export function Community() {
               &ldquo;I joined for the system. I stayed for the team.&rdquo;
             </blockquote>
             <figcaption className="mt-4 label-mono">
-              &mdash; Placeholder testimonial, to be replaced with a real one
+              - Placeholder testimonial, to be replaced with a real one
             </figcaption>
           </figure>
         </Reveal>
       </div>
     </section>
-  );
-}
-
-function MessageCard({
-  avatar,
-  name,
-  time,
-  body,
-  replies,
-}: {
-  avatar: string;
-  name: string;
-  time: string;
-  body: string;
-  replies?: number;
-}) {
-  return (
-    <article className="rounded-2xl bg-surface hairline p-5 md:p-6 shadow-[var(--shadow-soft)]">
-      <header className="flex items-center gap-3">
-        <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-ink text-white text-[0.7rem] font-medium">
-          {avatar}
-        </span>
-        <div className="flex flex-col">
-          <span className="text-[0.875rem] font-medium text-ink">{name}</span>
-          <span className="font-mono text-[0.7rem] tracking-wide text-ink-subtle">
-            {time}
-          </span>
-        </div>
-      </header>
-      <p className="mt-4 text-[0.975rem] leading-[1.6] text-ink">{body}</p>
-      {typeof replies === "number" && (
-        <p className="mt-4 text-[0.8rem] text-ink-muted">
-          <span className="font-medium text-accent">↳ {replies} replies</span>
-          <span className="mx-2 text-line">·</span>
-          <span>Last reply 18m ago</span>
-        </p>
-      )}
-    </article>
-  );
-}
-
-function PhotoCard({ label }: { label: string }) {
-  return (
-    <article className="rounded-2xl overflow-hidden hairline">
-      <div
-        className="relative aspect-[16/9]"
-        style={{
-          background:
-            "linear-gradient(135deg, #efe7d7 0%, #d8cdb6 50%, #b8ad95 100%)",
-        }}
-      >
-        <div
-          aria-hidden
-          className="absolute inset-0 opacity-[0.07]"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 60% 30%, rgba(0,0,0,0.25), transparent 60%)",
-          }}
-        />
-        <span className="absolute bottom-4 left-4 inline-flex items-center rounded-full bg-black/60 px-3 py-1 text-[0.7rem] font-medium tracking-wide text-white">
-          {label}
-        </span>
-      </div>
-    </article>
   );
 }

@@ -1,3 +1,6 @@
+"use client";
+
+import { useState, useRef } from "react";
 import { ArrowDown, Play } from "./icons";
 import { Reveal } from "./reveal";
 
@@ -33,8 +36,8 @@ export function Hero() {
         <div className="text-center max-w-[920px] mx-auto">
           <Reveal>
             <p className="label-mono inline-flex items-center gap-2 mb-7">
-              <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent" />
-              From a real seller
+              <span className="inline-block h-1.5 w-1.5 rounded-full bg-emerald-500" />
+              Now accepting new students
             </p>
           </Reveal>
 
@@ -52,7 +55,7 @@ export function Hero() {
             <p className="mt-7 mx-auto max-w-[640px] text-[clamp(1.05rem,1.5vw,1.25rem)] leading-[1.55] text-ink-muted">
               I&rsquo;m Jakub. I sell on Amazon full-time, and I built a system
               from scratch to do it. Now I&rsquo;m hand-picking a small group of
-              sellers to mentor 1-to-1 &mdash; and to build a team with.
+              sellers to mentor 1 to 1 - and to build a team with.
             </p>
           </Reveal>
 
@@ -90,55 +93,102 @@ export function Hero() {
 }
 
 function VideoFrame() {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [hasStarted, setHasStarted] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const handlePlay = () => {
+    if (videoRef.current) {
+      videoRef.current.play();
+      setIsPlaying(true);
+      setHasStarted(true);
+    }
+  };
+
   return (
     <div id="video" className="mt-16 md:mt-24 mx-auto max-w-[1080px]">
-      <div className="relative rounded-2xl overflow-hidden shadow-[var(--shadow-lift)] hairline">
-        {/* placeholder gradient surface */}
-        <div
-          className="relative aspect-[16/9]"
-          style={{
-            background:
-              "radial-gradient(120% 80% at 30% 25%, #f6efe3 0%, #e9e2d0 50%, #d8d0bc 100%)",
-          }}
-        >
-          {/* subtle noise/grain */}
-          <div
-            aria-hidden
-            className="absolute inset-0 opacity-[0.07] mix-blend-multiply"
-            style={{
-              backgroundImage:
-                "radial-gradient(circle at 50% 40%, rgba(0,0,0,0.18), transparent 60%)",
+      <div className="relative rounded-2xl overflow-hidden shadow-[var(--shadow-lift)] hairline bg-surface">
+        <div className="relative aspect-[16/9] bg-black">
+          <video
+            ref={videoRef}
+            src="/FBA%20main%20video.mov"
+            poster="/Thumbnail%20final.png"
+            className="w-full h-full object-cover"
+            controls={hasStarted}
+            playsInline
+            onPlay={() => {
+              setIsPlaying(true);
+              setHasStarted(true);
             }}
-          />
-          {/* light highlight */}
-          <div
-            aria-hidden
-            className="absolute -top-1/4 left-1/4 h-1/2 w-1/2 rounded-full"
-            style={{
-              background:
-                "radial-gradient(closest-side, rgba(255,255,255,0.55), transparent)",
+            onPause={() => setIsPlaying(false)}
+            onEnded={() => {
+              setIsPlaying(false);
+              setHasStarted(false);
             }}
           />
 
-          {/* play button */}
-          <button
-            type="button"
-            aria-label="Play Jakub's intro video"
-            className="group absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 inline-flex h-16 w-16 md:h-20 md:w-20 items-center justify-center rounded-full bg-white play-ring transition-transform duration-300 hover:scale-[1.06]"
-          >
-            <span
-              aria-hidden
-              className="absolute inset-0 rounded-full ring-1 ring-black/5"
-            />
-            <Play size={26} className="text-ink translate-x-[2px]" />
-          </button>
+          {!hasStarted && (
+            <div className="absolute inset-0">
+              {/* thumbnail preview */}
+              <div className="absolute inset-0 pointer-events-none z-0">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/Thumbnail%20final.png"
+                  alt="Video thumbnail"
+                  className="w-full h-full object-cover"
+                />
+                <div
+                  className="absolute inset-0"
+                  style={{
+                    background:
+                      "radial-gradient(circle at 50% 50%, transparent 20%, rgba(10,10,10,0.4) 100%)",
+                  }}
+                />
+              </div>
 
-          {/* video label */}
-          <div className="absolute bottom-4 left-4">
-            <span className="inline-flex items-center rounded-full bg-black/60 px-3 py-1 text-[0.7rem] font-medium tracking-wide text-white">
-              [VIDEO: Jakub intro &mdash; to be filmed]
-            </span>
-          </div>
+              {/* subtle noise/grain */}
+              <div
+                aria-hidden
+                className="absolute inset-0 opacity-[0.07] mix-blend-multiply pointer-events-none z-0"
+                style={{
+                  backgroundImage:
+                    "radial-gradient(circle at 50% 40%, rgba(0,0,0,0.18), transparent 60%)",
+                }}
+              />
+              {/* light highlight */}
+              <div
+                aria-hidden
+                className="absolute -top-1/4 left-1/4 h-1/2 w-1/2 rounded-full pointer-events-none z-0"
+                style={{
+                  background:
+                    "radial-gradient(closest-side, rgba(255,255,255,0.55), transparent)",
+                }}
+              />
+
+              {/* play button overlay */}
+              <div className="absolute inset-0 flex items-center justify-center z-10">
+                <button
+                  type="button"
+                  onClick={handlePlay}
+                  aria-label="Play Jakub's intro video"
+                  className="group relative inline-flex h-16 w-16 md:h-20 md:w-20 items-center justify-center rounded-full bg-white play-ring transition-transform duration-300 hover:scale-[1.06]"
+                >
+                  <span
+                    aria-hidden
+                    className="absolute inset-0 rounded-full ring-1 ring-black/5"
+                  />
+                  <Play size={26} className="text-ink translate-x-[2px]" />
+                </button>
+              </div>
+
+              {/* video label */}
+              <div className="absolute bottom-4 left-4 z-10">
+                <span className="inline-flex items-center rounded-full bg-black/60 px-3 py-1 text-[0.7rem] font-medium tracking-wide text-white">
+                  WATCH INTRO VIDEO
+                </span>
+              </div>
+            </div>
+          )}
         </div>
       </div>
       <p className="mt-4 text-center text-[0.8125rem] text-ink-subtle font-mono">

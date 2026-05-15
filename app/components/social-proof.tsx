@@ -1,42 +1,65 @@
-const features = [
-  "FORBES",
-  "ECOMCREW",
-  "SELLERSESSIONS",
-  "AMZ ADVISERS",
-  "HELIUM 10",
-  "JUNGLE SCOUT",
+﻿import { CountUp } from "./count-up";
+import { Reveal } from "./reveal";
+
+const stats = [
+  {
+    value: 10,
+    prefix: "£",
+    suffix: "k+",
+    label: "Monthly revenue",
+    delay: 0,
+  },
+  {
+    value: 100,
+    prefix: "£",
+    suffix: "k+",
+    label: "Annual sales",
+    delay: 100,
+  },
+  {
+    value: 10000,
+    prefix: "",
+    suffix: "+",
+    label: "Products sold",
+    delay: 200,
+  },
 ];
 
 export function SocialProof() {
   return (
-    <section className="border-y border-line bg-surface">
-      <div className="mx-auto max-w-[1280px] px-6 md:px-8 py-10 md:py-12">
-        <p className="label-mono text-center mb-7">As featured in</p>
+    <section className="border-y border-line bg-surface/50">
+      <div className="mx-auto max-w-[1280px] px-6 md:px-8 py-12 md:py-16">
+        <Reveal>
+          <p className="label-mono text-center mb-10 text-ink-subtle">
+            The proof in numbers
+          </p>
+        </Reveal>
 
-        {/* desktop grid */}
-        <ul className="hidden md:grid grid-cols-6 items-center gap-x-8">
-          {features.map((name) => (
-            <li
-              key={name}
-              className="font-display text-center font-medium tracking-[0.16em] text-ink-subtle hover:text-ink transition-colors duration-200 text-[0.95rem]"
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-y-12 md:gap-y-0 items-center">
+          {stats.map((stat, i) => (
+            <div
+              key={i}
+              className={`relative flex flex-col items-center px-4 ${
+                i !== stats.length - 1 ? "md:border-r border-line/60" : ""
+              }`}
             >
-              {name}
-            </li>
+              <Reveal delay={stat.delay}>
+                <div className="flex flex-col items-center">
+                  <span className="font-display text-[clamp(2.5rem,5vw,3.75rem)] font-medium tracking-tight text-ink leading-none">
+                    <CountUp
+                      to={stat.value}
+                      prefix={stat.prefix}
+                      suffix={stat.suffix}
+                      duration={2500}
+                    />
+                  </span>
+                  <span className="mt-4 label-mono text-ink-muted uppercase tracking-[0.1em] text-[0.7rem] md:text-[0.75rem]">
+                    {stat.label}
+                  </span>
+                </div>
+              </Reveal>
+            </div>
           ))}
-        </ul>
-
-        {/* mobile marquee */}
-        <div className="md:hidden overflow-hidden">
-          <div className="marquee-track flex gap-12 whitespace-nowrap will-change-transform">
-            {[...features, ...features].map((name, i) => (
-              <span
-                key={`${name}-${i}`}
-                className="font-display font-medium tracking-[0.16em] text-ink-subtle text-[0.95rem]"
-              >
-                {name}
-              </span>
-            ))}
-          </div>
         </div>
       </div>
     </section>

@@ -1,4 +1,4 @@
-VIDEO PLACEHOLDER FIRST
+﻿VIDEO PLACEHOLDER FIRST
 
 **The goal:**
 
@@ -52,7 +52,7 @@ We’re keeping it **lean**, because:
     
 7. **Confirm tax interview (UK sellers select Individual/sole trader).**
 
-Once that’s done, you’ll land inside **Seller Central** — your new control panel.
+Once that’s done, you’ll land inside **Seller Central** - your new control panel.
 
 ## Common Mistakes to Avoid
 
@@ -75,7 +75,7 @@ Once that’s done, you’ll land inside **Seller Central** — your new control
 
 ## A Quick Tour of Seller Central
 
-You don’t need to learn everything yet — but know these key areas:
+You don’t need to learn everything yet - but know these key areas:
 
 | Section | What it’s for |
 | --- | --- |

@@ -5,9 +5,9 @@ import { Nav } from "../components/nav";
 import { Reveal } from "../components/reveal";
 
 export const metadata: Metadata = {
-  title: "My Story — Jakub",
+  title: "My Story - Jakub",
   description:
-    "How Amazon gave me my life back. A story in seven chapters — by Jakub.",
+    "How Amazon gave me my life back. A story in seven chapters - by Jakub.",
 };
 
 export default function MyStoryPage() {
@@ -17,7 +17,7 @@ export default function MyStoryPage() {
       <main>
         <article>
           <ColdOpen />
-          <ChapterCollege />
+          <ChapterHustle />
           <ChapterCorporate />
           <ChapterSpark />
           <ChapterFirstSale />
@@ -67,7 +67,7 @@ function ColdOpen() {
 
         <Reveal delay={1400}>
           <p className="mt-10 font-mono text-[0.75rem] tracking-[0.18em] uppercase text-ink-subtle">
-            — Jakub
+            - Jakub
           </p>
         </Reveal>
       </div>
@@ -86,58 +86,68 @@ function ColdOpen() {
 }
 
 /* -------------------------------------------------- */
-/* 2. Chapter 01 — College                            */
+/* 2. Chapter 01 - College                            */
 /* -------------------------------------------------- */
 
-function ChapterCollege() {
+function ChapterHustle() {
   return (
     <section className="bg-surface-alt py-28 md:py-40 transition-colors duration-700">
       <div className="mx-auto max-w-[1280px] px-6 md:px-8">
-        <div className="grid md:grid-cols-12 gap-10 md:gap-16">
-          <div className="md:col-span-5">
+        <div className="grid md:grid-cols-12 gap-10 md:gap-16 items-center">
+          {/* Left Column: Content */}
+          <div className="md:col-span-7">
             <Reveal>
               <p className="label-mono">Chapter 01</p>
             </Reveal>
+
             <Reveal delay={80}>
-              <p className="mt-2 label-mono">The struggle</p>
-            </Reveal>
-            <Reveal delay={160}>
-              <p className="mt-6 font-mono text-[0.75rem] tracking-[0.14em] uppercase text-ink-subtle">
-                [Year, City]
-              </p>
+              <p className="mt-2 label-mono">The Early Hustle</p>
             </Reveal>
 
             <Reveal delay={240}>
               <h2 className="mt-8 font-display font-medium tracking-[-0.025em] leading-[1.05] text-[clamp(2.25rem,4.6vw,4rem)]">
-                I wasn&rsquo;t the kid with the grades.
+                I was always the kid with a hustle.
               </h2>
             </Reveal>
+
+            <div className="mt-8 space-y-6 text-[1rem] md:text-[1.125rem] leading-[1.75] text-ink-muted max-w-[60ch]">
+              <Reveal delay={320}>
+                <p>
+                  From a young age, I was obsessed with making my own money. 
+                  I always had a passion for the hustle. I was always looking for the next 
+                  opportunity to build something and see a return on my effort.
+                </p>
+              </Reveal>
+              <Reveal delay={420}>
+                <p>
+                  In school, it started small - selling sweets and loom bands out of 
+                  my backpack to classmates. As I got older, the hustle scaled. I was 
+                  flipping bottles of KSI's Prime at the height of the craze and 
+                  selling phone cases on eBay.
+                </p>
+              </Reveal>
+              <Reveal delay={520}>
+                <p>
+                  I didn&rsquo;t just want a job; I wanted to control my own time 
+                  and income. I had the spirit of a young entrepreneur long before 
+                  I knew what the word meant.
+                </p>
+              </Reveal>
+            </div>
           </div>
 
-          <div className="md:col-span-7 md:pt-2">
-            <Reveal delay={320}>
-              <p className="text-[1rem] md:text-[1.125rem] leading-[1.75] text-ink-muted max-w-[60ch]">
-                College didn&rsquo;t come easy to me. I worked hard &mdash;
-                harder than people knew &mdash; but the grades I needed for
-                the kind of jobs everyone said I should want? They never
-                quite came. I remember sitting with my results, doing the
-                math on what doors had just closed. Then I went and applied
-                for what I could get.
-              </p>
-            </Reveal>
-
-            <Reveal delay={500}>
-              <div className="mt-12 max-w-[420px]">
-                <div className="relative aspect-[4/5] rounded-2xl overflow-hidden hairline shadow-[var(--shadow-soft)] grayscale">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src="https://placehold.co/640x800/2A2A28/E8E5DD/png?text=Jakub+at+college"
-                    alt="[IMAGE: Jakub at college, b&w, candid — desk / books / computer]"
-                    loading="lazy"
-                    decoding="async"
-                    className="h-full w-full object-cover"
-                  />
-                </div>
+          {/* Right Column: Image */}
+          <div className="md:col-span-5">
+            <Reveal delay={300}>
+              <div className="relative aspect-[4/5] rounded-2xl overflow-hidden hairline shadow-[var(--shadow-soft)]">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/jakub%20kid.jpeg"
+                  alt="[IMAGE: Young Jakub with his early hustle, b&w, candid]"
+                  loading="lazy"
+                  decoding="async"
+                  className="h-full w-full object-cover"
+                />
               </div>
             </Reveal>
           </div>
@@ -148,7 +158,7 @@ function ChapterCollege() {
 }
 
 /* -------------------------------------------------- */
-/* 3. Chapter 02 — Corporate (dark)                   */
+/* 3. Chapter 02 - Corporate (dark)                   */
 /* -------------------------------------------------- */
 
 function ChapterCorporate() {
@@ -158,76 +168,75 @@ function ChapterCorporate() {
       style={{ backgroundColor: "var(--color-ink-dark)" }}
     >
       <div className="mx-auto max-w-[1280px] px-6 md:px-8">
-        <div className="mx-auto max-w-[640px]">
-          <Reveal>
-            <p className="font-mono text-[0.75rem] tracking-[0.18em] uppercase text-accent">
-              Chapter 02
-            </p>
-          </Reveal>
-          <Reveal delay={80}>
-            <p className="mt-2 font-mono text-[0.75rem] tracking-[0.18em] uppercase text-white/60">
-              The corporate world
-            </p>
-          </Reveal>
-          <Reveal delay={160}>
-            <p className="mt-6 font-mono text-[0.75rem] tracking-[0.14em] uppercase text-white/50">
-              AJ Bell · [Year started]
-            </p>
-          </Reveal>
-
-          <Reveal delay={240}>
-            <h2 className="mt-8 font-display font-medium tracking-[-0.025em] leading-[1.05] text-[clamp(2.25rem,4.6vw,4rem)]">
-              A webchat agent in a tower of suits.
-            </h2>
-          </Reveal>
-
-          <div className="mt-10 space-y-6 text-[1rem] md:text-[1.125rem] leading-[1.75] text-white/75 max-w-[60ch]">
-            <Reveal delay={320}>
-              <p>
-                I got a job as a webchat agent at AJ Bell. It taught me more
-                than I&rsquo;d realised at the time &mdash; how to talk to
-                people, how to handle pressure, how to show up every day even
-                when you didn&rsquo;t want to.
-              </p>
-            </Reveal>
-            <Reveal delay={420}>
-              <p>
-                But I knew, deep down, there had to be more to life than this.
-                I&rsquo;d always loved travelling. Visiting family. Spending
-                my time how I wanted to &mdash; not how someone else&rsquo;s
-                calendar told me to.
-              </p>
+        <div className="grid md:grid-cols-12 gap-10 md:gap-16 items-center">
+          {/* Left Column: Image */}
+          <div className="md:col-span-5">
+            <Reveal delay={200}>
+              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden hairline border-white/10 shadow-[var(--shadow-soft)]">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/chapter%202%20image.jpeg"
+                  alt="Jakub at the office"
+                  loading="lazy"
+                  decoding="async"
+                  className="h-full w-full object-cover"
+                />
+              </div>
             </Reveal>
           </div>
 
-          <Reveal delay={520}>
-            <FactStrip />
-          </Reveal>
+          {/* Right Column: Content */}
+          <div className="md:col-span-7">
+            <Reveal>
+              <p className="font-mono text-[0.75rem] tracking-[0.18em] uppercase text-accent">
+                Chapter 02
+              </p>
+            </Reveal>
+            <Reveal delay={80}>
+              <p className="mt-2 font-mono text-[0.75rem] tracking-[0.18em] uppercase text-white/60">
+                The corporate world
+              </p>
+            </Reveal>
+            <Reveal delay={160}>
+              <p className="mt-6 font-mono text-[0.75rem] tracking-[0.14em] uppercase text-white/50">
+                AJ Bell · 2022
+              </p>
+            </Reveal>
 
-          <Reveal delay={600}>
-            <div className="mt-16 rounded-2xl overflow-hidden">
-              <div
-                className="relative aspect-[16/9] grayscale"
-                style={{
-                  background:
-                    "linear-gradient(135deg, #2a2a28 0%, #1a1a18 50%, #131311 100%)",
-                }}
-              >
-                <div
-                  aria-hidden
-                  className="absolute inset-0 opacity-[0.18]"
-                  style={{
-                    background:
-                      "radial-gradient(circle at 30% 40%, rgba(255,255,255,0.18), transparent 60%)",
-                  }}
-                />
-                <span className="absolute bottom-4 left-4 inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-[0.7rem] font-medium tracking-wide text-white/70">
-                  [IMAGE: A wide, slightly desaturated shot of an office /
-                  commute / corporate setting]
-                </span>
-              </div>
+            <Reveal delay={240}>
+              <h2 className="mt-8 font-display font-medium tracking-[-0.025em] leading-[1.05] text-[clamp(2.25rem,4.6vw,4rem)]">
+                A finance employee in a tower of suits.
+              </h2>
+            </Reveal>
+
+            <div className="mt-8 space-y-6 text-[1rem] md:text-[1.125rem] leading-[1.75] text-white/75 max-w-[60ch]">
+              <Reveal delay={320}>
+                <p>
+                  After finishing college, I did what was expected: I landed an apprenticeship in the
+                  heart of the finance world. On the outside, it looked like
+                  I&rsquo;d made it. I was learning the machinery of a
+                  multi-billion pound industry, handling high-pressure demands,
+                  and mastering the art of professional communication.
+                </p>
+              </Reveal>
+              <Reveal delay={420}>
+                <p>
+                  But as I climbed the ladder, I realised the view from the top
+                  didn&rsquo;t look like freedom. I was trading my best hours
+                  for a paycheck and a tiny window of &ldquo;allowed&rdquo; time
+                  off. I wanted to see the world and visit family without
+                  needing a manager&rsquo;s signature to do it. The stability
+                  was great, but the ceiling was too low.
+                </p>
+              </Reveal>
             </div>
-          </Reveal>
+
+            <Reveal delay={520}>
+              <div className="mt-12">
+                <FactStrip />
+              </div>
+            </Reveal>
+          </div>
         </div>
       </div>
     </section>
@@ -237,7 +246,7 @@ function ChapterCorporate() {
 function FactStrip() {
   const facts = [
     ["Mon–Fri", "9 to 5"],
-    ["Lunch", "30 mins"],
+    ["Lunch", "1 hour"],
     ["Holidays", "25 days/year"],
     ["Freedom", "none"],
   ];
@@ -263,53 +272,118 @@ function FactStrip() {
 }
 
 /* -------------------------------------------------- */
-/* 4. Chapter 03 — The Spark                          */
+/* 4. Chapter 03 - The Spark                          */
 /* -------------------------------------------------- */
 
 function ChapterSpark() {
   return (
     <section className="bg-bg py-32 md:py-44">
-      <div className="mx-auto max-w-[820px] px-6 md:px-8 text-center">
-        <Reveal>
-          <p className="label-mono">Chapter 03</p>
-        </Reveal>
-        <Reveal delay={80}>
-          <p className="mt-2 label-mono">The spark</p>
-        </Reveal>
-        <Reveal delay={160}>
-          <p className="mt-6 font-mono text-[0.75rem] tracking-[0.14em] uppercase text-ink-subtle">
-            Summer 2025
-          </p>
-        </Reveal>
+      <div className="mx-auto max-w-[1280px] px-6 md:px-8">
+        {/* Subtitle */}
+        <div className="text-center mb-16">
+          <Reveal>
+            <p className="label-mono">Chapter 03</p>
+          </Reveal>
+          <Reveal delay={80}>
+            <p className="mt-2 label-mono">The spark</p>
+          </Reveal>
+          <Reveal delay={160}>
+            <p className="mt-6 font-mono text-[0.75rem] tracking-[0.14em] uppercase text-ink-subtle">
+              Spring 2025
+            </p>
+          </Reveal>
+        </div>
 
-        <Reveal delay={240}>
-          <h2 className="mt-10 font-display font-medium tracking-[-0.025em] leading-[1.05] text-[clamp(2.25rem,4.6vw,4rem)]">
-            Then I found Amazon FBA.
-          </h2>
-        </Reveal>
+        {/* Beat 1: Trying to find a way out */}
+        <div className="grid md:grid-cols-12 gap-10 md:gap-16 items-center mb-32">
+          {/* Left: Text */}
+          <div className="md:col-span-7">
+            <Reveal delay={240}>
+              <h2 className="font-display font-medium tracking-[-0.025em] leading-[1.05] text-[clamp(2.25rem,4.6vw,4rem)]">
+                Trying to find a way out.
+              </h2>
+            </Reveal>
 
-        <Reveal delay={420}>
-          <p className="mt-10 mx-auto max-w-[56ch] text-[1rem] md:text-[1.125rem] leading-[1.75] text-ink-muted">
-            Summer 2025. I&rsquo;d been reading, watching, lurking on forums
-            for months. Something about Amazon FBA kept pulling me back
-            &mdash; the idea that you could build a real product business
-            from a laptop, on the side, without asking anyone&rsquo;s
-            permission. I decided to try.
-          </p>
-        </Reveal>
+            <Reveal delay={320}>
+              <p className="mt-8 text-[1rem] md:text-[1.125rem] leading-[1.75] text-ink-muted max-w-[60ch]">
+                I always wanted a side hustle alongside my 9-5 to eventually make it out. 
+                I tried everything. It started with selling on TikTok Shop, then moved to 
+                trading Forex and futures. I put in the hours, but none of it worked. I was 
+                spinning my wheels, looking for something that actually made sense.
+              </p>
+            </Reveal>
+          </div>
 
-        <Reveal delay={620}>
-          <p className="mt-16 font-serif text-[clamp(1.5rem,3vw,2.25rem)] leading-[1.45] text-ink">
-            &ldquo;It was the first time work felt like mine.&rdquo;
-          </p>
-        </Reveal>
+          {/* Right: Image */}
+          <div className="md:col-span-5">
+            <Reveal delay={360}>
+              <div className="relative aspect-[16/9] rounded-2xl overflow-hidden hairline shadow-[var(--shadow-soft)]">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/trading%20image.png"
+                  alt="[IMAGE: Trading charts or attempts at trading]"
+                  loading="lazy"
+                  decoding="async"
+                  className="h-full w-full object-cover"
+                />
+              </div>
+            </Reveal>
+          </div>
+        </div>
+
+        {/* Beat 2: Then I found Amazon FBA */}
+        <div className="grid md:grid-cols-12 gap-10 md:gap-16 items-center">
+          {/* Left: Image (Order 2 on mobile, 1 on desktop) */}
+          <div className="md:col-span-5 order-2 md:order-1">
+            <Reveal delay={520}>
+              <div className="relative aspect-[16/9] rounded-2xl overflow-hidden hairline shadow-[var(--shadow-soft)]">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/discoverfba.jpeg"
+                  alt="[IMAGE: Discovering Amazon FBA]"
+                  loading="lazy"
+                  decoding="async"
+                  className="h-full w-full object-cover"
+                />
+              </div>
+            </Reveal>
+          </div>
+
+          {/* Right: Text (Order 1 on mobile, 2 on desktop) */}
+          <div className="md:col-span-7 order-1 md:order-2">
+            <Reveal delay={400}>
+              <h2 className="font-display font-medium tracking-[-0.025em] leading-[1.05] text-[clamp(2rem,4vw,3.5rem)]">
+                Then I found Amazon FBA.
+              </h2>
+            </Reveal>
+
+            <Reveal delay={480}>
+              <p className="mt-8 text-[1rem] md:text-[1.125rem] leading-[1.75] text-ink-muted max-w-[60ch]">
+                I was still at my finance job when I started digging into the world of e-commerce. 
+                But when I discovered the FBA model, everything clicked. The realisation that I 
+                could send inventory to Amazon's warehouses and let <em>them</em> handle the storage, 
+                shipping, and customer service was mind-blowing. It meant I could actually scale 
+                a brand without a warehouse of my own.
+              </p>
+            </Reveal>
+          </div>
+        </div>
+
+        {/* Quote */}
+        <div className="text-center mt-32">
+          <Reveal delay={560}>
+            <p className="font-serif text-[clamp(1.5rem,3vw,2.25rem)] leading-[1.45] text-ink max-w-[50ch] mx-auto">
+              &ldquo;The Amazon FBA business model blew my mind.&rdquo;
+            </p>
+          </Reveal>
+        </div>
       </div>
     </section>
   );
 }
 
 /* -------------------------------------------------- */
-/* 5. Chapter 04 — The First Sale                     */
+/* 5. Chapter 04 - The First Sale                     */
 /* -------------------------------------------------- */
 
 function ChapterFirstSale() {
@@ -342,16 +416,22 @@ function ChapterFirstSale() {
 
         <Reveal delay={400}>
           <p className="mt-8 font-display font-medium tracking-[-0.04em] leading-[0.95] text-[clamp(3rem,12vw,9rem)] text-ink">
-            August 14,{" "}
+            May 24th,{" "}
             <span className="draw-underline">2025</span>
           </p>
         </Reveal>
 
         <Reveal delay={700}>
           <p className="mt-16 mx-auto max-w-[58ch] font-serif text-[clamp(1.375rem,2.6vw,2rem)] leading-[1.45] text-ink-muted">
-            &ldquo;It was £[PLACEHOLDER]. It changed everything &mdash; not
+            &ldquo;It was just £10. It changed everything - not
             because of the money, but because someone, somewhere, had bought
             something I&rsquo;d put into the world.&rdquo;
+          </p>
+        </Reveal>
+
+        <Reveal delay={800}>
+          <p className="mt-8 mx-auto max-w-[56ch] text-[1rem] md:text-[1.125rem] leading-[1.75] text-ink-muted">
+            The next day I received 3 more sales, and we got the ball rolling.
           </p>
         </Reveal>
       </div>
@@ -360,28 +440,28 @@ function ChapterFirstSale() {
 }
 
 /* -------------------------------------------------- */
-/* 6. Chapter 05 — The Crossroads                     */
+/* 6. Chapter 05 - The Crossroads                     */
 /* -------------------------------------------------- */
 
 function ChapterCrossroads() {
   const beats = [
     {
       label: "Moment 01",
-      title: "The day Amazon paid me what AJ Bell did.",
+      title: "The day Amazon paid me what my full-time job did.",
       body:
-        "[Date]. I looked at my Seller Central dashboard, then I looked at my payslip. They were the same. For the first time, two paths sat side by side on a screen — and one of them I'd built myself.",
+        "Winter 2025. I looked at my Seller Central dashboard, then I looked at my payslip. They were the same. For the first time, two paths sat side by side on a screen - and one of them I'd built myself.",
     },
     {
       label: "Moment 02",
       title: "The promotion that didn't fix anything.",
       body:
-        "Around the same time, I got promoted. Senior webchat agent, managing a team. It should've felt like a win. It didn't. I was good at it — and I knew, with absolute clarity, that being good at something isn't the same as wanting it.",
+        "Around the same time, I got promoted towards managing a team. It should've felt like a win. It didn't. I was good at it - but I knew, with absolute clarity, that being good at something isn't the same as wanting it.",
     },
     {
       label: "Moment 03",
       title: "Wasting my life one Monday at a time.",
       body:
-        "Every Sunday night I felt it. The dread. Not because the job was terrible — it wasn't. Because every hour spent there was an hour not spent on the thing I actually cared about.",
+        "Every Sunday night I felt it. The dread. Not because the job was terrible - it wasn't. Because every hour spent there was an hour not spent on the thing I actually cared about.",
     },
   ];
 
@@ -427,7 +507,7 @@ function ChapterCrossroads() {
 }
 
 /* -------------------------------------------------- */
-/* 7. Chapter 06 — The Leap                           */
+/* 7. Chapter 06 - The Leap                           */
 /* -------------------------------------------------- */
 
 function ChapterLeap() {
@@ -472,7 +552,7 @@ function ChapterLeap() {
                 you&rsquo;ve got something working on the side. But I&rsquo;d
                 done the math. I&rsquo;d done the work. And I&rsquo;d watched
                 too many people stay in jobs they hated because leaving felt
-                risky &mdash; when staying was the bigger risk all along.
+                risky - when staying was the bigger risk all along.
               </p>
             </Reveal>
           </div>
@@ -482,8 +562,8 @@ function ChapterLeap() {
               <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-[0_24px_60px_rgba(0,0,0,0.35)]">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="https://placehold.co/720x900/F4F2EC/0A0A0A/png?text=The+day+I+quit"
-                  alt="[IMAGE: Jakub on the day he quit — or the day after]"
+                  src="/the%20day%20i%20quit%20image.jpeg"
+                  alt="Jakub on the day he quit"
                   loading="lazy"
                   decoding="async"
                   className="h-full w-full object-cover"
@@ -498,7 +578,7 @@ function ChapterLeap() {
 }
 
 /* -------------------------------------------------- */
-/* 8. Chapter 07 — Today / Freedom                    */
+/* 8. Chapter 07 - Today / Freedom                    */
 /* -------------------------------------------------- */
 
 function ChapterToday() {
@@ -514,7 +594,7 @@ function ChapterToday() {
       />
 
       <div className="relative mx-auto max-w-[1280px] px-6 md:px-8">
-        {/* Part 1 — title */}
+        {/* Part 1 - title */}
         <div className="max-w-[1000px]">
           <Reveal>
             <p className="font-mono text-[0.75rem] tracking-[0.18em] uppercase text-accent">
@@ -526,7 +606,7 @@ function ChapterToday() {
           </Reveal>
           <Reveal delay={160}>
             <p className="mt-6 font-mono text-[0.75rem] tracking-[0.14em] uppercase text-ink-subtle">
-              [Current month/year]
+              May 2026
             </p>
           </Reveal>
 
@@ -537,7 +617,7 @@ function ChapterToday() {
           </Reveal>
         </div>
 
-        {/* Part 2 — stats */}
+        {/* Part 2 - stats */}
         <Reveal delay={200}>
           <dl className="mt-24 md:mt-32 grid grid-cols-1 md:grid-cols-3 border-t border-line">
             <Stat
@@ -554,27 +634,27 @@ function ChapterToday() {
               accent
               border
             />
-            <Stat label="Holidays a year" to={10} suffix="×" border />
+            <Stat label="Holidays a year" to={10} suffix="+" border />
           </dl>
         </Reveal>
 
         <Reveal delay={300}>
           <p className="mt-10 font-mono text-[0.7rem] tracking-[0.16em] uppercase text-ink-subtle">
-            Real numbers, real time, real business. Updated [month/year].
+            Real numbers, real time, real business. Updated May 2026.
           </p>
         </Reveal>
 
-        {/* Part 3 — reflection */}
+        {/* Part 3 - reflection */}
         <Reveal delay={200}>
           <p className="mt-28 md:mt-36 mx-auto max-w-[58ch] text-center font-serif text-[clamp(1.5rem,3vw,2.25rem)] leading-[1.45] text-ink">
-            &ldquo;Amazon didn&rsquo;t make me rich. It made me free. I get
+            &ldquo;Amazon didn&rsquo;t make me rich overnight. It made me free. I get
             to pick where I am, who I&rsquo;m with, and what I work on. To
             me, that&rsquo;s the only currency that&rsquo;s ever really
             mattered.&rdquo;
           </p>
         </Reveal>
 
-        {/* Part 4 — freedom moments */}
+        {/* Part 4 - freedom moments */}
         <FreedomGrid />
       </div>
     </section>
@@ -620,10 +700,19 @@ function Stat({
 
 function FreedomGrid() {
   const moments = [
-    { label: "[Marrakech, March 2026]", img: "Jakub+on+holiday" },
-    { label: "[Family + friends]", img: "Family+gathering" },
-    { label: "[Coffee shop, anywhere]", img: "Working+from+anywhere" },
-    { label: "[Outside of work]", img: "Hobby+%2F+travel" },
+    { label: "Malta", src: "/jakub%20on%20holiday.jpeg" },
+    {
+      label: "Marbella",
+      src: "/marbella.jpeg",
+    },
+    {
+      label: "Ayia Napa",
+      src: "/ayia%20napa.jpeg",
+    },
+    {
+      label: "Aintree",
+      src: "/aintree.jpeg",
+    },
   ];
 
   return (
@@ -633,16 +722,16 @@ function FreedomGrid() {
       </Reveal>
       <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
         {moments.map((m, i) => (
-          <Reveal key={m.img} delay={i * 100}>
+          <Reveal key={m.src} delay={i * 100}>
             <figure className="group">
               <div className="relative aspect-[4/5] rounded-2xl overflow-hidden hairline shadow-[var(--shadow-soft)]">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src={`https://placehold.co/640x800/F4F2EC/0A0A0A/png?text=${m.img}`}
+                  src={m.src}
                   alt={`[IMAGE: ${m.label}]`}
                   loading="lazy"
                   decoding="async"
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.05]"
                 />
                 <div
                   aria-hidden
@@ -691,7 +780,7 @@ function ClosingLine() {
           </Reveal>
           <Reveal delay={400}>
             <p className="mt-10 font-mono text-[0.75rem] tracking-[0.18em] uppercase text-ink-subtle">
-              — Jakub
+              - Jakub
             </p>
           </Reveal>
         </div>
@@ -704,7 +793,7 @@ function ClosingLine() {
               href="/#apply"
               className="inline-flex h-12 items-center rounded-full border border-accent/40 bg-accent-soft px-7 text-[0.95rem] font-medium text-accent transition-all duration-200 hover:-translate-y-px hover:bg-accent hover:text-white hover:border-accent"
             >
-              If you want this too — apply for mentorship →
+              If you want this too - apply for mentorship →
             </a>
             <a
               href="/"

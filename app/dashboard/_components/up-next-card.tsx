@@ -1,4 +1,4 @@
-import { ChevronRight, FileText } from "@/app/components/icons";
+﻿import { ChevronRight, FileText } from "@/app/components/icons";
 import { upNext } from "../_lib/mock-data";
 import { Card } from "./ui/card";
 

@@ -1,4 +1,5 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
+import { AiPartnerCard } from "./_components/ai-partner-card";
 import { AppShell } from "./_components/app-shell";
 import { MentorshipCard } from "./_components/mentorship-card";
 import { TeamPanel } from "./_components/team-panel";
@@ -7,7 +8,7 @@ import { UpNextCard } from "./_components/up-next-card";
 import { WelcomeCard } from "./_components/welcome-card";
 
 export const metadata: Metadata = {
-  title: "Dashboard — EliteFBA",
+  title: "Dashboard - EliteFBA",
   description: "Your EliteFBA mentorship dashboard.",
 };
 
@@ -21,6 +22,8 @@ export default function DashboardPage() {
           <UpNextCard />
           <MentorshipCard />
         </div>
+
+        <AiPartnerCard />
 
         <ToolsRow />
 

@@ -1,4 +1,4 @@
-import { Compass, MessageCircle, Users } from "./icons";
+﻿import { Compass, MessageCircle, Users } from "./icons";
 import { Reveal } from "./reveal";
 
 const pillars = [
@@ -13,7 +13,7 @@ const pillars = [
     n: "02",
     icon: MessageCircle,
     title: "Real 1-to-1 mentorship. From me. Full-time.",
-    body: "You get me. Not a “certified coach.” Not a virtual assistant. Direct access to the person who built the system, with full-time support — so when you're stuck on a supplier negotiation at 11pm, you actually get help.",
+    body: "You get me. Not a “certified coach.” Not a virtual assistant. Direct access to the person who built the system, with full-time support - so when you're stuck on a supplier negotiation at 11pm, you actually get help.",
     tag: "Direct access · Fast responses",
   },
   {
@@ -80,7 +80,7 @@ export function Pillars() {
               &ldquo;I&rsquo;d rather have ten students I actually know than a
               thousand I&rsquo;ll never meet.&rdquo;
             </p>
-            <p className="mt-4 label-mono">&mdash; Jakub</p>
+            <p className="mt-4 label-mono">- Jakub</p>
             <a
               href="#curriculum"
               className="mt-10 inline-flex h-11 items-center gap-2 rounded-full border border-line bg-surface px-6 text-[0.9rem] font-medium text-ink transition-all duration-200 hover:-translate-y-px hover:border-ink/20"

@@ -1,4 +1,4 @@
-## FBA Course Introduction Script
+﻿## FBA Course Introduction Script
 
 **Opening**
 
