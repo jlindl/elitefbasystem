@@ -1,36 +1,49 @@
 import { NextResponse } from 'next/server';
 import { stripe } from '@/lib/stripe';
+import { createSupabaseServerClient } from '@/lib/supabase/server';
 
 export async function POST(req: Request) {
   try {
-    const origin = req.headers.get('origin') || process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+    const supabase = await createSupabaseServerClient();
+    const {
+      data: { user },
+    } = await supabase.auth.getUser();
 
-    // Optional: parse body if you want to pass dynamic data (e.g., user ID or email)
-    // const body = await req.json();
+    if (!user) {
+      return NextResponse.json(
+        { error: 'You must be signed in to start checkout.' },
+        { status: 401 },
+      );
+    }
+
+    const origin =
+      req.headers.get('origin') ||
+      process.env.NEXT_PUBLIC_BASE_URL ||
+      'http://localhost:3000';
 
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
       mode: 'payment',
+      customer_email: user.email ?? undefined,
       line_items: [
         {
           price_data: {
-            currency: 'usd',
+            currency: 'gbp',
             product_data: {
-              name: 'Elite FBA System',
-              description: 'Full access to the Elite FBA curriculum and community.',
+              name: 'Elite FBA Mentorship',
+              description:
+                'Full access to the Elite FBA mentorship, curriculum, and community.',
             },
-            // Replace this with your actual price (in cents, e.g., 99700 for $997.00)
-            unit_amount: 99700, 
+            unit_amount: 60000,
           },
           quantity: 1,
         },
       ],
       success_url: `${origin}/dashboard?success=true`,
       cancel_url: `${origin}/?canceled=true`,
-      // You can add metadata here to pass the user's ID for the webhook to use
-      // metadata: {
-      //   userId: body.userId, 
-      // },
+      metadata: {
+        userId: user.id,
+      },
     });
 
     return NextResponse.json({ url: session.url });
@@ -38,7 +51,7 @@ export async function POST(req: Request) {
     console.error('Error creating checkout session:', err);
     return NextResponse.json(
       { error: err.message || 'Internal Server Error' },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

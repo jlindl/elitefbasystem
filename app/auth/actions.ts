@@ -1,4 +1,4 @@
-﻿"use server";
+"use server";
 
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
@@ -15,6 +15,14 @@ async function getOrigin() {
   );
 }
 
+function safeNext(raw: FormDataEntryValue | null) {
+  const next = typeof raw === "string" ? raw.trim() : "";
+  if (!next || !next.startsWith("/") || next.startsWith("//")) {
+    return "/dashboard";
+  }
+  return next;
+}
+
 /* ------------------------------------------------------------------ */
 /* Magic link                                                         */
 /* ------------------------------------------------------------------ */
@@ -29,6 +37,7 @@ export async function signInWithMagicLink(
   formData: FormData,
 ): Promise<MagicLinkState> {
   const email = String(formData.get("email") ?? "").trim().toLowerCase();
+  const next = safeNext(formData.get("next"));
 
   if (!EMAIL_RE.test(email)) {
     return { status: "error", message: "Enter a valid email address." };
@@ -40,7 +49,7 @@ export async function signInWithMagicLink(
   const { error } = await supabase.auth.signInWithOtp({
     email,
     options: {
-      emailRedirectTo: `${origin}/auth/callback`,
+      emailRedirectTo: `${origin}/auth/callback?next=${encodeURIComponent(next)}`,
       shouldCreateUser: true,
     },
   });
@@ -63,6 +72,7 @@ export async function signInWithPassword(
 ): Promise<LoginState> {
   const email = String(formData.get("email") ?? "").trim().toLowerCase();
   const password = String(formData.get("password") ?? "");
+  const next = safeNext(formData.get("next"));
 
   if (!EMAIL_RE.test(email)) {
     return { status: "error", message: "Enter a valid email address." };
@@ -82,7 +92,7 @@ export async function signInWithPassword(
     return { status: "error", message: msg };
   }
 
-  redirect("/dashboard");
+  redirect(next);
 }
 
 /* ------------------------------------------------------------------ */
@@ -100,6 +110,7 @@ export async function signUpWithPassword(
 ): Promise<SignUpState> {
   const email = String(formData.get("email") ?? "").trim().toLowerCase();
   const password = String(formData.get("password") ?? "");
+  const next = safeNext(formData.get("next"));
 
   if (!EMAIL_RE.test(email)) {
     return { status: "error", message: "Enter a valid email address." };
@@ -117,7 +128,9 @@ export async function signUpWithPassword(
   const { data, error } = await supabase.auth.signUp({
     email,
     password,
-    options: { emailRedirectTo: `${origin}/auth/callback` },
+    options: {
+      emailRedirectTo: `${origin}/auth/callback?next=${encodeURIComponent(next)}`,
+    },
   });
 
   if (error) {
@@ -137,5 +150,5 @@ export async function signUpWithPassword(
     return { status: "check-email", email };
   }
 
-  redirect("/dashboard");
+  redirect(next);
 }

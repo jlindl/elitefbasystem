@@ -20,10 +20,10 @@ export function FinalCta() {
           </Reveal>
           <Reveal delay={200}>
             <a
-              href="#apply"
+              href="/checkout"
               className="mt-12 inline-flex h-14 items-center gap-2 rounded-full bg-accent px-8 text-[1rem] font-medium text-white shadow-[0_1px_2px_rgba(255,255,255,0.06)] transition-all duration-200 hover:-translate-y-px hover:bg-accent-deep hover:shadow-[0_12px_32px_rgba(255,107,26,0.4)]"
             >
-              Apply for Mentorship
+              Enroll in Mentorship
               <ArrowRight size={18} />
             </a>
           </Reveal>

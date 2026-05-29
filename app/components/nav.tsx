@@ -81,10 +81,10 @@ export function Nav() {
           </button>
 
           <a
-            href="/#apply"
+            href="/checkout"
             className="inline-flex h-10 items-center rounded-full bg-accent px-5 text-[0.9rem] font-medium text-white shadow-[0_1px_2px_rgba(10,10,10,0.06)] transition-all duration-200 hover:-translate-y-px hover:bg-accent-deep hover:shadow-[0_4px_14px_rgba(255,107,26,0.35)] ml-1 md:ml-2"
           >
-            Apply Now
+            Enroll Now
           </a>
           <button
             type="button"
@@ -133,11 +133,11 @@ export function Nav() {
 
           <div className="px-6 pt-10 mt-8 border-t border-line flex flex-col gap-3">
             <a
-              href="/#apply"
+              href="/checkout"
               onClick={() => setOpen(false)}
               className="inline-flex h-12 items-center justify-center rounded-full bg-accent px-6 text-base font-medium text-white"
             >
-              Apply Now
+              Enroll Now
             </a>
 
             <button

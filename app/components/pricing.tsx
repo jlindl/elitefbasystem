@@ -75,10 +75,10 @@ export function Pricing() {
               </ul>
 
               <a
-                href="#apply-form"
+                href="/checkout"
                 className="mt-10 flex h-12 items-center justify-center rounded-full bg-accent px-7 text-[0.95rem] font-medium text-white shadow-[0_1px_2px_rgba(10,10,10,0.06)] transition-all duration-200 hover:-translate-y-px hover:bg-accent-deep hover:shadow-[0_8px_24px_rgba(255,107,26,0.32)]"
               >
-                Apply Now
+                Enroll Now
               </a>
 
               <p className="mt-5 text-center font-mono text-[0.7rem] tracking-[0.1em] uppercase text-ink-subtle">
