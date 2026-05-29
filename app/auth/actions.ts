@@ -108,10 +108,17 @@ export async function signUpWithPassword(
   _prev: SignUpState,
   formData: FormData,
 ): Promise<SignUpState> {
+  const fullName = String(formData.get("full_name") ?? "").trim();
   const email = String(formData.get("email") ?? "").trim().toLowerCase();
   const password = String(formData.get("password") ?? "");
   const next = safeNext(formData.get("next"));
 
+  if (fullName.length < 3) {
+    return {
+      status: "error",
+      message: "Enter your full name (at least 3 characters).",
+    };
+  }
   if (!EMAIL_RE.test(email)) {
     return { status: "error", message: "Enter a valid email address." };
   }
@@ -130,6 +137,7 @@ export async function signUpWithPassword(
     password,
     options: {
       emailRedirectTo: `${origin}/auth/callback?next=${encodeURIComponent(next)}`,
+      data: { full_name: fullName },
     },
   });
 

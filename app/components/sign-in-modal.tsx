@@ -243,6 +243,17 @@ function SignUpForm({ onSwitchToLogin }: { onSwitchToLogin: () => void }) {
         <Field>
           <input
             ref={inputRef}
+            type="text"
+            name="full_name"
+            required
+            minLength={3}
+            autoComplete="name"
+            placeholder="Full name"
+            className={inputClass}
+          />
+        </Field>
+        <Field>
+          <input
             type="email"
             name="email"
             required

@@ -42,3 +42,5 @@ next-env.d.ts
 
 # Large media files
 *.mov
+
+.vercel

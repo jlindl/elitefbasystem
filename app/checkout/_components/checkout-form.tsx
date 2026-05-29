@@ -120,6 +120,17 @@ function SignUpFormInline() {
       <Field>
         <input
           ref={ref}
+          type="text"
+          name="full_name"
+          required
+          minLength={3}
+          autoComplete="name"
+          placeholder="Full name"
+          className={inputCls}
+        />
+      </Field>
+      <Field>
+        <input
           type="email"
           name="email"
           required
