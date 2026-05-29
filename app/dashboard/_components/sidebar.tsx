@@ -12,7 +12,7 @@ import {
   Wrench,
   X,
 } from "@/app/components/icons";
-import { student } from "../_lib/mock-data";
+import type { Student } from "../_lib/get-student";
 
 type NavItem = {
   label: string;
@@ -37,9 +37,11 @@ const secondary = [
 export function Sidebar({
   open,
   onClose,
+  student,
 }: {
   open: boolean;
   onClose: () => void;
+  student: Student;
 }) {
   const pathname = usePathname();
 

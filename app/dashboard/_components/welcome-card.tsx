@@ -1,9 +1,10 @@
 ﻿import { ArrowRight } from "@/app/components/icons";
-import { progress, student, upNext } from "../_lib/mock-data";
+import { progress, upNext } from "../_lib/mock-data";
+import type { Student } from "../_lib/get-student";
 import { Card } from "./ui/card";
 import { ProgressBar } from "./ui/progress-bar";
 
-export function WelcomeCard() {
+export function WelcomeCard({ student }: { student: Student }) {
   const next = upNext[0];
 
   return (

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { AppShell } from "../_components/app-shell";
+import { getCurrentStudent } from "../_lib/get-student";
 import { Accordion } from "@/app/components/accordion";
 import { WorkflowDiagram } from "../_components/workflow-diagram";
 import { PrimeComparison } from "../_components/prime-comparison";
@@ -197,7 +198,8 @@ function groupBlocksIntoTabs(blocks: any[]) {
   return tabs;
 }
 
-export default function ModulesPage() {
+export default async function ModulesPage() {
+  const student = await getCurrentStudent();
   const items = modulesData.map((mod, index) => {
     const tabs = groupBlocksIntoTabs(mod.blocks);
 
@@ -223,7 +225,7 @@ export default function ModulesPage() {
   });
 
   return (
-    <AppShell>
+    <AppShell student={student}>
       <div className="max-w-[1100px] mx-auto px-4 md:px-10 py-6 md:py-10 space-y-8">
         <div>
           <h1 className="font-display text-[2rem] md:text-[2.5rem] font-medium tracking-[-0.025em] text-ink">

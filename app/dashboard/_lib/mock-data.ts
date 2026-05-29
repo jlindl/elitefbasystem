@@ -1,11 +1,4 @@
-﻿export const student = {
-  firstName: "Sarah",
-  fullName: "Sarah Mitchell",
-  initials: "SM",
-  plan: "Mentorship Member",
-};
-
-export const progress = {
+﻿export const progress = {
   modulesCompleted: 4,
   modulesTotal: 9,
   percentComplete: 44,

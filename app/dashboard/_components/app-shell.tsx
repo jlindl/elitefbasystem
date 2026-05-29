@@ -3,13 +3,20 @@
 import { useState, type ReactNode } from "react";
 import { Menu } from "@/app/components/icons";
 import { Sidebar } from "./sidebar";
+import type { Student } from "../_lib/get-student";
 
-export function AppShell({ children }: { children: ReactNode }) {
+export function AppShell({
+  children,
+  student,
+}: {
+  children: ReactNode;
+  student: Student;
+}) {
   const [open, setOpen] = useState(false);
 
   return (
     <div className="min-h-screen flex">
-      <Sidebar open={open} onClose={() => setOpen(false)} />
+      <Sidebar open={open} onClose={() => setOpen(false)} student={student} />
 
       <div className="flex-1 md:ml-[240px]">
         {/* mobile top bar */}
