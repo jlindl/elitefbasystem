@@ -45,7 +45,7 @@ export async function POST(request: Request) {
       messages,
     });
 
-    return result.toDataStreamResponse();
+    return result.toTextStreamResponse();
   } catch (err) {
     return new Response("Invalid request.", { status: 400 });
   }
