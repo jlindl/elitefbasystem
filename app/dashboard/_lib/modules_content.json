@@ -1,207 +1,303 @@
 [
   {
     "id": "29b20c1c-884d-8077-b9c5-e7e5d68384e8",
-    "name": "Module 1 - The FBA Model",
+    "name": "Module 1 - Introduction to Amazon FBA (Wholesale & Bundling)",
     "blocks": [
       {
+        "type": "video",
+        "content": "Module 1: The Blueprint to 6-Figures"
+      },
+      {
+        "type": "module_sections",
+        "content": ""
+      },
+      {
+        "type": "heading_1",
+        "content": "The Basics of Amazon FBA"
+      },
+      {
         "type": "paragraph",
-        "content": "Script: "
+        "content": "Normally, running an online shop means buying stock, cluttering your spare bedroom with boxes, packing orders manually every evening, and driving to the post office."
+      },
+      {
+        "type": "paragraph",
+        "content": "FBA stands for Fulfillment by Amazon. It is a logistics service where you pay Amazon to handle the physical heavy lifting."
       },
       {
         "type": "heading_2",
-        "content": "FBA Course Introduction Script"
+        "content": "How the Infrastructure Works"
+      },
+      {
+        "type": "workflow_diagram",
+        "content": ""
+      },
+      {
+        "type": "heading_3",
+        "content": "Storage"
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "Storage: You find profitable products locally and ship them in bulk boxes to one of Amazon's massive fulfillment centres (warehouses). Amazon logs your stock and stores it on their shelves ready to ship to customers. You pay a small fee for this."
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "The Inbound Box: You pack your inventory into a single large cardboard box, print a shipping label from your Amazon dashboard, and post it at your local parcelshop."
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "The Warehouse Arrival: Your box goes to an Amazon Fulfillment Centre (FC). Amazon warehouse staff open it, scan the item barcodes, and your stock instantly goes live for sale online with the Prime badge."
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "The \"Stow\" Algorithm: Amazon splits your items across different physical shelves in the warehouse, and across different warehouses around the UK. This ensures that no matter where a customer orders from, your product is always close to a picker, maximizing delivery speed."
+      },
+      {
+        "type": "callout",
+        "content": "⚠️ The 180-Day Penalty: If your stock sits in a warehouse for more than 180 days, Amazon charges severe Long-Term Storage Fees. This is why we use the Lean Model: we test with 10 to 12 units first. We never risk buying hundreds of units upfront."
+      },
+      {
+        "type": "heading_3",
+        "content": "The Prime Badge"
       },
       {
         "type": "paragraph",
-        "content": "Opening"
+        "content": "When you use Amazon FBA, your product listings don't just sit on a marketplace - they are instantly upgraded with the Amazon Prime badge. For a brand-new seller starting from zero, this badge is an unfair advantage that completely levels the playing field against massive, established competitors."
       },
       {
         "type": "paragraph",
-        "content": "“Welcome."
+        "content": "Here is exactly why the Prime badge allows us to win customers over non-Prime competitors:"
+      },
+      {
+        "type": "prime_comparison",
+        "content": ""
+      },
+      {
+        "type": "heading_3",
+        "content": "The Trust Multiplier"
       },
       {
         "type": "paragraph",
-        "content": "If you’re watching this, you’ve already taken the first step into building a real Amazon FBA business."
+        "content": "Customers do not know who you are, and frankly, they don't care. When they see the Prime badge, their trust transfers directly from Amazon to your listing. They know that if the product is late, damaged, or not what they expected, Amazon's customer service will instantly handle it."
+      },
+      {
+        "type": "heading_3",
+        "content": "The \"Next-Day\" Filter"
       },
       {
         "type": "paragraph",
-        "content": "This isn’t a theory course or guru playbook, but a system built from actually selling on Amazon and learning what works the hard way."
+        "content": "Over 80% of Amazon buyers filter search results strictly by \"Prime Only.\" If you handle your own shipping (FBM / Fulfillment by Merchant), your listing becomes completely invisible to Amazon's most active, highest-spending customers."
+      },
+      {
+        "type": "heading_3",
+        "content": "Bypassing the Price Fight"
       },
       {
         "type": "paragraph",
-        "content": "It comes from trial and error. From launching products that didn’t work, spending money where I shouldn’t have, making mistakes with stock, pricing, listings, and timing."
+        "content": "Non-Prime sellers often have to lower their prices to get noticed. Because Prime members prioritize speed and reliability, they are consistently willing to pay a premium price. You can list a bundle for £19.99 and comfortably out-sell a non-Prime competitor offering a similar single item for less, simply because your product can be on their doorstep tomorrow morning."
+      },
+      {
+        "type": "heading_3",
+        "content": "Automation"
       },
       {
         "type": "paragraph",
-        "content": "I’ve thrown money in the mud so you don’t have to."
+        "content": "When you use Amazon FBA, you aren't just paying for storage space - you are hiring a flawless, automated fulfillment machine. The moment your inventory is scanned into the fulfillment centre, your physical workload drops to zero. Amazon takes over the entire order cycle."
       },
       {
         "type": "paragraph",
-        "content": "Every step in this course exists because something went wrong at some point, and I had to fix it. The goal here is to shortcut that learning curve, avoid the common traps, and help you make smarter decisions from day one."
+        "content": "Here is exactly what happens behind the scenes the second a customer buys your product:"
+      },
+      {
+        "type": "automation_timeline",
+        "content": ""
+      },
+      {
+        "type": "heading_3",
+        "content": "Instant Order Routing"
       },
       {
         "type": "paragraph",
-        "content": "What FBA Actually Is"
+        "content": "The second a customer clicks \"Buy Now\" on Amazon.co.uk, Amazon's backend software instantly routes the order to the exact warehouse holding your inventory. You don't need to log in, print a label, or click a single button to approve it."
+      },
+      {
+        "type": "heading_3",
+        "content": "Robotic Retrieval & Packing"
       },
       {
         "type": "paragraph",
-        "content": "“Amazon FBA stands for Fulfilled by Amazon."
+        "content": "Inside the warehouse, high-speed automated robots and picking staff locate your specific bundle. It is brought to a packing station, scanned for accuracy, placed into an official Amazon-branded cardboard box, and sealed."
+      },
+      {
+        "type": "heading_3",
+        "content": "The Shipping Network"
       },
       {
         "type": "paragraph",
-        "content": "In simple terms, you send your products to Amazon’s warehouses, and they handle storage, shipping, customer service, and returns."
+        "content": "The package is automatically sorted onto a delivery vehicle. Because Amazon runs its own massive shipping network, your product moves from a warehouse shelf to the customer's doorstep in less than 24 hours."
+      },
+      {
+        "type": "callout",
+        "content": "🧠 The Operator Reality: This level of automation runs 24 hours a day, 365 days a year. Whether you are asleep, at your day job, or spending time with family, your inventory is selling, packing, and shipping completely in the background. You make money all day every day, from wherever you want to be. In return, you pay a predictable, flat FBA Fulfillment Fee per unit for this service, turning a massive operational headache into a fixed expense."
+      },
+      {
+        "type": "heading_3",
+        "content": "Hands-Off Customer Service: Amazon's Automated Front Desk"
       },
       {
         "type": "paragraph",
-        "content": "But here’s the important part."
+        "content": "When you use Amazon FBA, your job as a customer service representative is effectively eliminated. For a lean, individual operator, managing customer messages, tracking updates, and refunds can drain hours from your week. Amazon absorbs this entire infrastructure, acting as your customer service front desk 24 hours a day, 7 days a week."
       },
       {
         "type": "paragraph",
-        "content": "FBA is not a business model by itself. It’s infrastructure."
+        "content": "Here is exactly how this hands-off layer operates in the real world:"
+      },
+      {
+        "type": "customer_service_flow",
+        "content": ""
+      },
+      {
+        "type": "heading_3",
+        "content": "Direct Customer Inquiries"
       },
       {
         "type": "paragraph",
-        "content": "The business is everything else. Product selection, positioning, pricing, compliance, and scaling. That’s what this course focuses on.”"
+        "content": "If a buyer clicks \"Contact Seller\" to ask standard tracking questions like \"Where is my parcel?\" or \"When will this arrive?\", Amazon's support team intercepts the message. They handle the communication directly using their live carrier tracking data. You never see the message, and you don't have to reply to it."
+      },
+      {
+        "type": "heading_3",
+        "content": "The Refund & Return Automation"
       },
       {
         "type": "paragraph",
-        "content": "What This Course Is and Isn’t"
+        "content": "If a customer decides they no longer want your bundle, or if a product arrives damaged, they initiate a return through their own Amazon buyer dashboard. Amazon instantly issues a return shipping label, handles the refund processing out of your account's gross funds, and instructs the buyer to ship the physical item back to the fulfillment centre."
+      },
+      {
+        "type": "heading_3",
+        "content": "Inventory Disposition"
       },
       {
         "type": "paragraph",
-        "content": "“This is not a get-rich-quick course."
+        "content": "Once the returned item arrives back at the warehouse, Amazon's staff inspects it. If the item is still pristine and unopened, they automatically put it back onto the shelf as Fulfillable Inventory to be sold again. If the packaging is torn or opened, they mark it as Unfulfillable, allowing you to recall it to your home address to inspect or salvage the components."
+      },
+      {
+        "type": "callout",
+        "content": "⚠️ The Operator Risk — The Return Rate Metric: While this system is completely hands-off, it is not free from risk. Amazon makes returning items incredibly easy for buyers. As an operator, you must track your Return Rate (Total Returns ÷ Total Units Sold) inside your seller dashboard. If you build poor-quality bundles that get damaged in transit, or if your listing images don't match the physical product exactly, your return rate will spike"
+      },
+      {
+        "type": "heading_2",
+        "content": "The Reality Check: FBA is Infrastructure, Not a Business Model"
       },
       {
         "type": "paragraph",
-        "content": "You won’t find screenshots, Lamborghinis, or overnight success stories here."
+        "content": "If you bought this course thinking that Amazon FBA is a magic \"set-and-forget\" passive income machine, you need to clear that out of your head right now."
       },
       {
         "type": "paragraph",
-        "content": "What you will find is a practical, low-risk way to start selling on Amazon without burning cash or guessing.”"
+        "content": "Amazon FBA is not a business model. FBA is simply infrastructure."
       },
       {
         "type": "paragraph",
-        "content": "The Core Method"
+        "content": "When you pay Amazon their fulfillment fees, you are renting their warehouses, their multi-billion pound delivery network, and their automated support staff. That is all. Amazon does not care if your product makes a profit. They do not care if your items sit on a shelf gathering dust. They charge you regardless."
       },
       {
         "type": "paragraph",
-        "content": "“The method I teach is the exact path I used."
+        "content": "Your actual business is everything that happens before your stock ever hits an Amazon pallet. If you fail to master the following four operational pillars, you aren't building a business - you are just donating cash to Amazon."
+      },
+      {
+        "type": "heading_3",
+        "content": "Sourcing Data vs. Software Laziness"
       },
       {
         "type": "paragraph",
-        "content": "We start lean as an individual seller."
+        "content": "Most beginners sit at a desk, open a mass-market product research software tool, and look for high-volume keywords. They find an item, order a bulk shipment, and find out that 400 other people pulled the exact same data report."
       },
       {
         "type": "paragraph",
-        "content": "We validate products before committing serious money."
+        "content": "Your business is about finding hidden data gaps. We do this by combining real-world shelf research in physical discount shops with live Amazon marketplace analytics. If you don't master how to spot real-world supply and demand mismatches, your business stops before it starts."
+      },
+      {
+        "type": "pillar_showcase",
+        "content": ""
+      },
+      {
+        "type": "heading_2",
+        "content": "The Cost of Using Amazon's Machine (Fees)"
       },
       {
         "type": "paragraph",
-        "content": "We use real-world shelf research, not just software."
+        "content": "Amazon does not store and ship your inventory for free. To protect your cash flow, you must understand the three core fees deducted from your sales. If you don't calculate these down to the penny before buying stock, you will lose money."
+      },
+      {
+        "type": "fee_calculator",
+        "content": ""
+      },
+      {
+        "type": "heading_3",
+        "content": "1. The Referral Fee (The Marketplace Commission)"
       },
       {
         "type": "paragraph",
-        "content": "We create unique bundles to avoid direct competition."
+        "content": "Think of this as your \"finder's fee.\" Amazon owns the customer; you are paying a commission for access to them."
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "The Math: For most everyday categories we target (Grocery, Beauty, Home, Personal Care), this is a flat 15% of the total amount the customer pays at checkout."
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "The Catch: This fee is calculated on the total retail price, which includes any shipping fees you charge the customer (though as an FBA seller, your items will typically be Prime and free delivery for the buyer). If you sell a bundle for £19.99, Amazon instantly takes £3.00 the second the transaction processes."
+      },
+      {
+        "type": "heading_3",
+        "content": "2. The FBA Fulfillment Fee (The Logistics Cost)"
       },
       {
         "type": "paragraph",
-        "content": "We launch under a Generic brand to test demand properly."
+        "content": "This is the flat charge for Amazon's robots and staff to physically pick your item off the shelf, pack it into an Amazon box, and deliver it to the customer's doorstep."
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "How it's calculated: This is based strictly on the weight and outer dimensions of your finished, packaged bundle - not the price of the item."
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "The Size Tier Trap: Amazon breaks products down into strict size categories (e.g., Small Envelope, Standard Envelope, Large Envelope, Standard Parcel). Moving up just 1mm past a size tier boundary can instantly bump your fulfillment fee up by £0.50 to £1.50 per unit."
+      },
+      {
+        "type": "bulleted_list_item",
+        "content": "The Operator Rule: When designing your bundles in physical retail shops, keep them compact. A bundle that fits into a small, flat cardboard mailer box or a tight polybag will always net you a higher profit than an awkwardly shaped, bulky item."
+      },
+      {
+        "type": "heading_3",
+        "content": "3. Monthly Storage Fees (The Rent)"
       },
       {
         "type": "paragraph",
-        "content": "Only once the numbers make sense do we scale."
+        "content": "You are renting physical space inside Amazon's warehouses. This is measured in cubic feet (30cm × 30cm × 30cm)."
       },
       {
-        "type": "paragraph",
-        "content": "That’s when we move into a limited company, trademarks, Brand Registry, and real brand building.”"
+        "type": "bulleted_list_item",
+        "content": "Standard Storage (January – September): This is a minimal, predictable baseline operating cost. As long as your inventory turns over within 30 to 45 days, this fee will barely impact your margins."
       },
       {
-        "type": "paragraph",
-        "content": "What You’ll Learn Inside"
+        "type": "bulleted_list_item",
+        "content": "Peak Storage (October – December): During the Q4 holiday rush, millions of sellers flood the warehouses. To force slow-moving stock out, Amazon triples their monthly storage fees."
       },
       {
-        "type": "paragraph",
-        "content": "“Inside the course, you’ll learn:"
+        "type": "bulleted_list_item",
+        "content": "The Operator Rule: If you have dead stock sitting on a warehouse shelf in November, it will bleed your profits dry. This is exactly why we use the Lean Model: we test demand with 10 to 12 units first. We never buy hundreds of units upfront to sit around gathering dust and racking up penalty fees."
       },
       {
-        "type": "paragraph",
-        "content": "How to start correctly as an individual seller"
+        "type": "case_study",
+        "content": ""
       },
       {
-        "type": "paragraph",
-        "content": "How to find product opportunities in physical shops"
+        "type": "unit_economics",
+        "content": ""
       },
       {
-        "type": "paragraph",
-        "content": "How to spot demand, gaps, and poor listings"
-      },
-      {
-        "type": "paragraph",
-        "content": "How to create compliant bundles and get GTIN exemptions"
-      },
-      {
-        "type": "paragraph",
-        "content": "How to launch your first ASIN properly"
-      },
-      {
-        "type": "paragraph",
-        "content": "How to read performance data without overreacting"
-      },
-      {
-        "type": "paragraph",
-        "content": "How to know when a product is worth scaling"
-      },
-      {
-        "type": "paragraph",
-        "content": "And how to turn proof of concept into a protected brand”"
-      },
-      {
-        "type": "paragraph",
-        "content": "How to Use This Course"
-      },
-      {
-        "type": "paragraph",
-        "content": "“This course is designed to be followed in order."
-      },
-      {
-        "type": "paragraph",
-        "content": "Don’t skip ahead. Don’t rush to launch."
-      },
-      {
-        "type": "paragraph",
-        "content": "Each module builds on the previous one, and every step is there to reduce risk and protect your account.”"
-      },
-      {
-        "type": "paragraph",
-        "content": "Mindset and Expectations"
-      },
-      {
-        "type": "paragraph",
-        "content": "“Progress beats perfection."
-      },
-      {
-        "type": "paragraph",
-        "content": "Your first product doesn’t need to be special. It needs to work."
-      },
-      {
-        "type": "paragraph",
-        "content": "Most people fail because they overthink or overinvest too early."
-      },
-      {
-        "type": "paragraph",
-        "content": "This system is about doing the opposite. Prove demand first, then scale.”"
-      },
-      {
-        "type": "paragraph",
-        "content": "Closing"
-      },
-      {
-        "type": "paragraph",
-        "content": "“If you follow the process, stay compliant, and focus on execution, this course can take you from zero to your first profitable FBA product the right way."
-      },
-      {
-        "type": "paragraph",
-        "content": "Let’s get started.”"
+        "type": "account_safety",
+        "content": ""
       }
     ]
   },

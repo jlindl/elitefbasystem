@@ -34,7 +34,7 @@ export function Accordion({ items, showNumeral = false }: AccordionProps) {
               type="button"
               aria-expanded={isOpen}
               onClick={() => setOpen(isOpen ? null : item.id)}
-              className="flex w-full items-center gap-5 md:gap-8 px-2 md:px-4 py-6 md:py-7 text-left"
+              className="flex w-full items-center gap-5 md:gap-8 px-2 md:px-4 py-6 md:py-7 text-left transition-all duration-200 hover:translate-x-1"
             >
               {showNumeral && item.numeral && (
                 <span className="font-display text-[1.5rem] md:text-[2rem] font-light text-ink-subtle min-w-[2.5rem] md:min-w-[3.5rem]">

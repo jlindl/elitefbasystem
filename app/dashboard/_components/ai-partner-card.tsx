@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useChat } from "@ai-sdk/react";
+import { DefaultChatTransport } from "ai";
 import { ArrowRight } from "@/app/components/icons";
 import { Card } from "./ui/card";
 
@@ -15,17 +16,31 @@ const suggestions = [
 export function AiPartnerCard() {
   const {
     messages,
-    input,
-    handleInputChange,
-    handleSubmit,
-    isLoading,
     stop,
     setMessages,
-    append,
+    sendMessage,
+    status,
     error,
   } = useChat({
-    api: "/api/ai",
+    transport: new DefaultChatTransport({
+      api: "/api/ai",
+    }),
   });
+
+  const [input, setInput] = useState("");
+
+  const isLoading = status === "submitted" || status === "streaming";
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setInput(e.target.value);
+  };
+
+  const handleSubmit = (e?: React.FormEvent<HTMLFormElement>) => {
+    e?.preventDefault();
+    if (!input.trim() || isLoading) return;
+    void sendMessage({ text: input });
+    setInput("");
+  };
 
   const scrollRef = useRef<HTMLDivElement | null>(null);
 
@@ -89,7 +104,7 @@ export function AiPartnerCard() {
         >
           {isEmpty ? (
             <EmptyState
-              onPick={(s) => void append({ role: "user", content: s })}
+              onPick={(s) => void sendMessage({ text: s })}
               streaming={isLoading}
             />
           ) : (
@@ -131,7 +146,7 @@ export function AiPartnerCard() {
               onKeyDown={(e) => {
                 if (e.key === "Enter" && !e.shiftKey) {
                   e.preventDefault();
-                  handleSubmit(e as unknown as React.FormEvent<HTMLFormElement>);
+                  handleSubmit();
                 }
               }}
               rows={1}
