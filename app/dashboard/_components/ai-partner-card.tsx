@@ -2,9 +2,16 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useChat } from "@ai-sdk/react";
-import { DefaultChatTransport } from "ai";
+import { DefaultChatTransport, type UIMessage } from "ai";
 import { ArrowRight } from "@/app/components/icons";
 import { Card } from "./ui/card";
+
+function messageText(m: UIMessage): string {
+  return m.parts
+    .filter((p): p is { type: "text"; text: string } => p.type === "text")
+    .map((p) => p.text)
+    .join("");
+}
 
 const suggestions = [
   "What should I focus on this week?",
@@ -112,7 +119,7 @@ export function AiPartnerCard() {
               <Bubble
                 key={m.id || i}
                 role={m.role as "user" | "assistant"}
-                text={m.content}
+                text={messageText(m)}
                 streaming={
                   isLoading &&
                   i === messages.length - 1 &&
