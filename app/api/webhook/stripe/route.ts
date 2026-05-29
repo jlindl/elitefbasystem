@@ -1,5 +1,11 @@
 import { NextResponse } from 'next/server';
 import { stripe } from '@/lib/stripe';
+import { createClient } from '@supabase/supabase-js';
+
+const supabase = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL!,
+  process.env.SUPABASE_SERVICE_ROLE_KEY!,
+);
 
 export async function POST(req: Request) {
   const body = await req.text();
@@ -18,19 +24,32 @@ export async function POST(req: Request) {
   // Handle the event
   switch (event.type) {
     case 'checkout.session.completed':
-      const checkoutSessionCompleted = event.data.object;
-      
-      console.log('Checkout session completed:', checkoutSessionCompleted);
+      const session = event.data.object;
 
-      // TODO: Handle post-purchase fulfillment here
-      // For example, grant the user access in Supabase:
-      // const customerEmail = checkoutSessionCompleted.customer_details?.email;
-      // const userId = checkoutSessionCompleted.metadata?.userId;
-      // await supabase.from('profiles').update({ has_access: true }).eq('id', userId);
-      
+      try {
+        const userId = session.metadata?.userId;
+        const email = session.customer_details?.email;
+
+        if (!userId) {
+          console.error('No userId in metadata');
+          break;
+        }
+
+        // Grant user access by updating their profile
+        const { error } = await supabase
+          .from('profiles')
+          .update({ has_access: true })
+          .eq('id', userId);
+
+        if (error) {
+          console.error('Failed to grant access:', error);
+        } else {
+          console.log(`Access granted to user ${userId} (${email})`);
+        }
+      } catch (err) {
+        console.error('Error processing checkout session:', err);
+      }
       break;
-    
-    // Add other event types here if needed (e.g., payment_intent.succeeded)
 
     default:
       console.log(`Unhandled event type ${event.type}`);
