@@ -6,7 +6,7 @@
       {
         "type": "video",
         "content": "Module 1: The Blueprint to 6-Figures",
-        "src": "/module%201%20video.MOV"
+        "src": "https://yjvlmqjqcxtanhmwcvkq.supabase.co/storage/v1/object/public/course-videos/module-1-intro.mp4"
       },
       {
         "type": "paragraph",
