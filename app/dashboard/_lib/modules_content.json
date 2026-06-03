@@ -5,71 +5,228 @@
     "blocks": [
       {
         "type": "video",
-        "content": "Module 1: The Blueprint to 6-Figures"
-      },
-      {
-        "type": "module_sections",
-        "content": ""
-      },
-      {
-        "type": "heading_1",
-        "content": "The Basics of Amazon FBA"
+        "content": "Module 1: The Blueprint to 6-Figures",
+        "src": "/module%201%20video.MOV"
       },
       {
         "type": "paragraph",
-        "content": "Normally, running an online shop means buying stock, cluttering your spare bedroom with boxes, packing orders manually every evening, and driving to the post office."
+        "content": "If you have never sold anything online before, the world of Amazon can look like a maze of confusing jargon. Let us strip all of that away."
       },
       {
         "type": "paragraph",
-        "content": "FBA stands for Fulfillment by Amazon. It is a logistics service where you pay Amazon to handle the physical heavy lifting."
+        "content": "To build a successful business on Amazon, you do not need to own a massive warehouse, you do not need a fleet of delivery trucks, and you do not need to spend your days packing and sending off customer orders."
+      },
+      {
+        "type": "paragraph",
+        "content": "Amazon has already spent billions of pounds building the most advanced delivery network on the planet. FBA stands for Fulfilment by Amazon. When you use FBA, you are simply renting a tiny corner of their infrastructure."
       },
       {
         "type": "heading_2",
-        "content": "How the Infrastructure Works"
+        "content": "The Core Concept: Split the Work"
       },
       {
-        "type": "workflow_diagram",
+        "type": "paragraph",
+        "content": "An Amazon FBA business is a partnership between you and Amazon. You handle the digital side; Amazon handles the physical side."
+      },
+      {
+        "type": "split_work_diagram",
+        "content": ""
+      },
+      {
+        "type": "callout",
+        "content": "The Lean Reality: because Amazon handles the physical shipping, once you have shipped your products to Amazon you can run this entire business from anywhere in the world with nothing more than a smartphone and a laptop."
+      },
+      {
+        "type": "heading_2",
+        "content": "The Ultimate Superpower: The Prime Badge"
+      },
+      {
+        "type": "paragraph",
+        "content": "There are two ways to sell on Amazon. The first is FBM (Fulfilment by Merchant), where you handle the whole physical chain yourself. You buy the stock, you store it at home or in a small unit, you print the postage labels, you queue at the post office, and you personally answer every customer message when something goes wrong with an order."
+      },
+      {
+        "type": "paragraph",
+        "content": "It is slow, it is exhausting, and customers do not trust it the way they trust an Amazon shipment. FBM listings show a generic delivery window of three to seven working days. They have no Prime badge, no guaranteed next-day delivery, and no Amazon-backed returns policy. A buyer comparing two identical products at the same price will pick the Prime listing every single time, even when the FBM version is a few pounds cheaper."
+      },
+      {
+        "type": "paragraph",
+        "content": "This is exactly why the Elite FBA System uses FBA and not FBM. We do not want to be the warehouse, the post office, and the customer service desk all at once. We want to be the buyer and the strategist. FBA hands the entire physical operation over to Amazon's billion-pound logistics network and gives us our time back to focus on what actually moves the business forward: finding the next profitable product."
+      },
+      {
+        "type": "paragraph",
+        "content": "Mechanically, FBA is very simple. You ship a single box of stock to an Amazon fulfilment centre. Their staff unload it, scan each unit, and check it into your inventory. From that point on, every customer order is picked off the shelf, packed into an Amazon box, shipped under the Amazon brand, and tracked by Amazon's own systems. If a buyer wants to return it, they speak to Amazon, not to you."
+      },
+      {
+        "type": "paragraph",
+        "content": "The moment your stock arrives at an Amazon FBA warehouse and is scanned in, your products automatically get the Amazon Prime badge. There is no application form, no waiting list, and no extra fee on top of the standard FBA fees you are already paying. Within a few hours, your listings are live and visible to every Prime customer searching for that product."
+      },
+      {
+        "type": "paragraph",
+        "content": "Tap each unlock below to see why that single badge is the difference between a listing that sells and a listing that does not."
+      },
+      {
+        "type": "prime_badge_benefits",
+        "content": ""
+      },
+      {
+        "type": "heading_2",
+        "content": "How You Actually Make Money"
+      },
+      {
+        "type": "paragraph",
+        "content": "The math behind Amazon FBA is straightforward. You are looking for simple price mismatches in the real world."
+      },
+      {
+        "type": "profit_calculator",
+        "content": ""
+      },
+      {
+        "type": "paragraph",
+        "content": "You do not need to guess if a product will make a profit. Before you spend a single penny on inventory, you will use free tools to calculate the exact Amazon fees and your exact profit margin. If the math does not work, you walk away."
+      },
+      {
+        "type": "heading_2",
+        "content": "Our Framework: The Lean Model"
+      },
+      {
+        "type": "paragraph",
+        "content": "Most gurus will tell you to order 500 units of a custom product from China, spend £3,000 upfront, and pray it sells. We do not do that here. That is how beginners lose their life savings."
+      },
+      {
+        "type": "paragraph",
+        "content": "The Elite FBA method is built on a strict Lean, Validate, Scale framework. Click each step below to see how it works in practice."
+      },
+      {
+        "type": "lean_framework_stepper",
+        "content": ""
+      },
+      {
+        "type": "paragraph",
+        "content": "Amazon FBA is simply a logistics machine. Once you understand how to slide products into that machine safely, the sky is the limit."
+      },
+      {
+        "type": "heading_2",
+        "content": "The Step-by-Step Infrastructure Flow"
+      },
+      {
+        "type": "paragraph",
+        "content": "Getting products into the Amazon ecosystem requires a specific, orderly sequence. Following these steps correctly ensures that inventory is tracked accurately and processed without warehouse delays."
+      },
+      {
+        "type": "infrastructure_stepper",
+        "content": ""
+      },
+      {
+        "type": "heading_2",
+        "content": "The Stow Algorithm and Inventory Health"
+      },
+      {
+        "type": "paragraph",
+        "content": "Once your stock lands at the warehouse, Amazon's Stow algorithm splits your items across different physical shelves in the warehouse, and across different regional fulfilment hubs around the country. This ensures that no matter where a customer orders from, your product is always physically close to a picker, maximising delivery speed."
+      },
+      {
+        "type": "paragraph",
+        "content": "When looking at your Seller Central dashboard, monitoring stock levels across the three statuses below is a daily operational requirement to prevent stockouts or excessive storage fees."
+      },
+      {
+        "type": "inventory_status_board",
+        "content": ""
+      },
+      {
+        "type": "callout",
+        "content": "⚠️ The 180-Day Penalty: if your stock sits in a warehouse for more than 180 days, Amazon charges severe Long-Term Storage Fees. This is why we use the Lean Model: we test with 10 to 12 units first. We never risk buying hundreds of units upfront without historical verification."
+      },
+      {
+        "type": "heading_2",
+        "content": "Behind the Scenes: The 24-Hour Fulfilment Machine"
+      },
+      {
+        "type": "paragraph",
+        "content": "The moment a customer purchases your product, Amazon does not immediately release the funds to your bank account. They hold them in a temporary reserve to ensure there are no immediate returns or chargebacks. Payouts are typically initiated every 14 days."
+      },
+      {
+        "type": "paragraph",
+        "content": "While you sleep, work your day job, or spend time with family, this flawless automated machine runs 24 hours a day, 365 days a year. Tap any stage of the journey below to see what is happening behind the scenes."
+      },
+      {
+        "type": "fulfilment_timeline",
+        "content": ""
+      },
+      {
+        "type": "heading_2",
+        "content": "Hands-Off Customer Service: Amazon's Automated Front Desk"
+      },
+      {
+        "type": "paragraph",
+        "content": "When you use Amazon FBA, your job as a customer service representative is effectively eliminated. For a lean, individual operator, managing customer messages, tracking updates, and refunds can drain hours from your week. Amazon absorbs this entire infrastructure, acting as your customer service front desk 24 hours a day, 7 days a week."
+      },
+      {
+        "type": "paragraph",
+        "content": "Here is exactly how this hands-off layer operates in the real world."
+      },
+      {
+        "type": "customer_service_flow",
         "content": ""
       },
       {
         "type": "heading_3",
-        "content": "Storage"
+        "content": "Direct Customer Inquiries"
       },
       {
-        "type": "bulleted_list_item",
-        "content": "Storage: You find profitable products locally and ship them in bulk boxes to one of Amazon's massive fulfillment centres (warehouses). Amazon logs your stock and stores it on their shelves ready to ship to customers. You pay a small fee for this."
-      },
-      {
-        "type": "bulleted_list_item",
-        "content": "The Inbound Box: You pack your inventory into a single large cardboard box, print a shipping label from your Amazon dashboard, and post it at your local parcelshop."
-      },
-      {
-        "type": "bulleted_list_item",
-        "content": "The Warehouse Arrival: Your box goes to an Amazon Fulfillment Centre (FC). Amazon warehouse staff open it, scan the item barcodes, and your stock instantly goes live for sale online with the Prime badge."
-      },
-      {
-        "type": "bulleted_list_item",
-        "content": "The \"Stow\" Algorithm: Amazon splits your items across different physical shelves in the warehouse, and across different warehouses around the UK. This ensures that no matter where a customer orders from, your product is always close to a picker, maximizing delivery speed."
-      },
-      {
-        "type": "callout",
-        "content": "⚠️ The 180-Day Penalty: If your stock sits in a warehouse for more than 180 days, Amazon charges severe Long-Term Storage Fees. This is why we use the Lean Model: we test with 10 to 12 units first. We never risk buying hundreds of units upfront."
+        "type": "paragraph",
+        "content": "If a buyer clicks Contact Seller to ask standard tracking questions like \"Where is my parcel?\" or \"When will this arrive?\", Amazon's support team intercepts the message. They handle the communication directly using their live carrier tracking data. You never see the message, and you do not have to reply to it."
       },
       {
         "type": "heading_3",
-        "content": "The Prime Badge"
+        "content": "The Refund and Return Automation"
       },
       {
         "type": "paragraph",
-        "content": "When you use Amazon FBA, your product listings don't just sit on a marketplace - they are instantly upgraded with the Amazon Prime badge. For a brand-new seller starting from zero, this badge is an unfair advantage that completely levels the playing field against massive, established competitors."
+        "content": "If a customer decides they no longer want your bundle, or if a product arrives damaged, they initiate a return through their own Amazon buyer dashboard. Amazon instantly issues a return shipping label, handles the refund processing out of your account's gross funds, and instructs the buyer to ship the physical item back to the fulfilment centre."
+      },
+      {
+        "type": "heading_3",
+        "content": "Inventory Disposition"
       },
       {
         "type": "paragraph",
-        "content": "Here is exactly why the Prime badge allows us to win customers over non-Prime competitors:"
+        "content": "Once the returned item arrives back at the warehouse, Amazon's staff inspect it. If the item is still pristine and unopened, they automatically put it back onto the shelf as Fulfillable Inventory to be sold again. If the packaging is torn or opened, they mark it as Unfulfillable, allowing you to recall it to your home address to inspect or salvage the components."
+      },
+      {
+        "type": "callout",
+        "content": "⚠️ The Operator Risk (the Return Rate Metric): while this system is completely hands-off, it is not free from risk. Amazon makes returning items incredibly easy for buyers. As an operator, you must track your Return Rate (total returns divided by total units sold) inside your seller dashboard. If you build poor-quality bundles that get damaged in transit, or if your listing images do not match the physical product exactly, your return rate will spike and put your account health at risk."
+      },
+      {
+        "type": "heading_2",
+        "content": "What the Prime Badge Really Is"
+      },
+      {
+        "type": "paragraph",
+        "content": "Amazon Prime is the most successful paid subscription service ever launched. For a flat annual fee, members get fast and free shipping on hundreds of millions of products, plus video streaming, music, photo storage, exclusive sales events, and a long list of secondary perks. In the UK and the US, more than half of all households now hold a Prime membership."
+      },
+      {
+        "type": "paragraph",
+        "content": "On a product page, the badge itself looks deceptively small: a blue chevron mark next to the word Prime, usually sitting just above the price. But that tiny symbol is the single most powerful conversion signal Amazon has ever built. It tells the buyer that this item ships fast, it ships free, and if anything goes wrong, Amazon stands behind it personally."
+      },
+      {
+        "type": "paragraph",
+        "content": "For a third-party seller, the badge is the front door to the customer. Without it, your listing sits behind an invisible wall that millions of Prime buyers never look past. With it, your listing is funnelled into the same trusted pipeline as every other product Amazon recommends."
+      },
+      {
+        "type": "prime_stats_card",
+        "content": ""
       },
       {
         "type": "prime_comparison",
         "content": ""
+      },
+      {
+        "type": "heading_2",
+        "content": "Why the Badge Wins Sales"
+      },
+      {
+        "type": "paragraph",
+        "content": "The badge does the heavy lifting on three different levers at once: trust, search visibility, and pricing freedom. Each one alone would be valuable. Stacked together they are why an FBA listing routinely out-sells a cheaper FBM listing on the same product page."
       },
       {
         "type": "heading_3",
@@ -96,140 +253,63 @@
         "content": "Non-Prime sellers often have to lower their prices to get noticed. Because Prime members prioritize speed and reliability, they are consistently willing to pay a premium price. You can list a bundle for £19.99 and comfortably out-sell a non-Prime competitor offering a similar single item for less, simply because your product can be on their doorstep tomorrow morning."
       },
       {
-        "type": "heading_3",
-        "content": "Automation"
+        "type": "heading_2",
+        "content": "How Prime Members Actually Behave"
       },
       {
         "type": "paragraph",
-        "content": "When you use Amazon FBA, you aren't just paying for storage space - you are hiring a flawless, automated fulfillment machine. The moment your inventory is scanned into the fulfillment centre, your physical workload drops to zero. Amazon takes over the entire order cycle."
+        "content": "Prime membership is not a casual purchase. People who subscribe pay roughly £95 a year up front, and they actively want to use the perks to feel that the subscription has paid for itself. That single psychological shift changes everything about how they shop on Amazon."
       },
       {
         "type": "paragraph",
-        "content": "Here is exactly what happens behind the scenes the second a customer buys your product:"
-      },
-      {
-        "type": "automation_timeline",
-        "content": ""
-      },
-      {
-        "type": "heading_3",
-        "content": "Instant Order Routing"
-      },
-      {
-        "type": "paragraph",
-        "content": "The second a customer clicks \"Buy Now\" on Amazon.co.uk, Amazon's backend software instantly routes the order to the exact warehouse holding your inventory. You don't need to log in, print a label, or click a single button to approve it."
-      },
-      {
-        "type": "heading_3",
-        "content": "Robotic Retrieval & Packing"
-      },
-      {
-        "type": "paragraph",
-        "content": "Inside the warehouse, high-speed automated robots and picking staff locate your specific bundle. It is brought to a packing station, scanned for accuracy, placed into an official Amazon-branded cardboard box, and sealed."
-      },
-      {
-        "type": "heading_3",
-        "content": "The Shipping Network"
-      },
-      {
-        "type": "paragraph",
-        "content": "The package is automatically sorted onto a delivery vehicle. Because Amazon runs its own massive shipping network, your product moves from a warehouse shelf to the customer's doorstep in less than 24 hours."
+        "content": "They search differently. They filter for Prime first, often without even noticing the toggle is on. They have made Amazon their default starting point for many categories where, a decade ago, they would have used Google or visited a physical shop. And they trust Amazon's recommendations enough to one-click items they have never seen or heard of before."
       },
       {
         "type": "callout",
-        "content": "🧠 The Operator Reality: This level of automation runs 24 hours a day, 365 days a year. Whether you are asleep, at your day job, or spending time with family, your inventory is selling, packing, and shipping completely in the background. You make money all day every day, from wherever you want to be. In return, you pay a predictable, flat FBA Fulfillment Fee per unit for this service, turning a massive operational headache into a fixed expense."
+        "content": "📈 The Loyalty Loop: a Prime member who uses the badge to find a useful item is more likely to come back next week, more likely to add a second item to their basket, and more likely to leave a positive review. The badge does not just win a single sale; it triggers a repeating loop that compounds over months and years."
       },
       {
-        "type": "heading_3",
-        "content": "Hands-Off Customer Service: Amazon's Automated Front Desk"
-      },
-      {
-        "type": "paragraph",
-        "content": "When you use Amazon FBA, your job as a customer service representative is effectively eliminated. For a lean, individual operator, managing customer messages, tracking updates, and refunds can drain hours from your week. Amazon absorbs this entire infrastructure, acting as your customer service front desk 24 hours a day, 7 days a week."
+        "type": "heading_2",
+        "content": "How a Listing Becomes Prime-Eligible"
       },
       {
         "type": "paragraph",
-        "content": "Here is exactly how this hands-off layer operates in the real world:"
+        "content": "There are two official ways for a third-party seller to earn the Prime badge on a listing. In practice, only one of them is realistic for almost every seller, and that is FBA."
       },
       {
-        "type": "customer_service_flow",
+        "type": "badge_eligibility_path",
         "content": ""
       },
       {
-        "type": "heading_3",
-        "content": "Direct Customer Inquiries"
-      },
-      {
         "type": "paragraph",
-        "content": "If a buyer clicks \"Contact Seller\" to ask standard tracking questions like \"Where is my parcel?\" or \"When will this arrive?\", Amazon's support team intercepts the message. They handle the communication directly using their live carrier tracking data. You never see the message, and you don't have to reply to it."
-      },
-      {
-        "type": "heading_3",
-        "content": "The Refund & Return Automation"
-      },
-      {
-        "type": "paragraph",
-        "content": "If a customer decides they no longer want your bundle, or if a product arrives damaged, they initiate a return through their own Amazon buyer dashboard. Amazon instantly issues a return shipping label, handles the refund processing out of your account's gross funds, and instructs the buyer to ship the physical item back to the fulfillment centre."
-      },
-      {
-        "type": "heading_3",
-        "content": "Inventory Disposition"
-      },
-      {
-        "type": "paragraph",
-        "content": "Once the returned item arrives back at the warehouse, Amazon's staff inspects it. If the item is still pristine and unopened, they automatically put it back onto the shelf as Fulfillable Inventory to be sold again. If the packaging is torn or opened, they mark it as Unfulfillable, allowing you to recall it to your home address to inspect or salvage the components."
+        "content": "The second route, Seller-Fulfilled Prime, technically lets you keep stock at home and still display the Prime badge. In reality, it requires near-perfect on-time delivery from your own warehouse, a strict packaging audit, and continuous performance monitoring that almost no individual seller can sustain. Amazon has also paused new applications to the programme for years at a time to keep quality high."
       },
       {
         "type": "callout",
-        "content": "⚠️ The Operator Risk — The Return Rate Metric: While this system is completely hands-off, it is not free from risk. Amazon makes returning items incredibly easy for buyers. As an operator, you must track your Return Rate (Total Returns ÷ Total Units Sold) inside your seller dashboard. If you build poor-quality bundles that get damaged in transit, or if your listing images don't match the physical product exactly, your return rate will spike"
+        "content": "🎯 The Practical Reality: for the Elite FBA System, the answer is simple. We always use FBA. The Prime badge appears automatically the moment our stock is scanned in, and we never have to worry about losing it because of a slow delivery, a missed dispatch, or a packaging audit."
       },
       {
         "type": "heading_2",
-        "content": "The Reality Check: FBA is Infrastructure, Not a Business Model"
+        "content": "The Cost of Using Amazon's Machine"
       },
       {
         "type": "paragraph",
-        "content": "If you bought this course thinking that Amazon FBA is a magic \"set-and-forget\" passive income machine, you need to clear that out of your head right now."
+        "content": "Amazon does not store, pack, and ship your inventory out of goodwill. FBA is an elite infrastructure, but it is an infrastructure that will quietly bleed your bank account dry if you do not understand exactly how it charges you."
       },
       {
         "type": "paragraph",
-        "content": "Amazon FBA is not a business model. FBA is simply infrastructure."
-      },
-      {
-        "type": "paragraph",
-        "content": "When you pay Amazon their fulfillment fees, you are renting their warehouses, their multi-billion pound delivery network, and their automated support staff. That is all. Amazon does not care if your product makes a profit. They do not care if your items sit on a shelf gathering dust. They charge you regardless."
-      },
-      {
-        "type": "paragraph",
-        "content": "Your actual business is everything that happens before your stock ever hits an Amazon pallet. If you fail to master the following four operational pillars, you aren't building a business - you are just donating cash to Amazon."
-      },
-      {
-        "type": "heading_3",
-        "content": "Sourcing Data vs. Software Laziness"
-      },
-      {
-        "type": "paragraph",
-        "content": "Most beginners sit at a desk, open a mass-market product research software tool, and look for high-volume keywords. They find an item, order a bulk shipment, and find out that 400 other people pulled the exact same data report."
-      },
-      {
-        "type": "paragraph",
-        "content": "Your business is about finding hidden data gaps. We do this by combining real-world shelf research in physical discount shops with live Amazon marketplace analytics. If you don't master how to spot real-world supply and demand mismatches, your business stops before it starts."
-      },
-      {
-        "type": "pillar_showcase",
-        "content": ""
+        "content": "To protect your cash flow, you must understand the core fee layers deducted from every sale. As an operator, your job is to calculate these costs down to the penny before you spend a single pound on physical inventory. If you guess, you lose."
       },
       {
         "type": "heading_2",
-        "content": "The Cost of Using Amazon's Machine (Fees)"
+        "content": "The Three Core Fees"
       },
       {
         "type": "paragraph",
-        "content": "Amazon does not store and ship your inventory for free. To protect your cash flow, you must understand the three core fees deducted from your sales. If you don't calculate these down to the penny before buying stock, you will lose money."
+        "content": "Every time a customer clicks Buy Now on your listing, Amazon's system instantly calculates and deducts three distinct fee types before the remaining capital hits your account reserve."
       },
       {
-        "type": "fee_calculator",
-        "content": ""
+        "type": "fee_breakdown_diagram"
       },
       {
         "type": "heading_3",
@@ -237,35 +317,31 @@
       },
       {
         "type": "paragraph",
-        "content": "Think of this as your \"finder's fee.\" Amazon owns the customer; you are paying a commission for access to them."
-      },
-      {
-        "type": "bulleted_list_item",
-        "content": "The Math: For most everyday categories we target (Grocery, Beauty, Home, Personal Care), this is a flat 15% of the total amount the customer pays at checkout."
-      },
-      {
-        "type": "bulleted_list_item",
-        "content": "The Catch: This fee is calculated on the total retail price, which includes any shipping fees you charge the customer (though as an FBA seller, your items will typically be Prime and free delivery for the buyer). If you sell a bundle for £19.99, Amazon instantly takes £3.00 the second the transaction processes."
-      },
-      {
-        "type": "heading_3",
-        "content": "2. The FBA Fulfillment Fee (The Logistics Cost)"
+        "content": "Think of this as your finder's fee. Amazon owns the customer data, the traffic, and the checkout platform; you are paying a direct commission for access to their active buyer base."
       },
       {
         "type": "paragraph",
-        "content": "This is the flat charge for Amazon's robots and staff to physically pick your item off the shelf, pack it into an Amazon box, and deliver it to the customer's doorstep."
+        "content": "The Calculation: for almost every everyday category we target in the Elite FBA framework (Grocery, Beauty, Home, Personal Care, and Toys), this is a flat 15% of the total gross amount the customer pays at checkout."
       },
       {
-        "type": "bulleted_list_item",
-        "content": "How it's calculated: This is based strictly on the weight and outer dimensions of your finished, packaged bundle - not the price of the item."
+        "type": "callout",
+        "content": "💷 The Catch: this fee is calculated on the total retail price paid. If you sell a custom multipack for £19.99, Amazon instantly takes £3.00 the exact second the transaction processes. You never handle this money; it is sliced off at the point of sale."
       },
       {
-        "type": "bulleted_list_item",
-        "content": "The Size Tier Trap: Amazon breaks products down into strict size categories (e.g., Small Envelope, Standard Envelope, Large Envelope, Standard Parcel). Moving up just 1mm past a size tier boundary can instantly bump your fulfillment fee up by £0.50 to £1.50 per unit."
+        "type": "heading_3",
+        "content": "2. The FBA Fulfilment Fee (The Logistics Cost)"
       },
       {
-        "type": "bulleted_list_item",
-        "content": "The Operator Rule: When designing your bundles in physical retail shops, keep them compact. A bundle that fits into a small, flat cardboard mailer box or a tight polybag will always net you a higher profit than an awkwardly shaped, bulky item."
+        "type": "paragraph",
+        "content": "This is the flat charge for Amazon's robotics and warehouse staff to physically pull your item off its warehouse shelf, track it, pack it into an official Amazon-branded cardboard box, and deliver it to the customer's doorstep."
+      },
+      {
+        "type": "paragraph",
+        "content": "The Calculation: this is based strictly on the weight and the physical outer dimensions of your finished, pre-packaged bundle. It has absolutely nothing to do with the retail price you charge."
+      },
+      {
+        "type": "callout",
+        "content": "📐 The Operator Rule: when sourcing inventory in physical retail shops, always look at items through the lens of volumetric weight. A bundle that can be packed tightly into a flat polybag or a slim mailer box will always make more money than an awkwardly shaped, hollow, or bulky item."
       },
       {
         "type": "heading_3",
@@ -273,27 +349,149 @@
       },
       {
         "type": "paragraph",
-        "content": "You are renting physical space inside Amazon's warehouses. This is measured in cubic feet (30cm × 30cm × 30cm)."
+        "content": "You are renting high-value physical space inside Amazon's fulfilment centres. This space is measured and billed monthly per cubic foot (roughly 30cm × 30cm × 30cm)."
       },
       {
-        "type": "bulleted_list_item",
-        "content": "Standard Storage (January – September): This is a minimal, predictable baseline operating cost. As long as your inventory turns over within 30 to 45 days, this fee will barely impact your margins."
+        "type": "paragraph",
+        "content": "Standard Storage (January to September): a low, highly predictable baseline operating cost. As long as your inventory turns over within our recommended 30 to 45 day window, this fee is negligible and barely impacts your net margins."
       },
       {
-        "type": "bulleted_list_item",
-        "content": "Peak Storage (October – December): During the Q4 holiday rush, millions of sellers flood the warehouses. To force slow-moving stock out, Amazon triples their monthly storage fees."
+        "type": "paragraph",
+        "content": "Peak Q4 Storage (October to December): during the holiday rush, millions of sellers flood the warehouses with inventory. To prevent gridlock and force slow-moving items out, Amazon triples their monthly storage fees."
       },
       {
-        "type": "bulleted_list_item",
-        "content": "The Operator Rule: If you have dead stock sitting on a warehouse shelf in November, it will bleed your profits dry. This is exactly why we use the Lean Model: we test demand with 10 to 12 units first. We never buy hundreds of units upfront to sit around gathering dust and racking up penalty fees."
+        "type": "callout",
+        "content": "🎯 The Operator Rule: if you have dead or unvalidated stock sitting on a warehouse shelf in November, storage fees will swallow your profits. This is exactly why the Elite FBA framework uses a lean setup: we test initial demand with only 10 to 12 units. We never buy hundreds of units upfront to sit around gathering dust and racking up penalty fees."
+      },
+      {
+        "type": "heading_2",
+        "content": "The Size Tier Trap"
+      },
+      {
+        "type": "paragraph",
+        "content": "Amazon breaks products down into incredibly strict dimensional size categories. Moving just 1mm past a size tier boundary can instantly bump your fulfilment fee up by £0.50 to £1.50 per unit. That single millimetre can completely wipe out your projected net profit."
+      },
+      {
+        "type": "size_tier_ladder"
+      },
+      {
+        "type": "paragraph",
+        "content": "When you are bundling items together physically at your desk (for example, taping a 3-pack of specialised lightbulbs together), you are the manufacturer. How you position, wrap, and bag those items determines their final dimensions."
+      },
+      {
+        "type": "callout",
+        "content": "⚠️ Operator Warning: if you bag items loosely and leave excess plastic flagging out from the sides, Amazon's automated laser scanners (Cubiscan machines) will measure that empty plastic flagging as part of the solid product volume. You will be up-charged into a higher parcel tier for shipping trapped air. Wrap your bundles tight, tap down excess corners, and pack them as densely as humanly possible."
+      },
+      {
+        "type": "heading_2",
+        "content": "Real-World Bundle Scenarios"
+      },
+      {
+        "type": "paragraph",
+        "content": "To help you visualise how these fee layers operate in action across different item types, analyse these three distinct operational scenarios based on common retail bundle configurations."
+      },
+      {
+        "type": "bundle_scenarios"
       },
       {
         "type": "case_study",
         "content": ""
       },
       {
-        "type": "unit_economics",
-        "content": ""
+        "type": "heading_2",
+        "content": "Understanding the Unit Economics"
+      },
+      {
+        "type": "paragraph",
+        "content": "Unit economics is the per-sale profit and loss of a single product. It is the smallest meaningful financial unit in your business. Everything else, from the size of your Q4 storage bill to the speed of your cash compounding, is a downstream consequence of these numbers."
+      },
+      {
+        "type": "paragraph",
+        "content": "Operators do not look at revenue. Revenue is a vanity figure that hides the cost of running the business. They look at one number: how many pounds are left in their pocket after every single unit is sold, fees deducted, returns absorbed, and storage accounted for. If that number is healthy and repeatable, the business scales smoothly. If it is not, no amount of sales volume will save it."
+      },
+      {
+        "type": "callout",
+        "content": "💡 The Operator Mindset: a £100,000-a-year bundle that nets £0.50 per unit is a tax-only business. A £30,000-a-year bundle that nets £8 per unit is an actual operation. We optimise for the second every single time."
+      },
+      {
+        "type": "heading_2",
+        "content": "Single Item vs Bundle: The Real Math"
+      },
+      {
+        "type": "paragraph",
+        "content": "The cleanest way to see why this framework works is to compare the per-unit economics of fighting for an existing single-product listing against running your own unique bundle. The figures below are pulled from a representative pair of listings: a generic car sponge sold on a crowded ASIN versus a bundle we built around it."
+      },
+      {
+        "type": "unit_economics"
+      },
+      {
+        "type": "callout",
+        "content": "🎯 The Key Reframe: total Amazon fees on the bundle (£6.00) are only £2.50 higher than the single item (£3.50), yet net profit per unit is more than five times larger. Raising the Average Order Value through bundling makes Amazon's flat logistics fees work for you rather than against you."
+      },
+      {
+        "type": "heading_2",
+        "content": "The Three Levers of Healthy Bundle Economics"
+      },
+      {
+        "type": "paragraph",
+        "content": "Every bundle in the Elite FBA framework is evaluated against three independent levers. Move any one of them in the right direction and your unit economics improve. Get all three pointing the right way and the bundle compounds into a genuine cash-flow asset rather than a side-project listing."
+      },
+      {
+        "type": "three_levers_framework"
+      },
+      {
+        "type": "heading_2",
+        "content": "What Good Looks Like"
+      },
+      {
+        "type": "paragraph",
+        "content": "Before sourcing any bundle, you run it through the floor rule. If the projected per-unit numbers do not clear all four thresholds at the same time on conservative assumptions, the bundle does not get built. This is the line between a hobbyist hunting for any sale and an operator running a real P and L."
+      },
+      {
+        "type": "economics_targets"
+      },
+      {
+        "type": "callout",
+        "content": "⚠️ The Floor Is Not a Goal: hitting £5 net or 30% margin is the minimum threshold to even consider sourcing. A bundle that clears it by a hair will not survive a fee revision, a Q4 storage cycle, or a 5% return rate. Aim well above the floor, then sourcing decisions become easy."
+      },
+      {
+        "type": "heading_2",
+        "content": "The Compounding Effect"
+      },
+      {
+        "type": "paragraph",
+        "content": "A single bundle running at the floor (around 60 units a month at £5 net) produces roughly £300 of net cash per month. Modest. The compound game is what happens when you have five, ten, or twenty of these running in parallel, each one validated, locked behind a brand registry, and replenished automatically from wholesale."
+      },
+      {
+        "type": "compounding_projection"
+      },
+      {
+        "type": "paragraph",
+        "content": "That is what good unit economics buy you. Not a single windfall but a quietly growing system that gets larger every month with no extra headcount, no extra customer service workload, and no extra retail real estate. Each bundle is an independent cash-flow engine running on the same warehouse infrastructure."
+      },
+      {
+        "type": "heading_2",
+        "content": "Where Unit Economics Go Wrong"
+      },
+      {
+        "type": "paragraph",
+        "content": "Bundles that look great on a spreadsheet can collapse the moment they hit a real fulfilment centre. The most common failure modes show up in roughly the same shapes every time."
+      },
+      {
+        "type": "callout",
+        "content": "📐 The Tier-Tripping Bundle: the components nest beautifully on paper, but the polybag adds 3mm of slack and pushes the finished pack into the Standard Parcel tier. An extra £1.50 per unit on every sale, forever. Mitigation: measure the prototype with calipers and confirm the tier before sending anything in."
+      },
+      {
+        "type": "callout",
+        "content": "🐢 The Slow-Mover: net £8 per unit looks great until you realise the bundle sells two units a month. Storage fees, return processing, and stockout penalties eat the margin alive. Mitigation: validate velocity in Phase 2 of the blueprint before committing any wholesale capital."
+      },
+      {
+        "type": "callout",
+        "content": "❄️ The Q4 Crusher: a 25% margin in March becomes a 5% margin in November when Amazon triples storage fees. Mitigation: keep margins comfortably above 30% during validation, so peak season pressure still leaves something on the bone."
+      },
+      {
+        "type": "paragraph",
+        "content": "Unit economics is not a one-off calculation. It is the lens through which every sourcing decision, every wholesale negotiation, and every Q4 inventory buy is filtered. Master it on the validation bundle and the model carries forward to every bundle you build after it."
       },
       {
         "type": "account_safety",

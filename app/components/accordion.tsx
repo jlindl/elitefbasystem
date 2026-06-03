@@ -9,6 +9,7 @@ type Item = {
   meta?: string;
   numeral?: string;
   body: ReactNode;
+  completed?: boolean;
 };
 
 type AccordionProps = {
@@ -37,13 +38,24 @@ export function Accordion({ items, showNumeral = false }: AccordionProps) {
               className="flex w-full items-center gap-5 md:gap-8 px-2 md:px-4 py-6 md:py-7 text-left transition-all duration-200 hover:translate-x-1"
             >
               {showNumeral && item.numeral && (
-                <span className="font-display text-[1.5rem] md:text-[2rem] font-light text-ink-subtle min-w-[2.5rem] md:min-w-[3.5rem]">
+                <span
+                  className={`font-display text-[1.5rem] md:text-[2rem] font-light min-w-[2.5rem] md:min-w-[3.5rem] ${
+                    item.completed ? "text-emerald-600" : "text-ink-subtle"
+                  }`}
+                >
                   {item.numeral}
                 </span>
               )}
               <span className="flex-1">
-                <span className="block font-display text-[1.05rem] md:text-[1.25rem] font-medium tracking-[-0.01em] text-ink">
-                  {item.title}
+                <span className="flex flex-wrap items-center gap-x-3 gap-y-1.5">
+                  <span className="font-display text-[1.05rem] md:text-[1.25rem] font-medium tracking-[-0.01em] text-ink">
+                    {item.title}
+                  </span>
+                  {item.completed && (
+                    <span className="inline-flex h-5 px-2 items-center rounded-full bg-emerald-100 text-emerald-800 font-mono text-[0.55rem] font-bold tracking-[0.14em] uppercase">
+                      ✓ Complete
+                    </span>
+                  )}
                 </span>
                 {item.meta && (
                   <span className="mt-1 block text-[0.9rem] text-ink-muted">
