@@ -2,11 +2,21 @@ import Link from "next/link";
 
 type Props = {
   moduleId: string;
+  moduleNumeral: string;
+  questionCount: number;
+  passPercent: number;
   completed: number;
   total: number;
 };
 
-export function ModuleExamCard({ moduleId, completed, total }: Props) {
+export function ModuleExamCard({
+  moduleId,
+  moduleNumeral,
+  questionCount,
+  passPercent,
+  completed,
+  total,
+}: Props) {
   const isUnlocked = completed >= total;
   const progressPct = total === 0 ? 0 : Math.round((completed / total) * 100);
 
@@ -27,13 +37,12 @@ export function ModuleExamCard({ moduleId, completed, total }: Props) {
               Final Exam
             </p>
             <h3 className="font-display text-xl md:text-2xl font-bold text-amber-900 leading-tight mt-1">
-              Take the Module 1 Final Exam
+              Take the Module {moduleNumeral} Final Exam
             </h3>
             <p className="text-[0.9rem] text-amber-900/80 leading-relaxed mt-2">
-              All {total} lessons complete. Test your grip on the fundamentals
-              with 15 questions covering FBA mechanics, the Prime badge, the
-              fee stack, ASIN ownership, and unit economics. Score 70% or
-              higher to pass.
+              All {total} lessons complete. {questionCount} questions covering
+              everything in this module. Score {passPercent}% or higher to
+              pass.
             </p>
             <span className="mt-4 inline-flex items-center gap-2 h-10 px-5 rounded-full bg-amber-500 text-white text-[0.9rem] font-medium transition-all duration-200 group-hover:bg-amber-600">
               Start exam
@@ -58,7 +67,7 @@ export function ModuleExamCard({ moduleId, completed, total }: Props) {
             Final Exam
           </p>
           <h3 className="font-display text-xl md:text-2xl font-bold text-ink leading-tight mt-1">
-            Module 1 Final Exam
+            Module {moduleNumeral} Final Exam
           </h3>
           <p className="text-[0.9rem] text-ink-muted leading-relaxed mt-2">
             Complete every lesson in this module to unlock the final exam.

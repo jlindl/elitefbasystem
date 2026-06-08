@@ -96,7 +96,7 @@ export function FourPillars() {
             }}
             onMouseEnter={() => setIsAutoPlaying(false)}
             disabled={pillar.details.length === 0}
-            className={`p-4 rounded-lg transition-all border-2 text-center group relative ${
+            className={`p-4 rounded-lg transition-all duration-200 border-2 text-center group relative ${
               expandedId === pillar.id
                 ? `bg-gradient-to-br ${pillar.color} text-white border-opacity-0 shadow-lg scale-105`
                 : pillar.details.length === 0

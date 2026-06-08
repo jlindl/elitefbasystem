@@ -1,0 +1,302 @@
+[
+  {
+    "name": "Faire",
+    "url": "https://www.faire.com",
+    "description": "Large B2B wholesale marketplace of independent brands with low minimum orders, 60-day terms, and returnable opening orders.",
+    "category": "B2B Marketplaces"
+  },
+  {
+    "name": "Ankorstore",
+    "url": "https://www.ankorstore.com",
+    "description": "European wholesale marketplace with thousands of independent brands, low minimums, and deferred payment terms.",
+    "category": "B2B Marketplaces"
+  },
+  {
+    "name": "Creoate",
+    "url": "https://www.creoate.com",
+    "description": "UK-founded B2B wholesale marketplace for independent retailers, with buy-now-pay-later terms and free first-order returns.",
+    "category": "B2B Marketplaces"
+  },
+  {
+    "name": "Qogita",
+    "url": "https://www.qogita.com",
+    "description": "B2B platform aggregating verified distributors, strong for branded health, beauty, and grocery lines.",
+    "category": "B2B Marketplaces"
+  },
+  {
+    "name": "eSources",
+    "url": "https://www.esources.co.uk",
+    "description": "The UK's largest wholesale supplier and dropshipper directory, with hundreds of thousands of verified sources.",
+    "category": "Wholesale Directories"
+  },
+  {
+    "name": "The Wholesaler UK",
+    "url": "https://www.thewholesaler.co.uk",
+    "description": "Long-running UK directory of vetted wholesalers, importers, and dropshippers, organised by product category.",
+    "category": "Wholesale Directories"
+  },
+  {
+    "name": "Bestway Wholesale",
+    "url": "https://www.bestway.co.uk",
+    "description": "One of the UK's largest cash-and-carry operators: grocery, household, and confectionery across 60+ depots.",
+    "category": "General & Discount Wholesalers"
+  },
+  {
+    "name": "Booker",
+    "url": "https://www.booker.co.uk",
+    "description": "Major UK cash-and-carry wholesaler offering trade accounts for everyday products in case quantities.",
+    "category": "General & Discount Wholesalers"
+  },
+  {
+    "name": "Stax Trade Centres",
+    "url": "https://www.staxtradecentres.co.uk",
+    "description": "The UK's biggest non-food cash-and-carry, stocking 40,000+ lines across home, garden, toys, DIY, and seasonal.",
+    "category": "General & Discount Wholesalers"
+  },
+  {
+    "name": "Pound Wholesale",
+    "url": "https://www.poundwholesale.co.uk",
+    "description": "Huge multi-category discount wholesaler (toys, DIY, cleaning, stationery, garden, beauty) aimed at discount shops.",
+    "category": "General & Discount Wholesalers"
+  },
+  {
+    "name": "Hill Interiors",
+    "url": "https://www.hill-interiors.com",
+    "description": "UK trade supplier of wholesale home furnishings, kitchenware, tableware, gifts, and decorative items.",
+    "category": "Home, Kitchen & Tableware"
+  },
+  {
+    "name": "Sass & Belle Trade",
+    "url": "https://www.sassandbelletrade.co.uk",
+    "description": "Wholesale homeware, kitchen, and dining brand popular with independent gift and lifestyle shops.",
+    "category": "Home, Kitchen & Tableware"
+  },
+  {
+    "name": "Widdop & Co",
+    "url": "https://www.widdop.co.uk",
+    "description": "One of the UK's leading wholesale gift and home suppliers, serving retailers in 75+ countries.",
+    "category": "Gifts, Candles & Fragrance"
+  },
+  {
+    "name": "Puckator",
+    "url": "https://www.puckator.co.uk",
+    "description": "Trend-led gifts, home, and kitchenware distributor supplying gift shops, garden centres, and online sellers.",
+    "category": "Gifts, Candles & Fragrance"
+  },
+  {
+    "name": "Something Different Wholesale",
+    "url": "https://www.somethingdifferentwholesale.co.uk",
+    "description": "Wholesale candles, home fragrance, and gifts with no minimum order quantity.",
+    "category": "Gifts, Candles & Fragrance"
+  },
+  {
+    "name": "Tildenet Gardenware",
+    "url": "https://tildenetgardenware.co.uk",
+    "description": "UK specialist trade supplier of gardenware for garden centres, nurseries, and retailers.",
+    "category": "Garden & Outdoor"
+  },
+  {
+    "name": "Dejex Supplies",
+    "url": "https://www.dejex.co.uk",
+    "description": "Long-established garden-centre wholesaler distributing 3,500+ garden products on behalf of major brands.",
+    "category": "Garden & Outdoor"
+  },
+  {
+    "name": "Vital Pet Group",
+    "url": "https://vitalpetproducts.co.uk",
+    "description": "Leading UK pet trade wholesaler/distributor across dog, cat, small animal, bird, aquatic, and equine.",
+    "category": "Pet Supplies"
+  },
+  {
+    "name": "Su-Bridge Pet Supplies",
+    "url": "https://www.su-bridge.co.uk",
+    "description": "Award-winning family-owned UK pet product wholesaler with 40+ years in the trade.",
+    "category": "Pet Supplies"
+  },
+  {
+    "name": "PetDreamHouse",
+    "url": "https://petdreamhouse.co.uk",
+    "description": "Trade-only pet supplies platform with 18,000+ SKUs from 70+ brands.",
+    "category": "Pet Supplies"
+  },
+  {
+    "name": "NDA Toys",
+    "url": "https://www.nda-toys.com",
+    "description": "One of the UK's largest toy wholesalers, serving 50,000+ registered trade customers.",
+    "category": "Toys & Games"
+  },
+  {
+    "name": "One For Fun",
+    "url": "https://oneforfun.com",
+    "description": "Long-running wholesaler/distributor of toys, games, and gadgets carrying top brands.",
+    "category": "Toys & Games"
+  },
+  {
+    "name": "Novanex",
+    "url": "https://www.novanex.co.uk",
+    "description": "Health and beauty wholesaler/distributor: skincare, haircare, cosmetics, fragrance, and wellness.",
+    "category": "Health & Beauty"
+  },
+  {
+    "name": "Wholesale-Cosmetics",
+    "url": "https://www.wholesale-cosmetics.co.uk",
+    "description": "Stockport-based wholesaler of branded cosmetics and skincare for traders and retailers.",
+    "category": "Health & Beauty"
+  },
+  {
+    "name": "Baby Brands Direct",
+    "url": "https://www.babybrandsdirect.co.uk",
+    "description": "Multi-award-winning baby, nursery, and toy wholesaler with 60+ brands and 2,000+ lines.",
+    "category": "Baby & Nursery"
+  },
+  {
+    "name": "Apollo Wholesale",
+    "url": "https://www.eapollowholesale.co.uk",
+    "description": "UK wholesaler of baby clothing, feeding, and accessories at trade prices for 30+ years.",
+    "category": "Baby & Nursery"
+  },
+  {
+    "name": "Wholesale Stationers",
+    "url": "https://www.wholesalestationers.co.uk",
+    "description": "UK distributor of stationery, greeting cards, and toys into the retail trade.",
+    "category": "Stationery & Cards"
+  },
+  {
+    "name": "Wholesale Stationery Direct",
+    "url": "https://wholesalestationerydirect.co.uk",
+    "description": "Bulk stationery wholesaler: pens, pencils, envelopes, postal accessories, and art/craft supplies.",
+    "category": "Stationery & Cards"
+  },
+  {
+    "name": "The Cleaning Collective",
+    "url": "https://thecleaningcollective.co.uk",
+    "description": "Wholesaler of branded hygiene and cleaning products for businesses and resellers.",
+    "category": "Cleaning & Household"
+  },
+  {
+    "name": "UK Cleaning Supplies",
+    "url": "https://ukcleaningsupplies.co.uk",
+    "description": "Established commercial cleaning-products wholesaler with trade counter and distribution since 1979.",
+    "category": "Cleaning & Household"
+  },
+  {
+    "name": "Markup Online",
+    "url": "https://www.markuponline.com",
+    "description": "Manchester wholesaler/distributor of tools, DIY, sealants, and hardware.",
+    "category": "DIY, Tools & Hardware"
+  },
+  {
+    "name": "Astro Imports",
+    "url": "https://astroimports.co.uk",
+    "description": "UK wholesale supplier of tools, DIY supplies, and electrical/phone accessories.",
+    "category": "DIY, Tools & Hardware"
+  },
+  {
+    "name": "A2Z Jewellery",
+    "url": "https://www.a2zjewellery.co.uk",
+    "description": "One of the UK/Europe's largest fashion jewellery and accessory wholesalers, with UK manufacturing.",
+    "category": "Jewellery & Accessories"
+  },
+  {
+    "name": "Euro Bijoux",
+    "url": "https://www.eurobijoux.co.uk",
+    "description": "Major UK fashion jewellery wholesaler with £25 minimum and free UK shipping over £200.",
+    "category": "Jewellery & Accessories"
+  },
+  {
+    "name": "Reydon Sports",
+    "url": "https://reydonsports.com",
+    "description": "One of Europe's largest sports wholesalers: football, fitness, golf, and sports accessories.",
+    "category": "Sports & Fitness"
+  },
+  {
+    "name": "Gymkituk",
+    "url": "https://gymkituk.com",
+    "description": "One of Europe's largest independent wholesale commercial gym-equipment suppliers.",
+    "category": "Sports & Fitness"
+  },
+  {
+    "name": "Ameego",
+    "url": "https://ameego.co.uk",
+    "description": "Manchester-based wholesaler of mobile phone, gaming, and electronic accessories.",
+    "category": "Electronics & Phone Accessories"
+  },
+  {
+    "name": "Mr Mobile UK",
+    "url": "https://mrmobileuk.com",
+    "description": "Wholesale supplier of mobile phones, iPads, and accessories in the UK.",
+    "category": "Electronics & Phone Accessories"
+  },
+  {
+    "name": "Talking Tables Trade",
+    "url": "https://trade.talkingtables.co.uk",
+    "description": "Wholesale party supplies and tableware brand for gift shops and event planners.",
+    "category": "Party & Seasonal"
+  },
+  {
+    "name": "Shatchi",
+    "url": "https://shatchi.co.uk",
+    "description": "Importer/distributor of seasonal and Christmas products at wholesale prices.",
+    "category": "Party & Seasonal"
+  },
+  {
+    "name": "Jomil",
+    "url": "https://jomil.co.uk",
+    "description": "Top-rated UK wholesaler of haberdashery, felt, and craft supplies.",
+    "category": "Crafts & Haberdashery"
+  },
+  {
+    "name": "Habico",
+    "url": "https://www.habico.co.uk",
+    "description": "One of the UK's largest wholesalers of haberdashery, trimmings, yarn, and craft products.",
+    "category": "Crafts & Haberdashery"
+  },
+  {
+    "name": "Hancocks",
+    "url": "https://www.hancocks.co.uk",
+    "description": "One of the UK's largest confectionery and sweets wholesalers, useful for food/treats bundles.",
+    "category": "Food & Confectionery"
+  },
+  {
+    "name": "John Pye Auctions",
+    "url": "https://www.johnpye.co.uk",
+    "description": "UK auction house selling returned, surplus, and liquidated retail stock by the pallet or lot.",
+    "category": "Liquidation & Clearance"
+  },
+  {
+    "name": "B-Stock",
+    "url": "https://www.bstock.com",
+    "description": "Global marketplace for buying liquidation and customer-return inventory direct from major retailers.",
+    "category": "Liquidation & Clearance"
+  },
+  {
+    "name": "Alibaba",
+    "url": "https://www.alibaba.com",
+    "description": "The largest global B2B marketplace for sourcing in bulk from Chinese (and other) manufacturers, best once a product is proven.",
+    "category": "Chinese & Overseas Suppliers"
+  },
+  {
+    "name": "AliExpress",
+    "url": "https://www.aliexpress.com",
+    "description": "Alibaba's small-quantity arm, handy for cheaply sampling or buying small batches from Chinese sellers.",
+    "category": "Chinese & Overseas Suppliers"
+  },
+  {
+    "name": "DHgate",
+    "url": "https://www.dhgate.com",
+    "description": "Chinese marketplace selling in small wholesale quantities, with lower minimums than Alibaba.",
+    "category": "Chinese & Overseas Suppliers"
+  },
+  {
+    "name": "Temu",
+    "url": "https://www.temu.com",
+    "description": "Low-cost consumer marketplace sourcing direct from Chinese manufacturers, useful for samples and trend-spotting.",
+    "category": "Chinese & Overseas Suppliers"
+  },
+  {
+    "name": "Made-in-China",
+    "url": "https://www.made-in-china.com",
+    "description": "B2B directory of Chinese manufacturers across nearly every category, an alternative to Alibaba for factory sourcing.",
+    "category": "Chinese & Overseas Suppliers"
+  }
+]

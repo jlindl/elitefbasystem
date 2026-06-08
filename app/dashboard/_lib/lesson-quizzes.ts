@@ -343,7 +343,7 @@ export const LESSON_QUIZZES: Record<string, QuizQuestion[]> = {
       ],
       correctIndex: 1,
       explanation:
-        "The three levers are Price, Procurement, and Packaging. Procurement is the cost per component, and it is usually the lever that moves the most as you scale from retail clearance into wholesale.",
+        "The three levers are Price, Procurement, and Packaging. Procurement is the cost per component, and it is usually the lever that moves the most as you scale from retail sourcing into wholesale.",
     },
     {
       question:

@@ -18,7 +18,7 @@ const STEPS = [
     title: "Buy Micro-Batches",
     short: "10 to 12 units of a tested product",
     detail:
-      "We do not buy hundreds of items. We buy a handful from local retail, supermarket reductions, or discount shops. Your absolute downside on a test batch is the cost of an evening out.",
+      "We do not buy hundreds of items. We buy a handful from local retail and discount shops to confirm the bundle, then move to the brand's wholesale distributor for ongoing supply. Your absolute downside on a test batch is the cost of an evening out.",
     color: "amber",
   },
   {

@@ -21,7 +21,7 @@ export function ModuleTabs({ tabs }: ModuleTabsProps) {
   return (
     <div className="flex gap-6">
       {/* Vertical Tab Navigation */}
-      <div className="sticky top-0 h-fit flex flex-col gap-2 w-48 flex-shrink-0">
+      <div className="sticky top-4 z-10 h-fit flex flex-col gap-2 w-48 flex-shrink-0">
         {tabs.map((tab) => (
           <button
             key={tab.id}

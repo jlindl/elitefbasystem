@@ -40,7 +40,7 @@ const LEVERS: Lever[] = [
     definition:
       "The wholesale or retail price you pay per unit of every item that goes into the bundle. The lever that moves the most as you scale.",
     moves: [
-      "Step up from retail clearance to a regional distributor the moment Phase 2 validates",
+      "Step up from retail sourcing to a regional distributor the moment Phase 2 validates",
       "Negotiate volume tiers once monthly velocity is established and predictable",
       "Combine inbound shipments and consolidate suppliers to dilute per-unit logistics",
     ],

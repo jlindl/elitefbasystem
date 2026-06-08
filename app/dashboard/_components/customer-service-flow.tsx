@@ -12,7 +12,7 @@ const flows = [
       { step: 1, label: 'Customer clicks "Contact Seller"', icon: '🖱️', time: '0s' },
       { step: 2, label: 'Amazon intercepts the message', icon: '🔍', time: '1s' },
       { step: 3, label: 'Amazon support replies using tracking data', icon: '📍', time: '2-30min' },
-      { step: 4, label: 'You receive zero messages', icon: '😴', time: '—' },
+      { step: 4, label: 'You receive zero messages', icon: '😴', time: 'never' },
     ],
   },
   {
@@ -127,7 +127,7 @@ export function CustomerServiceFlow() {
             {currentFlow.steps.map((item, index) => (
               <div
                 key={index}
-                className={`flex items-start gap-3 p-3 rounded-lg transition-all ${
+                className={`flex items-start gap-3 p-3 rounded-lg transition-all duration-300 ${
                   activeStep >= index
                     ? 'bg-white border-2 border-gray-300 shadow-sm'
                     : 'bg-white/50 border border-gray-200'

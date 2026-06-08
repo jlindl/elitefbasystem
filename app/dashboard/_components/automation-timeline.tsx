@@ -114,7 +114,7 @@ export function AutomationTimeline() {
               <div className="hidden md:flex items-start gap-6">
                 <div className={`flex-shrink-0 w-16 h-16 rounded-full bg-gradient-to-br ${step.color} flex items-center justify-center text-2xl shadow-lg ring-4 ring-white ${
                   activeStep === step.id ? 'ring-8 animate-pulse' : ''
-                } transition-all relative`}>
+                } transition-all duration-300 relative`}>
                   {step.icon}
                   {activeStep === step.id && (
                     <div className="absolute inset-0 rounded-full border-2 border-white animate-spin" style={{animationDuration: '2s'}}></div>

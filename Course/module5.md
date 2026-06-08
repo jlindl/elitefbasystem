@@ -2,7 +2,7 @@
 module: 5
 title: "Sending to Amazon"
 slug: "sending-to-amazon"
-phase: "Phase 1 — Lean Launch"
+phase: "Phase 1: Lean Launch"
 estimated_minutes: 40
 lessons: 4
 prerequisite: 4
@@ -10,7 +10,7 @@ tools: []
 status: "available"
 ---
 
-# Module 5 — Sending to Amazon
+# Module 5: Sending to Amazon
 
 > **What you'll walk away with:** Your first inventory shipped to Amazon's FBA warehouse, correctly labelled, packed, and live for sale.
 
@@ -39,7 +39,7 @@ But only if you ship it to them correctly. That's what this module is about.
 
 ---
 
-## Lesson 5.1 — Creating Your Shipment Plan
+## Lesson 5.1: Creating Your Shipment Plan
 
 **10 min · Lesson 1 of 4**
 
@@ -59,7 +59,7 @@ A shipment plan tells Amazon: *"I'm sending you X units of Product Y. Here's whe
 
 ### Choosing your destination warehouse(s)
 
-Amazon decides where your shipment goes — sometimes one warehouse, sometimes split across multiple. [CONTENT FROM NOTION: explain inventory placement options and when to pay for "Amazon Distribution" vs accept splits.]
+Amazon decides where your shipment goes, sometimes one warehouse, sometimes split across multiple. [CONTENT FROM NOTION: explain inventory placement options and when to pay for "Amazon Distribution" vs accept splits.]
 
 ### Common first-time mistakes
 
@@ -69,7 +69,7 @@ Amazon decides where your shipment goes — sometimes one warehouse, sometimes s
 
 > ⚠️ **Watch out**
 >
-> [The mistake that gets shipments rejected at the warehouse — pull from your Notion.]
+> [The mistake that gets shipments rejected at the warehouse, pull from your Notion.]
 
 ---
 
@@ -77,13 +77,13 @@ Amazon decides where your shipment goes — sometimes one warehouse, sometimes s
 
 ---
 
-## Lesson 5.2 — Labelling Your Products
+## Lesson 5.2: Labelling Your Products
 
 **10 min · Lesson 2 of 4**
 
 ### FNSKU vs. barcode
 
-Amazon uses its own internal product code called an **FNSKU**. Every unit you send needs one — even if it already has a manufacturer barcode.
+Amazon uses its own internal product code called an **FNSKU**. Every unit you send needs one, even if it already has a manufacturer barcode.
 
 [CONTENT FROM NOTION: paste your full labelling explanation.]
 
@@ -119,7 +119,7 @@ Amazon uses its own internal product code called an **FNSKU**. Every unit you se
 - **Apply the label flat and visible.** Not on a curved surface, not on a seam.
 - **One label per unit.** No exceptions.
 
-[CONTENT FROM NOTION: any product-specific tips — bottles, bags, soft items.]
+[CONTENT FROM NOTION: any product-specific tips, bottles, bags, soft items.]
 
 ---
 
@@ -127,7 +127,7 @@ Amazon uses its own internal product code called an **FNSKU**. Every unit you se
 
 ---
 
-## Lesson 5.3 — Packing & Boxing
+## Lesson 5.3: Packing & Boxing
 
 **10 min · Lesson 3 of 4**
 
@@ -159,12 +159,12 @@ Every box gets a box label printed from your shipment plan. It contains the dest
 ### What to put inside
 
 - Your products, FNSKU-labelled
-- Bubble wrap, paper fill, or void fill (no peanuts — Amazon hates them)
+- Bubble wrap, paper fill, or void fill (no peanuts, Amazon hates them)
 - No marketing inserts in the early stages (we add those in Module 6 once you're a brand)
 
 > ⚠️ **Watch out**
 >
-> [The packing mistake that causes the most damaged-on-arrival reports — pull from your Notion.]
+> [The packing mistake that causes the most damaged-on-arrival reports, pull from your Notion.]
 
 ---
 
@@ -172,7 +172,7 @@ Every box gets a box label printed from your shipment plan. It contains the dest
 
 ---
 
-## Lesson 5.4 — Booking the Carrier & Tracking
+## Lesson 5.4: Booking the Carrier & Tracking
 
 **10 min · Lesson 4 of 4**
 
@@ -225,10 +225,10 @@ When inventory is checked-in and live for sale, your **first sales window opens.
 
 ---
 
-_End of Module 5. End of Phase 1 — the Lean Launch._
+_End of Module 5. End of Phase 1, the Lean Launch._
 
 ---
 
 ## ─── PHASE 2: BUILDING A REAL BRAND ───
 
-You've made it through the lean launch. From here on, the playbook changes. Module 6 is the gear-shift — when reseller becomes brand owner.
+You've made it through the lean launch. From here on, the playbook changes. Module 6 is the gear-shift, when reseller becomes brand owner.

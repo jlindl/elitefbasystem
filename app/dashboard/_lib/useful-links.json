@@ -1,0 +1,176 @@
+[
+  {
+    "name": "Amazon Seller Central (UK)",
+    "url": "https://sellercentral.amazon.co.uk",
+    "description": "The control panel where you register as a seller, create listings, manage FBA inventory, run PPC, and monitor account health.",
+    "category": "Amazon"
+  },
+  {
+    "name": "Amazon Seller Signup (UK)",
+    "url": "https://sell.amazon.co.uk",
+    "description": "The correct UK signup entry point so your home marketplace is Amazon.co.uk, not .com.",
+    "category": "Amazon"
+  },
+  {
+    "name": "Amazon Brand Registry",
+    "url": "https://brandservices.amazon.co.uk",
+    "description": "Amazon's brand-protection programme you enrol in once your trademark is registered, unlocking A+ Content, Brand Story, Vine, and hijacker reporting.",
+    "category": "Amazon"
+  },
+  {
+    "name": "Amazon Multi-Channel Fulfilment (MCF)",
+    "url": "https://sell.amazon.co.uk",
+    "description": "Amazon service that ships your existing FBA inventory to fulfil orders from other channels such as eBay.",
+    "category": "Amazon"
+  },
+  {
+    "name": "Helium 10",
+    "url": "https://www.helium10.com",
+    "description": "Amazon research suite whose free X-Ray extension gives sales/BSR estimates and whose Cerebro tool is used for keyword research.",
+    "category": "Research Tools"
+  },
+  {
+    "name": "Chrome Web Store",
+    "url": "https://chromewebstore.google.com",
+    "description": "Where you install the free Helium 10 browser extension for product research.",
+    "category": "Research Tools"
+  },
+  {
+    "name": "SellerApp Description Editor",
+    "url": "https://www.sellerapp.com/amazon-product-description-editor.html",
+    "description": "Free web tool that converts a plain-text product description into Amazon-compatible HTML for pasting into Seller Central.",
+    "category": "Research Tools"
+  },
+  {
+    "name": "ChatGPT",
+    "url": "https://chat.openai.com",
+    "description": "AI assistant used to draft optimised listing titles, bullets, and descriptions from a keyword list before editing them down.",
+    "category": "Research Tools"
+  },
+  {
+    "name": "Claude",
+    "url": "https://claude.ai",
+    "description": "AI assistant cited as an alternative to ChatGPT for drafting listing copy against the course's structured prompts.",
+    "category": "Research Tools"
+  },
+  {
+    "name": "Gemini",
+    "url": "https://gemini.google.com",
+    "description": "Google's AI assistant, another option for drafting and refining listing titles, bullets, and descriptions from your keyword list.",
+    "category": "Research Tools"
+  },
+  {
+    "name": "Canva",
+    "url": "https://www.canva.com",
+    "description": "Free design tool for building Amazon listing images and infographics and creating a simple brand logo/wordmark.",
+    "category": "Design & Branding"
+  },
+  {
+    "name": "Looka",
+    "url": "https://looka.com",
+    "description": "AI logo generator suggested as a low-cost option for creating a brand wordmark.",
+    "category": "Design & Branding"
+  },
+  {
+    "name": "Fiverr",
+    "url": "https://www.fiverr.com",
+    "description": "Freelance marketplace where you can pay a small fee for a clean logo or wordmark once your brand has proven itself.",
+    "category": "Design & Branding"
+  },
+  {
+    "name": "GoDaddy",
+    "url": "https://www.godaddy.com",
+    "description": "Domain registrar mentioned as an option for securing the brand's web domain.",
+    "category": "Design & Branding"
+  },
+  {
+    "name": "GOV.UK: Set up a Limited Company",
+    "url": "https://www.gov.uk/limited-company-formation",
+    "description": "Official UK portal for registering a limited company so you can operate as a legitimate brand and open trade accounts.",
+    "category": "Government & Legal"
+  },
+  {
+    "name": "Companies House: Name Check",
+    "url": "https://find-and-update.company-information.service.gov.uk",
+    "description": "UK register to check whether a proposed brand/company name is already taken before forming your Ltd.",
+    "category": "Government & Legal"
+  },
+  {
+    "name": "GOV.UK: Register a Trade Mark",
+    "url": "https://www.gov.uk/how-to-register-a-trade-mark",
+    "description": "Official UK Intellectual Property Office route to file the trademark required for Amazon Brand Registry.",
+    "category": "Government & Legal"
+  },
+  {
+    "name": "GOV.UK: Search for a Trade Mark",
+    "url": "https://www.gov.uk/search-for-trademark",
+    "description": "Free UK trademark search to confirm your proposed brand name is unique before filing.",
+    "category": "Government & Legal"
+  },
+  {
+    "name": "HMRC",
+    "url": "https://www.gov.uk/government/organisations/hm-revenue-customs",
+    "description": "UK tax authority you engage with for the Amazon tax interview, Corporation Tax, and self-assessment.",
+    "category": "Government & Legal"
+  },
+  {
+    "name": "UPS",
+    "url": "https://www.ups.com/gb",
+    "description": "Amazon's primary UK partnered carrier for inbound FBA shipments, with discounted rates and Access Point drop-offs.",
+    "category": "Shipping & Carriers"
+  },
+  {
+    "name": "DPD",
+    "url": "https://www.dpd.co.uk",
+    "description": "One of Amazon's UK partnered carriers you can book at a discounted rate to ship boxes into FBA.",
+    "category": "Shipping & Carriers"
+  },
+  {
+    "name": "Avery",
+    "url": "https://www.avery.co.uk",
+    "description": "Maker of L7160-compatible adhesive label sheets used to print FNSKU labels for FBA units.",
+    "category": "Shipping & Carriers"
+  },
+  {
+    "name": "eBay UK",
+    "url": "https://www.ebay.co.uk",
+    "description": "Second sales channel to expand to first, listing the same bundles via a business account and optionally fulfilling through Amazon MCF.",
+    "category": "Selling Channels"
+  },
+  {
+    "name": "TikTok Shop (UK Seller)",
+    "url": "https://seller-uk.tiktok.com",
+    "description": "Social-commerce channel for visual, impulse-buy products using creator and live-shopping content.",
+    "category": "Selling Channels"
+  },
+  {
+    "name": "Shopify",
+    "url": "https://www.shopify.com",
+    "description": "E-commerce platform for building the brand's own website once you have a loyal, direct customer base.",
+    "category": "Selling Channels"
+  },
+  {
+    "name": "Starling Bank",
+    "url": "https://www.starlingbank.com",
+    "description": "Business bank account option to keep company finances separate and match your Amazon account name.",
+    "category": "Banking & Finance"
+  },
+  {
+    "name": "Monzo Business",
+    "url": "https://monzo.com/business",
+    "description": "Business banking option for the new limited company once it is formed.",
+    "category": "Banking & Finance"
+  },
+  {
+    "name": "Tide",
+    "url": "https://www.tide.co",
+    "description": "Business banking provider for separating business income and simplifying bookkeeping.",
+    "category": "Banking & Finance"
+  },
+  {
+    "name": "Revolut Business",
+    "url": "https://www.revolut.com/business",
+    "description": "Business banking option for paying suppliers and receiving Amazon payouts.",
+    "category": "Banking & Finance"
+  }
+]

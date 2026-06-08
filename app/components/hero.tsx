@@ -116,6 +116,7 @@ function VideoFrame() {
             className="w-full h-full object-cover"
             controls={hasStarted}
             playsInline
+            preload="metadata"
             onPlay={() => {
               setIsPlaying(true);
               setHasStarted(true);

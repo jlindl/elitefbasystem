@@ -34,7 +34,7 @@ export default async function DashboardPage() {
 
         <div className="text-center mt-16 mb-8">
           <p className="font-mono text-[0.7rem] uppercase tracking-[0.08em] text-ink-subtle">
-            EliteFBA · Mentorship Member · You&rsquo;re in good hands
+EliteFBA · 2026
           </p>
         </div>
       </div>

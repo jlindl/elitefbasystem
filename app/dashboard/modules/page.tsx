@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { cookies } from "next/headers";
+import Link from "next/link";
+import { BookOpen } from "@/app/components/icons";
 import { AppShell } from "../_components/app-shell";
 import { ModuleExamCard } from "../_components/module-exam-card";
 import { ModuleLock } from "../_components/module-lock";
@@ -7,11 +8,16 @@ import { ModuleTabs } from "../_components/module-tabs";
 import { getCurrentStudent } from "../_lib/get-student";
 import { Accordion } from "@/app/components/accordion";
 import { getPassedModules } from "../_lib/module-exam-results";
-import { MODULE_QUIZZES } from "../_lib/module-quizzes";
+import {
+  MODULE_EXAM_PASS_THRESHOLD,
+  MODULE_QUIZZES,
+} from "../_lib/module-quizzes";
 import {
   groupBlocksIntoTabs,
+  hasLessonMarkers,
   renderBlock,
   splitVideoFromBlocks,
+  type Block,
   type TabColor,
 } from "../_lib/modules-render";
 import { getCompletedTabs } from "../_lib/tab-completions";
@@ -68,13 +74,10 @@ const NEUTRAL_NUMERAL = "text-ink-subtle";
 
 export default async function ModulesPage() {
   const student = await getCurrentStudent();
-  const cookieStore = await cookies();
-  const unlocked = cookieStore.get("modules_unlocked")?.value === "1";
   const completed = await getCompletedTabs();
   const passedModules = await getPassedModules();
 
   const items = modulesData.map((mod, index) => {
-    const isLocked = index >= 1 && !unlocked;
     const base = {
       id: mod.id,
       title: mod.name,
@@ -82,19 +85,21 @@ export default async function ModulesPage() {
       completed: passedModules.has(mod.id),
     };
 
-    if (isLocked) {
-      return { ...base, body: <ModuleLock /> };
-    }
+    // JSON imports infer the colour as `string`; narrow to Block[] so the
+    // splitter/grouper types are happy. Runtime values are validated by the
+    // lesson_marker renderer if any unknown colour ever slips in.
+    const blocks = mod.blocks as Block[];
 
-    // Module 1 layout: video at the top, then 4 tab buttons that open the
-    // tab content in a new browser tab.
-    if (index === 0) {
-      const { videos, rest } = splitVideoFromBlocks(mod.blocks);
+    // Video + lesson-cards layout: used for Module 1 (legacy hardcoded
+    // sentinels) and for any module whose JSON contains lesson_marker blocks.
+    if (index === 0 || hasLessonMarkers(blocks)) {
+      const { videos, rest } = splitVideoFromBlocks(blocks);
       const tabs = groupBlocksIntoTabs(rest);
       const completedTabs = tabs.filter((t) =>
         completed.has(`${mod.id}::${t.id}`),
       ).length;
-      const hasExam = !!MODULE_QUIZZES[mod.id];
+      const moduleQuiz = MODULE_QUIZZES[mod.id];
+      const hasExam = !!moduleQuiz;
 
       return {
         ...base,
@@ -179,6 +184,9 @@ export default async function ModulesPage() {
             {hasExam && (
               <ModuleExamCard
                 moduleId={mod.id}
+                moduleNumeral={(index + 1).toString()}
+                questionCount={moduleQuiz.length}
+                passPercent={Math.round(MODULE_EXAM_PASS_THRESHOLD * 100)}
                 completed={completedTabs}
                 total={tabs.length}
               />
@@ -188,36 +196,59 @@ export default async function ModulesPage() {
       };
     }
 
-    const tabs = groupBlocksIntoTabs(mod.blocks);
+    const tabs = groupBlocksIntoTabs(blocks);
+    const tabsBody = (
+      <ModuleTabs
+        tabs={tabs.map((tab) => ({
+          id: tab.id,
+          label: tab.label,
+          icon: tab.icon,
+          content: (
+            <div className="space-y-6 text-ink-muted">
+              {tab.blocks.map((block, i) => renderBlock(block, i))}
+            </div>
+          ),
+        }))}
+      />
+    );
+
+    // Modules 6-9 (index 5+) are gated behind a password.
     return {
       ...base,
-      body: (
-        <ModuleTabs
-          tabs={tabs.map((tab) => ({
-            id: tab.id,
-            label: tab.label,
-            icon: tab.icon,
-            content: (
-              <div className="space-y-6 text-ink-muted">
-                {tab.blocks.map((block, i) => renderBlock(block, i))}
-              </div>
-            ),
-          }))}
-        />
-      ),
+      body:
+        index >= 5 ? (
+          <ModuleLock>{tabsBody}</ModuleLock>
+        ) : (
+          tabsBody
+        ),
     };
   });
 
   return (
     <AppShell student={student}>
       <div className="max-w-[1100px] mx-auto px-4 md:px-10 py-6 md:py-10 space-y-8">
-        <div>
-          <h1 className="font-display text-[2rem] md:text-[2.5rem] font-medium tracking-[-0.025em] text-ink">
-            Learning Modules
-          </h1>
-          <p className="mt-2 text-[1rem] text-ink-muted">
-            Access all course content and track your progress.
-          </p>
+        <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+          <div>
+            <h1 className="font-display text-[2rem] md:text-[2.5rem] font-medium tracking-[-0.025em] text-ink">
+              Learning Modules
+            </h1>
+            <p className="mt-2 text-[1rem] text-ink-muted">
+              Access all course content and track your progress.
+            </p>
+          </div>
+          <Link
+            href="/dashboard/tools/dictionary"
+            className="group inline-flex shrink-0 items-center gap-2 rounded-xl border border-line bg-surface px-5 py-3 text-[0.9rem] font-medium text-ink transition-colors duration-150 hover:bg-surface-alt focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
+          >
+            <BookOpen size={18} className="text-accent" />
+            Jargon Dictionary
+            <span
+              aria-hidden
+              className="transition-transform duration-150 group-hover:translate-x-0.5"
+            >
+              →
+            </span>
+          </Link>
         </div>
 
         <div className="rounded-2xl bg-surface hairline shadow-[var(--shadow-lift)] overflow-hidden">

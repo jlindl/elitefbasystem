@@ -6,7 +6,6 @@ import {
   BookOpen,
   ChevronUp,
   LayoutGrid,
-  Library,
   MessageCircle,
   Users,
   Wrench,
@@ -23,15 +22,15 @@ type NavItem = {
 const primary: NavItem[] = [
   { label: "Dashboard", href: "/dashboard", Icon: LayoutGrid },
   { label: "Modules", href: "/dashboard/modules", Icon: BookOpen },
-  { label: "My Tools", href: "#", Icon: Wrench },
+  { label: "My Tools", href: "/dashboard/tools", Icon: Wrench },
   { label: "AI Partner", href: "/dashboard#ai-partner", Icon: MessageCircle },
-  { label: "The Team", href: "#", Icon: Users },
-  { label: "Resources", href: "#", Icon: Library },
+  { label: "The Team", href: "/dashboard/team", Icon: Users },
 ];
 
 const secondary = [
-  { label: "Account", href: "#" },
-  { label: "Help", href: "#" },
+  { label: "Back to website", href: "/" },
+  { label: "Account", href: "/dashboard/account" },
+  { label: "Help", href: "/dashboard/help" },
 ];
 
 export function Sidebar({
@@ -141,8 +140,9 @@ export function Sidebar({
         <div className="mx-3 border-t border-line" />
 
         {/* user identity */}
-        <button
-          type="button"
+        <Link
+          href="/dashboard/account"
+          onClick={onClose}
           className="m-3 flex items-center gap-3 rounded-lg p-2 text-left hover:bg-surface-alt/60 transition-colors duration-150"
         >
           <span
@@ -160,7 +160,7 @@ export function Sidebar({
             </span>
           </span>
           <ChevronUp size={16} className="text-ink-subtle shrink-0" />
-        </button>
+        </Link>
       </aside>
     </>
   );

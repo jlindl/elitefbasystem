@@ -1,0 +1,11 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <rect width="512" height="512" rx="112" fill="#0d0d0d"/>
+  <g transform="translate(256 256) scale(1.5) translate(-256 -256)">
+    <polygon points="256,96 406,171.0 256,246 106,171.0" fill="#EA8320" stroke="#0d0d0d" stroke-width="7" stroke-linejoin="round"/>
+    <polygon points="106,171.0 256,246 256,396 106,321.0" fill="#ECECEC" stroke="#0d0d0d" stroke-width="7" stroke-linejoin="round"/>
+    <polygon points="256,246 406,171.0 406,321.0 256,396" fill="#EA8320" stroke="#0d0d0d" stroke-width="7" stroke-linejoin="round"/>
+    <g fill="#ECECEC"><path transform="matrix(0.06028,-0.03014,-0.06028,-0.03014,258.351,214.825)" d="M188 1493H1227V1202H573V924H1188V633H573V0H188Z"/></g>
+    <g fill="#141414"><path transform="matrix(0.05931,0.02965,-0.00000,-0.06631,133.405,309.202)" d="M786 915Q877 915 924.0 955.0Q971 995 971 1073Q971 1150 924.0 1190.5Q877 1231 786 1231H573V915ZM799 262Q915 262 973.5 311.0Q1032 360 1032 459Q1032 556 974.0 604.5Q916 653 799 653H573V262ZM1157 799Q1281 763 1349.0 666.0Q1417 569 1417 428Q1417 212 1271.0 106.0Q1125 0 827 0H188V1493H766Q1077 1493 1216.5 1399.0Q1356 1305 1356 1098Q1356 989 1305.0 912.5Q1254 836 1157 799Z"/></g>
+    <g fill="#ECECEC"><path transform="matrix(0.05931,-0.02965,-0.00000,-0.06631,283.998,356.501)" d="M1094 272H492L397 0H10L563 1493H1022L1575 0H1188ZM588 549H997L793 1143Z"/></g>
+  </g>
+</svg>

@@ -53,7 +53,7 @@ const SCENARIOS: Scenario[] = [
     letter: "C",
     title: "The Premium Compact Bundle",
     bundle:
-      "A premium, specialised skincare serum set (2 items) sourced directly from an authorised regional distributor clearance sheet. High retail value, tiny physical footprint.",
+      "A premium, specialised skincare serum set (2 items) sourced directly from an authorised regional UK distributor at standard wholesale pricing. High retail value, tiny physical footprint.",
     tier: "Small Envelope",
     sweetSpot: true,
     sale: 44.99,

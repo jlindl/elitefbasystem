@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { cookies } from "next/headers";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CompletionCheckbox } from "../../../_components/completion-checkbox";
@@ -11,7 +10,7 @@ import { LESSON_QUIZZES } from "../../../_lib/lesson-quizzes";
 import {
   extractTocHeadings,
   groupBlocksIntoTabs,
-  renderBlock,
+  renderBlocks,
   splitVideoFromBlocks,
 } from "../../../_lib/modules-render";
 import { isTabCompleted } from "../../../_lib/tab-completions";
@@ -48,22 +47,6 @@ export default async function ModuleTabPage({
 
   const mod = modulesData[moduleIndex];
 
-  // Gate: same rule as the modules listing. Module 1 (index 0) is open,
-  // everything else needs the unlock cookie.
-  if (moduleIndex >= 1) {
-    const cookieStore = await cookies();
-    const unlocked = cookieStore.get("modules_unlocked")?.value === "1";
-    if (!unlocked) {
-      return (
-        <main className="min-h-screen bg-surface-alt pt-16 pb-20 px-6">
-          <div className="mx-auto max-w-[460px]">
-            <ModuleLock />
-          </div>
-        </main>
-      );
-    }
-  }
-
   const { rest } = splitVideoFromBlocks(mod.blocks);
   const tab = groupBlocksIntoTabs(rest).find((t) => t.id === tabId);
   if (!tab) notFound();
@@ -71,6 +54,35 @@ export default async function ModuleTabPage({
   const completed = await isTabCompleted(moduleId, tabId);
   const headings = extractTocHeadings(tab.blocks);
   const quiz = LESSON_QUIZZES[`${moduleId}::${tabId}`];
+
+  const lessonContent = (
+    <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_220px] lg:gap-10 xl:gap-14">
+      <div className="min-w-0">
+        <div className="flex items-center gap-3">
+          <span className="text-2xl">{tab.icon}</span>
+          <h1 className="font-display text-[1.875rem] md:text-[2.25rem] font-medium tracking-[-0.025em] text-ink leading-[1.1]">
+            {tab.label}
+          </h1>
+        </div>
+
+        <div className="mt-8 space-y-6 text-ink-muted">
+          {renderBlocks(tab.blocks)}
+        </div>
+
+        {quiz && quiz.length > 0 && <LessonQuiz questions={quiz} />}
+
+        <CompletionCheckbox
+          moduleId={moduleId}
+          tabId={tabId}
+          initialCompleted={completed}
+        />
+      </div>
+
+      <aside className="hidden lg:block">
+        <TableOfContents headings={headings} />
+      </aside>
+    </div>
+  );
 
   return (
     <main className="min-h-screen bg-surface-alt">
@@ -90,32 +102,11 @@ export default async function ModuleTabPage({
       </header>
 
       <div className="mx-auto max-w-[1180px] px-6 md:px-8 py-8 md:py-12">
-        <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_220px] lg:gap-10 xl:gap-14">
-          <div className="min-w-0">
-            <div className="flex items-center gap-3">
-              <span className="text-2xl">{tab.icon}</span>
-              <h1 className="font-display text-[1.875rem] md:text-[2.25rem] font-medium tracking-[-0.025em] text-ink leading-[1.1]">
-                {tab.label}
-              </h1>
-            </div>
-
-            <div className="mt-8 space-y-6 text-ink-muted">
-              {tab.blocks.map((block, i) => renderBlock(block, i))}
-            </div>
-
-            {quiz && quiz.length > 0 && <LessonQuiz questions={quiz} />}
-
-            <CompletionCheckbox
-              moduleId={moduleId}
-              tabId={tabId}
-              initialCompleted={completed}
-            />
-          </div>
-
-          <aside className="hidden lg:block">
-            <TableOfContents headings={headings} />
-          </aside>
-        </div>
+        {moduleIndex >= 5 ? (
+          <ModuleLock>{lessonContent}</ModuleLock>
+        ) : (
+          lessonContent
+        )}
       </div>
     </main>
   );

@@ -46,7 +46,7 @@ export async function getCurrentStudent(): Promise<Student> {
     fullName: displayName,
     initials,
     email: user.email ?? "",
-    plan: profile?.has_access ? "Mentorship Member" : "Awaiting Enrollment",
+    plan: profile?.has_access ? "Mentorship Member" : "Full Plan",
     hasAccess: !!profile?.has_access,
   };
 }

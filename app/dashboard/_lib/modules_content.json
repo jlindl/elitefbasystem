@@ -6,7 +6,7 @@
       {
         "type": "video",
         "content": "Module 1: The Blueprint to 6-Figures",
-        "src": "https://yjvlmqjqcxtanhmwcvkq.supabase.co/storage/v1/object/public/course-videos/module-1-intro.mp4"
+        "src": "/module-1-intro.mp4"
       },
       {
         "type": "paragraph",
@@ -504,116 +504,295 @@
     "name": "Module 2 - Opening your first Seller Account",
     "blocks": [
       {
-        "type": "heading_1",
-        "content": "The Foundation: Your Seller Account"
+        "type": "video",
+        "content": "Module 2: Opening Your First Seller Account",
+        "src": "https://yjvlmqjqcxtanhmwcvkq.supabase.co/storage/v1/object/public/course-videos/module-2-intro.mp4"
       },
       {
-        "type": "paragraph",
-        "content": "Opening an Amazon Seller account seems simple, but it is the first major hurdle where many beginners fail. Amazon's verification bots are ruthless. One typo or mismatched address can result in an immediate suspension before you even list a product."
-      },
-      {
-        "type": "paragraph",
-        "content": "In this module, we will ensure you get approved on the first try so you can start sourcing immediately."
-      },
-      {
-        "type": "heading_2",
-        "content": "1. Individual vs. Professional Plan"
-      },
-      {
-        "type": "paragraph",
-        "content": "Amazon offers two selling plans. Here is the golden rule: Start with the Individual plan."
-      },
-      {
-        "type": "bulleted_list_item",
-        "content": "Individual Plan: No monthly fee. You pay £0.75 per item sold. Perfect for the 'Lean' phase."
-      },
-      {
-        "type": "bulleted_list_item",
-        "content": "Professional Plan: £25/month (excl. VAT). Necessary once you sell 35+ items a month or want to win the Buy Box."
-      },
-      {
-        "type": "pro_tip",
-        "content": "You can upgrade to Professional at any time with one click in your Seller Central settings. Save your money while you are learning and sourcing your first products."
+        "type": "lesson_marker",
+        "tabId": "preflight",
+        "label": "Before You Begin",
+        "icon": "📋",
+        "description": "The documents, accounts, and information you need ready before opening the signup wizard.",
+        "color": "blue"
       },
       {
         "type": "heading_2",
-        "content": "2. The 'Exact Match' Rule"
-      },
-      {
-        "type": "warning",
-        "content": "CRITICAL: Every single document you provide to Amazon must match EXACTLY. Character for character."
+        "content": "Why Preparation Beats Speed"
       },
       {
         "type": "paragraph",
-        "content": "If your bank statement says '123 Main St, Apt 4' and you type 'Apt 4, 123 Main Street' into Amazon, the automated system will reject you. The bots do not have common sense. Copy your address exactly as it appears on your official documents."
-      },
-      {
-        "type": "heading_2",
-        "content": "3. The Verification Checklist"
+        "content": "Opening an Amazon Seller account looks like a 20-minute web form. It is not. It is a verification process that can take days or weeks depending on how prepared you are when you start. The fastest path through is not to rush; it is to walk in with every document, account, and answer already to hand."
       },
       {
         "type": "paragraph",
-        "content": "Before you click 'Register', gather the following documents. Do not start the process without them."
+        "content": "Amazon's verification system runs strict identity, banking, and address checks. Any mismatch (a missing middle name, a slightly different address spelling, a card that triggers a 3D Secure prompt) sends you back to the start of a queue. New sellers who turn up unprepared spend 3 to 6 weeks bouncing between failed checks. Sellers who walk in prepared get verified in 5 to 10 business days."
       },
       {
-        "type": "to_do",
-        "content": "A valid Passport or Driver's License (Check the expiry date!)"
-      },
-      {
-        "type": "to_do",
-        "content": "A Bank Statement issued within the last 90 days (Must show your name and address clearly)"
-      },
-      {
-        "type": "to_do",
-        "content": "A chargeable credit or debit card (Monzo/Starling work fine, but physical high-street banks are preferred if possible)"
-      },
-      {
-        "type": "to_do",
-        "content": "A dedicated email address (e.g., yourname.fba@gmail.com) so you don't miss important account updates."
+        "type": "callout",
+        "content": "🎯 The Operator Mindset: do not start the wizard before you have completed the checklist below. Every item missing at registration costs you a verification cycle. Every cycle is a week."
       },
       {
         "type": "heading_2",
-        "content": "4. The Video Verification Call"
+        "content": "Your Pre-Flight Checklist"
       },
       {
         "type": "paragraph",
-        "content": "Amazon now requires a short video call to verify your identity. This is to stop fraudulent sellers. It takes 5 minutes."
+        "content": "Work through the seven items below. Each one is required, each one needs to match the others, and each one will be checked by a human at some stage of verification. Tap a row to see the format Amazon expects."
       },
       {
-        "type": "bulleted_list_item",
-        "content": "Have your physical ID and printed/digital bank statement ready in your hand."
-      },
-      {
-        "type": "bulleted_list_item",
-        "content": "Ensure you are in a well-lit room with a stable internet connection."
-      },
-      {
-        "type": "bulleted_list_item",
-        "content": "The associate will ask you to hold your ID next to your face and tilt it to show the holograms."
+        "type": "preflight_checklist"
       },
       {
         "type": "heading_2",
-        "content": "Action Steps for This Week"
+        "content": "Common Preparation Mistakes"
       },
       {
-        "type": "to_do",
-        "content": "Create your dedicated Amazon email address."
+        "type": "paragraph",
+        "content": "Three small decisions before signup prevent the most common rejections later. Use a fresh email address that you have never used to shop on Amazon, otherwise the wizard sometimes confuses your shopper history with your seller registration. Make sure your name on the bank account exactly matches your passport, including middle names, before you start. And confirm the address on file with your bank is the same one you plan to register at, because the verification postcard will be cross-checked."
       },
       {
-        "type": "to_do",
-        "content": "Download your latest bank statement as a PDF."
+        "type": "callout",
+        "content": "💡 Plan a 30-minute prep block: ID photos taken, bank statement downloaded as PDF, new business email created, dedicated mobile number ready. Then start the wizard in one uninterrupted sitting."
       },
       {
-        "type": "to_do",
-        "content": "Register for an Individual Amazon Seller account at sell.amazon.co.uk."
+        "type": "lesson_marker",
+        "tabId": "plans",
+        "label": "Choosing Your Selling Plan",
+        "icon": "💼",
+        "description": "Individual vs Professional. The cost trade-off, the hidden Buy Box rule, and when to switch.",
+        "color": "purple"
       },
       {
-        "type": "to_do",
-        "content": "Complete the identity verification process."
+        "type": "heading_2",
+        "content": "Two Plans, One Decision"
       },
       {
-        "type": "to_do",
-        "content": "Set up a 2-Step Verification app (like Google Authenticator) to secure your account."
+        "type": "paragraph",
+        "content": "Amazon offers exactly two seller plans, and they look almost identical on the surface. The difference is a single line of fine print: only Professional sellers are eligible to win the Buy Box. That single line decides whether your bundle earns sales or sits invisible behind a 'Other Sellers' link."
+      },
+      {
+        "type": "paragraph",
+        "content": "On the Individual plan, you pay nothing per month but lose £0.75 per unit sold. On the Professional plan, you pay £25 plus VAT per month flat and keep every penny per unit. The break-even point is 33 units a month, which is roughly one a day."
+      },
+      {
+        "type": "heading_2",
+        "content": "Side-by-Side, Feature by Feature"
+      },
+      {
+        "type": "paragraph",
+        "content": "The table below lets you switch between plans to see the eight features that actually matter. Tap the header of either plan to highlight its column. Note that four of the features are Professional-only, and three of those (Buy Box, ungating applications, Sponsored Ads) are essential for the Elite FBA framework to work at all."
+      },
+      {
+        "type": "plan_comparison"
+      },
+      {
+        "type": "heading_2",
+        "content": "The Two-Stage Sequence We Use"
+      },
+      {
+        "type": "paragraph",
+        "content": "Our standard sequence is to open the account on the Individual plan, then upgrade to Professional the moment our first units are checked into the fulfilment centre. This costs nothing during the verification wait (often 5 to 10 days), and unlocks every Professional feature within minutes of upgrading. The upgrade itself is a single button in Account Settings > Manage Selling Plan."
+      },
+      {
+        "type": "paragraph",
+        "content": "There is no penalty for switching either direction, and Amazon does not require any re-verification when you do. The only thing to watch is the timing: if you upgrade on the first day of a calendar month, you pay the full £25 for that month. Upgrade on the 28th and you still pay the full £25. Pick your upgrade date strategically."
+      },
+      {
+        "type": "callout",
+        "content": "🎯 The Operator Move: do not upgrade until your test units are scanned into a fulfilment centre and your first listing is live. Until that point, you are paying £25 a month for features you cannot use."
+      },
+      {
+        "type": "lesson_marker",
+        "tabId": "registration",
+        "label": "Walking Through the Wizard",
+        "icon": "✍️",
+        "description": "The eight-step signup process, broken down screen by screen with the exact fields to fill.",
+        "color": "amber"
+      },
+      {
+        "type": "heading_2",
+        "content": "Before You Click Sign Up"
+      },
+      {
+        "type": "paragraph",
+        "content": "Two final checks before opening the wizard. First, confirm you are on sell.amazon.co.uk in your browser address bar, not sell.amazon.com. The marketplace you start in becomes your home marketplace, and migrating later is painful. Second, sign out of any existing Amazon shopper account in the same browser, then open the seller signup in a fresh incognito window. This stops Amazon's session manager from confusing your shopper identity with your seller registration."
+      },
+      {
+        "type": "paragraph",
+        "content": "Plan for 30 minutes of uninterrupted form-filling once you start. The wizard saves progress automatically, but having to leave halfway through and come back invites verification edge cases (timing out, regenerating session tokens) that are hard to recover from."
+      },
+      {
+        "type": "heading_2",
+        "content": "The Eight Steps, in Order"
+      },
+      {
+        "type": "paragraph",
+        "content": "Tap each numbered step below to see exactly what Amazon asks for, the fields you fill in, and the most common watch-out on that step. Steps 1 to 6 are form-filling. Step 7 is the video call. Step 8 is the postcard wait."
+      },
+      {
+        "type": "registration_wizard"
+      },
+      {
+        "type": "heading_2",
+        "content": "After You Submit"
+      },
+      {
+        "type": "paragraph",
+        "content": "Once you click the final Submit, Seller Central opens immediately in a partly-active state. You can browse the menus and start drafting listings, but you cannot list anything live, accept payments, or send inventory to Amazon until verification completes. This wait is normal. Use it productively by drafting your first listing in the Catalog menu (covered in Module 4) so it is ready to publish the moment verification passes."
+      },
+      {
+        "type": "paragraph",
+        "content": "You will receive emails at three milestones: when the documents pass automated review, when the video call is scheduled, and when the address postcard is sent. If any of these emails do not arrive within their expected window (24 hours, 3 business days, 7 business days respectively), check the Performance > Account Health page in Seller Central for any required action."
+      },
+      {
+        "type": "lesson_marker",
+        "tabId": "approval",
+        "label": "Verification & Approval",
+        "icon": "🛡️",
+        "description": "What Amazon checks, the video call, common rejection patterns, and how to recover from a suspension.",
+        "color": "lime"
+      },
+      {
+        "type": "heading_2",
+        "content": "What Amazon Is Actually Checking"
+      },
+      {
+        "type": "paragraph",
+        "content": "Amazon's verification is not a credit check or a business audit. It is an identity check designed to prevent three specific abuses: fraudsters opening accounts with stolen IDs, previously-banned sellers returning under new identities, and bots farming accounts at scale. Knowing which threat the check is designed to catch helps you understand why every single field matters."
+      },
+      {
+        "type": "paragraph",
+        "content": "The verification has three layers. The automated layer checks document images for editing artefacts and runs OCR to extract name, address, and date of birth. The human layer is a verification associate who looks at your documents and matches them against the form data. The video layer is a 30-minute call where a verifier confirms you, the person on camera, are the same person on the ID and the same person typing the answers."
+      },
+      {
+        "type": "heading_2",
+        "content": "The Video Call, Step by Step"
+      },
+      {
+        "type": "paragraph",
+        "content": "Amazon schedules the video call after the document upload passes automated review. Slots are usually 30 minutes long and offered within 2 to 5 business days of submission. The call takes place on Amazon Chime, in your browser. You do not need to install anything. You will be asked to hold your physical ID up to the camera at eye level, answer a few sourcing questions (what you plan to sell, where you plan to source from), and confirm a handful of details from the form."
+      },
+      {
+        "type": "paragraph",
+        "content": "The verifier is checking for three things. One: do you look like the person on the ID? Two: are you answering naturally or reading from a script? Three: does the room and setup look like a real workspace, not a coaching session? Sit in good even light, have your physical ID and any backup documents on the desk, and answer in your own words. Verifiers are trained to catch rehearsed answers."
+      },
+      {
+        "type": "callout",
+        "content": "💡 If you stumble on a question (forgetting your own UTR is a classic), say so. Asking 'can I check that?' and grabbing the paperwork is fine. Faking it is not."
+      },
+      {
+        "type": "heading_2",
+        "content": "Where Things Go Wrong"
+      },
+      {
+        "type": "paragraph",
+        "content": "Five out of six rejections come from the same handful of preventable mistakes. The sixth is harder. Tap each pitfall below to see the symptom (what Amazon's email says), the root cause (what actually happened), and the fix."
+      },
+      {
+        "type": "approval_pitfalls"
+      },
+      {
+        "type": "heading_2",
+        "content": "If You Get Suspended"
+      },
+      {
+        "type": "paragraph",
+        "content": "A small percentage of accounts get suspended during verification rather than rejected. Suspension is recoverable but requires writing a formal Plan of Action: a short document explaining what happened, why it happened, and what you are doing to prevent it. Plans of Action are written in three numbered sections (Root Cause, Immediate Action, Long-Term Action) and are submitted via the Performance > Account Health page."
+      },
+      {
+        "type": "paragraph",
+        "content": "Keep the Plan of Action factual and short. Two paragraphs per section is more effective than two pages. Amazon's response time is typically 48 hours for a first review. If the first plan is rejected, you can revise and resubmit. Do not appeal to multiple support cases in parallel; that just confuses the queue and slows your reinstatement."
+      },
+      {
+        "type": "lesson_marker",
+        "tabId": "tour",
+        "label": "Seller Central Tour",
+        "icon": "🗺️",
+        "description": "Section by section through the dashboard you will use every day. What lives where, and when you reach for it.",
+        "color": "rose"
+      },
+      {
+        "type": "heading_2",
+        "content": "Your Operations Cockpit"
+      },
+      {
+        "type": "paragraph",
+        "content": "Seller Central is Amazon's web app for sellers. It is where you list products, manage inventory, see sales, run advertising, file support cases, and watch your account health. Once verified, you will spend more time in Seller Central than on any other part of Amazon's site."
+      },
+      {
+        "type": "paragraph",
+        "content": "The dashboard can feel overwhelming on day one. There are eight top-level menus, each with five to fifteen sub-pages, and Amazon updates the layout every few months. The good news: you will only routinely use four of the menus, and the others you visit once a quarter. Knowing which is which saves an enormous amount of time."
+      },
+      {
+        "type": "heading_2",
+        "content": "The Eight Menus You Will Actually Use"
+      },
+      {
+        "type": "paragraph",
+        "content": "Tap each menu in the sidebar below to see what lives inside it, what it does, when you reach for it during the normal week, and what to watch out for. The first four (Catalog, Inventory, Orders, Performance) are your daily drivers. The other four are reference and occasional use."
+      },
+      {
+        "type": "seller_central_tour"
+      },
+      {
+        "type": "heading_2",
+        "content": "Where to Spend Time Each Week"
+      },
+      {
+        "type": "paragraph",
+        "content": "A healthy weekly rhythm looks like this. Daily, 5 minutes: glance at the home dashboard for any red banner, scroll the Orders feed for unusual activity. Twice a week, 15 minutes each: review Inventory for stockouts and Performance > Account Health for any new warnings. Weekly, 30 minutes: run a Sales report, compare to the previous week, note anything anomalous. Monthly, 90 minutes: full close, pull the Payments report, reconcile against your bank, file the figures for your accountant."
+      },
+      {
+        "type": "paragraph",
+        "content": "That cadence keeps you ahead of every metric Amazon cares about without becoming a full-time Seller Central operator. Every minute spent outside that rhythm should be product research, sourcing calls, or new listing creation. Time inside Seller Central is overhead; time outside is what compounds."
+      },
+      {
+        "type": "lesson_marker",
+        "tabId": "hygiene",
+        "label": "Day-One Account Hygiene",
+        "icon": "💚",
+        "description": "The eight setup tasks that protect your account, your money, and your future sanity.",
+        "color": "cyan"
+      },
+      {
+        "type": "heading_2",
+        "content": "The Account Health Mindset"
+      },
+      {
+        "type": "paragraph",
+        "content": "Once verified, you are responsible for keeping the account in good standing. Amazon does not warn you progressively as things degrade; it goes from green to amber to suspended quickly when a metric crosses a threshold. The fix is not vigilance; it is hygiene. A handful of small setup tasks done in the first hour after verification eliminate 80% of the situations that cause suspensions later."
+      },
+      {
+        "type": "paragraph",
+        "content": "Treat hygiene like the rest of the Elite FBA framework: front-load the discipline, then let the system run on its own. Once these eight tasks are done correctly, you will not touch most of them again for the life of the account."
+      },
+      {
+        "type": "heading_2",
+        "content": "Your First-Hour Setup"
+      },
+      {
+        "type": "paragraph",
+        "content": "Three of the eight tasks below are critical and must be done on day one. Four are high priority and should be done within the first week. The last (Brand Registry) is parked for later, after your first bundle has validated and you have a trademark in progress. Tap any task to see exactly what to do, where it lives in Seller Central, and why it matters."
+      },
+      {
+        "type": "account_health_setup"
+      },
+      {
+        "type": "heading_2",
+        "content": "Building a Weekly Rhythm"
+      },
+      {
+        "type": "paragraph",
+        "content": "After day-one setup, account hygiene takes about 15 minutes a week. Every Monday morning, check three things: Account Health (still green?), Inventory Performance (any new stranded SKUs?), and Notifications (any policy emails from the previous week?). If everything is clear, close the tab and get back to product research. If something is amber, fix it the same day."
+      },
+      {
+        "type": "callout",
+        "content": "🎯 The Compounding Effect: a clean account on day 365 is a direct result of clean hygiene on day 1. There is no way to retroactively fix a suspended account except to write a Plan of Action. Prevention is roughly fifty times cheaper than cure."
+      },
+      {
+        "type": "paragraph",
+        "content": "With the account open, verified, and properly set up, you are ready for Module 3, where we move from operations to product research and start finding the bundles that will actually fund the business."
       }
     ]
   },
@@ -622,200 +801,451 @@
     "name": "Module 3 - Product Research",
     "blocks": [
       {
-        "type": "paragraph",
-        "content": "💡 The Goal"
+        "type": "video",
+        "content": "Module 3: Finding Bundles That Sell",
+        "src": "https://yjvlmqjqcxtanhmwcvkq.supabase.co/storage/v1/object/public/course-videos/module-3-intro.mp4"
       },
       {
-        "type": "paragraph",
-        "content": "To identify low-risk products or combinations that already have proven demand — such as poor listings, low stock, or missing bundles."
-      },
-      {
-        "type": "paragraph",
-        "content": "This approach flips the traditional “software-only” model on its head."
-      },
-      {
-        "type": "paragraph",
-        "content": "🗒️ Checklist"
-      },
-      {
-        "type": "to_do",
-        "content": "Visit 2–3 physical stores (Can be online)"
-      },
-      {
-        "type": "to_do",
-        "content": "Find 3 individual items that sell well on Amazon"
-      },
-      {
-        "type": "to_do",
-        "content": "Identify 2 potential bundle ideas (complementary items that could be listed together)"
-      },
-      {
-        "type": "to_do",
-        "content": "Log everything into your Product Research Sheet (name, price, profit, reviews, etc.)"
-      },
-      {
-        "type": "to_do",
-        "content": "Choose your favourite product idea to use in Module 4 – Creating Your First Listing"
-      },
-      {
-        "type": "paragraph",
-        "content": "🧠 Why This Works"
-      },
-      {
-        "type": "bulleted_list_item",
-        "content": "Instant proof of demand → if a product is sold in major UK shops, people are already buying it."
-      },
-      {
-        "type": "bulleted_list_item",
-        "content": "Local advantage → most sellers never step outside online tools."
-      },
-      {
-        "type": "bulleted_list_item",
-        "content": "Unique bundles → combining complementary retail products creates your own ASIN and USP."
-      },
-      {
-        "type": "bulleted_list_item",
-        "content": "Low starting cost → you can test ideas with £20–£50 total spend."
-      },
-      {
-        "type": "heading_3",
-        "content": "🛒 Go to shops like:"
-      },
-      {
-        "type": "bulleted_list_item",
-        "content": "The Range"
-      },
-      {
-        "type": "bulleted_list_item",
-        "content": "Tesco/Asda"
-      },
-      {
-        "type": "bulleted_list_item",
-        "content": "Poundland"
-      },
-      {
-        "type": "bulleted_list_item",
-        "content": "B&Q"
-      },
-      {
-        "type": "bulleted_list_item",
-        "content": "TK Maxx (beauty/homeware section)"
-      },
-      {
-        "type": "bulleted_list_item",
-        "content": "Other Major Retailers"
-      },
-      {
-        "type": "heading_3",
-        "content": "🔍 When scanning shelves, ask yourself:"
-      },
-      {
-        "type": "numbered_list_item",
-        "content": "Is this already listed on Amazon?"
-      },
-      {
-        "type": "numbered_list_item",
-        "content": "What’s the BSR (Best Seller Rank)?"
-      },
-      {
-        "type": "numbered_list_item",
-        "content": "Are there poor listings?"
-      },
-      {
-        "type": "numbered_list_item",
-        "content": "Could I bundle this with something else?"
-      },
-      {
-        "type": "numbered_list_item",
-        "content": "Is it light and easy to ship?"
-      },
-      {
-        "type": "paragraph",
-        "content": "✅ Easy Wins"
-      },
-      {
-        "type": "bulleted_list_item",
-        "content": "Existing listings with poor images"
-      },
-      {
-        "type": "bulleted_list_item",
-        "content": "Consistent but under-optimised listings"
-      },
-      {
-        "type": "bulleted_list_item",
-        "content": "Products always “Currently Unavailable”"
-      },
-      {
-        "type": "paragraph",
-        "content": "⚠️ Avoid"
-      },
-      {
-        "type": "bulleted_list_item",
-        "content": "Licensed or large - brand items (copyright risk)"
-      },
-      {
-        "type": "bulleted_list_item",
-        "content": "Food or health products without manufacturer details"
-      },
-      {
-        "type": "bulleted_list_item",
-        "content": "Fragile, liquid or heavy items (higher FBA Fees)"
+        "type": "lesson_marker",
+        "tabId": "mindset",
+        "label": "The Research Mindset",
+        "icon": "🧠",
+        "description": "How to think about product research: what makes a viable bundle candidate before you even open Amazon.",
+        "color": "blue"
       },
       {
         "type": "heading_2",
-        "content": "💡 Example Opportunity"
+        "content": "Why Most Product Research Fails"
       },
       {
         "type": "paragraph",
-        "content": "You’re in Tesco and notice a shelf of car care products."
+        "content": "Most people who try to find products to sell on Amazon spend weeks looking and never source a single unit. They scroll through hundreds of items, get excited about half a dozen, do five minutes of half-hearted Amazon checking, and end up frozen by the choice. The problem is not the volume of products. The problem is they have no clear definition of what a good candidate even looks like, so every product feels equally promising and equally risky."
       },
       {
         "type": "paragraph",
-        "content": "Two stand out:"
+        "content": "An operator has the opposite experience. They walk into a shop with a mental filter dialled in tight, scan an aisle in 60 seconds, and either flag one or two items for closer investigation or move on without taking a single photo. They miss things, but the things they catch are real. The filter is the entire game."
       },
       {
-        "type": "bulleted_list_item",
-        "content": "Dashboard Cleaner Spray (500 ml) – £2.49"
-      },
-      {
-        "type": "bulleted_list_item",
-        "content": "Dashboard Cleaning Wipes (20 pack) – £2.49"
-      },
-      {
-        "type": "paragraph",
-        "content": "Both have separate Amazon listings with steady sales and average reviews."
-      },
-      {
-        "type": "paragraph",
-        "content": "Neither listing offers a combined “interior cleaning kit.” This is where we shine."
-      },
-      {
-        "type": "paragraph",
-        "content": "You create a new bundle as:"
-      },
-      {
-        "type": "quote",
-        "content": "“Car Care Essentials Duo – Glass Cleaner + Dashboard Wipes”"
-      },
-      {
-        "type": "paragraph",
-        "content": "This gives you:"
-      },
-      {
-        "type": "bulleted_list_item",
-        "content": "A unique ASIN (through GTIN exemption)"
-      },
-      {
-        "type": "bulleted_list_item",
-        "content": "A clear use-case bundle customers instantly understand"
-      },
-      {
-        "type": "bulleted_list_item",
-        "content": "A safe, everyday product that shows how bundling works - without entering sensitive niches like skincare or supplements"
+        "type": "callout",
+        "content": "🎯 The Operator Reframe: research is not about finding the perfect product. It is about quickly rejecting the 98% of products that will not work, so you can spend real time validating the 2% that might."
       },
       {
         "type": "heading_2",
-        "content": ""
+        "content": "The Two Bundle Routes"
+      },
+      {
+        "type": "paragraph",
+        "content": "Every bundle we build sits in one of two categories, and recognising the difference upfront saves a lot of confused research. Route one is the multi-pack: three of the same item packaged together, like a 3-pack of the same pet food. The customer benefit is convenience and a small discount versus buying singles. Route two is the complementary pair: two genuinely different products that solve the same problem together, like pet food and dental sticks. The customer benefit is curation: someone else has picked the right pair so they do not have to."
+      },
+      {
+        "type": "paragraph",
+        "content": "Multi-packs are easier to build (one SKU to source) but face more competition because the maths is obvious to other sellers. Complementary pairs are harder to design (you have to know which items genuinely go together) but the resulting ASIN is more defensible because the curation itself is intellectual property. We use both, but we lean towards multi-packs for the first three to five listings to get the rhythm of operations down."
+      },
+      {
+        "type": "heading_2",
+        "content": "The Pre-Validation Gate"
+      },
+      {
+        "type": "paragraph",
+        "content": "Before we sink 20 minutes into the full Amazon Validation Method (Lesson 3), we run every candidate through a three-gate pre-check. Each gate is a single question that can be answered in under five minutes. Fail any one of them and the candidate is dead; there is no point investigating further. The gates exist because most candidates die at one of these three points anyway, so doing the cheap test first saves the expensive test."
+      },
+      {
+        "type": "paragraph",
+        "content": "Gate one asks whether the product can plausibly be sold as a multipack at all. Gate two asks whether someone else has already built that multipack and locked the listing position. Gate three asks whether the brand itself is off-limits because the manufacturer dominates its own Amazon presence. Pass all three and you have earned the right to run the full validation method."
+      },
+      {
+        "type": "bundle_candidate_gate"
+      },
+      {
+        "type": "heading_2",
+        "content": "The Big Brand Trap"
+      },
+      {
+        "type": "paragraph",
+        "content": "Gate three is the one most new sellers miss, so it deserves a closer look. The brands you instinctively recognise from television adverts (L'Oreal, Garnier, Maybelline, Nivea-by-Beiersdorf, Procter & Gamble lines like Pantene and Head & Shoulders, Unilever lines like Dove and Vaseline, Reckitt lines like Dettol and Veet, Nestle confectionery) are almost all already on Amazon in a serious way. They have direct relationships with Amazon Retail, which means Amazon itself buys at the lowest possible wholesale tier and sells the product on its own Buy Box. They run Brand Stores that customers click into. They run Sponsored Brands ads at the top of every relevant search. They have A+ content on every listing."
+      },
+      {
+        "type": "paragraph",
+        "content": "For a new third-party seller trying to launch a bundle, this is a hostile environment. Even if you can source the product cheaply enough to build a bundle, you cannot win the visibility fight. Amazon Retail will undercut your single-unit price. The Brand Store funnels search traffic away from your listing. Sponsored Brands ads at the top of the SERP eat the first 10% of clicks before any organic result is seen. Your bundle launches into a search page where the brand owns the top three rows of pixels."
+      },
+      {
+        "type": "paragraph",
+        "content": "The brands you want to target sit in the opposite position. They are usually mid-sized or specialist: well-established at retail in Boots, B&M, Home Bargains, Holland & Barrett, independent pet shops, and local mini markets, but with no aggressive direct-to-Amazon programme. Examples of the profile we look for: Dr. Beckmann, Childs Farm, KMS, NYX (depending on category), Sukin, Vosene, Astonish, Pedigree treats, regional health food brands, niche pet specialists, smaller cosmetics labels. These brands distribute through a third-party UK distributor (which is where you buy wholesale from in Module 3 Lesson 6) and leave the Amazon channel mostly to third-party sellers. That is the gap."
+      },
+      {
+        "type": "callout",
+        "content": "🎯 The Recognition Test: if you can name the brand without thinking about it, and you have seen its adverts on TV, walk away. If you only recognise the brand because you walked past it in B&M last week, that is the right altitude for a new operator."
+      },
+      {
+        "type": "heading_2",
+        "content": "The Mental Model: A Funnel, Not a Search"
+      },
+      {
+        "type": "paragraph",
+        "content": "Think of research as a funnel. The top of the funnel is everything on a shop shelf and every product on Amazon's catalogue. The middle is the small subset that clears the pre-validation gate. The narrow end is the handful that pass the Amazon validation method (Lesson 3) and the Bundle Scorecard (Lesson 5). Your job is to move products through the funnel quickly, not to fall in love with any single item near the top."
+      },
+      {
+        "type": "paragraph",
+        "content": "The numbers we expect at each stage, roughly: 200 products glanced at in a session, 20 to 30 photographed for closer look, 8 to 12 validated on Amazon in detail, 2 to 4 scored, 1 actually sourced. If you find yourself with a 50% pass-through rate at any stage, your filter is too loose. Tighten it."
+      },
+      {
+        "type": "lesson_marker",
+        "tabId": "hunting",
+        "label": "Sourcing Hunting Grounds",
+        "icon": "🛒",
+        "description": "The physical shops and online directories where bundle opportunities actually live.",
+        "color": "purple"
+      },
+      {
+        "type": "heading_2",
+        "content": "Why Physical Shops Beat Spreadsheets"
+      },
+      {
+        "type": "paragraph",
+        "content": "Almost every new seller starts product research by opening a spreadsheet, downloading an Amazon best-sellers report, and trying to reverse-engineer a winning product from data alone. It rarely works. The data tells you what is already selling well on Amazon, which means by definition the competition is already established. The interesting opportunities are upstream: products that sell well at retail but have weak or non-existent bundle representation on Amazon."
+      },
+      {
+        "type": "paragraph",
+        "content": "You find those opportunities by walking shops. You will spot products you did not know existed, brands you had never heard of, and pricing arbitrage that does not show up in any data tool. Every successful Elite FBA bundle started with someone noticing something in a physical aisle."
+      },
+      {
+        "type": "callout",
+        "content": "🎯 The Operator Routine: walk three or four shops a week, even when you do not need to source. The discovery muscle gets weaker if you do not use it. Treat it like a runner treats easy mileage."
+      },
+      {
+        "type": "heading_2",
+        "content": "Where to Hunt and What to Look For"
+      },
+      {
+        "type": "paragraph",
+        "content": "Different hunting grounds give you different signals. Boots and Superdrug are brand-discovery shops where you walk the shelves at full retail to learn which third-party brands sit in our target categories, then chase the wholesale relationship. B&M and Home Bargains are discount retailers that consistently carry mid-sized UK brands, where we spot the likes of Dr. Beckmann, Astonish, and Childs Farm rather than buying stock to flip. Poundland and Savers surface mini-sized branded basics that bundle naturally into 3-packs. Local mini markets and independent corner shops reveal which brands the accessible cash-and-carry wholesalers are actually supplying in small case quantities. Specialist shops surface niche brands with passionate customers."
+      },
+      {
+        "type": "paragraph",
+        "content": "Tap any hunting ground below to see what to look for, what your scan routine should be, and what to avoid. We are listing both physical and online sources; both matter. Online discovery (especially reverse-searching Amazon for products that need a bundle) feeds physical research and vice versa."
+      },
+      {
+        "type": "hunting_grounds"
+      },
+      {
+        "type": "heading_2",
+        "content": "Reading the Back of the Packaging"
+      },
+      {
+        "type": "paragraph",
+        "content": "While you are walking the shops, get into the habit of turning every promising product over and reading the small print on the back. UK packaging law requires every consumer product to display the name and address of the company importing or distributing it. That single line of small text is the most reliable starting point for a wholesale conversation, because it tells you exactly which UK business is already supplying that brand in case quantities."
+      },
+      {
+        "type": "paragraph",
+        "content": "The wording is usually one of three forms. 'Distributed in the UK by [Company Name]', 'Imported by [Company Name]', or 'For UK enquiries contact [Company Name]'. The company name will almost always have a website that surfaces in the first Google result, and from there you have a real business with a real email address that you can approach in Lesson 6 for wholesale pricing on larger ongoing quantities."
+      },
+      {
+        "type": "paragraph",
+        "content": "Build a simple capture habit. Photograph the back of every product you photograph the front of. Note the distributor company name in your research log alongside the brand, the shop you saw it in, and the date. Within a few weeks of walking shops you will have a short list of UK distributors that come up again and again across different brands, and those repeat names are the wholesalers worth prioritising. The same distributor often supplies a whole portfolio of brands, which means one good supplier relationship can unlock multiple future bundles."
+      },
+      {
+        "type": "callout",
+        "content": "💡 Tactical tip: photograph the back panel in good light and zoom in on the small print. The text is often three or four points smaller than the rest of the label. A quick crop on your phone makes it easy to read later when you sit down for your distributor research session."
+      },
+      {
+        "type": "heading_2",
+        "content": "Building Your Weekly Loop"
+      },
+      {
+        "type": "paragraph",
+        "content": "A workable weekly research rhythm looks like this. Two physical shop visits, 30 minutes each. One Amazon reverse-discovery session, 45 minutes. One distributor research session, 30 minutes. That is roughly two and a half hours a week. From that you should be surfacing 4 to 8 candidate products that clear the pre-validation gate."
+      },
+      {
+        "type": "paragraph",
+        "content": "Keep a research log. A simple note on your phone is fine. For each candidate, jot: shop name, brand, product, your photographed price, your gut take on which trait might fail, and the date. Revisit the log weekly. Patterns will emerge: certain shops produce more candidates, certain categories dominate your wins, certain price bands feel right."
+      },
+      {
+        "type": "callout",
+        "content": "💡 Take photos, not notes, in store. The product photo encodes the price tag, the packaging, the brand, and a visual cue for size. Notes lose half of that and slow you down."
+      },
+      {
+        "type": "lesson_marker",
+        "tabId": "validation",
+        "label": "The Amazon Validation Method",
+        "icon": "🔍",
+        "description": "Six-step Amazon search workflow that decides whether a candidate is worth bundling or not.",
+        "color": "amber"
+      },
+      {
+        "type": "heading_2",
+        "content": "From Candidate to Confirmed Opportunity"
+      },
+      {
+        "type": "paragraph",
+        "content": "A product that clears the pre-validation gate from Lesson 1 is a candidate, not an opportunity. To confirm it is actually worth your sourcing capital, you run it through the Amazon Validation Method: a six-step search-and-analyse routine that takes about 20 minutes per product and tells you definitively whether the market is open, crowded, or dead."
+      },
+      {
+        "type": "paragraph",
+        "content": "Each step gives you a single piece of evidence: does the single-unit listing exist, how many sellers compete on it, what is the current price, how fast is it selling, does a bundle already exist, and what would your bundle have to charge to clear the floor rule. Six pieces of evidence, six chances to spot a deal-breaker."
+      },
+      {
+        "type": "heading_2",
+        "content": "Reading Single-Unit Demand"
+      },
+      {
+        "type": "paragraph",
+        "content": "The single-unit Amazon listing is your demand proxy. If shoppers are buying singles at meaningful volume, they will absolutely buy a 3-pack at a small discount. If shoppers are not buying singles, your bundle will not magically conjure demand. So the first three validation steps all read different angles on single-unit demand: existence, competition, and price stability."
+      },
+      {
+        "type": "paragraph",
+        "content": "The trick is not to over-interpret any single signal. A single-unit listing with 50 sellers might look hopelessly crowded, but if your bundle is unique you are not joining their fight at all; you are building a parallel listing. Conversely, a single-unit listing with one seller and a slowly declining price might look uncrowded, but if it is selling at a loss your bundle will too. Read all six signals together."
+      },
+      {
+        "type": "heading_2",
+        "content": "The Six-Step Workflow"
+      },
+      {
+        "type": "paragraph",
+        "content": "Tap each numbered step below to see exactly what to do, what you should see on Amazon, the green-light conditions that mean continue, and the red-light conditions that mean stop. A full pass takes about 20 minutes for an experienced operator; double that on your first few attempts. Speed comes from repetition."
+      },
+      {
+        "type": "amazon_validator"
+      },
+      {
+        "type": "callout",
+        "content": "🎯 The 10:1 Rule: expect to reject 10 candidates for every one that clears all six validation steps. If your pass-through rate is higher, you are being too generous with red flags. If it is lower, your initial filter from Lesson 1 was too loose."
+      },
+      {
+        "type": "heading_2",
+        "content": "What Validation Does Not Tell You"
+      },
+      {
+        "type": "paragraph",
+        "content": "The validation method tells you whether demand exists and whether the listing economics work. It does not tell you whether you can actually source the product at scale, what the customer reviews say about reliability, or whether there is a hidden quality issue with the brand. Those questions come up later in the Scorecard (Lesson 5) and the wholesale conversation (Lesson 6). Validation is a necessary but not sufficient gate."
+      },
+      {
+        "type": "lesson_marker",
+        "tabId": "helium",
+        "label": "Helium 10 X-Ray",
+        "icon": "🧪",
+        "description": "The free Chrome extension that overlays sales estimates, BSR, and revenue on every Amazon search.",
+        "color": "lime"
+      },
+      {
+        "type": "video",
+        "content": "How to Install and Use Helium 10 X-Ray"
+      },
+      {
+        "type": "heading_2",
+        "content": "The Only Third-Party Tool We Use"
+      },
+      {
+        "type": "paragraph",
+        "content": "We try to keep the toolstack lean. There are dozens of paid Amazon research platforms (Jungle Scout, Viral Launch, SellerApp, ZonGuru, Keepa Premium) and most of them duplicate what the others do. Of all of them, the single tool that adds real value at the research stage and is genuinely free is Helium 10's Chrome extension, specifically the X-Ray feature."
+      },
+      {
+        "type": "paragraph",
+        "content": "X-Ray overlays a small data panel on top of any Amazon search results page. The panel shows estimated monthly sales, estimated monthly revenue, current Best Seller Rank, review count, and a listing quality score for every visible result. You see the entire competitive landscape of a search in one view, without having to click into each listing."
+      },
+      {
+        "type": "callout",
+        "content": "💡 We use the free tier only. The paid Helium 10 plans add keyword research and listing optimisation tools that are useful in Module 4 and Module 7, but for product research the free X-Ray feature is enough."
+      },
+      {
+        "type": "heading_2",
+        "content": "Setup and Tour"
+      },
+      {
+        "type": "paragraph",
+        "content": "Four-step setup gets you up and running in about 10 minutes. Install the Chrome extension, create a free Helium 10 account, optionally connect it to Seller Central for later use, and pin the extension to your browser toolbar. From there, every Amazon search page becomes a research dashboard."
+      },
+      {
+        "type": "paragraph",
+        "content": "The walkthrough below covers the four setup steps and the six X-Ray metrics you will use during validation. Each metric tells you something specific about the niche; learning to read them as a group is the difference between research that feels rigorous and research that is rigorous."
+      },
+      {
+        "type": "helium10_walkthrough"
+      },
+      {
+        "type": "heading_2",
+        "content": "How We Use X-Ray in Practice"
+      },
+      {
+        "type": "paragraph",
+        "content": "The most useful workflow: take a candidate brand from Lesson 2, run a broad Amazon search for the brand or the category (for example, 'shampoo 250ml' or 'protein bar multipack'), and let X-Ray paint the landscape. Look at the top 10 results. Are they doing 200+ units/month each? Are there any obvious bundle listings, or only singles? Does Helium 10 estimate the listing quality scores below 7, suggesting room to compete on optimisation alone?"
+      },
+      {
+        "type": "paragraph",
+        "content": "X-Ray is best treated as a sanity check, not a primary discovery tool. The candidates that survive your shop-floor filter and the Amazon validation method should also look healthy in X-Ray. If they do not, you missed something earlier. If they do, the green light is now triple-confirmed."
+      },
+      {
+        "type": "callout",
+        "content": "⚠️ Helium 10's sales estimates are estimates. They are accurate within roughly 20% on most listings but can be off by 50% on small-niche or low-velocity items. Never make a sourcing decision on a single X-Ray number; always cross-reference with BSR and review count."
+      },
+      {
+        "type": "lesson_marker",
+        "tabId": "bundles",
+        "label": "The Bundle Opportunity Test",
+        "icon": "📦",
+        "description": "Five-criterion scorecard that decides whether a validated product becomes a sourced bundle.",
+        "color": "rose"
+      },
+      {
+        "type": "heading_2",
+        "content": "From Validated Product to Sourced Bundle"
+      },
+      {
+        "type": "paragraph",
+        "content": "By this point in the funnel, a product has cleared the pre-validation gate (Lesson 1), passed the six-step Amazon validation method (Lesson 3), and looks healthy in Helium 10 X-Ray (Lesson 4). That is still not enough to spend money on. The final gate is the Bundle Scorecard: five criteria that confirm the bundle has a clear economic case, a sourcing route, and a market position that does not already exist."
+      },
+      {
+        "type": "paragraph",
+        "content": "Each criterion is binary: it passes or it fails. There is no partial credit. A bundle that fails even one criterion is not necessarily dead, but it requires explicit rework on the failing axis before sourcing. A bundle that fails three or more is dead; do not try to salvage it. The temptation to push through a marginal candidate because you have already done so much work on it is the single most expensive bias in this entire business."
+      },
+      {
+        "type": "callout",
+        "content": "🎯 The Sunk Cost Trap: every hour you have already spent on a candidate is gone whether you source it or not. The only question that matters is whether the next pound spent has a positive expected return. If the scorecard says no, you save the next pound."
+      },
+      {
+        "type": "heading_2",
+        "content": "The Five Criteria"
+      },
+      {
+        "type": "paragraph",
+        "content": "Tap each criterion below to confirm or fail it for your candidate. The verdict at the bottom updates live as you go. Aim for five out of five on your first sourced bundle. Conditional Gos (four out of five) are workable once you have two or three bundles under your belt; do not start on one."
+      },
+      {
+        "type": "bundle_scorecard"
+      },
+      {
+        "type": "heading_2",
+        "content": "Designing the Bundle Itself"
+      },
+      {
+        "type": "paragraph",
+        "content": "Once a bundle passes the scorecard, the last design decision is composition: how many units, what specific variant, and how it physically packages. Three rules of thumb. First, 3-packs sell better than 2-packs because the visual gap with the single unit is bigger; the customer feels like they are getting an obvious deal. Second, the bundle should include the highest-velocity variant the brand offers, not the obscure one you happen to have stock of. Third, design the packaging to be flat and tight; size tier is fee tier."
+      },
+      {
+        "type": "paragraph",
+        "content": "For complementary pairs, the second item should solve the same problem as the first, not a different one. A shampoo and a matching conditioner pair well because they are both addressing hair care. A shampoo and a body wash pair worse because the customer is now solving two problems at once and may not need both this month."
+      },
+      {
+        "type": "callout",
+        "content": "💡 Pricing the bundle: take the single-unit Amazon price, multiply by the unit count, subtract 10 to 15%. That is your initial retail price. You can fine-tune from there once the listing is live and you see how customers respond."
+      },
+      {
+        "type": "lesson_marker",
+        "tabId": "wholesale",
+        "label": "Approaching Wholesale Suppliers",
+        "icon": "🤝",
+        "description": "How to find the right distributor and run the email conversation from cold contact to first order.",
+        "color": "cyan"
+      },
+      {
+        "type": "heading_2",
+        "content": "Why Wholesale Beats Retail Past Validation"
+      },
+      {
+        "type": "paragraph",
+        "content": "Retail sourcing is how you validate. Wholesale is how you scale. Once a bundle has proven demand at retail-sourced prices, the next move is to cut the component cost by 30 to 50% by buying directly from the brand's UK distributor. That margin lift compounds across every future sale and is what turns a single tested bundle into a long-running cash-flow engine."
+      },
+      {
+        "type": "paragraph",
+        "content": "Wholesale conversations intimidate new sellers because there is no public marketplace; you have to find the right contact and start the dialogue from scratch. The good news is that the format of the conversation is predictable. A handful of email templates and a clear understanding of what the supplier is looking for in your enquiry will get you through 90% of supplier interactions."
+      },
+      {
+        "type": "paragraph",
+        "content": "Before we dig into the tactics, one important point on who the wholesale conversation is open to. Approaching most UK wholesale suppliers is a business-to-business transaction. Distributors invoice a registered company, send a wholesale rate card based on case quantities, and deliver to a commercial address. Most will not open a trade account for an individual without a registered business. Below are the two routes through this lesson depending on where you are right now."
+      },
+      {
+        "type": "heading_2",
+        "content": "Route A: If You Already Trade as a Limited Company"
+      },
+      {
+        "type": "paragraph",
+        "content": "If you already have a UK limited company set up with a business bank account, you can work through the rest of this lesson exactly as written. Suppliers will ask for your company registration number, a VAT number where applicable, and the trading details of where you intend to resell. You can answer all three immediately, which means you can move straight to outreach. Skip ahead to 'Finding the Right Contact' below and start your conversations this week."
+      },
+      {
+        "type": "paragraph",
+        "content": "If you do not yet have a limited company, you are not blocked from sourcing wholesale. Module 6 covers the entire company formation, trademark, and Brand Registry process step by step, and that is where most students set up the legal entity that the wholesale conversation requires. We do not introduce that work earlier on purpose: the validation in Modules 1 to 3 is deliberately set up to be doable as an individual, so you can prove the concept works for you before paying to incorporate."
+      },
+      {
+        "type": "callout",
+        "content": "🏢 The shortest path to direct wholesale: Module 6 takes about a fortnight of waiting time plus one focused afternoon of paperwork. If your bundle has cleared the Scorecard and you want to go direct, you can jump to Module 6 now, come back here once your company is registered, and pick the wholesale lesson back up without losing momentum."
+      },
+      {
+        "type": "heading_2",
+        "content": "Route B: If You Are Still Sourcing as an Individual"
+      },
+      {
+        "type": "paragraph",
+        "content": "If you do not yet have a registered business and are not ready to set one up, there is a route that lets you keep validating and scaling without the wholesale conversation stalling. I am happy to approach the supplier on your behalf through my own limited company, place the order under my trading name, and then invoice the stock onward to you at the wholesale price plus a small handling cost. From there, you receive the inventory, send it into FBA under your own Amazon seller account, and run the listing as normal."
+      },
+      {
+        "type": "paragraph",
+        "content": "The process is simple. You identify the supplier and the SKUs using the methods covered in this lesson. You send me the details: brand, product, quantity, your target case size, along with a copy of any quote you already have. I contact the supplier, agree pricing and MOQ, place the order, and issue you a clean B2B invoice for the goods. You pay the invoice, and the supplier ships either to you directly or to my address for a quick handover onto yours."
+      },
+      {
+        "type": "paragraph",
+        "content": "This route exists specifically so that the wholesale economics covered in Module 3 are not gated behind incorporation. It is intended as a bridge until you finish Module 6 and set up your own limited company, at which point you start dealing with suppliers directly and the handover happens cleanly. Pricing is transparent: you see the supplier's invoice to my business, you pay that figure plus a flat handling rate, and the bulk of the margin you would have captured by being incorporated yourself stays with you."
+      },
+      {
+        "type": "callout",
+        "content": "💬 To take the individual-seller route, message me with the supplier name, the SKUs you want to order, and the quantity. I can usually have a B2B quote back to you within 48 hours and stock landed within two to three weeks of confirmation."
+      },
+      {
+        "type": "heading_2",
+        "content": "Finding the Right Contact"
+      },
+      {
+        "type": "paragraph",
+        "content": "There are three reliable routes to the right distributor. Route one: the back of the product itself. UK packaging law requires the importer or distributor's name and address on every consumer product. Read the small print on the back of the bottle or box; you will often find a 'Imported by' or 'Distributed in the UK by' line with a company name. Search that company online for their website and email."
+      },
+      {
+        "type": "paragraph",
+        "content": "Route two: the brand's own website. Most brands have a 'Wholesale' or 'Trade' link in their footer. If they do not, look for a 'Contact' page and email asking who their UK distributor is. Brand reps will usually answer this honestly because it helps them place product. Route three: a Google search for 'BRAND NAME wholesale UK' or 'BRAND NAME distributor UK'. The first three results are almost always the right path; their websites will list available SKUs, minimum order quantities, and (for the well-run ones) a contact email for new account enquiries."
+      },
+      {
+        "type": "callout",
+        "content": "💡 If three different searches surface the same wholesale aggregator (esources, wholesaledomain, etc.), the aggregator is one level above the real distributor. Their pricing is barely below retail. Go one level upstream: ask the aggregator who they buy from, then contact that party directly."
+      },
+      {
+        "type": "heading_2",
+        "content": "Email Templates That Actually Get Replies"
+      },
+      {
+        "type": "paragraph",
+        "content": "Tap each tab below to see the three templates that walk the full supplier conversation from cold contact through to placing the first order: First Contact, Follow-up, and Placing an Order. Toggle the annotations to see why each line is there. Swap the placeholders in braces for your own details before sending."
+      },
+      {
+        "type": "wholesale_outreach"
+      },
+      {
+        "type": "heading_2",
+        "content": "What Suppliers Look For"
+      },
+      {
+        "type": "paragraph",
+        "content": "A wholesale distributor talking to a new Amazon seller is screening for three things, mostly without saying so. One: are you a real business or a hobbyist? They want to see a company number, a trading email on a real domain (or a clearly business-flavoured Gmail), and a tone that sounds like someone who has done this before. Two: are you going to break their pricing structure? They worry that you will undercut their other resellers on Amazon and damage the brand. Three: can you actually pay? An MOQ exists partly to filter out tyre-kickers."
+      },
+      {
+        "type": "paragraph",
+        "content": "Your job in the cold email is to pre-empt all three. Include company registration details. Mention that you maintain pricing discipline (you do not have to call it that; just framing your enquiry around bundle building rather than racing the Buy Box signals it). And offer to cover small costs like samples or shipping. None of these are expensive moves; together they signal that you are serious."
+      },
+      {
+        "type": "heading_2",
+        "content": "Cadence and Patience"
+      },
+      {
+        "type": "paragraph",
+        "content": "Wholesale conversations move slowly. A typical timeline: cold email Monday, no reply by Friday, follow-up the following Wednesday, first response the week after, sample request and reply over the next ten days, terms agreement and first order in week four to six. Sometimes faster. Often slower. This is fine because by the time you are emailing suppliers, your test bundle is already validating on Amazon, so cash flow is not waiting on the wholesale conversation to close."
+      },
+      {
+        "type": "paragraph",
+        "content": "Do not pursue more than three to four supplier conversations at once. Each one needs real attention and your follow-up cadence falls apart at higher volume. Better to land one good wholesale relationship per month than to start ten and follow up on none."
+      },
+      {
+        "type": "callout",
+        "content": "🎯 The Long Game: a single strong wholesale relationship can supply you for years. Treat the conversation as the beginning of a multi-year partnership, not a single transaction. Your tone in the first email sets the tone for everything that follows."
+      },
+      {
+        "type": "paragraph",
+        "content": "With your first bundle validated, scored, and supplied, you are ready for Module 4: turning the bundle into a published Amazon listing that customers actually find and buy."
       }
     ]
   },
@@ -824,272 +1254,425 @@
     "name": "Module 4 - Listing Creation",
     "blocks": [
       {
-        "type": "paragraph",
-        "content": "📦 Module 4 – Creating Your First Listing (Generic ASIN Method)"
+        "type": "video",
+        "content": "Module 4: Listing Creation"
+      },
+      {
+        "type": "lesson_marker",
+        "tabId": "foundations",
+        "label": "Anatomy of a Listing",
+        "icon": "🧱",
+        "description": "What the Amazon listing form is asking for and the three jobs each part has to do.",
+        "color": "blue"
+      },
+      {
+        "type": "heading_2",
+        "content": "What a Listing Actually Is"
       },
       {
         "type": "paragraph",
-        "content": "It’s time to bring your product idea to life on Amazon, testing demand, keywords and profit margins."
-      },
-      {
-        "type": "heading_3",
-        "content": "🎯 Lesson 1 – Why We List Under “Generic”"
+        "content": "An Amazon listing is the single page a customer sees when they click into your product. It is also the database entry that Amazon's search algorithm reads to decide when and where to show that page. Most new sellers spend their first listing thinking of it as a marketing brochure, when in reality it is two things at once: a sales page for the human visitor and a structured record for the machine. The fields you fill in this module have to satisfy both audiences."
       },
       {
         "type": "paragraph",
-        "content": "The goal is to get live on Amazon fast and test demand — not to build a brand yet."
+        "content": "Across this module we work through the listing creation flow end to end. Lesson 2 covers the generic-brand path and the GTIN exemption that lets you publish without a barcode. Lesson 3 covers writing the listing copy with AI help. Lesson 4 covers converting the description to HTML so it actually renders well on Amazon. Lesson 5 covers the seven image slots. Lesson 6 walks through the remaining form fields including dimensions, compliance, and pricing. By the end you have a live listing ready to receive inbound stock in Module 5."
+      },
+      {
+        "type": "heading_2",
+        "content": "The Three Jobs Every Listing Has to Do"
       },
       {
         "type": "paragraph",
-        "content": "Most new sellers wait months trying to design logos and order packaging."
+        "content": "Every part of a listing exists to do one of three jobs. Job one: get found. The title, search terms, and BSR all feed Amazon's search index, deciding whether a customer typing 'stainless steel cutlery set' ever sees you. Job two: get clicked. The main image and the price are what convert a search impression into a click into your page. Job three: get bought. The bullets, description, A+ content, and reviews are what convince the customer who clicked to add to basket."
       },
       {
         "type": "paragraph",
-        "content": "We don’t do that here."
+        "content": "A weak listing usually fails one of those three jobs cleanly. Tap through the anatomy below to see which part of the listing does which job. You will refer back to this map several times in the next five lessons."
+      },
+      {
+        "type": "listing_anatomy"
+      },
+      {
+        "type": "heading_2",
+        "content": "Iterative, Not One-Shot"
       },
       {
         "type": "paragraph",
-        "content": "By listing under the “Generic” brand, you can:"
+        "content": "Your first listing will not be perfect. It is not supposed to be. Spending three weeks polishing a listing before publishing wastes time you could be using to gather real customer behaviour data. The right mindset is to publish a clean v1 that meets every compliance requirement, then iterate based on actual conversion data over the first month. Module 7 covers iteration in depth; for now, the goal is a publishable v1."
       },
       {
-        "type": "bulleted_list_item",
-        "content": "✅ Skip GTINs and UPC codes using GTIN exemption"
+        "type": "callout",
+        "content": "🎯 The Publishing Standard: every field is filled, every image meets spec, every required declaration is correct. That is the bar for v1. Beauty and polish come later from data, not from your gut."
       },
       {
-        "type": "bulleted_list_item",
-        "content": "✅ Avoid trademark or Brand Registry requirements"
+        "type": "lesson_marker",
+        "tabId": "gtin",
+        "label": "Generic Brand & GTIN Exemption",
+        "icon": "🏷️",
+        "description": "Listing under Generic without a barcode, and walking through the GTIN exemption application.",
+        "color": "amber"
       },
       {
-        "type": "bulleted_list_item",
-        "content": "✅ Focus purely on testing demand"
-      },
-      {
-        "type": "paragraph",
-        "content": "💬 Think of this as your “proof of concept” stage."
-      },
-      {
-        "type": "paragraph",
-        "content": "Once you confirm sales, then you can form your Ltd company, apply for a trademark, and rebrand the listing under your own name. (Module 6)"
-      },
-      {
-        "type": "heading_3",
-        "content": "🧾 Lesson 2 – Creating the Listing"
+        "type": "heading_2",
+        "content": "Why We List Under Generic"
       },
       {
         "type": "paragraph",
-        "content": "Let’s create your first ASIN."
-      },
-      {
-        "type": "heading_3",
-        "content": "🧩 Add a New Product"
-      },
-      {
-        "type": "numbered_list_item",
-        "content": "Go to Inventory → Add a Product → Create a New Listing"
-      },
-      {
-        "type": "numbered_list_item",
-        "content": "Select your product category"
-      },
-      {
-        "type": "numbered_list_item",
-        "content": "Under Brand Name → type Generic"
-      },
-      {
-        "type": "numbered_list_item",
-        "content": "Under Product ID Type → select GTIN Exemption"
-      },
-      {
-        "type": "numbered_list_item",
-        "content": "Fill out:"
+        "content": "By default, Amazon expects every product to carry a GTIN: a Global Trade Item Number, which on most consumer goods is the UPC or EAN barcode printed on the packaging. For a brand-new bundle that you have created yourself, no GTIN exists. You could buy one from a barcode reseller for around £30, but for a v1 test listing that is money you do not need to spend. Amazon offers a GTIN exemption specifically for sellers in your position: new bundles, generic-branded products, and small-batch sellers who do not yet have a registered trademark."
       },
       {
         "type": "paragraph",
-        "content": "Tip: When you’ve written your description, paste it into: https://www.sellerapp.com/amazon-product-description-editor.html"
+        "content": "Listing under the 'Generic' brand is the path we take in Module 4 because it removes three obstacles at once. You do not need a registered trademark. You do not need a barcode. You do not need Brand Registry. All three of those come later: Module 6 covers the trademark and brand setup, after you have proven the bundle works. For now, Generic is the fastest legal route to a published listing."
+      },
+      {
+        "type": "callout",
+        "content": "🏷️ Generic is a real brand on Amazon. It is not a workaround or a loophole. Thousands of legitimate sellers list under Generic permanently. The only thing you lose is Brand Registry, which you do not need to launch and validate."
+      },
+      {
+        "type": "heading_2",
+        "content": "What You Need Before You Apply"
       },
       {
         "type": "paragraph",
-        "content": "Once you have the HTML version, paste this into the Amazon description area."
+        "content": "The exemption application is entirely online and entirely photo-based. There is no PDF letter, no brand authorisation document, no signature scan; Amazon only asks for a set of clear product photos. What those photos have to show is the important part. Amazon needs to see the product itself from a couple of angles, your chosen brand name visibly attached to the packaging in a way that cannot be peeled off, and no existing barcode anywhere on the product or its packaging."
       },
       {
         "type": "paragraph",
-        "content": "This ensures that your description is formatted correctly, ensuring that it looks professional and appealing to customers."
-      },
-      {
-        "type": "heading_3",
-        "content": "📝 Example Listing (Car Care Duo)"
-      },
-      {
-        "type": "bulleted_list_item",
-        "content": "Title: Car Care Essentials Duo – Glass Cleaner & Dashboard Wipes (Generic Brand)"
-      },
-      {
-        "type": "bulleted_list_item",
-        "content": "Bullet Points:"
-      },
-      {
-        "type": "bulleted_list_item",
-        "content": "Description:"
-      },
-      {
-        "type": "heading_3",
-        "content": "📸 Lesson 4 – Taking Product Photos"
+        "content": "Permanence is the bit that trips most people up. Amazon's reviewer needs to be confident that the brand name belongs to the packaging and cannot simply be peeled off and swapped later. The easiest way to demonstrate this without spending money on custom-printed packaging is the method I use myself: take a plain polybag or kraft box, print a sticker with your chosen brand name, and place the sticker INSIDE the bag with the product so that the sticker is sealed in when the bag is closed. A sticker stuck on the outside of the bag will be rejected because the reviewer assumes anything peelable is temporary. Three or four photos cover the whole application: one of the bundle itself, one of the packaging showing the brand sticker visible through or inside the bag, and one of the back of the packaging confirming there is no existing barcode."
       },
       {
         "type": "paragraph",
-        "content": "You don’t need professional photography yet — just clean, compliant, and clear images."
+        "content": "The whole asset prep takes about twenty minutes of focused work. Take the photos with your phone in natural light against a plain background. The walkthrough below covers the application itself step by step."
       },
       {
-        "type": "heading_3",
-        "content": "✅ Photo Requirements"
+        "type": "gtin_stepper"
       },
       {
-        "type": "bulleted_list_item",
-        "content": "Pure white background (you can remove background using Canva or Remove.bg)"
-      },
-      {
-        "type": "bulleted_list_item",
-        "content": "Product fills 85% of the frame"
-      },
-      {
-        "type": "bulleted_list_item",
-        "content": "No watermarks, logos, or text overlays"
-      },
-      {
-        "type": "bulleted_list_item",
-        "content": "Show everything included in the bundle"
-      },
-      {
-        "type": "bulleted_list_item",
-        "content": "Include 1 image of product + packaging together (Amazon requirement for GTIN exemption)"
-      },
-      {
-        "type": "heading_3",
-        "content": "📷 Tip"
+        "type": "heading_2",
+        "content": "After the Exemption Is Approved"
       },
       {
         "type": "paragraph",
-        "content": "Use your phone in natural lighting."
+        "content": "Approval typically arrives inside 24 to 72 hours by email. Once approved, you go to Catalog → Add Products → I'm adding a product not sold on Amazon, type 'Generic' as the brand name, and the form will let you proceed without a barcode field. From here, the rest of the listing creation flow looks exactly like any other Amazon listing, which is what the next four lessons cover."
+      },
+      {
+        "type": "callout",
+        "content": "⚠️ If your exemption is rejected, the rejection email tells you exactly which check failed. The single most common reason is a brand-name sticker stuck on the outside of the packaging instead of sealed inside. Move the sticker so it is sealed inside the bag with the product, take fresh photos, and re-submit. Second applications almost always succeed."
+      },
+      {
+        "type": "lesson_marker",
+        "tabId": "copywriting",
+        "label": "Writing the Listing Copy",
+        "icon": "✍️",
+        "description": "Drafting your title, bullets, and description with AI as a starting point.",
+        "color": "purple"
+      },
+      {
+        "type": "heading_2",
+        "content": "First, Why Keywords Matter"
       },
       {
         "type": "paragraph",
-        "content": "A £10 white foam board and daylight can produce excellent photos for testing."
-      },
-      {
-        "type": "heading_3",
-        "content": "💰 Lesson 5 – Pricing & Launch"
+        "content": "Before we touch the title, bullets, or description, we need to cover why the specific words you put in them matter so much. If you have never come across the term SEO before, the concept on Amazon is simple. Amazon is a search engine, not a shop window. When a customer types something into the Amazon search bar, Amazon has to decide which listings to show them and in what order. The single biggest factor in that decision is whether the exact words the customer typed appear in your listing. Get those words right and your product appears on the first page of results. Miss them and your product is invisible, no matter how good the bundle is."
       },
       {
         "type": "paragraph",
-        "content": "Price for motion, not maximum profit."
+        "content": "SEO stands for Search Engine Optimisation. On Amazon, all it really means is writing your listing in the language your customer uses when they search. A customer looking for a dining cutlery set does not type 'tableware metallic accessories'; they type 'cutlery set' or 'stainless steel cutlery set' or 'knife and fork set'. Each of those exact phrases is what we call a keyword. Your listing needs to contain the keywords customers actually use, otherwise you will never appear when they search, however polished your photos or pricing happen to be."
+      },
+      {
+        "type": "heading_2",
+        "content": "A Worked Example"
       },
       {
         "type": "paragraph",
-        "content": "When testing Generic listings, your goal is to move stock and learn."
+        "content": "Imagine you are launching a 24-piece stainless steel dining cutlery set for 6 people. Three different customers might search for that exact same product in three different ways: 'stainless steel cutlery set 24 piece', '24 piece cutlery set for 6 people', and 'knife fork spoon set 6 person'. All three are perfectly valid customer phrasings of the same buying intent. Your listing has three places it can hold keywords for Amazon to read: the title (which carries the most weight in the search algorithm), the bullet points (medium weight), and the backend search terms field (invisible to the customer but indexed by Amazon). Across those three places, you need to cover as many real customer phrasings as you can, weaving them in naturally rather than stuffing them in."
+      },
+      {
+        "type": "heading_2",
+        "content": "Where Your Keywords Come From"
       },
       {
         "type": "paragraph",
-        "content": "Aim for a small but noticeable gap below similar listings — just enough to attract clicks."
+        "content": "You do not have to guess what customers actually search for. That is exactly what Helium 10, the free Chrome extension you set up in Module 3 Lesson 4, surfaces for you. Open Helium 10 on the top-ranking competitor for your product, run a keyword research lookup, and you see a list of the actual search phrases driving traffic to that listing, along with how many people search each phrase per month. Take the top five to ten phrases that genuinely describe your bundle. Those are the keywords you weave into your title, bullets, and search terms field in the rest of this lesson. Further down this lesson you will also find an AI keyword-research prompt that gives you a quick brainstorm of customer phrasings even before you open Helium 10; treat the AI list as a fast starting point and the Helium 10 numbers as the validation. The title prompt then has a 'top keywords' field where you paste the phrases you have chosen, and the AI weaves them into the copy for you."
+      },
+      {
+        "type": "callout",
+        "content": "🎯 The keyword principle in one line: every word a customer might realistically type to find a product like yours should appear somewhere across your title, bullets, and search terms field. Not stuffed in. Not repeated five times. Just present, naturally, at least once."
+      },
+      {
+        "type": "heading_2",
+        "content": "Title, Bullets, Description: Three Different Jobs"
       },
       {
         "type": "paragraph",
-        "content": "💡 Example:"
+        "content": "The three pieces of listing copy each do a different job. The title is for the search algorithm: it is the field that decides whether you appear at all when a customer types a query. The bullets are for the scanner: a customer who has clicked into your listing but has not committed to read everything. The description is for the considered buyer: someone who is genuinely interested and wants more context before adding to basket. Writing them as if they were all the same kind of content is the single most common mistake we see in new listings."
       },
       {
         "type": "paragraph",
-        "content": "If competitors are at £9.99 → list yours at £8.49 to start."
+        "content": "A good workflow uses an AI assistant (ChatGPT, Claude, or any capable model) to draft each piece against a structured prompt. AI is good at producing a competent first draft fast. It is not good at making the small judgement calls that turn a draft into a converting listing, so you always read, edit, and tighten what comes back. The three prompts below give you a reliable starting point for each piece."
+      },
+      {
+        "type": "ai_prompt_templates"
+      },
+      {
+        "type": "heading_2",
+        "content": "How to Refine AI Output"
       },
       {
         "type": "paragraph",
-        "content": "Once you sell your first 10–20 units and see consistent sales, you can:"
+        "content": "Treat the AI output as a 70% draft. Three editing passes turn it into something you can publish. Pass one: strip filler words. AI loves 'enjoy', 'experience', 'discover', 'revolutionary', 'unparalleled', 'cutting-edge'. Find and remove every instance; the sentences almost always read better without them. Pass two: read each bullet and the title aloud. If it sounds robotic when spoken, rewrite. Pass three: check every claim against the actual product. AI will happily invent a vitamin content, a certification, or an ingredient that is not really in the bundle. Cross-reference everything with the packaging in front of you."
       },
       {
-        "type": "bulleted_list_item",
-        "content": "Raise your price slightly"
+        "type": "paragraph",
+        "content": "Save the polished title, bullets, and description in a single document before you leave this lesson. The next two lessons (HTML conversion and images) build on top of this text, and you will paste the finished versions into Seller Central in Lesson 6."
       },
       {
-        "type": "bulleted_list_item",
-        "content": "Reorder stock"
+        "type": "callout",
+        "content": "💡 The two-prompt rule: never publish copy generated by a single AI prompt. Always run the output through a second 'critique and improve' prompt, then edit by hand. The first draft is shape; the second is voice; the third is yours."
       },
       {
-        "type": "bulleted_list_item",
-        "content": "Start thinking about branding & packaging for your trademark phase"
+        "type": "lesson_marker",
+        "tabId": "html",
+        "label": "HTML Description Formatting",
+        "icon": "💻",
+        "description": "Why HTML descriptions outperform plain text on Amazon and how to convert yours in one click.",
+        "color": "violet"
       },
       {
-        "type": "heading_3",
-        "content": "⚠️ Lesson 6 – Compliance & Common Mistakes"
+        "type": "heading_2",
+        "content": "Why HTML Beats Plain Text on Amazon"
       },
       {
-        "type": "bulleted_list_item",
-        "content": "❌ Using branded items without modification (don’t list “Dettol Bundle” under Generic)"
+        "type": "paragraph",
+        "content": "Amazon's description field has a specific quirk: it collapses plain-text line breaks into a single block of prose when it renders on the live listing. If you write three short paragraphs in the form, the customer sees one wall of text. This is not a bug, it is how the field works, and most new sellers do not realise until their listing publishes looking nothing like the document they wrote."
       },
       {
-        "type": "bulleted_list_item",
-        "content": "✅ Always create your own ASIN, never hijack an existing one"
+        "type": "paragraph",
+        "content": "The fix is HTML. Amazon respects a small set of HTML tags inside the description: paragraphs, line breaks, bold, and a couple of others. Wrapping your text in these tags preserves the structure, gives you visual emphasis where you want it, and turns a wall of prose into a scannable mini sales page. Listings with HTML descriptions consistently outperform plain-text equivalents on conversion."
       },
       {
-        "type": "bulleted_list_item",
-        "content": "❌ Forgetting packaging photo (Amazon can reject GTIN exemption)"
+        "type": "callout",
+        "content": "💻 You do not need to know HTML to do this. We use a free tool that converts your plain prose into Amazon-compatible HTML in one click. The tool link is below the comparison."
       },
       {
-        "type": "bulleted_list_item",
-        "content": "✅ Keep your packaging simple — plain polybag or small box with an FNSKU label is fine"
+        "type": "heading_2",
+        "content": "Plain vs HTML, Side By Side"
       },
       {
-        "type": "heading_3",
-        "content": "✅ What To Do Next"
+        "type": "paragraph",
+        "content": "The demo below shows the same description three ways. 'Plain text on Amazon' shows what your customers actually see if you paste prose into the field without conversion. 'HTML rendered' shows the same content with the right tags applied. 'HTML source' shows the actual tagged text you would paste into Seller Central."
       },
       {
-        "type": "heading_3",
-        "content": "🗒️ Checklist"
+        "type": "html_conversion_demo"
+      },
+      {
+        "type": "heading_2",
+        "content": "The Free Conversion Tool"
+      },
+      {
+        "type": "paragraph",
+        "content": "We use the SellerApp Amazon Product Description Editor, a free web tool that converts plain prose into Amazon-compatible HTML. The workflow is dead simple: paste your polished plain-text description into the left panel, click 'Convert', copy the HTML output from the right panel, and paste that HTML directly into the Description field in Seller Central. The whole conversion takes 30 seconds."
+      },
+      {
+        "type": "external_link",
+        "src": "https://www.sellerapp.com/amazon-product-description-editor.html",
+        "label": "Open the SellerApp HTML Editor",
+        "description": "Free web tool, opens in a new tab. No account required."
+      },
+      {
+        "type": "paragraph",
+        "content": "The tool gives you a few formatting buttons (bold, italic, paragraph break, bullet list) that you can use to add emphasis before clicking convert. Use them sparingly: two or three bold phrases per description, never a full sentence in bold. The goal is to draw the eye to the benefit headlines, not to shout."
+      },
+      {
+        "type": "callout",
+        "content": "🔧 SellerApp's tool is a free utility on their public website; you do not need an account. We are not using any other part of the SellerApp platform. This is the only third-party tool in Module 4."
+      },
+      {
+        "type": "lesson_marker",
+        "tabId": "images",
+        "label": "Listing Images",
+        "icon": "📷",
+        "description": "Main image rules, the seven AI-generated slots with a prompt for each, and dimensions that pass Amazon's checks.",
+        "color": "pink"
+      },
+      {
+        "type": "heading_2",
+        "content": "The Single Most Important Image"
+      },
+      {
+        "type": "paragraph",
+        "content": "If you fix only one thing on your listing, fix the main image. It is the image that appears in search results, comparison grids, sponsored placements, and the listing header itself. Customers decide whether to click your listing based on this single image in a fraction of a second, often before they read the title. A clean, well-lit main image lifts click-through rate by a factor of three to five over a busy or off-brand one, and click-through rate compounds into every metric downstream."
+      },
+      {
+        "type": "paragraph",
+        "content": "Amazon's rules for the main image are strict and they are enforced. The background must be pure white (RGB 255, 255, 255), the product must fill at least 85% of the frame, and there must be no text, badges, props, hands, models, watermarks, or branding overlays. Break any of those and Amazon may strip the image or suspend the listing without warning. The good news is that AI image generators now produce compliant white-background product shots in seconds, and we walk through that workflow below."
+      },
+      {
+        "type": "heading_2",
+        "content": "The Seven Image Slots"
+      },
+      {
+        "type": "paragraph",
+        "content": "Amazon gives you seven image slots per listing. Slot one is the main image, with the strict rules above. The other six are 'secondary' images and have almost no rules: lifestyle shots, infographics, size comparisons, ingredient close-ups, packaging shots, and a second lifestyle frame. Each one is a chance to answer a customer's silent question before they ask it. Fill all seven. Listings with seven images outconvert listings with one by 20 to 30%, and the slots are free."
+      },
+      {
+        "type": "listing_images_guide"
+      },
+      {
+        "type": "heading_2",
+        "content": "Generating Images With AI"
+      },
+      {
+        "type": "paragraph",
+        "content": "Every one of the seven image slots can be generated with AI. ChatGPT (with image generation), Midjourney, Google Gemini, and free tools like Bing Image Creator all produce passable Amazon-grade product shots from a written prompt. The interactive guide above gives you a ready-made AI prompt for each of the seven slots; tap a slot, fill in the curly-brace placeholders with your bundle's specifics, and paste the prompt into the generator of your choice. The descriptive accuracy of your placeholders matters; the more specific you are about colour, material, finish, and quantity, the more closely the AI gets to your real bundle."
+      },
+      {
+        "type": "paragraph",
+        "content": "AI has one consistent weakness: small legible text. If a slot needs precise text rendered on the image (a benefit callout, a numbered step badge, a quantity label), the AI will sometimes produce garbled or mis-spelled text. The fix is not to abandon AI; it is to use Canva as a polish layer on top of the AI image. Generate the visual base with AI, drop it into a Canva listing template, and add the text in Canva where it will render cleanly. This combination of AI for visuals plus Canva for text is what produces all seven images in a single focused session."
+      },
+      {
+        "type": "heading_2",
+        "content": "Canva as the Polish Layer"
+      },
+      {
+        "type": "paragraph",
+        "content": "Canva is the right tool for anything that needs sharp text on top of an AI-generated image. Its free tier includes Amazon listing image templates already sized to 2000 × 2000 with the safe-zone marked. Workflow: generate the product image with AI, save it locally, open a Canva listing template, drop the AI image in as the background, and layer your text and icons on top in Canva. Save each listing as its own Canva project so you can re-use the styling on future bundles."
+      },
+      {
+        "type": "paragraph",
+        "content": "If you have never opened Canva before, the tutorial below is a beginner-friendly walkthrough of building Amazon listing images from scratch. Watch it once before your first listing and the workflow above will make a lot more sense visually."
+      },
+      {
+        "type": "external_link",
+        "src": "https://www.youtube.com/watch?v=UrGeCWTJBOM",
+        "label": "How to Make Amazon Listing Images in Canva (Beginner Tutorial)",
+        "description": "YouTube tutorial, opens in a new tab. Around 15 minutes, no Canva experience needed."
+      },
+      {
+        "type": "paragraph",
+        "content": "One hard Canva rule: never use text smaller than 50 pixels on a 1600 × 1600 canvas. Anything smaller is illegible on a mobile screen, which is where the majority of Amazon traffic lives. Big text reads. Small text gets ignored. The same principle applies when you let the AI generate text directly inside the image; if the AI keeps producing tiny illegible text, add a line to the prompt asking for 'large sans-serif text at least 50 pixels tall'."
+      },
+      {
+        "type": "callout",
+        "content": "💡 The image batch rhythm: generate or shoot all seven images in one focused session, then review them as a set before uploading. Listings where each image was made in isolation tend to feel inconsistent. Listings where all seven were made in one sitting feel like a brand."
+      },
+      {
+        "type": "lesson_marker",
+        "tabId": "form",
+        "label": "Completing the Form & Going Live",
+        "icon": "🚀",
+        "description": "Dimensions, weight, compliance, search terms, pricing, and the final pre-submit checklist.",
+        "color": "orange"
+      },
+      {
+        "type": "heading_2",
+        "content": "The Last Mile of the Form"
+      },
+      {
+        "type": "paragraph",
+        "content": "With your brand sorted, your copy polished, your description converted, and your seven images uploaded, the listing form still has several pages of structured fields left to fill in. None of them is creative work; they are the operational details Amazon needs to physically receive, store, ship, and tax your product. They are easy to rush through and easy to get wrong, and the cost of getting them wrong is high: inflated FBA fees, blocked inbound shipments, account-health flags, or a listing that simply will not publish."
+      },
+      {
+        "type": "paragraph",
+        "content": "The interactive walkthrough below groups these remaining fields into four sections: dimensions and weight, compliance declarations, backend search terms, and pricing. Tap each section, then tap individual fields to see exactly what each one means, how to fill it correctly, and the specific pitfall to avoid. Before you open the dimensions section, take a moment with the measurement diagram below; it covers the L × W × H convention used by the form for anyone who has not measured a parcel before."
+      },
+      {
+        "type": "measurement_diagram"
+      },
+      {
+        "type": "listing_form_walkthrough"
+      },
+      {
+        "type": "heading_2",
+        "content": "Backend Search Terms Are Where New Sellers Leak Traffic"
+      },
+      {
+        "type": "paragraph",
+        "content": "Backend search terms deserve a second mention on their own because almost every new seller either ignores them entirely or fills them with the same words already in the title, both of which throw away free traffic. The field is invisible to the customer but fully indexed by Amazon's search algorithm, which means every word you put in there adds keyword surface area without using up a single character of your title or bullet space. Used properly, this field is the easiest extra search rank you will ever get."
+      },
+      {
+        "type": "paragraph",
+        "content": "The rule is simple: the words in your backend search terms field should be words a customer might type that do NOT already appear in your title. Common spelling variants (cutlery / cutlary), regional phrasings (silverware as a US-flavoured search), alternate descriptors (flatware, dinnerware), and product-adjacent terms (knife and fork) all belong here. You have a 250-byte budget, which works out to roughly 250 plain-text characters; separate the words with spaces, not commas, and never repeat a word that is already in your title."
+      },
+      {
+        "type": "callout",
+        "content": "🎯 Audit your backend terms every few weeks. Amazon silently strips entries that violate its policy (competitor brand names, subjective claims like 'best', repeated words). The field will look like it published, but no traffic comes from it. The only way to catch this is to search for your own keywords and confirm you appear; if you do not, your backend terms got stripped and you need to rewrite them."
+      },
+      {
+        "type": "heading_2",
+        "content": "We Do Not Use Automated Pricing"
+      },
+      {
+        "type": "paragraph",
+        "content": "When you set your price, the form will offer to enable automated pricing rules that move your price up and down in response to competitor moves. Leave that switch off. On a new listing with no review history and no proven velocity, auto-pricing tools tend to race competitors to the bottom, which trains Amazon's algorithm to treat your price band as low and locks you out of the margin you actually need. Price manually using the formula from Module 3 Lesson 5 (single-unit Amazon price × bundle count, minus 10 to 15%), then adjust by hand based on real conversion data over the first month. Manual control is slower but gives you predictable economics while you are still validating, which is the whole point of the v1 listing."
+      },
+      {
+        "type": "heading_2",
+        "content": "Pre-Submit Checklist"
+      },
+      {
+        "type": "paragraph",
+        "content": "Before you click the final submit button on your listing, run through this checklist. Each item is something that has bitten new sellers in the first 90 days post-publish and is preventable in 30 seconds at this stage."
       },
       {
         "type": "to_do",
-        "content": "Apply for GTIN exemption under your chosen category"
+        "content": "Title is under 200 characters and front-loaded with your primary keyword"
       },
       {
         "type": "to_do",
-        "content": "Take clear photos of your product and packaging"
+        "content": "All five bullet points are filled, benefit-led, and under 200 characters each"
       },
       {
         "type": "to_do",
-        "content": "Create a new listing under the Generic brand"
+        "content": "Description is HTML-converted and pasted as HTML, not plain text"
       },
       {
         "type": "to_do",
-        "content": "Set competitive pricing"
+        "content": "Main image is white-background, fills 85% of frame, has no text or props"
       },
       {
         "type": "to_do",
-        "content": "Prepare your FBA shipment for Amazon (we’ll cover this next)"
+        "content": "All seven image slots are filled with at least 1600x1600 px images"
       },
       {
-        "type": "heading_3",
-        "content": "📎 Optional Downloads"
+        "type": "to_do",
+        "content": "Package dimensions and weight are measured with the polybag on"
       },
       {
-        "type": "bulleted_list_item",
-        "content": "📄 GTIN Exemption & Listing Guide (PDF)"
+        "type": "to_do",
+        "content": "Country of origin matches what is printed on the product packaging"
       },
       {
-        "type": "bulleted_list_item",
-        "content": "🖼️ Photo Compliance Reference Sheet"
+        "type": "to_do",
+        "content": "Hazmat is declared honestly (Yes if aerosols, batteries, or flammable liquids; No otherwise)"
       },
       {
-        "type": "bulleted_list_item",
-        "content": "🧾 Listing Copy Template (Editable)"
+        "type": "to_do",
+        "content": "Search terms field uses keywords not already in the title, no commas, no competitor brands"
       },
       {
-        "type": "heading_3",
-        "content": "🎓 End of Module 4 Summary"
+        "type": "to_do",
+        "content": "Price uses the bundle pricing formula from Module 3 Lesson 5"
+      },
+      {
+        "type": "to_do",
+        "content": "Fulfilment channel is set to FBA"
+      },
+      {
+        "type": "heading_2",
+        "content": "What Happens After You Submit"
       },
       {
         "type": "paragraph",
-        "content": "You’ve now learned how to create a fully compliant, barcode-free listing under Generic, test your bundle idea, and get real data before investing in a brand."
+        "content": "Once you submit, Amazon runs the listing through an automated validation, then a human catalogue review. Validation is instant: it confirms required fields are filled and dimensions are coherent. The human review typically takes 24 to 48 hours and confirms that your photos, copy, and category align. Most v1 listings publish without issue. If yours is rejected, the rejection email is specific about which check failed; fix that one thing and resubmit."
       },
       {
         "type": "paragraph",
-        "content": "Next up → Module 5: Turning Proof of Concept Into a Real Brand — where we’ll form your Ltd company, register your trademark, and apply for Brand Registry."
+        "content": "Once live, your listing has a status of 'Active' and is technically visible to customers. The catch is that you have no stock at Amazon yet. The listing exists, the URL works, but the buy box reads 'Currently unavailable'. That is fine; you are about to fix it. Module 5 covers exactly how to ship your first batch into FBA so the buy box goes live, and Module 7 covers how to start driving real traffic to it."
+      },
+      {
+        "type": "callout",
+        "content": "🎯 The next 48 hours: while the listing is in human review, photograph and weigh your bundle once more with the polybag fully sealed and an FNSKU label attached. That data goes straight into Module 5 Lesson 1, so you do not start that module empty-handed."
       }
     ]
   },
@@ -1098,332 +1681,238 @@
     "name": "Module 5 - Sending to Amazon",
     "blocks": [
       {
-        "type": "heading_1",
-        "content": "🚚 Module 5 – Sending Your Product to Amazon FBA"
+        "type": "video",
+        "content": "Module 5: Sending to Amazon"
       },
       {
-        "type": "quote",
-        "content": "It’s time to make your listing real — by sending your product to Amazon’s warehouse and going live for the first time."
-      },
-      {
-        "type": "heading_2",
-        "content": "🎯 Lesson 1 – Understanding How FBA Works"
-      },
-      {
-        "type": "quote",
-        "content": "FBA (Fulfilled by Amazon) means Amazon stores, picks, packs, and ships your product for you."
-      },
-      {
-        "type": "heading_3",
-        "content": "🧠 In simple terms:"
-      },
-      {
-        "type": "numbered_list_item",
-        "content": "You create your listing (done ✅)"
-      },
-      {
-        "type": "numbered_list_item",
-        "content": "You send your inventory to an Amazon warehouse"
-      },
-      {
-        "type": "numbered_list_item",
-        "content": "Amazon stores your stock"
-      },
-      {
-        "type": "numbered_list_item",
-        "content": "When someone orders → Amazon handles delivery, returns, and customer service"
-      },
-      {
-        "type": "heading_3",
-        "content": "✅ Benefits of FBA:"
-      },
-      {
-        "type": "bulleted_list_item",
-        "content": "Prime-eligible listings (higher conversion rate)"
-      },
-      {
-        "type": "bulleted_list_item",
-        "content": "Automatic trust from buyers"
-      },
-      {
-        "type": "bulleted_list_item",
-        "content": "Hands-off logistics"
-      },
-      {
-        "type": "bulleted_list_item",
-        "content": "Low starting effort (you can send as few as 5–10 units)"
-      },
-      {
-        "type": "paragraph",
-        "content": "💬 Your goal for this stage:"
-      },
-      {
-        "type": "paragraph",
-        "content": "Get your first units to Amazon, learn the process, and make sure your first FBA shipment is smooth."
+        "type": "lesson_marker",
+        "tabId": "prep",
+        "label": "Preparing Your Bundle",
+        "icon": "🧰",
+        "description": "What to have on the table before you start polybagging your first FBA inbound shipment.",
+        "color": "blue"
       },
       {
         "type": "heading_2",
-        "content": "📦 Lesson 2 – Preparing Your Product"
-      },
-      {
-        "type": "quote",
-        "content": "Amazon’s golden rule: every product must be barcode-scannable and safely packaged."
-      },
-      {
-        "type": "heading_3",
-        "content": "🧴 Packaging Checklist"
-      },
-      {
-        "type": "to_do",
-        "content": "Product is sealed and clean"
-      },
-      {
-        "type": "to_do",
-        "content": "All components of the bundle are inside one bag or box"
-      },
-      {
-        "type": "to_do",
-        "content": "Packaging is plain and professional (no trademarked logos)"
-      },
-      {
-        "type": "to_do",
-        "content": "Add a small “Sold & Packaged by [Your Name]” sticker if possible"
-      },
-      {
-        "type": "to_do",
-        "content": "Include FNSKU label (Amazon’s barcode) on the outside of the packaging"
-      },
-      {
-        "type": "heading_3",
-        "content": "🔖 FNSKU Label"
+        "content": "Before You Touch a Single Polybag"
       },
       {
         "type": "paragraph",
-        "content": "After you create your FBA shipment, Amazon will generate a unique barcode (FNSKU) for each SKU."
+        "content": "Inbound shipment preparation is one of those jobs that takes 30 minutes if you have everything ready before you start, and three hours if you discover halfway through that you are missing a roll of tape. This first lesson is the laying-out-the-tools step. Read through the supplies list, confirm you have each item to hand, then move on to Lesson 2 to start polybagging. None of the supplies are expensive; a starter kit for your first 5-10 unit shipment lands at around £30 to £50 of one-off costs, most of which carries over to future shipments."
       },
       {
         "type": "paragraph",
-        "content": "Print it using:"
+        "content": "The checklist below splits everything into four groups: the stock itself, polybag supplies, outer-box supplies, and basic tools. Tap any row to see what to look for when sourcing each item. Tick items off as you confirm them, so the screen acts as a working checklist while you set up."
       },
       {
-        "type": "bulleted_list_item",
-        "content": "Regular printer + cut them out  (for small batches)"
+        "type": "bundle_prep_checklist"
       },
       {
-        "type": "bulleted_list_item",
-        "content": "Label paper (once you scale)"
-      },
-      {
-        "type": "quote",
-        "content": "Each individual product needs its own FNSKU for Amazon to understand what it is — not just the box or bag."
+        "type": "callout",
+        "content": "🛒 EliteFBA supplies: I am in the process of setting up an eBay shop with the exact polybags, FNSKU labels, Heavy Package warning labels, and brand-sticker rolls we use ourselves. Links will appear in this module once the listings are live. In the meantime, any UK packaging supplier will stock equivalents; the supplies checklist above tells you what to look for."
       },
       {
         "type": "heading_2",
-        "content": "🧾 Lesson 3 – Creating the FBA Shipment"
-      },
-      {
-        "type": "quote",
-        "content": "Once your listing exists, you can convert it to FBA and send stock to Amazon."
-      },
-      {
-        "type": "heading_3",
-        "content": "Step-by-Step"
-      },
-      {
-        "type": "numbered_list_item",
-        "content": "Go to Inventory → Manage All Inventory"
-      },
-      {
-        "type": "numbered_list_item",
-        "content": "Find your product → click “Send/Replenish Inventory”"
-      },
-      {
-        "type": "numbered_list_item",
-        "content": "Choose:"
-      },
-      {
-        "type": "numbered_list_item",
-        "content": "Enter your ship-from address (home or office)"
-      },
-      {
-        "type": "numbered_list_item",
-        "content": "Select “Small Parcel Delivery (SPD)”"
-      },
-      {
-        "type": "numbered_list_item",
-        "content": "Choose your carrier (Amazon Partnered or own courier)."
-      },
-      {
-        "type": "numbered_list_item",
-        "content": "Enter your box weight & dimensions."
-      },
-      {
-        "type": "numbered_list_item",
-        "content": "Confirm and click “Print Box Labels.”"
+        "content": "Set Aside a Quiet Two Hours"
       },
       {
         "type": "paragraph",
-        "content": "📦 Label Placement"
+        "content": "Your first inbound shipment will take longer than later ones because you are learning the rhythm. Block out two hours of uninterrupted time, clear a table, and work through Lessons 2 to 4 in one sitting. Trying to polybag in 15-minute chunks across a week leads to inconsistency (different sticker placement on different units, mismatched label scaling) and an inconsistent inbound shipment is a slower receiving experience at the warehouse. Do it once, properly, in one session."
       },
       {
-        "type": "bulleted_list_item",
-        "content": "Place one FNSKU on each unit."
-      },
-      {
-        "type": "bulleted_list_item",
-        "content": "Place one box label (with “FBA” and “UPS” barcodes) on each carton."
-      },
-      {
-        "type": "bulleted_list_item",
-        "content": "Make sure they’re not covered by tape or seams."
+        "type": "lesson_marker",
+        "tabId": "polybag",
+        "label": "Polybagging Your Units",
+        "icon": "🛍️",
+        "description": "The four labels and warnings every compliant FBA polybag carries.",
+        "color": "amber"
       },
       {
         "type": "heading_2",
-        "content": "🧰 Lesson 4 – Shipping Options & Costs"
-      },
-      {
-        "type": "quote",
-        "content": "Amazon’s partnered UPS service is by far the easiest way to start."
-      },
-      {
-        "type": "heading_3",
-        "content": "💡 Example:"
+        "content": "What Goes On Every Polybag"
       },
       {
         "type": "paragraph",
-        "content": "Sending 1 small carton (5 kg) via UPS Partnered:"
-      },
-      {
-        "type": "bulleted_list_item",
-        "content": "Cost: around £2–£5 total"
-      },
-      {
-        "type": "bulleted_list_item",
-        "content": "Delivery time: 3-5 days"
-      },
-      {
-        "type": "bulleted_list_item",
-        "content": "Amazon auto-updates when received"
+        "content": "Every single bundle you send into FBA goes into its own polybag, sealed, with a specific set of labels and printed warnings on the outside. Get the set right and your inbound passes receiving without flags. Miss a required label and either the unit is sent back at your cost or Amazon charges a non-compliance fee to relabel it for you. The good news: the requirements are short, consistent, and the same on every bundle you ever ship."
       },
       {
         "type": "paragraph",
-        "content": "You can book collection or drop off at any UPS Access Point. Same goes if you choose DPD."
+        "content": "There are three required elements and one optional one. The interactive guide below covers each: the FNSKU label that identifies the SKU, the suffocation warning that Amazon mandates on every poly bag over 12.5 cm wide, the Do Not Separate label that keeps multi-unit bundles bundled, and the optional brand or shop sticker that doubles as your permanent brand marker for the GTIN exemption."
       },
       {
-        "type": "heading_3",
-        "content": "⚠️ Shipping Tips"
-      },
-      {
-        "type": "bulleted_list_item",
-        "content": "Use strong boxes — no gaps or rattling."
-      },
-      {
-        "type": "bulleted_list_item",
-        "content": "Add bubble wrap or kraft paper for protection."
-      },
-      {
-        "type": "bulleted_list_item",
-        "content": "Never reuse branded boxes (Amazon can reject them)."
-      },
-      {
-        "type": "bulleted_list_item",
-        "content": "Avoid mixing products in the same carton (one ASIN/FNSKU per box ideally)."
+        "type": "polybag_requirements"
       },
       {
         "type": "heading_2",
-        "content": "🕒 Lesson 5 – What Happens After You Ship"
+        "content": "The Practical Sequence"
       },
       {
         "type": "paragraph",
-        "content": "Once Amazon receives your stock:"
+        "content": "Working through the polybagging in the same order every time makes the process roughly twice as fast once you have done it a few times. Lay out all of the bundles on a clean surface. Lay out the polybags next to them. Lay out the FNSKU labels (already printed, see Lesson 5 if you have not yet). Lay out the Do Not Separate labels and the brand stickers. Then for each unit in turn: place the bundle into the bag, apply the FNSKU label to the front face, apply the Do Not Separate label if it is a multi-unit bundle, apply the brand sticker, seal the bag with a quick fold or heat-seal. Move on to the next unit. A 25-unit shipment takes 25 to 40 minutes once you find the rhythm."
       },
       {
-        "type": "numbered_list_item",
-        "content": "Your listing status changes from “Inactive – Out of Stock” to “Active.”"
+        "type": "callout",
+        "content": "🛒 EliteFBA supplies: the exact pre-printed polybags with the suffocation warning already on them, plus the Do Not Separate and FNSKU label rolls we use, will be listed on our eBay shop. Links coming. Until then, search 'FBA polybags with suffocation warning' on any UK packaging supplier."
       },
       {
-        "type": "numbered_list_item",
-        "content": "Units enter FC (Fulfilment Centre) processing (takes 24–72 hours)."
-      },
-      {
-        "type": "numbered_list_item",
-        "content": "You’ll start seeing your inventory count and Buy Box price live."
-      },
-      {
-        "type": "numbered_list_item",
-        "content": "Congratulations — you’re now officially selling on Amazon. 🎉"
+        "type": "lesson_marker",
+        "tabId": "box",
+        "label": "Packing the Outer Box",
+        "icon": "📦",
+        "description": "Outer box dimensions, weight limits, and the 15 kg Heavy Package warning rule.",
+        "color": "lime"
       },
       {
         "type": "heading_2",
-        "content": "⚠️ Lesson 6 – Common Issues to Avoid"
+        "content": "From Polybagged Units to a Single Shippable Box"
       },
       {
         "type": "paragraph",
-        "content": "❌ Incorrect or missing labels"
+        "content": "Once every unit is polybagged with the right labels, the whole batch goes into one outer cardboard box for shipping. The outer box is the only thing UPS or DPD ever sees; the polybagged units inside it are unwrapped by the warehouse on arrival. Amazon enforces hard limits on this outer box, both for physical handling safety and for warehouse logistics. Get them right at the packing stage and the shipment moves through receiving without flags."
       },
       {
         "type": "paragraph",
-        "content": "✅ Double-check FNSKU placement before sealing the box."
+        "content": "Two hard limits and one important warning rule, all summarised below."
       },
       {
-        "type": "paragraph",
-        "content": "❌ Sending restricted items"
-      },
-      {
-        "type": "paragraph",
-        "content": "✅ Always re-check Amazon’s category rules before shipping."
-      },
-      {
-        "type": "paragraph",
-        "content": "❌ Damaged packaging"
-      },
-      {
-        "type": "paragraph",
-        "content": "✅ Amazon will reject items that look used, dented, or dirty."
-      },
-      {
-        "type": "paragraph",
-        "content": "❌ Oversized boxes"
-      },
-      {
-        "type": "paragraph",
-        "content": "✅ Keep under 63.5 cm (25 in) per side and under 15 kg unless otherwise allowed."
+        "type": "box_spec_card"
       },
       {
         "type": "heading_2",
-        "content": "✅ What To Do Next"
+        "content": "The Practical Pack"
       },
       {
         "type": "paragraph",
-        "content": "🗒️ FBA Shipment Checklist"
+        "content": "Pack the box so the polybagged units sit snugly with no rattle. Layer the units flat where possible (cutlery sets and similar flat bundles love this), or pack them in rows if they are upright (bottles, taller bundles). Use kraft paper or air pillows to fill any empty space; a box that rattles in transit damages the polybags and damages your account health when customers receive crushed units. Seal the box with at least three strips of 50mm packing tape across the opening seam, and one strip down each side for reinforcement."
       },
       {
-        "type": "to_do",
-        "content": "Convert listing to FBA"
+        "type": "paragraph",
+        "content": "Weigh the closed box on a scale before you create the shipment in Seller Central. The weight you enter into the wizard must match the actual weight; Amazon's Cubiscan re-weighs every inbound box and a mismatch beyond a few hundred grams triggers a non-compliance flag. If the scale reads between 15.0 kg and 23.0 kg, apply the Heavy Package warning label to the outside before you go anywhere near the carrier. If it reads over 23.0 kg, open the box, redistribute units across two boxes, and treat them as two separate shipments inside Seller Central."
       },
       {
-        "type": "to_do",
-        "content": "Print and attach FNSKU labels to each unit"
+        "type": "callout",
+        "content": "🛒 EliteFBA supplies: branded cardboard outer boxes in the most common sizes, plus Heavy Package warning sticker rolls, will be listed on our eBay shop. Links coming. Any twin-wall corrugated cardboard box from a packaging supplier works in the meantime."
       },
       {
-        "type": "to_do",
-        "content": "Pack your products safely (one ASIN per box)"
+        "type": "lesson_marker",
+        "tabId": "shipment",
+        "label": "Creating the Shipment",
+        "icon": "🖥️",
+        "description": "The Send to Amazon wizard in Seller Central, step by step from inventory selection to label generation.",
+        "color": "purple"
       },
       {
-        "type": "to_do",
-        "content": "Create your shipment in Seller Central"
+        "type": "heading_2",
+        "content": "Tell Amazon What is Coming and Where"
       },
       {
-        "type": "to_do",
-        "content": "Print and attach box labels"
+        "type": "paragraph",
+        "content": "Once the outer box is packed, sealed, and weighed, the next step is to tell Amazon the shipment exists. This happens inside the Send to Amazon wizard in Seller Central, a multi-page flow that asks you which SKU, how many units, which box dimensions and weight, and which carrier you want to use. The wizard then generates the shipping labels and charges you the discounted Partnered Carrier rate. End to end, with your box already packed, this is about 15 minutes of clicking."
       },
       {
-        "type": "to_do",
-        "content": "Ship using Amazon Partnered UPS"
+        "type": "paragraph",
+        "content": "The seven-step walkthrough below covers exactly what to click and what to enter on each page, with the gotcha to avoid at each step."
       },
       {
-        "type": "quote",
-        "content": "💬 Tip: Track your first shipment daily — seeing “Delivered to Fulfilment Centre” is the best motivation you’ll ever get."
+        "type": "shipment_wizard"
+      },
+      {
+        "type": "callout",
+        "content": "🎯 Save the shipment plan in Seller Central even if you do not finish in one sitting. Half-completed shipment plans are stored under Inventory → Shipments → Working as drafts, so you can pause and come back without losing your dimension and weight entries."
+      },
+      {
+        "type": "lesson_marker",
+        "tabId": "labels",
+        "label": "Printing Your Labels",
+        "icon": "🏷️",
+        "description": "FNSKU labels, carrier shipping labels, shipment IDs, and the conditional Heavy Package warning.",
+        "color": "pink"
+      },
+      {
+        "type": "heading_2",
+        "content": "The Five Labels an FBA Shipment Uses"
+      },
+      {
+        "type": "paragraph",
+        "content": "An FBA shipment uses up to five different kinds of label, all of which you print yourself before the box leaves your address. Three you will print every time: the FNSKU labels (one per unit), the carrier shipping label (one per outer box), and the Amazon shipment ID label (also one per outer box, usually on the same PDF as the carrier label). Two are conditional: the Heavy Package warning if the box is over 15 kg, and the Do Not Separate label on every multi-unit polybag (already covered in Lesson 2)."
+      },
+      {
+        "type": "paragraph",
+        "content": "Each label below shows what it is, where to print it, and where on the package it goes. Tap through them in order; together they describe every sticker your box will carry by the time it leaves you."
+      },
+      {
+        "type": "label_types"
+      },
+      {
+        "type": "heading_2",
+        "content": "Printing the FNSKU Labels During Shipment Creation"
+      },
+      {
+        "type": "paragraph",
+        "content": "The most common source of confusion is when to print the FNSKU labels. The answer: print them at the shipment-creation stage in Lesson 4, not before. The Send to Amazon wizard offers you a PDF of FNSKU labels sized to the number of units in the shipment, ready to print on standard 21-per-A4 adhesive label sheets (commonly Avery L7160 or any compatible 63.5 mm × 38.1 mm layout). Print, peel, apply one per polybag. If you have a dedicated thermal label printer, the wizard also offers a thermal-format option that emits one label per strip."
+      },
+      {
+        "type": "paragraph",
+        "content": "Print at 100% scale, never 'Fit to page'. Fit-to-page shrinks the barcode below the 0.4 mm minimum bar width that Amazon's scanners need to read it reliably, and a tiny shrink that looks fine to your eye can cause every label in the batch to fail at receiving. Print one test page first if your printer is unfamiliar, scan the test barcode with the camera on your phone, and confirm the FNSKU reads back as expected before you print the full sheet."
+      },
+      {
+        "type": "callout",
+        "content": "🛒 EliteFBA supplies: the exact adhesive label sheets we use, plus the thermal label rolls for sellers with a dedicated printer, will be listed on our eBay shop. Links coming. Any Avery L7160-compatible sheet from an office supplier works in the meantime."
+      },
+      {
+        "type": "lesson_marker",
+        "tabId": "shipping",
+        "label": "Shipping & Arrival",
+        "icon": "🚚",
+        "description": "Partner carriers (UPS and DPD), the timeline from dispatch to sellable, and what to watch in Seller Central.",
+        "color": "cyan"
+      },
+      {
+        "type": "heading_2",
+        "content": "Hand the Box to the Carrier"
+      },
+      {
+        "type": "paragraph",
+        "content": "With every label applied (FNSKU on each polybag, shipping label and shipment ID on the outer box, Heavy Package sticker if the box is over 15 kg), the box is ready for the carrier. Inside the UK, Amazon's partner carriers are UPS and DPD, both available through the Partnered Carrier flow in the Send to Amazon wizard. Using either of them gets you a materially cheaper rate than booking the same service at retail, because Amazon has negotiated the rate centrally and passes it through."
+      },
+      {
+        "type": "paragraph",
+        "content": "You have two options for handing the box over. Option one: drop the box at a UPS Access Point or a DPD Pickup Shop. Both carriers have a public locator on their UK websites and the network covers most high streets. This is the cheaper option and works well for one or two boxes at a time. Option two: book a doorstep collection through the carrier's website. Costs a few pounds more but is worth it once you are shipping a box every few days."
+      },
+      {
+        "type": "heading_2",
+        "content": "The Timeline From Dispatch to Sellable"
+      },
+      {
+        "type": "paragraph",
+        "content": "From the moment the box leaves you to the moment your listing's buy box flips from 'Currently unavailable' to active, the typical window in the UK is 7 to 12 working days. The timeline below breaks down what happens in each stage and roughly how long each takes. Quiet weeks are faster; Q4 weeks (November, December, Prime Day in July) are noticeably slower because every UK Amazon warehouse is at peak load."
+      },
+      {
+        "type": "delivery_timeline"
+      },
+      {
+        "type": "heading_2",
+        "content": "What to Watch in Seller Central"
+      },
+      {
+        "type": "paragraph",
+        "content": "Once the box is dispatched, you do not need to chase. Seller Central updates the shipment status automatically as the carrier scans the parcel and as the warehouse processes it. The status progression you will see, in order, is: Working → Shipped → In Transit → Delivered → Receiving → Closed. The shipment is closed when every unit in the box has been checked into your inventory. At that point your sellable inventory count for the SKU increments by the number of units in the shipment, and the buy box on your listing goes live."
+      },
+      {
+        "type": "paragraph",
+        "content": "If a shipment sits in the Receiving status for more than five working days outside of peak season, that is the point to raise a case with Seller Support. Before then, the standard advice applies: do not chase. Receiving queues vary, and most shipments process inside 48 hours of arrival."
+      },
+      {
+        "type": "callout",
+        "content": "🎯 Track the first shipment daily for the first few cycles. Watching the status move from In Transit through Delivered to Receiving and finally to your inventory count incrementing is the single most satisfying moment in the whole course. After three or four shipments the rhythm becomes routine, but the first time it lands is something you will remember."
+      },
+      {
+        "type": "heading_2",
+        "content": "You Are Now Live on Amazon"
+      },
+      {
+        "type": "paragraph",
+        "content": "When the shipment closes and the buy box flips, your listing is genuinely live: customers can find it, click it, and buy it. First sale usually lands within 24 to 72 hours of going live if your title, images, and price hold up under real demand. Module 6 starts the brand work that turns the v1 listing into something defensible long term, and Module 7 covers the marketing levers (PPC, keywords, A+ content) that drive serious traffic to it. For now, you have done the operational bit; the next 48 hours are about watching the data."
       }
     ]
   },
@@ -1437,7 +1926,7 @@
       },
       {
         "type": "quote",
-        "content": "You’ve proven people want your product — now it’s time to turn that into something permanent. This is the biggest step in the entire system, and it’s not a one-day job. Expect this phase to take several weeks to a few months. Go slowly, stay organised, and reach out if you’re unsure — I’m happy to guide you through any part of it."
+        "content": "You’ve proven people want your product. Now it’s time to turn that into something permanent. This is the biggest step in the entire system, and it’s not a one-day job. Expect this phase to take several weeks to a few months. Go slowly, stay organised, and reach out if you’re unsure. I’m happy to guide you through any part of it."
       },
       {
         "type": "heading_2",
@@ -1449,7 +1938,7 @@
       },
       {
         "type": "paragraph",
-        "content": "Each stage — company formation, trademark registration, brand approval — has waiting periods built in."
+        "content": "Each stage (company formation, trademark registration, brand approval) has waiting periods built in."
       },
       {
         "type": "paragraph",
@@ -1457,7 +1946,7 @@
       },
       {
         "type": "paragraph",
-        "content": "⏳ Don’t rush — treat it like building foundations for the rest of your FBA journey."
+        "content": "⏳ Don’t rush. Treat it like building foundations for the rest of your FBA journey."
       },
       {
         "type": "heading_2",
@@ -1489,7 +1978,7 @@
       },
       {
         "type": "paragraph",
-        "content": "If you’re still unsure, message me first — I can help you decide whether to push forward or gather a little more data."
+        "content": "If you’re still unsure, message me first. I can help you decide whether to push forward or gather a little more data."
       },
       {
         "type": "heading_2",
@@ -1581,7 +2070,7 @@
       },
       {
         "type": "paragraph",
-        "content": "⏳ Banks may take a week or more to approve — don’t panic."
+        "content": "⏳ Banks may take a week or more to approve. Don’t panic."
       },
       {
         "type": "heading_2",
@@ -1589,7 +2078,7 @@
       },
       {
         "type": "quote",
-        "content": "This step gives you ownership of your brand name — no one else can legally sell under it."
+        "content": "This step gives you ownership of your brand name. No one else can legally sell under it."
       },
       {
         "type": "heading_3",
@@ -1601,7 +2090,7 @@
       },
       {
         "type": "numbered_list_item",
-        "content": "Search your brand name — ensure it’s unique."
+        "content": "Search your brand name. Ensure it’s unique."
       },
       {
         "type": "numbered_list_item",
@@ -1653,7 +2142,7 @@
       },
       {
         "type": "paragraph",
-        "content": "🗣️ If you’re unsure which class to choose, ask me before you submit — I can help check your category."
+        "content": "🗣️ If you’re unsure which class to choose, ask me before you submit. I can help check your category."
       },
       {
         "type": "heading_2",
@@ -1701,7 +2190,7 @@
       },
       {
         "type": "paragraph",
-        "content": "💬 If your application gets rejected or delayed, message me — I’ve dealt with most of the common errors before."
+        "content": "💬 If your application gets rejected or delayed, message me. I’ve dealt with most of the common errors before."
       },
       {
         "type": "heading_2",
@@ -1709,7 +2198,7 @@
       },
       {
         "type": "quote",
-        "content": "Branding makes your store look real. You don’t need to be a designer — just stay consistent."
+        "content": "Branding makes your store look real. You don’t need to be a designer. Just stay consistent."
       },
       {
         "type": "heading_3",
@@ -1803,11 +2292,11 @@
       },
       {
         "type": "quote",
-        "content": "You’re now a registered brand. This module shows you how to make your listing visible, trustworthy, and profitable — using the exact tools real Amazon brands use today."
+        "content": "You’re now a registered brand. This module shows you how to make your listing visible, trustworthy, and profitable, using the exact tools real Amazon brands use today."
       },
       {
         "type": "heading_1",
-        "content": "🎯 LESSON 1 — Understanding Visibility vs Conversion"
+        "content": "🎯 LESSON 1: Understanding Visibility vs Conversion"
       },
       {
         "type": "paragraph",
@@ -1815,7 +2304,7 @@
       },
       {
         "type": "heading_2",
-        "content": "1️⃣ Visibility — can people find your product?"
+        "content": "1️⃣ Visibility: can people find your product?"
       },
       {
         "type": "paragraph",
@@ -1827,7 +2316,7 @@
       },
       {
         "type": "heading_2",
-        "content": "2️⃣ Conversion — do people buy once they see it?"
+        "content": "2️⃣ Conversion: do people buy once they see it?"
       },
       {
         "type": "paragraph",
@@ -1855,7 +2344,7 @@
       },
       {
         "type": "heading_1",
-        "content": "🧱 LESSON 2 — Keywords: The Core of Amazon’s Algorithm"
+        "content": "🧱 LESSON 2. Keywords: The Core of Amazon’s Algorithm"
       },
       {
         "type": "quote",
@@ -1963,11 +2452,11 @@
       },
       {
         "type": "heading_1",
-        "content": "🧱 LESSON 3 — Helium 10: Your Beginner-Friendly Toolkit"
+        "content": "🧱 LESSON 3. Helium 10: Your Beginner-Friendly Toolkit"
       },
       {
         "type": "quote",
-        "content": "This is the tool that helped me build my company — and it removes guesswork."
+        "content": "This is the tool that helped me build my company, and it removes guesswork."
       },
       {
         "type": "paragraph",
@@ -2003,7 +2492,7 @@
       },
       {
         "type": "heading_1",
-        "content": "🎨 LESSON 4 — A+ Content: Turning Your Listing Into a Brand"
+        "content": "🎨 LESSON 4. A+ Content: Turning Your Listing Into a Brand"
       },
       {
         "type": "quote",
@@ -2083,7 +2572,7 @@
       },
       {
         "type": "heading_1",
-        "content": "💸 LESSON 5 — PPC: The Engine That Drives Visibility"
+        "content": "💸 LESSON 5. PPC: The Engine That Drives Visibility"
       },
       {
         "type": "paragraph",
@@ -2131,7 +2620,7 @@
       },
       {
         "type": "heading_2",
-        "content": "Stage 1 — Data Collection (Week 1–2)"
+        "content": "Stage 1: Data Collection (Week 1–2)"
       },
       {
         "type": "paragraph",
@@ -2151,7 +2640,7 @@
       },
       {
         "type": "heading_2",
-        "content": "Stage 2 — Manual Campaign (Week 3+)"
+        "content": "Stage 2: Manual Campaign (Week 3+)"
       },
       {
         "type": "paragraph",
@@ -2181,15 +2670,15 @@
     "blocks": [
       {
         "type": "heading_1",
-        "content": "🌍 MODULE 8 — Expanding Beyond Amazon"
+        "content": "🌍 MODULE 8: Expanding Beyond Amazon"
       },
       {
         "type": "quote",
-        "content": "Once you’ve validated your product, built your brand, and created a stable Amazon listing, it’s time to grow beyond a single platform. In this module, you’ll learn how to expand safely and strategically into eBay, TikTok Shop, and your own Shopify website — without overwhelming yourself."
+        "content": "Once you’ve validated your product, built your brand, and created a stable Amazon listing, it’s time to grow beyond a single platform. In this module, you’ll learn how to expand safely and strategically into eBay, TikTok Shop, and your own Shopify website, without overwhelming yourself."
       },
       {
         "type": "heading_1",
-        "content": "🎯 Lesson 1 — Why Expand Beyond Amazon?"
+        "content": "🎯 Lesson 1: Why Expand Beyond Amazon?"
       },
       {
         "type": "paragraph",
@@ -2201,7 +2690,7 @@
       },
       {
         "type": "paragraph",
-        "content": "And yes — Amazon is huge, powerful, and absolutely the best place to start."
+        "content": "And yes, Amazon is huge, powerful, and absolutely the best place to start."
       },
       {
         "type": "paragraph",
@@ -2217,7 +2706,7 @@
       },
       {
         "type": "paragraph",
-        "content": "You don’t need to find new items — you simply place your existing product in new marketplaces."
+        "content": "You don’t need to find new items. You simply place your existing product in new marketplaces."
       },
       {
         "type": "heading_3",
@@ -2253,7 +2742,7 @@
       },
       {
         "type": "heading_1",
-        "content": "🧩 Lesson 2 — The Three Expansion Channels"
+        "content": "🧩 Lesson 2: The Three Expansion Channels"
       },
       {
         "type": "paragraph",
@@ -2277,7 +2766,7 @@
       },
       {
         "type": "heading_1",
-        "content": "🛒 Lesson 3 — Expanding to eBay (BEGINNER-FRIENDLY)"
+        "content": "🛒 Lesson 3: Expanding to eBay (BEGINNER-FRIENDLY)"
       },
       {
         "type": "quote",
@@ -2397,7 +2886,7 @@
       },
       {
         "type": "heading_3",
-        "content": "Option A — Self-Ship (Cheap but manual)"
+        "content": "Option A: Self-Ship (Cheap but manual)"
       },
       {
         "type": "bulleted_list_item",
@@ -2417,7 +2906,7 @@
       },
       {
         "type": "heading_3",
-        "content": "Option B — Amazon MCF (Multi-Channel Fulfilment)"
+        "content": "Option B: Amazon MCF (Multi-Channel Fulfilment)"
       },
       {
         "type": "bulleted_list_item",
@@ -2441,11 +2930,11 @@
       },
       {
         "type": "heading_1",
-        "content": "🎥 Lesson 4 — Expanding to TikTok Shop"
+        "content": "🎥 Lesson 4: Expanding to TikTok Shop"
       },
       {
         "type": "quote",
-        "content": "A visual platform with explosive sales potential — perfect for bundles or colourful products."
+        "content": "A visual platform with explosive sales potential. Perfect for bundles or colourful products."
       },
       {
         "type": "heading_2",
@@ -2473,7 +2962,7 @@
       },
       {
         "type": "paragraph",
-        "content": "TikTok Shop is perfect for visually appealing products, satisfying demonstrations, and skincare/beauty — but still works for many niches if filmed correctly."
+        "content": "TikTok Shop is perfect for visually appealing products, satisfying demonstrations, and skincare/beauty, but still works for many niches if filmed correctly."
       },
       {
         "type": "heading_2",
@@ -2541,7 +3030,7 @@
       },
       {
         "type": "heading_3",
-        "content": "Option 1 — Create Your Own Videos"
+        "content": "Option 1: Create Your Own Videos"
       },
       {
         "type": "bulleted_list_item",
@@ -2555,7 +3044,7 @@
     "blocks": [
       {
         "type": "heading_1",
-        "content": "🔧 MODULE 9 — Long-Term Maintenance & Keeping Your Amazon Business Healthy"
+        "content": "🔧 MODULE 9: Long-Term Maintenance & Keeping Your Amazon Business Healthy"
       },
       {
         "type": "quote",
@@ -2563,7 +3052,7 @@
       },
       {
         "type": "heading_1",
-        "content": "🎯 Lesson 1 — What long-term maintenance actually means"
+        "content": "🎯 Lesson 1: What long-term maintenance actually means"
       },
       {
         "type": "paragraph",
@@ -2607,11 +3096,11 @@
       },
       {
         "type": "paragraph",
-        "content": "Maintenance is simple — but it must be consistent."
+        "content": "Maintenance is simple, but it must be consistent."
       },
       {
         "type": "heading_1",
-        "content": "🔁 Lesson 2 — Weekly Maintenance Checklist"
+        "content": "🔁 Lesson 2: Weekly Maintenance Checklist"
       },
       {
         "type": "quote",
@@ -2803,7 +3292,7 @@
       },
       {
         "type": "heading_1",
-        "content": "📅 Lesson 3 — Monthly Maintenance Routine"
+        "content": "📅 Lesson 3: Monthly Maintenance Routine"
       },
       {
         "type": "paragraph",

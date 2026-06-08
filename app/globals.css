@@ -181,6 +181,28 @@ body {
   }
 }
 
+/* ---------- Enter animation (animate-in fade-in) ---------- */
+@keyframes ui-enter {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-in {
+  animation: ui-enter 300ms var(--ease-out-expo) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-in {
+    animation: none;
+  }
+}
+
 /* ---------- Progress bar fill animation ---------- */
 @keyframes progress-fill {
   from {

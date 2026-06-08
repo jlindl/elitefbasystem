@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
-import { cookies } from "next/headers";
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import { ModuleExam } from "../../../_components/module-exam";
-import { ModuleLock } from "../../../_components/module-lock";
 import { getCurrentStudent } from "../../../_lib/get-student";
 import {
   MODULE_EXAM_PASS_THRESHOLD,
@@ -38,20 +36,6 @@ export default async function ModuleExamPage({ params }: { params: Params }) {
   const quiz = MODULE_QUIZZES[moduleId];
   const required = MODULE_REQUIRED_TABS[moduleId];
   if (!quiz || !required) notFound();
-
-  if (moduleIndex >= 1) {
-    const cookieStore = await cookies();
-    const unlocked = cookieStore.get("modules_unlocked")?.value === "1";
-    if (!unlocked) {
-      return (
-        <main className="min-h-screen bg-surface-alt pt-16 pb-20 px-6">
-          <div className="mx-auto max-w-[460px]">
-            <ModuleLock />
-          </div>
-        </main>
-      );
-    }
-  }
 
   const completed = await getCompletedTabs();
   const missing = required.filter(

@@ -24,11 +24,44 @@ import { BundleScenarios } from "../_components/bundle-scenarios";
 import { ThreeLeversFramework } from "../_components/three-levers-framework";
 import { EconomicsTargets } from "../_components/economics-targets";
 import { CompoundingProjection } from "../_components/compounding-projection";
+import { PreflightChecklist } from "../_components/preflight-checklist";
+import { PlanComparison } from "../_components/plan-comparison";
+import { RegistrationWizard } from "../_components/registration-wizard";
+import { ApprovalPitfalls } from "../_components/approval-pitfalls";
+import { SellerCentralTour } from "../_components/seller-central-tour";
+import { AccountHealthSetup } from "../_components/account-health-setup";
+import { BundleCandidateGate } from "../_components/bundle-candidate-gate";
+import { HuntingGrounds } from "../_components/hunting-grounds";
+import { AmazonValidator } from "../_components/amazon-validator";
+import { Helium10Walkthrough } from "../_components/helium10-walkthrough";
+import { BundleScorecard } from "../_components/bundle-scorecard";
+import { WholesaleOutreach } from "../_components/wholesale-outreach";
+import { ListingAnatomy } from "../_components/listing-anatomy";
+import { GtinStepper } from "../_components/gtin-stepper";
+import { AiPromptTemplates } from "../_components/ai-prompt-templates";
+import { HtmlConversionDemo } from "../_components/html-conversion-demo";
+import { ListingImagesGuide } from "../_components/listing-images-guide";
+import { ListingFormWalkthrough } from "../_components/listing-form-walkthrough";
+import { MeasurementDiagram } from "../_components/measurement-diagram";
+import { BundlePrepChecklist } from "../_components/bundle-prep-checklist";
+import { PolybagRequirements } from "../_components/polybag-requirements";
+import { BoxSpecCard } from "../_components/box-spec-card";
+import { ShipmentWizard } from "../_components/shipment-wizard";
+import { LabelTypes } from "../_components/label-types";
+import { DeliveryTimeline } from "../_components/delivery-timeline";
 
 export type Block = {
   type: string;
   content?: string;
   src?: string;
+  // lesson_marker metadata fields. A lesson_marker block does not render any
+  // content; it only signals where a new lesson tab begins inside the JSON
+  // and carries the tab's card-level metadata.
+  tabId?: string;
+  label?: string;
+  icon?: string;
+  description?: string;
+  color?: TabColor;
 };
 
 export function slugify(text: string): string {
@@ -76,7 +109,29 @@ export type Tab = {
   blocks: Block[];
 };
 
-export function renderBlock(block: Block, i: number) {
+// Render a list of blocks while assigning heading_2 elements the same unique,
+// de-duplicated ids that extractTocHeadings produces, so Table of Contents
+// anchor links resolve even when two headings share the same text.
+export function renderBlocks(blocks: Block[]) {
+  const seen = new Set<string>();
+  return blocks.map((block, i) => {
+    if (block.type === "heading_2" && block.content) {
+      let id = slugify(block.content);
+      if (id) {
+        let suffix = 1;
+        while (seen.has(id)) {
+          suffix += 1;
+          id = `${slugify(block.content)}-${suffix}`;
+        }
+        seen.add(id);
+        return renderBlock(block, i, id);
+      }
+    }
+    return renderBlock(block, i);
+  });
+}
+
+export function renderBlock(block: Block, i: number, idOverride?: string) {
   if (block.type === "paragraph") {
     if (!block.content || block.content.trim() === "")
       return <div key={i} className="h-4" />;
@@ -96,7 +151,7 @@ export function renderBlock(block: Block, i: number) {
     );
   }
   if (block.type === "heading_2") {
-    const id = block.content ? slugify(block.content) : undefined;
+    const id = idOverride ?? (block.content ? slugify(block.content) : undefined);
     return (
       <div
         key={i}
@@ -185,17 +240,56 @@ export function renderBlock(block: Block, i: number) {
     );
   }
   if (block.type === "image") {
+    const src = block.src ?? block.content ?? "";
+    const caption = block.src ? block.content : undefined;
     return (
-      <div
+      <figure
         key={i}
         className="my-6 rounded-xl overflow-hidden border border-black/5 shadow-sm bg-white p-2"
       >
         <img
-          src={block.content}
-          alt="Module Diagram"
+          src={src}
+          alt={block.label ?? "Module image"}
           className="w-full h-auto rounded-lg"
         />
-      </div>
+        {caption && (
+          <figcaption className="px-3 py-3 text-[0.85rem] text-ink-muted leading-relaxed italic text-center">
+            {caption}
+          </figcaption>
+        )}
+      </figure>
+    );
+  }
+  if (block.type === "external_link") {
+    const href = block.src ?? "";
+    return (
+      <a
+        key={i}
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="my-6 flex items-center justify-between gap-4 rounded-xl border-2 border-violet-300 bg-violet-50 px-5 py-4 transition-colors duration-150 hover:bg-violet-100 hover:border-violet-400 no-underline"
+      >
+        <div className="min-w-0 flex-1">
+          <p className="font-display font-bold text-[0.95rem] text-violet-900 leading-tight">
+            {block.label ?? "Open link"}
+          </p>
+          <p className="font-mono text-[0.7rem] text-violet-700 leading-tight mt-1 truncate">
+            {href}
+          </p>
+          {block.description && (
+            <p className="text-[0.8rem] text-violet-800 leading-snug mt-1.5">
+              {block.description}
+            </p>
+          )}
+        </div>
+        <span
+          className="text-violet-600 text-xl flex-shrink-0"
+          aria-hidden="true"
+        >
+          ↗
+        </span>
+      </a>
     );
   }
   if (block.type === "callout") {
@@ -253,6 +347,33 @@ export function renderBlock(block: Block, i: number) {
   if (block.type === "three_levers_framework") return <ThreeLeversFramework key={i} />;
   if (block.type === "economics_targets") return <EconomicsTargets key={i} />;
   if (block.type === "compounding_projection") return <CompoundingProjection key={i} />;
+  if (block.type === "preflight_checklist") return <PreflightChecklist key={i} />;
+  if (block.type === "plan_comparison") return <PlanComparison key={i} />;
+  if (block.type === "registration_wizard") return <RegistrationWizard key={i} />;
+  if (block.type === "approval_pitfalls") return <ApprovalPitfalls key={i} />;
+  if (block.type === "seller_central_tour") return <SellerCentralTour key={i} />;
+  if (block.type === "account_health_setup") return <AccountHealthSetup key={i} />;
+  if (block.type === "bundle_candidate_gate") return <BundleCandidateGate key={i} />;
+  if (block.type === "hunting_grounds") return <HuntingGrounds key={i} />;
+  if (block.type === "amazon_validator") return <AmazonValidator key={i} />;
+  if (block.type === "helium10_walkthrough") return <Helium10Walkthrough key={i} />;
+  if (block.type === "bundle_scorecard") return <BundleScorecard key={i} />;
+  if (block.type === "wholesale_outreach") return <WholesaleOutreach key={i} />;
+  if (block.type === "listing_anatomy") return <ListingAnatomy key={i} />;
+  if (block.type === "gtin_stepper") return <GtinStepper key={i} />;
+  if (block.type === "ai_prompt_templates") return <AiPromptTemplates key={i} />;
+  if (block.type === "html_conversion_demo") return <HtmlConversionDemo key={i} />;
+  if (block.type === "listing_images_guide") return <ListingImagesGuide key={i} />;
+  if (block.type === "listing_form_walkthrough") return <ListingFormWalkthrough key={i} />;
+  if (block.type === "measurement_diagram") return <MeasurementDiagram key={i} />;
+  if (block.type === "bundle_prep_checklist") return <BundlePrepChecklist key={i} />;
+  if (block.type === "polybag_requirements") return <PolybagRequirements key={i} />;
+  if (block.type === "box_spec_card") return <BoxSpecCard key={i} />;
+  if (block.type === "shipment_wizard") return <ShipmentWizard key={i} />;
+  if (block.type === "label_types") return <LabelTypes key={i} />;
+  if (block.type === "delivery_timeline") return <DeliveryTimeline key={i} />;
+  // lesson_marker is metadata for tab grouping; never renders any UI itself.
+  if (block.type === "lesson_marker") return null;
   return null;
 }
 
@@ -321,7 +442,39 @@ const BUCKET_ORDER: BucketId[] = [
   "unit_economics",
 ];
 
+// Generic splitter: any module whose JSON contains lesson_marker blocks gets
+// its tabs derived directly from those markers. The marker carries the full
+// tab metadata (id, label, icon, description, colour) so we don't need any
+// per-module hard-coding here.
+function splitByLessonMarkers(blocks: Block[]): Tab[] {
+  const tabs: Tab[] = [];
+  let current: Tab | null = null;
+  for (const block of blocks) {
+    if (block.type === "lesson_marker") {
+      if (!block.tabId || !block.label) continue;
+      current = {
+        id: block.tabId,
+        label: block.label,
+        icon: block.icon ?? "📄",
+        description: block.description,
+        color: block.color,
+        blocks: [],
+      };
+      tabs.push(current);
+      continue;
+    }
+    if (current) current.blocks.push(block);
+  }
+  return tabs;
+}
+
+export function hasLessonMarkers(blocks: Block[]): boolean {
+  return blocks.some((b) => b.type === "lesson_marker");
+}
+
 export function groupBlocksIntoTabs(blocks: Block[]): Tab[] {
+  if (hasLessonMarkers(blocks)) return splitByLessonMarkers(blocks);
+
   const buckets: Record<BucketId, Block[]> = {
     basics: [],
     infrastructure: [],
@@ -394,9 +547,14 @@ export function splitVideoFromBlocks(blocks: Block[]): {
 } {
   const videos: Block[] = [];
   const rest: Block[] = [];
+  let seenLessonMarker = false;
   for (const b of blocks) {
-    if (b.type === "video") videos.push(b);
-    else rest.push(b);
+    if (b.type === "lesson_marker") seenLessonMarker = true;
+    if (b.type === "video" && !seenLessonMarker) {
+      videos.push(b);
+    } else {
+      rest.push(b);
+    }
   }
   return { videos, rest };
 }

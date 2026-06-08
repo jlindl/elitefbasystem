@@ -171,7 +171,7 @@ export function CaseStudy() {
           <span className="text-xl flex-shrink-0 leading-none">💡</span>
           <p className="text-[0.85rem] text-white/70 leading-relaxed">
             This system does not start with expensive websites, warehouses, or
-            thousands in upfront investment. It starts on clearance shelves.
+            thousands in upfront investment. It starts on local shop shelves.
           </p>
         </div>
       </section>

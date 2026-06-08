@@ -28,14 +28,6 @@ export async function proxy(request: NextRequest) {
 
   await supabase.auth.getUser();
 
-  // One-shot modules unlock: consume the cookie so a refresh re-prompts.
-  if (
-    request.nextUrl.pathname === "/dashboard/modules" &&
-    request.cookies.has("modules_unlocked")
-  ) {
-    response.cookies.set("modules_unlocked", "", { maxAge: 0, path: "/" });
-  }
-
   return response;
 }
 
