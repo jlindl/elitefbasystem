@@ -8,6 +8,7 @@ import { TableOfContents } from "../../../_components/table-of-contents";
 import { getCurrentStudent } from "../../../_lib/get-student";
 import { LESSON_QUIZZES } from "../../../_lib/lesson-quizzes";
 import {
+  type Block,
   extractTocHeadings,
   groupBlocksIntoTabs,
   renderBlocks,
@@ -28,7 +29,7 @@ export async function generateMetadata({
   if (moduleIndex === -1) return { title: "Modules - EliteFBA" };
 
   const mod = modulesData[moduleIndex];
-  const { rest } = splitVideoFromBlocks(mod.blocks);
+  const { rest } = splitVideoFromBlocks(mod.blocks as Block[]);
   const tab = groupBlocksIntoTabs(rest).find((t) => t.id === tabId);
   const tabLabel = tab?.label ?? "Module";
   return { title: `${tabLabel} - ${mod.name}` };
@@ -47,7 +48,7 @@ export default async function ModuleTabPage({
 
   const mod = modulesData[moduleIndex];
 
-  const { rest } = splitVideoFromBlocks(mod.blocks);
+  const { rest } = splitVideoFromBlocks(mod.blocks as Block[]);
   const tab = groupBlocksIntoTabs(rest).find((t) => t.id === tabId);
   if (!tab) notFound();
 
