@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { ArrowDown, Play } from "./icons";
 import { Reveal } from "./reveal";
 
@@ -92,41 +92,26 @@ export function Hero() {
   );
 }
 
-function VideoFrame() {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [hasStarted, setHasStarted] = useState(false);
-  const videoRef = useRef<HTMLVideoElement>(null);
+const YOUTUBE_ID = "oFp_kVwq0g8";
 
-  const handlePlay = () => {
-    if (videoRef.current) {
-      videoRef.current.play();
-      setIsPlaying(true);
-      setHasStarted(true);
-    }
-  };
+function VideoFrame() {
+  const [hasStarted, setHasStarted] = useState(false);
+
+  const handlePlay = () => setHasStarted(true);
 
   return (
     <div id="video" className="mt-16 md:mt-24 mx-auto max-w-[1080px]">
       <div className="relative rounded-2xl overflow-hidden shadow-[var(--shadow-lift)] hairline bg-surface">
         <div className="relative aspect-[16/9] bg-black">
-          <video
-            ref={videoRef}
-            src="/FBA%20main%20video.mov"
-            poster="/Thumbnail%20final.png"
-            className="w-full h-full object-cover"
-            controls={hasStarted}
-            playsInline
-            preload="metadata"
-            onPlay={() => {
-              setIsPlaying(true);
-              setHasStarted(true);
-            }}
-            onPause={() => setIsPlaying(false)}
-            onEnded={() => {
-              setIsPlaying(false);
-              setHasStarted(false);
-            }}
-          />
+          {hasStarted && (
+            <iframe
+              src={`https://www.youtube.com/embed/${YOUTUBE_ID}?autoplay=1&rel=0&modestbranding=1`}
+              title="Jakub's intro video"
+              className="absolute inset-0 w-full h-full"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          )}
 
           {!hasStarted && (
             <div className="absolute inset-0">
@@ -134,9 +119,12 @@ function VideoFrame() {
               <div className="absolute inset-0 pointer-events-none z-0">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/Thumbnail%20final.png"
+                  src={`https://img.youtube.com/vi/${YOUTUBE_ID}/maxresdefault.jpg`}
                   alt="Video thumbnail"
                   className="w-full h-full object-cover"
+                  onError={(e) => {
+                    e.currentTarget.src = `https://img.youtube.com/vi/${YOUTUBE_ID}/hqdefault.jpg`;
+                  }}
                 />
                 <div
                   className="absolute inset-0"

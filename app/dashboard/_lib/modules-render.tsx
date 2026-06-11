@@ -64,6 +64,15 @@ export type Block = {
   color?: TabColor;
 };
 
+// Returns the 11-char YouTube video id for youtu.be / youtube.com URLs, or
+// null for any other src (e.g. a direct .mp4 file) so it renders as <video>.
+export function extractYouTubeId(src: string): string | null {
+  const match = src.match(
+    /(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|shorts\/))([A-Za-z0-9_-]{11})/,
+  );
+  return match ? match[1] : null;
+}
+
 export function slugify(text: string): string {
   return text
     .toLowerCase()
@@ -203,18 +212,29 @@ export function renderBlock(block: Block, i: number, idOverride?: string) {
   }
   if (block.type === "video") {
     if (block.src) {
+      const youTubeId = extractYouTubeId(block.src);
       return (
         <div
           key={i}
           className="relative aspect-video w-full max-w-4xl mx-auto rounded-xl overflow-hidden bg-black my-6 shadow-inner"
         >
-          <video
-            src={block.src}
-            controls
-            playsInline
-            preload="metadata"
-            className="absolute inset-0 h-full w-full"
-          />
+          {youTubeId ? (
+            <iframe
+              src={`https://www.youtube.com/embed/${youTubeId}?rel=0&modestbranding=1`}
+              title={block.content ?? "Module video"}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              className="absolute inset-0 h-full w-full"
+            />
+          ) : (
+            <video
+              src={block.src}
+              controls
+              playsInline
+              preload="metadata"
+              className="absolute inset-0 h-full w-full"
+            />
+          )}
         </div>
       );
     }
