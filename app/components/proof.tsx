@@ -1,32 +1,33 @@
 import { Reveal } from "./reveal";
 
-const testimonials = [
+// Jakub's own milestones on the road from a 9-5 to full-time Amazon income.
+// These are personal results, not student results. Swap each `img` for a real
+// screenshot (Seller Central payouts, sales dashboards, bank transfers, etc.)
+// when you have them — keep the 4:3 aspect ratio for a clean, even grid.
+const milestones = [
   {
-    name: "Sarah K.",
-    initials: "SK",
-    quote:
-      "I'd been burned twice by other courses before this. The difference is Jakub actually picks up the phone. Six months in, it finally feels like I'm running a business, not gambling.",
-    result: "$4,200/mo profit · 6 months in",
-    months: "8",
-    img: "https://placehold.co/640x640/F4F2EC/0A0A0A/png?text=Screenshot",
+    metric: "£600",
+    period: "in a single day",
+    title: "The first £600 day",
+    blurb:
+      "The day the side hustle out-earned the day job. One day of Amazon payouts beat a full week of my old salary - that's the moment I knew the 9-5 had an exit.",
+    img: "https://placehold.co/640x480/F4F2EC/0A0A0A/png?text=%C2%A3600+day+%E2%80%94+screenshot",
   },
   {
-    name: "Marcus T.",
-    initials: "MT",
-    quote:
-      "Hit my first profitable launch in week 11. What blew me away wasn't the system - it was the team. Three people in the group helped me debug a customs problem in one afternoon.",
-    result: "$2,400/mo profit · 4 months in",
-    months: "6",
-    img: "https://placehold.co/640x640/F4F2EC/0A0A0A/png?text=Screenshot",
+    metric: "£3,000",
+    period: "in a week",
+    title: "£3k weeks became normal",
+    blurb:
+      "Once the system was dialled in, £3,000 weeks stopped being a lucky spike and became the baseline I could actually plan my life around.",
+    img: "https://placehold.co/640x480/F4F2EC/0A0A0A/png?text=%C2%A33k+week+%E2%80%94+screenshot",
   },
   {
-    name: "Elena R.",
-    initials: "ER",
-    quote:
-      "I came in skeptical. The thing that won me over was Jakub showing me his own losses - actual screenshots, actual SKUs that flopped. Honesty I'd never seen from anyone selling FBA.",
-    result: "$8,100/mo profit · 11 months in",
-    months: "12",
-    img: "https://placehold.co/640x640/F4F2EC/0A0A0A/png?text=Screenshot",
+    metric: "£10,000",
+    period: "in a month",
+    title: "The £10k month",
+    blurb:
+      "Proof the model scales. A full month of FBA revenue that replaced my salary several times over - built on bundles and wholesale, not gambling on hype products.",
+    img: "https://placehold.co/640x480/F4F2EC/0A0A0A/png?text=%C2%A310k+month+%E2%80%94+screenshot",
   },
 ];
 
@@ -40,50 +41,56 @@ export function Proof() {
           </Reveal>
           <Reveal delay={80}>
             <h2 className="mt-5 font-display font-medium tracking-[-0.02em] leading-[1.05] text-[clamp(2rem,4.5vw,4rem)]">
-              Real students. Real screenshots. Real friendships.
+              I won&rsquo;t fake student results. So here are mine.
             </h2>
           </Reveal>
           <Reveal delay={160}>
             <p className="mt-5 text-[clamp(1.05rem,1.4vw,1.25rem)] leading-[1.55] text-ink-muted">
-              Modest numbers, real timelines, real people. The kind of results
-              you can actually replicate - not the kind you put on a
-              Lamborghini.
+              This mentorship is new, so I&rsquo;m not going to parade screenshots
+              from &ldquo;students&rdquo; you&rsquo;ve never met. Instead,
+              here&rsquo;s the honest version - the exact numbers that took me from
+              a 9-5 to running Amazon full-time, and the financial freedom that
+              came with it.
             </p>
           </Reveal>
         </div>
 
         <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {testimonials.map((t, i) => (
-            <Reveal key={t.name} delay={(i % 3) * 100}>
+          {milestones.map((m, i) => (
+            <Reveal key={m.title} delay={(i % 3) * 100}>
               <article className="group h-full flex flex-col rounded-2xl bg-surface hairline p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-lift)]">
-                <div className="aspect-[4/3] rounded-lg overflow-hidden bg-surface-alt">
+                <div className="relative aspect-[4/3] rounded-lg overflow-hidden bg-surface-alt">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src={t.img}
-                    alt={`Screenshot from ${t.name}`}
+                    src={m.img}
+                    alt={`Screenshot: ${m.title}`}
                     loading="lazy"
                     decoding="async"
                     className="h-full w-full object-cover"
                   />
-                </div>
-                <p className="mt-5 text-[0.975rem] text-ink leading-[1.6] flex-1">
-                  &ldquo;{t.quote}&rdquo;
-                </p>
-                <div className="mt-6 flex items-center gap-3">
-                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-ink text-white text-[0.7rem] font-medium">
-                    {t.initials}
+                  <span className="absolute top-3 left-3 inline-flex items-center rounded-full bg-ink/80 px-2.5 py-1 font-mono text-[0.6rem] tracking-[0.1em] uppercase text-white backdrop-blur-sm">
+                    Screenshot
                   </span>
-                  <div className="flex flex-col">
-                    <span className="text-[0.875rem] font-medium text-ink">
-                      {t.name}
-                    </span>
-                    <span className="text-[0.8rem] text-ink-muted">
-                      {t.result}
-                    </span>
-                  </div>
                 </div>
+
+                <div className="mt-6 flex items-baseline gap-2">
+                  <span className="font-display text-[2rem] font-semibold tracking-[-0.02em] leading-none text-ink">
+                    {m.metric}
+                  </span>
+                  <span className="text-[0.85rem] text-ink-muted">
+                    {m.period}
+                  </span>
+                </div>
+
+                <p className="mt-3 text-[0.95rem] font-medium text-ink">
+                  {m.title}
+                </p>
+                <p className="mt-2 text-[0.95rem] text-ink-muted leading-[1.6] flex-1">
+                  {m.blurb}
+                </p>
+
                 <p className="mt-5 pt-4 border-t border-line label-mono">
-                  Mentored for {t.months} months
+                  My own Amazon results
                 </p>
               </article>
             </Reveal>
@@ -91,8 +98,8 @@ export function Proof() {
         </div>
 
         <p className="mt-12 text-center font-mono text-[0.75rem] tracking-[0.1em] uppercase text-ink-subtle">
-          Income disclaimer: Individual results vary. These reflect real
-          students, not averages.
+          Income disclaimer: These are my own personal results, not typical and
+          not a guarantee of what you&rsquo;ll earn. Individual results vary.
         </p>
       </div>
     </section>

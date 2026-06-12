@@ -19,9 +19,9 @@ export function ModuleTabs({ tabs }: ModuleTabsProps) {
   const activeTabData = tabs.find(tab => tab.id === activeTab);
 
   return (
-    <div className="flex gap-6">
-      {/* Vertical Tab Navigation */}
-      <div className="sticky top-4 z-10 h-fit flex flex-col gap-2 w-48 flex-shrink-0">
+    <div className="flex flex-col md:flex-row gap-4 md:gap-6">
+      {/* Tab Navigation: full-width stack on mobile, sticky sidebar on desktop */}
+      <div className="flex flex-col gap-2 w-full md:w-48 md:flex-shrink-0 md:sticky md:top-4 md:z-10 md:h-fit">
         {tabs.map((tab) => (
           <button
             key={tab.id}

@@ -115,9 +115,22 @@ export function Footer() {
           <p className="text-[0.85rem]">
             © {new Date().getFullYear()} Elite FBA. All rights reserved.
           </p>
-          <p className="font-mono text-[0.7rem] tracking-[0.1em] uppercase text-white/40">
-            Not affiliated with Amazon.com, Inc.
-          </p>
+          <div className="flex flex-col sm:flex-row sm:items-center gap-x-6 gap-y-3">
+            <p className="text-[0.85rem] text-white/50">
+              Powered by{" "}
+              <a
+                href="https://www.integrate-tech.co.uk"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/70 underline underline-offset-4 decoration-white/30 hover:text-white hover:decoration-white transition-colors"
+              >
+                Integrate Tech
+              </a>
+            </p>
+            <p className="font-mono text-[0.7rem] tracking-[0.1em] uppercase text-white/40">
+              Not affiliated with Amazon.com, Inc.
+            </p>
+          </div>
         </div>
       </div>
 

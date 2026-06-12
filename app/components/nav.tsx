@@ -39,6 +39,7 @@ export function Nav() {
   };
 
   return (
+    <>
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-[background-color,backdrop-filter,border-color] duration-300 ${
         scrolled
@@ -97,6 +98,7 @@ export function Nav() {
           </button>
         </div>
       </nav>
+    </header>
 
       {open && (
         <div className="lg:hidden fixed inset-0 z-50 bg-bg">
@@ -159,6 +161,6 @@ export function Nav() {
         initialTab={authTab}
         onClose={() => setAuthOpen(false)}
       />
-    </header>
+    </>
   );
 }
