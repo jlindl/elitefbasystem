@@ -100,7 +100,7 @@ function VideoFrame() {
   const handlePlay = () => setHasStarted(true);
 
   return (
-    <div id="video" className="mt-16 md:mt-24 mx-auto max-w-[1080px]">
+    <div id="video" className="scroll-mt-20 md:scroll-mt-24 mt-16 md:mt-24 mx-auto max-w-[1080px]">
       <div className="relative rounded-2xl overflow-hidden shadow-[var(--shadow-lift)] hairline bg-surface">
         <div className="relative aspect-[16/9] bg-black">
           {hasStarted && (

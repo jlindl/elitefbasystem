@@ -16,7 +16,7 @@ export function Pricing() {
   return (
     <section
       id="apply"
-      className="bg-surface-alt py-24 md:py-32 border-y border-line"
+      className="scroll-mt-20 md:scroll-mt-24 bg-surface-alt py-24 md:py-32 border-y border-line"
     >
       <div className="mx-auto max-w-[1280px] px-6 md:px-8">
         <div className="text-center max-w-[760px] mx-auto">
@@ -50,15 +50,6 @@ export function Pricing() {
                 Direct 1-to-1 mentorship from a full-time Amazon seller, plus
                 a hand-picked team you&rsquo;ll actually want to work
                 alongside.
-              </p>
-
-              <div className="mt-8 flex items-baseline gap-2">
-                <span className="font-display text-[3rem] md:text-[3.5rem] font-semibold tracking-[-0.025em] leading-none">
-                  £600
-                </span>
-              </div>
-              <p className="mt-2 text-[0.85rem] text-ink-subtle">
-                or 3 × £200 · interest-free
               </p>
 
               <ul className="mt-8 space-y-3">

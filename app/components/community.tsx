@@ -12,7 +12,7 @@ export function Community() {
   return (
     <section
       id="community"
-      className="bg-surface-alt py-24 md:py-32 border-y border-line"
+      className="scroll-mt-20 md:scroll-mt-24 bg-surface-alt py-24 md:py-32 border-y border-line"
     >
       <div className="mx-auto max-w-[1280px] px-6 md:px-8">
         <div className="max-w-[820px]">

@@ -54,7 +54,7 @@ const deliverables = [
 
 export function Mentorship() {
   return (
-    <section id="mentorship" className="relative py-24 md:py-32 overflow-hidden">
+    <section id="mentorship" className="scroll-mt-20 md:scroll-mt-24 relative py-24 md:py-32 overflow-hidden">
       {/* warm radial bleed - matches hero */}
       <div
         aria-hidden
@@ -238,18 +238,18 @@ export function Mentorship() {
         <div className="mt-28 md:mt-36">
           <div className="max-w-[760px]">
             <Reveal>
-              <p className="label-mono">The investment</p>
+              <p className="label-mono">The program</p>
             </Reveal>
             <Reveal delay={80}>
               <h3 className="mt-5 font-display font-medium tracking-[-0.02em] leading-[1.05] text-[clamp(1.75rem,3.4vw,2.75rem)]">
-                One price. One program. No upsells.
+                One program. Limited spots. No upsells.
               </h3>
             </Reveal>
             <Reveal delay={160}>
               <p className="mt-5 text-[clamp(1rem,1.3vw,1.15rem)] leading-[1.55] text-ink-muted">
                 Everything above - the calls, the templates, the
-                community, the lifetime updates - for a single,
-                straightforward fee.
+                community, the lifetime updates - in one straightforward
+                program. We&rsquo;ll talk through the details together.
               </p>
             </Reveal>
           </div>
@@ -269,18 +269,6 @@ export function Mentorship() {
                     Full access to the course and mentorship. Direct 1-to-1s with
                     Jakub, plus the team you&rsquo;ll build alongside your
                     journey.
-                  </p>
-
-                  <div className="mt-8 flex items-baseline gap-3">
-                    <span className="font-display text-[3rem] md:text-[3.5rem] font-semibold tracking-[-0.025em] leading-none">
-                      £600
-                    </span>
-                    <span className="text-[0.9rem] text-ink-subtle">
-                      one-time
-                    </span>
-                  </div>
-                  <p className="mt-2 text-[0.85rem] text-ink-subtle">
-                    or 3 × £200 · interest-free
                   </p>
 
                   <a

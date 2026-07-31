@@ -8,7 +8,7 @@ const stats = [
 
 export function About() {
   return (
-    <section id="about" className="py-24 md:py-32">
+    <section id="about" className="scroll-mt-20 md:scroll-mt-24 py-24 md:py-32">
       <div className="mx-auto max-w-[1280px] px-6 md:px-8">
         <div className="grid md:grid-cols-12 gap-10 md:gap-16 items-start">
           <Reveal as="div" className="md:col-span-5">

@@ -66,7 +66,7 @@ const faqs = [
 
 export function Faq() {
   return (
-    <section id="faq" className="py-24 md:py-32">
+    <section id="faq" className="scroll-mt-20 md:scroll-mt-24 py-24 md:py-32">
       <div className="mx-auto max-w-[1280px] px-6 md:px-8">
         <div className="max-w-[820px]">
           <Reveal>
