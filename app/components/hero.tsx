@@ -1,188 +1,223 @@
 "use client";
 
-import { useState } from "react";
-import { ArrowDown, Play } from "./icons";
-import { Reveal } from "./reveal";
+import { Photo } from "./photo";
+import { useRef, useState } from "react";
+import { ArrowRight, Calendar, Check, Play, TrendingUp } from "./icons";
+import { Reveal, RevealWords } from "./reveal";
+import { VideoLightbox } from "./video-lightbox";
+
+const trust = [
+  "Direct 1-to-1 mentorship",
+  "Real screenshots",
+  "No upsells",
+  "Limited spots",
+];
+
+const YOUTUBE_ID = "oFp_kVwq0g8";
+const POSTER = "/Thumbnail final.png";
 
 export function Hero() {
+  const [origin, setOrigin] = useState<DOMRect | null>(null);
+  const [open, setOpen] = useState(false);
+  const thumbRef = useRef<HTMLDivElement | null>(null);
+
+  const openVideo = () => {
+    setOrigin(thumbRef.current?.getBoundingClientRect() ?? null);
+    setOpen(true);
+  };
+
   return (
     <section
       id="top"
-      className="relative pt-[120px] md:pt-[140px] pb-20 md:pb-28 overflow-hidden"
+      className="relative overflow-hidden pt-[112px] md:pt-[140px] lg:pt-[150px] pb-16 md:pb-24"
     >
-      {/* warm radial bleed */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0"
-        style={{
-          background:
-            "radial-gradient(circle at 92% -5%, rgba(255,107,26,0.10), transparent 55%)",
-        }}
-      />
-      {/* faint grid */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 opacity-[0.025]"
-        style={{
-          backgroundImage:
-            "linear-gradient(to right, #0a0a0a 1px, transparent 1px), linear-gradient(to bottom, #0a0a0a 1px, transparent 1px)",
-          backgroundSize: "64px 64px",
-          maskImage:
-            "radial-gradient(ellipse at 50% 30%, black 30%, transparent 70%)",
-        }}
-      />
-
-      <div className="relative mx-auto max-w-[1280px] px-6 md:px-8">
-        <div className="text-center max-w-[920px] mx-auto">
-          <Reveal>
-            <p className="label-mono inline-flex items-center gap-2 mb-7">
-              <span className="inline-block h-1.5 w-1.5 rounded-full bg-emerald-500" />
-              Now accepting new students
-            </p>
-          </Reveal>
-
-          <Reveal delay={80}>
-            <h1 className="font-display font-medium tracking-[-0.025em] leading-[1.02] text-[clamp(2.75rem,7vw,6.5rem)]">
-              The FBA system I actually use.
-              <br />
-              <span className="text-ink-muted">
-                Taught by me. To you. Personally.
-              </span>
-            </h1>
-          </Reveal>
-
-          <Reveal delay={160}>
-            <p className="mt-7 mx-auto max-w-[640px] text-[clamp(1.05rem,1.5vw,1.25rem)] leading-[1.55] text-ink-muted">
-              I&rsquo;m Jakub. I sell on Amazon full-time, and I built a system
-              from scratch to do it. Now I&rsquo;m hand-picking a small group of
-              sellers to mentor 1 to 1 - and to build a team with.
-            </p>
-          </Reveal>
-
-          <Reveal delay={240}>
-            <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
-              <a
-                href="#apply"
-                className="inline-flex h-12 items-center rounded-full bg-accent px-7 text-[0.95rem] font-medium text-white shadow-[0_1px_2px_rgba(10,10,10,0.06)] transition-all duration-200 hover:-translate-y-px hover:bg-accent-deep hover:shadow-[0_8px_24px_rgba(255,107,26,0.32)]"
-              >
-                Apply for Mentorship
-              </a>
-              <a
-                href="#video"
-                className="inline-flex h-12 items-center gap-2 rounded-full border border-line bg-surface px-6 text-[0.95rem] font-medium text-ink transition-all duration-200 hover:-translate-y-px hover:border-ink/20"
-              >
-                Watch My Story <ArrowDown size={16} />
-              </a>
-            </div>
-          </Reveal>
-
-          <Reveal delay={320}>
-            <p className="mt-7 text-[0.8rem] text-ink-subtle">
-              Direct 1-to-1 mentorship · Real screenshots · No upsells ·
-              Limited spots
-            </p>
-          </Reveal>
-        </div>
-
-        <Reveal delay={400}>
-          <VideoFrame />
-        </Reveal>
+      {/* ambient light */}
+      <div aria-hidden className="pointer-events-none absolute inset-0">
+        <div className="glow-orb -top-40 right-[-10%] h-[560px] w-[560px] bg-accent/[0.16]" />
+        <div
+          className="glow-orb top-[35%] -left-40 h-[420px] w-[420px] bg-[#ffd2b0]/40"
+          style={{ animationDelay: "-6s" }}
+        />
+        <div
+          className="absolute inset-0 opacity-[0.035]"
+          style={{
+            backgroundImage:
+              "linear-gradient(to right, #0a0a0a 1px, transparent 1px), linear-gradient(to bottom, #0a0a0a 1px, transparent 1px)",
+            backgroundSize: "56px 56px",
+            maskImage:
+              "radial-gradient(ellipse 75% 60% at 50% 35%, black 20%, transparent 75%)",
+            WebkitMaskImage:
+              "radial-gradient(ellipse 75% 60% at 50% 35%, black 20%, transparent 75%)",
+          }}
+        />
       </div>
+
+      <div className="relative mx-auto max-w-[1280px] px-5 sm:px-6 md:px-8">
+        {/* Phones: headline, video, copy. Desktop: copy left, video right. */}
+        <div className="grid items-center gap-x-12 xl:gap-x-16 lg:grid-cols-12 lg:grid-rows-[auto_auto]">
+          <div className="text-center lg:text-left lg:col-span-6 lg:row-start-1 lg:self-end">
+            <Reveal variant="blur">
+              <p className="inline-flex items-center gap-2.5 rounded-full border border-line bg-white/70 py-1.5 pl-3 pr-4 text-[0.8125rem] text-ink-muted shadow-[0_1px_2px_rgba(10,10,10,0.04)] backdrop-blur">
+                <span className="live-dot" />
+                Now accepting new students
+              </p>
+            </Reveal>
+
+            <h1 className="mt-6 md:mt-7 font-display font-medium tracking-[-0.04em] leading-[1] text-balance text-[clamp(2.5rem,7.4vw,4.25rem)]">
+              <RevealWords text="The FBA system I actually use." className="block" />
+              <RevealWords
+                delay={260}
+                className="block text-ink-subtle"
+                text={[
+                  { text: "Taught by me. To you." },
+                  {
+                    text: "Personally.",
+                    className: "font-serif text-accent tracking-[-0.02em]",
+                  },
+                ]}
+              />
+            </h1>
+          </div>
+
+          <div
+            id="video"
+            className="relative z-10 hover:z-30 scroll-mt-24 md:scroll-mt-28 mt-10 lg:mt-0 lg:col-span-6 lg:col-start-7 lg:row-span-2 lg:row-start-1"
+          >
+            <Reveal delay={300} variant="scale">
+              <VideoCard thumbRef={thumbRef} onOpen={openVideo} />
+            </Reveal>
+          </div>
+
+          <div className="text-center lg:text-left lg:col-span-6 lg:row-start-2 lg:self-start">
+            <Reveal delay={420}>
+              <p className="mx-auto lg:mx-0 mt-8 md:mt-9 lg:mt-7 max-w-[560px] text-pretty text-[clamp(1.05rem,1.5vw,1.2rem)] leading-[1.6] text-ink-muted">
+                I&rsquo;m Jakub. Amazon FBA took me from a 9-5 to £10k+
+                revenue months - selling full-time, on my own terms. Now
+                I&rsquo;m hand-picking a small group of people to mentor 1-to-1
+                and show exactly how I did it.
+              </p>
+            </Reveal>
+
+            <Reveal delay={520}>
+              <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-3">
+                <a href="#apply" className="btn btn-primary btn-lg">
+                  Apply for Mentorship
+                  <ArrowRight size={18} className="btn-arrow" />
+                </a>
+                <button type="button" onClick={openVideo} className="btn btn-secondary btn-lg">
+                  <Play size={14} className="text-accent" />
+                  Watch My Story
+                </button>
+              </div>
+            </Reveal>
+
+            <Reveal delay={620}>
+              <ul className="mt-7 flex flex-wrap items-center justify-center lg:justify-start gap-x-5 gap-y-2.5 text-[0.8125rem] text-ink-muted">
+                {trust.map((t) => (
+                  <li key={t} className="inline-flex items-center gap-1.5">
+                    <Check size={14} className="text-accent" />
+                    {t}
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
+          </div>
+        </div>
+      </div>
+
+      {open && (
+        <VideoLightbox
+          youtubeId={YOUTUBE_ID}
+          poster={POSTER}
+          title="Jakub's intro video"
+          origin={origin}
+          onClose={() => setOpen(false)}
+        />
+      )}
     </section>
   );
 }
 
-const YOUTUBE_ID = "oFp_kVwq0g8";
-
-function VideoFrame() {
-  const [hasStarted, setHasStarted] = useState(false);
-
-  const handlePlay = () => setHasStarted(true);
-
+function VideoCard({
+  thumbRef,
+  onOpen,
+}: {
+  thumbRef: React.RefObject<HTMLDivElement | null>;
+  onOpen: () => void;
+}) {
   return (
-    <div id="video" className="scroll-mt-20 md:scroll-mt-24 mt-16 md:mt-24 mx-auto max-w-[1080px]">
-      <div className="relative rounded-2xl overflow-hidden shadow-[var(--shadow-lift)] hairline bg-surface">
-        <div className="relative aspect-[16/9] bg-black">
-          {hasStarted && (
-            <iframe
-              src={`https://www.youtube.com/embed/${YOUTUBE_ID}?autoplay=1&rel=0&modestbranding=1`}
-              title="Jakub's intro video"
-              className="absolute inset-0 w-full h-full"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
+    <div className="group/video relative z-10 transition-transform duration-700 ease-[var(--ease-out-expo)] hover:z-30 md:hover:scale-[1.06] lg:origin-[85%_50%] lg:hover:scale-[1.18]">
+      <div className="relative rounded-[20px] md:rounded-[26px] bg-white/70 p-1.5 md:p-2 shadow-[var(--shadow-float)] ring-1 ring-ink/[0.06] backdrop-blur transition-shadow duration-700 group-hover/video:shadow-[0_2px_4px_rgba(10,10,10,0.04),0_30px_80px_-20px_rgba(10,10,10,0.35)]">
+        <div
+          ref={thumbRef}
+          className="relative aspect-video overflow-hidden rounded-[15px] md:rounded-[19px] bg-ink"
+        >
+          <button
+            type="button"
+            onClick={onOpen}
+            aria-label="Play Jakub's intro video"
+            className="absolute inset-0 block h-full w-full cursor-zoom-in text-left"
+          >
+            <Photo
+              src={POSTER}
+              alt=""
+              fill
+              preload
+              sizes="(min-width: 1280px) 620px, (min-width: 1024px) 50vw, 100vw"
+              className="object-cover transition-transform duration-[1200ms] ease-[var(--ease-out-expo)] group-hover/video:scale-[1.06]"
             />
-          )}
+            <span
+              aria-hidden
+              className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/5 to-transparent"
+            />
 
-          {!hasStarted && (
-            <div className="absolute inset-0">
-              {/* thumbnail preview */}
-              <div className="absolute inset-0 pointer-events-none z-0">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={`https://img.youtube.com/vi/${YOUTUBE_ID}/maxresdefault.jpg`}
-                  alt="Video thumbnail"
-                  className="w-full h-full object-cover"
-                  onError={(e) => {
-                    e.currentTarget.src = `https://img.youtube.com/vi/${YOUTUBE_ID}/hqdefault.jpg`;
-                  }}
-                />
-                <div
-                  className="absolute inset-0"
-                  style={{
-                    background:
-                      "radial-gradient(circle at 50% 50%, transparent 20%, rgba(10,10,10,0.4) 100%)",
-                  }}
-                />
-              </div>
+            <span className="absolute inset-0 flex items-center justify-center">
+              <span className="play-ring relative inline-flex h-16 w-16 md:h-20 md:w-20 items-center justify-center rounded-full bg-white/95 shadow-[0_10px_40px_rgba(0,0,0,0.25)] transition-transform duration-500 ease-[var(--ease-out-expo)] group-hover/video:scale-110">
+                <Play size={24} className="translate-x-[2px] text-ink" />
+              </span>
+            </span>
 
-              {/* subtle noise/grain */}
-              <div
-                aria-hidden
-                className="absolute inset-0 opacity-[0.07] mix-blend-multiply pointer-events-none z-0"
-                style={{
-                  backgroundImage:
-                    "radial-gradient(circle at 50% 40%, rgba(0,0,0,0.18), transparent 60%)",
-                }}
-              />
-              {/* light highlight */}
-              <div
-                aria-hidden
-                className="absolute -top-1/4 left-1/4 h-1/2 w-1/2 rounded-full pointer-events-none z-0"
-                style={{
-                  background:
-                    "radial-gradient(closest-side, rgba(255,255,255,0.55), transparent)",
-                }}
-              />
-
-              {/* play button overlay */}
-              <div className="absolute inset-0 flex items-center justify-center z-10">
-                <button
-                  type="button"
-                  onClick={handlePlay}
-                  aria-label="Play Jakub's intro video"
-                  className="group relative inline-flex h-16 w-16 md:h-20 md:w-20 items-center justify-center rounded-full bg-white play-ring transition-transform duration-300 hover:scale-[1.06]"
-                >
-                  <span
-                    aria-hidden
-                    className="absolute inset-0 rounded-full ring-1 ring-black/5"
-                  />
-                  <Play size={26} className="text-ink translate-x-[2px]" />
-                </button>
-              </div>
-
-              {/* video label */}
-              <div className="absolute bottom-4 left-4 z-10">
-                <span className="inline-flex items-center rounded-full bg-black/60 px-3 py-1 text-[0.7rem] font-medium tracking-wide text-white">
-                  WATCH INTRO VIDEO
+            <span className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-3 p-4 md:p-5 text-white">
+              <span>
+                <span className="block font-mono text-[0.62rem] md:text-[0.68rem] uppercase tracking-[0.16em] text-white/75">
+                  Watch the intro
                 </span>
-              </div>
-            </div>
-          )}
+                <span className="mt-1 block font-display text-[1rem] md:text-[1.25rem] font-medium tracking-[-0.02em]">
+                  Jakub&rsquo;s full breakdown
+                </span>
+              </span>
+              <span className="rounded-full bg-white/15 px-3 py-1 font-mono text-[0.7rem] backdrop-blur">
+                3:24
+              </span>
+            </span>
+          </button>
         </div>
       </div>
-      <p className="mt-4 text-center text-[0.8125rem] text-ink-subtle font-mono">
-        Watch: Jakub&rsquo;s full breakdown · 3:24
-      </p>
+
+      {/* floating proof chips (desktop) */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -left-8 -bottom-7 hidden xl:flex items-center gap-3 rounded-2xl border border-line bg-white/90 py-3 pl-3 pr-5 shadow-[var(--shadow-float)] backdrop-blur-xl"
+      >
+        <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-accent-soft text-accent">
+          <TrendingUp size={18} />
+        </span>
+        <span className="leading-tight">
+          <span className="block font-display text-[1.125rem] font-medium tracking-[-0.02em] text-ink">
+            £10k+ / month
+          </span>
+          <span className="block text-[0.75rem] text-ink-muted">Jakub&rsquo;s own revenue</span>
+        </span>
+      </div>
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -right-5 -top-6 hidden xl:flex items-center gap-2.5 rounded-full border border-line bg-white/90 py-2 pl-2 pr-4 shadow-[var(--shadow-float)] backdrop-blur-xl"
+      >
+        <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-ink text-white">
+          <Calendar size={15} />
+        </span>
+        <span className="text-[0.8125rem] font-medium text-ink">Weekly 1-to-1 calls</span>
+      </div>
     </div>
   );
 }

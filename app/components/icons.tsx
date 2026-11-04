@@ -278,3 +278,44 @@ export function TikTok({ size = 18, ...rest }: IconProps) {
     </svg>
   );
 }
+
+export function Package({ size = 18, ...rest }: IconProps) {
+  return (
+    <svg {...base(size)} {...rest}>
+      <path d="M21 8 12 3 3 8v8l9 5 9-5Z" />
+      <path d="m3 8 9 5 9-5" />
+      <path d="M12 13v8" />
+      <path d="m7.5 5.5 9 5" />
+    </svg>
+  );
+}
+
+export function Truck({ size = 18, ...rest }: IconProps) {
+  return (
+    <svg {...base(size)} {...rest}>
+      <path d="M3 6h11v10H3z" />
+      <path d="M14 9h4l3 3v4h-7" />
+      <circle cx="7" cy="17.5" r="1.75" />
+      <circle cx="17" cy="17.5" r="1.75" />
+    </svg>
+  );
+}
+
+export function Warehouse({ size = 18, ...rest }: IconProps) {
+  return (
+    <svg {...base(size)} {...rest}>
+      <path d="M3 21V9l9-5 9 5v12" />
+      <path d="M7 21v-8h10v8" />
+      <path d="M7 17h10" />
+    </svg>
+  );
+}
+
+export function TrendingUp({ size = 18, ...rest }: IconProps) {
+  return (
+    <svg {...base(size)} {...rest}>
+      <path d="m3 17 6-6 4 4 8-8" />
+      <path d="M15 7h6v6" />
+    </svg>
+  );
+}

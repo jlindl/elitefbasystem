@@ -1,4 +1,4 @@
-@import "tailwindcss"; 
+@import "tailwindcss";
 
 @theme inline {
   --color-bg: #fafaf7;
@@ -25,12 +25,21 @@
 
 :root {
   --ease-out-expo: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
   --shadow-soft: 0 1px 2px rgba(10, 10, 10, 0.04), 0 8px 24px rgba(10, 10, 10, 0.06);
   --shadow-lift: 0 1px 2px rgba(10, 10, 10, 0.05), 0 18px 40px rgba(10, 10, 10, 0.09);
+  --shadow-float: 0 1px 1px rgba(10, 10, 10, 0.04), 0 12px 32px -8px rgba(10, 10, 10, 0.12),
+    0 40px 80px -24px rgba(10, 10, 10, 0.14);
 }
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Lenis drives the scroll on marketing pages; native smoothing would fight it. */
+html.lenis {
+  scroll-behavior: auto;
 }
 
 body {
@@ -38,6 +47,15 @@ body {
   font-feature-settings: "ss01", "cv11";
   letter-spacing: -0.01em;
   line-height: 1.65;
+  -webkit-tap-highlight-color: transparent;
+  text-rendering: optimizeLegibility;
+}
+
+/* Side-entering reveals start off-canvas; clip them so phones never pan
+   sideways. On main rather than body: body overflow is handed to the viewport,
+   where it would not contain them. clip (unlike hidden) keeps sticky working. */
+main {
+  overflow-x: clip;
 }
 
 ::selection {
@@ -63,19 +81,381 @@ body {
   color: var(--color-ink-subtle);
 }
 
+.text-balance {
+  text-wrap: balance;
+}
+
+.text-pretty {
+  text-wrap: pretty;
+}
+
+/* Layered so Tailwind utilities (hidden, w-full, text-*) can still override. */
+@layer components {
+  /* ---------- Buttons ---------- */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    height: 3rem;
+    padding: 0 1.625rem;
+    border-radius: 9999px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: transform 300ms var(--ease-out-expo), background-color 200ms ease,
+      box-shadow 300ms var(--ease-out-expo), border-color 200ms ease, color 200ms ease;
+  }
+
+  .btn:active {
+    transform: scale(0.98);
+  }
+
+  .btn-sm {
+    height: 2.5rem;
+    padding: 0 1.125rem;
+    font-size: 0.875rem;
+  }
+
+  .btn-lg {
+    height: 3.5rem;
+    padding: 0 2rem;
+    font-size: 1rem;
+  }
+
+  .btn-primary {
+    background: var(--color-accent);
+    color: #fff;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.22), 0 1px 2px rgba(10, 10, 10, 0.08),
+      0 6px 16px -6px rgba(255, 107, 26, 0.55);
+  }
+
+  .btn-primary:hover {
+    background: var(--color-accent-deep);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18), 0 1px 2px rgba(10, 10, 10, 0.08),
+      0 14px 30px -8px rgba(255, 107, 26, 0.6);
+  }
+
+  .btn-secondary {
+    background: var(--color-surface);
+    color: var(--color-ink);
+    border: 1px solid var(--color-line);
+    box-shadow: 0 1px 2px rgba(10, 10, 10, 0.04);
+  }
+
+  .btn-secondary:hover {
+    border-color: rgba(10, 10, 10, 0.18);
+    box-shadow: 0 8px 20px -10px rgba(10, 10, 10, 0.18);
+  }
+
+  .btn-on-dark {
+    background: rgba(255, 255, 255, 0.06);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+  }
+
+  .btn-on-dark:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.28);
+  }
+
+  @media (hover: hover) {
+    .btn-primary:hover,
+    .btn-secondary:hover,
+    .btn-on-dark:hover {
+      transform: translateY(-1px);
+    }
+  }
+
+  .btn .btn-arrow {
+    transition: transform 300ms var(--ease-out-expo);
+  }
+
+  .btn:hover .btn-arrow {
+    transform: translateX(3px);
+  }
+
+  /* ---------- Eyebrow pill ---------- */
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.625rem;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-ink-muted);
+  }
+
+  .eyebrow-index {
+    color: var(--color-accent);
+  }
+
+  .eyebrow-rule {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1px;
+    background: currentColor;
+    opacity: 0.35;
+  }
+}
+
 /* ---------- Scroll reveal ---------- */
 .reveal {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 700ms var(--ease-out-expo),
-    transform 700ms var(--ease-out-expo);
+  transform: translate3d(0, 28px, 0);
+  transition: opacity 900ms var(--ease-out-expo), transform 1000ms var(--ease-out-expo),
+    filter 900ms var(--ease-out-expo);
   transition-delay: var(--reveal-delay, 0ms);
-  will-change: opacity, transform;
+}
+
+.reveal[data-reveal="fade"] {
+  transform: none;
+}
+
+.reveal[data-reveal="blur"] {
+  transform: translate3d(0, 12px, 0);
+  filter: blur(10px);
+}
+
+.reveal[data-reveal="scale"] {
+  transform: scale(0.96);
+}
+
+.reveal[data-reveal="left"] {
+  transform: translate3d(-32px, 0, 0);
+}
+
+.reveal[data-reveal="right"] {
+  transform: translate3d(32px, 0, 0);
 }
 
 .reveal.is-visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
+  filter: none;
+}
+
+/* Word-by-word heading reveal: each word rises out of its own mask. */
+.reveal-words .rw-mask {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  padding-bottom: 0.12em;
+  margin-bottom: -0.12em;
+}
+
+.reveal-words .rw-word {
+  display: inline-block;
+  transform: translate3d(0, 105%, 0);
+  transition: transform 1000ms var(--ease-out-quint);
+  transition-delay: calc(var(--rw-base, 0ms) + var(--rw-i, 0) * 45ms);
+}
+
+.reveal-words.is-visible .rw-word {
+  transform: none;
+}
+
+/* Scroll-scrubbed word highlight (driven from JS). */
+.hl-word {
+  color: var(--hl-dim, rgba(10, 10, 10, 0.16));
+  transition: color 400ms ease;
+}
+
+.hl-word.is-lit {
+  color: var(--hl-lit, var(--color-ink));
+}
+
+/* ---------- Scroll-driven effects (progressive enhancement) ---------- */
+.scroll-progress {
+  display: none;
+}
+
+@supports (animation-timeline: scroll()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .scroll-progress {
+      display: block;
+      transform-origin: 0 50%;
+      transform: scaleX(0);
+      animation: sd-progress linear both;
+      animation-timeline: scroll(root block);
+    }
+
+    .sd-tilt {
+      transform-origin: 50% 0%;
+      animation: sd-tilt linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 45%;
+    }
+
+    .sd-zoom {
+      animation: sd-zoom linear both;
+      animation-timeline: view();
+      animation-range: cover 0% cover 100%;
+    }
+
+    .sd-drift {
+      animation: sd-drift linear both;
+      animation-timeline: view();
+      animation-range: cover 0% cover 100%;
+    }
+  }
+}
+
+@keyframes sd-progress {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes sd-tilt {
+  from {
+    transform: perspective(1400px) rotateX(16deg) scale(0.92) translateY(24px);
+    opacity: 0.6;
+  }
+  to {
+    transform: perspective(1400px) rotateX(0deg) scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes sd-zoom {
+  from {
+    transform: scale(1.14);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes sd-drift {
+  from {
+    transform: translate3d(0, 40px, 0);
+  }
+  to {
+    transform: translate3d(0, -40px, 0);
+  }
+}
+
+/* ---------- Ambient glow ---------- */
+@keyframes glow-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(-4%, 6%, 0) scale(1.08);
+  }
+}
+
+.glow-orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(60px);
+  pointer-events: none;
+  animation: glow-float 14s ease-in-out infinite;
+}
+
+/* ---------- Live dot ---------- */
+@keyframes live-ping {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  80%,
+  100% {
+    transform: scale(2.6);
+    opacity: 0;
+  }
+}
+
+.live-dot {
+  position: relative;
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  background: #10b981;
+}
+
+.live-dot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: inherit;
+  animation: live-ping 2s var(--ease-out-expo) infinite;
+}
+
+/* ---------- Timeline line draw ---------- */
+.draw-line {
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition: transform 1600ms var(--ease-out-expo) 200ms;
+}
+
+.draw-line-y {
+  transform: scaleY(0);
+  transform-origin: 50% 0;
+  transition: transform 1600ms var(--ease-out-expo) 200ms;
+}
+
+.is-visible .draw-line,
+.draw-line.is-visible {
+  transform: scaleX(1);
+}
+
+.is-visible .draw-line-y,
+.draw-line-y.is-visible {
+  transform: scaleY(1);
+}
+
+/* ---------- Video lightbox backdrop ---------- */
+@keyframes lightbox-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.lightbox-fade {
+  animation: lightbox-fade 500ms ease both;
+}
+
+/* ---------- Profit calculator slider ---------- */
+.money-range {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 9999px;
+  background: linear-gradient(to right, var(--color-accent) var(--fill, 50%), rgba(255, 255, 255, 0.15) var(--fill, 50%));
+  cursor: pointer;
+}
+
+.money-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 9999px;
+  background: #fff;
+  border: 4px solid var(--color-accent);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  transition: transform 200ms var(--ease-out-expo);
+}
+
+.money-range::-webkit-slider-thumb:hover {
+  transform: scale(1.12);
+}
+
+.money-range::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  background: #fff;
+  border: 4px solid var(--color-accent);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
 }
 
 /* ---------- Utility: hairline divider ---------- */
@@ -86,13 +466,13 @@ body {
 /* ---------- Pulse ring around play button ---------- */
 @keyframes ring-pulse {
   0% {
-    box-shadow: 0 0 0 0 rgba(255, 107, 26, 0.45);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
   }
   70% {
-    box-shadow: 0 0 0 22px rgba(255, 107, 26, 0);
+    box-shadow: 0 0 0 22px rgba(255, 255, 255, 0);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(255, 107, 26, 0);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
   }
 }
 
@@ -108,7 +488,8 @@ body {
 }
 
 @keyframes scroll-pulse {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0.4;
     transform: scaleY(0.6);
   }
@@ -227,6 +608,10 @@ body {
   animation: marquee 32s linear infinite;
 }
 
+.marquee-mask {
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
 /* ---------- Focus rings ---------- */
 :focus-visible {
   outline: 2px solid var(--color-accent);
@@ -245,8 +630,19 @@ body {
     scroll-behavior: auto !important;
   }
 
-  .reveal {
+  .reveal,
+  .reveal-words .rw-word {
     opacity: 1;
     transform: none;
+    filter: none;
+  }
+
+  .draw-line,
+  .draw-line-y {
+    transform: none;
+  }
+
+  .hl-word {
+    color: var(--hl-lit, var(--color-ink));
   }
 }

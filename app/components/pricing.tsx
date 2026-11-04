@@ -1,5 +1,6 @@
-import { Check } from "./icons";
+import { ArrowRight, Check } from "./icons";
 import { Reveal } from "./reveal";
+import { SectionHeading } from "./section-heading";
 
 const includes = [
   "Full access to the Elite FBA course",
@@ -16,65 +17,64 @@ export function Pricing() {
   return (
     <section
       id="apply"
-      className="scroll-mt-20 md:scroll-mt-24 bg-surface-alt py-24 md:py-32 border-y border-line"
+      className="scroll-mt-20 md:scroll-mt-24 relative overflow-hidden bg-surface-alt py-16 md:py-36 border-y border-line"
     >
-      <div className="mx-auto max-w-[1280px] px-6 md:px-8">
-        <div className="text-center max-w-[760px] mx-auto">
-          <Reveal>
-            <p className="label-mono">08 / Apply</p>
-          </Reveal>
-          <Reveal delay={80}>
-            <h2 className="mt-5 font-display font-medium tracking-[-0.02em] leading-[1.05] text-[clamp(2rem,4.5vw,4rem)]">
-              One program. Limited spots. No upsells.
-            </h2>
-          </Reveal>
-          <Reveal delay={160}>
-            <p className="mt-5 text-[clamp(1.05rem,1.4vw,1.25rem)] leading-[1.55] text-ink-muted">
-              Because mentorship is real, I can only take a small number of
-              students at a time. Apply below - if it&rsquo;s a fit,
-              we&rsquo;ll talk.
-            </p>
-          </Reveal>
-        </div>
+      <div aria-hidden className="pointer-events-none absolute inset-0">
+        <div className="glow-orb left-1/2 top-1/3 h-[480px] w-[680px] -translate-x-1/2 bg-accent/[0.12]" />
+      </div>
 
-        <Reveal delay={200}>
-          <div className="mt-14 mx-auto max-w-[480px]">
-            <div className="rounded-2xl bg-surface hairline p-8 md:p-12 shadow-[var(--shadow-lift)]">
-              <span className="inline-flex items-center rounded-full bg-accent-soft px-3 py-1 text-[0.75rem] font-medium tracking-wide text-accent">
-                Limited spots
-              </span>
-              <h3 className="mt-6 font-display text-[1.875rem] md:text-[2.125rem] font-semibold tracking-[-0.02em] leading-[1.1]">
-                The Elite FBA Mentorship
-              </h3>
-              <p className="mt-3 text-[0.975rem] text-ink-muted leading-[1.55]">
-                Direct 1-to-1 mentorship from a full-time Amazon seller, plus
-                a hand-picked team you&rsquo;ll actually want to work
-                alongside.
-              </p>
+      <div className="relative mx-auto max-w-[1280px] px-5 sm:px-6 md:px-8">
+        <SectionHeading
+          align="center"
+          index="09"
+          eyebrow="Apply"
+          title="One program. Limited spots. No upsells."
+          intro="Because mentorship is real, I can only take a small number of students at a time. Apply below - if it’s a fit, we’ll talk."
+        />
 
-              <ul className="mt-8 space-y-3">
-                {includes.map((inc) => (
-                  <li key={inc} className="flex items-start gap-3">
-                    <span className="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-accent-soft text-accent shrink-0">
-                      <Check size={14} />
-                    </span>
-                    <span className="text-[0.95rem] text-ink leading-[1.5]">
-                      {inc}
-                    </span>
-                  </li>
-                ))}
-              </ul>
+        <Reveal delay={160} variant="scale">
+          <div className="mx-auto mt-14 md:mt-16 max-w-[1040px] rounded-[28px] bg-gradient-to-b from-white to-white/40 p-px shadow-[var(--shadow-float)]">
+            <div className="grid overflow-hidden rounded-[27px] bg-surface md:grid-cols-2">
+              <div className="flex flex-col p-7 sm:p-10 md:p-12">
+                <span className="inline-flex w-fit items-center gap-2 rounded-full bg-accent-soft px-3 py-1 text-[0.75rem] font-medium text-accent-deep">
+                  <span className="live-dot !h-1.5 !w-1.5" />
+                  Limited spots
+                </span>
+                <h3 className="mt-6 font-display text-[2rem] md:text-[2.5rem] font-medium tracking-[-0.035em] leading-[1.05]">
+                  The Elite FBA Mentorship
+                </h3>
+                <p className="mt-4 text-[1rem] leading-[1.65] text-ink-muted">
+                  Direct 1-to-1 mentorship from a full-time Amazon seller, plus
+                  a hand-picked team you&rsquo;ll actually want to work
+                  alongside.
+                </p>
 
-              <a
-                href="/checkout"
-                className="mt-10 flex h-12 items-center justify-center rounded-full bg-accent px-7 text-[0.95rem] font-medium text-white shadow-[0_1px_2px_rgba(10,10,10,0.06)] transition-all duration-200 hover:-translate-y-px hover:bg-accent-deep hover:shadow-[0_8px_24px_rgba(255,107,26,0.32)]"
-              >
-                Enroll Now
-              </a>
+                <div className="mt-auto pt-10">
+                  <a href="/checkout" className="btn btn-primary btn-lg w-full">
+                    Enroll Now
+                    <ArrowRight size={18} className="btn-arrow" />
+                  </a>
+                  <p className="mt-4 text-center font-mono text-[0.68rem] uppercase tracking-[0.12em] text-ink-subtle">
+                    Application required · Starts with a WhatsApp chat
+                  </p>
+                </div>
+              </div>
 
-              <p className="mt-5 text-center font-mono text-[0.7rem] tracking-[0.1em] uppercase text-ink-subtle">
-                Application required
-              </p>
+              <div className="border-t border-line bg-surface-alt/60 p-7 sm:p-10 md:border-l md:border-t-0 md:p-12">
+                <p className="label-mono">Everything included</p>
+                <ul className="mt-6 space-y-3.5">
+                  {includes.map((inc) => (
+                    <li key={inc} className="flex items-start gap-3">
+                      <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-ink text-white">
+                        <Check size={12} />
+                      </span>
+                      <span className="text-[0.95rem] leading-[1.5] text-ink">
+                        {inc}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </Reveal>

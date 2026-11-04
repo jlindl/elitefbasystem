@@ -1,43 +1,58 @@
-﻿import { ArrowRight } from "./icons";
-import { Reveal } from "./reveal";
+﻿import Link from "next/link";
+import { ArrowRight } from "./icons";
+import { Reveal, RevealWords } from "./reveal";
 
 export function FinalCta() {
   return (
-    <section className="bg-ink text-white">
-      <div className="mx-auto max-w-[1280px] px-6 md:px-8 py-28 md:py-40">
-        <div className="text-center max-w-[920px] mx-auto">
+    <section className="relative overflow-hidden bg-ink text-white">
+      <div aria-hidden className="pointer-events-none absolute inset-0">
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(ellipse 55% 45% at 50% 62%, rgba(255,107,26,0.26), transparent 70%)",
+          }}
+        />
+        <div
+          className="absolute inset-0 opacity-[0.06]"
+          style={{
+            backgroundImage:
+              "linear-gradient(to right, #fff 1px, transparent 1px), linear-gradient(to bottom, #fff 1px, transparent 1px)",
+            backgroundSize: "56px 56px",
+            maskImage: "radial-gradient(ellipse 60% 60% at 50% 50%, black, transparent 75%)",
+            WebkitMaskImage:
+              "radial-gradient(ellipse 60% 60% at 50% 50%, black, transparent 75%)",
+          }}
+        />
+      </div>
+
+      <div className="relative mx-auto max-w-[1280px] px-5 sm:px-6 md:px-8 py-20 md:py-44">
+        <div className="mx-auto max-w-[980px] text-center">
           <Reveal>
-            <p className="font-mono text-[0.75rem] tracking-[0.18em] uppercase text-white/50">
+            <p className="eyebrow !text-white/50 justify-center">
+              <span className="eyebrow-rule" />
               Ready?
+              <span className="eyebrow-rule" />
             </p>
           </Reveal>
-          <Reveal delay={80}>
-            <h2 className="mt-7 font-display font-medium tracking-[-0.025em] leading-[1.02] text-[clamp(2.5rem,7vw,6rem)]">
-              Stop watching FBA on YouTube.
-              <br />
-              <span className="text-accent">Start building it - with a team.</span>
-            </h2>
-          </Reveal>
-          <Reveal delay={200}>
-            <a
-              href="/checkout"
-              className="mt-12 inline-flex h-14 items-center gap-2 rounded-full bg-accent px-8 text-[1rem] font-medium text-white shadow-[0_1px_2px_rgba(255,255,255,0.06)] transition-all duration-200 hover:-translate-y-px hover:bg-accent-deep hover:shadow-[0_12px_32px_rgba(255,107,26,0.4)]"
-            >
-              Enroll in Mentorship
-              <ArrowRight size={18} />
-            </a>
-          </Reveal>
-          <Reveal delay={280}>
-            <p className="mt-7 text-[0.95rem] text-white/55">
-              Or{" "}
-              <a
-                href="#video"
-                className="text-white underline decoration-white/30 underline-offset-4 hover:decoration-accent transition-colors"
-              >
-                watch Jakub&rsquo;s story
-              </a>{" "}
-              first &rarr;
-            </p>
+          <h2 className="mt-7 font-display font-medium tracking-[-0.04em] leading-[1] text-balance text-[clamp(2.5rem,7.5vw,6.25rem)]">
+            <RevealWords text="Stop watching FBA on YouTube." className="block" />
+            <RevealWords
+              delay={240}
+              className="block text-accent"
+              text={"Start building it - with a team."}
+            />
+          </h2>
+          <Reveal delay={360}>
+            <div className="mt-12 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3">
+              <a href="/checkout" className="btn btn-primary btn-lg">
+                Enroll in Mentorship
+                <ArrowRight size={18} className="btn-arrow" />
+              </a>
+              <Link href="/#video" className="btn btn-on-dark btn-lg">
+                Watch Jakub&rsquo;s story
+              </Link>
+            </div>
           </Reveal>
         </div>
       </div>

@@ -1,3 +1,4 @@
+import { Photo } from "./photo";
 import {
   ArrowRight,
   Calendar,
@@ -6,7 +7,10 @@ import {
   MessageCircle,
   Wrench,
 } from "./icons";
+import { MoreOnMobile } from "./more-on-mobile";
 import { Reveal } from "./reveal";
+import { SectionHeading } from "./section-heading";
+import { WeekTimeline } from "./week-timeline";
 
 const items = [
   "Weekly 1-to-1 calls",
@@ -41,57 +45,46 @@ const valuePillars = [
   },
 ];
 
-const deliverables = [
-  "Full access to the Elite FBA course",
-  "9 learning modules & video walkthroughs",
-  "Weekly 1-to-1 calls with Jakub",
-  "Direct messaging - full-time support",
-  "Live launches & listing teardowns",
-  "Every SOP, script & template I use",
-  "Private team community + meetups",
-  "Lifetime updates as Amazon evolves",
-];
-
 export function Mentorship() {
   return (
-    <section id="mentorship" className="scroll-mt-20 md:scroll-mt-24 relative py-24 md:py-32 overflow-hidden">
-      {/* warm radial bleed - matches hero */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0"
-        style={{
-          background:
-            "radial-gradient(circle at 8% 0%, rgba(255,107,26,0.07), transparent 45%)",
-        }}
-      />
-
-      <div className="relative mx-auto max-w-[1280px] px-6 md:px-8">
+    <section
+      id="mentorship"
+      className="scroll-mt-20 md:scroll-mt-24 relative overflow-hidden bg-surface-alt py-16 md:py-36 border-y border-line"
+    >
+      <div className="relative mx-auto max-w-[1280px] px-5 sm:px-6 md:px-8">
         {/* ─────────────  Intro  ───────────── */}
-        <div className="grid md:grid-cols-12 gap-10 md:gap-16 items-center">
-          <Reveal as="div" className="md:col-span-5">
-            <div className="relative aspect-[4/5] rounded-2xl overflow-hidden hairline shadow-[var(--shadow-soft)]">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/jakub%20portrait%202.jpeg"
-                alt="Jakub portrait"
-                loading="lazy"
-                decoding="async"
-                className="h-full w-full object-cover"
-              />
+        <div className="grid items-center gap-12 md:grid-cols-12 md:gap-16">
+          <Reveal variant="scale" className="md:col-span-5">
+            <div className="relative">
+              <div className="relative aspect-[5/4] md:aspect-[4/5] overflow-hidden rounded-3xl hairline shadow-[var(--shadow-lift)]">
+                <Photo
+                  src="/jakub portrait 2.jpeg"
+                  alt="Jakub, Elite FBA mentor"
+                  fill
+                  sizes="(min-width: 768px) 40vw, 100vw"
+                  className="object-cover object-[50%_35%] md:object-center"
+                />
+              </div>
+              <div className="absolute -bottom-5 left-4 right-4 sm:left-auto sm:-right-4 md:-right-8 sm:w-[250px] rounded-2xl border border-line bg-white/90 p-4 shadow-[var(--shadow-float)] backdrop-blur-xl">
+                <p className="flex items-center gap-2 text-[0.8rem] text-ink-muted">
+                  <span className="live-dot !h-1.5 !w-1.5" />
+                  Avg. response time
+                </p>
+                <p className="mt-1 font-display text-[1.5rem] font-medium tracking-[-0.03em]">
+                  Under 4 hours
+                </p>
+              </div>
             </div>
           </Reveal>
 
-          <div className="md:col-span-7">
-            <Reveal>
-              <p className="label-mono">05 / Mentorship</p>
-            </Reveal>
-            <Reveal delay={80}>
-              <h2 className="mt-5 font-display font-medium tracking-[-0.02em] leading-[1.05] text-[clamp(2rem,4.2vw,3.5rem)]">
-                You&rsquo;re not buying a course. You&rsquo;re hiring a partner.
-              </h2>
-            </Reveal>
+          <div className="md:col-span-7 pt-6 md:pt-0">
+            <SectionHeading
+              index="05"
+              eyebrow="Mentorship"
+              title="You’re not buying a course. You’re hiring a partner."
+            />
 
-            <div className="mt-7 space-y-5 text-[1rem] md:text-[1.05rem] leading-[1.7] text-ink-muted max-w-[640px]">
+            <div className="mt-7 max-w-[640px] space-y-5 text-[1rem] md:text-[1.05rem] leading-[1.75] text-ink-muted">
               <Reveal delay={140}>
                 <p>
                   When I say &ldquo;1-to-1,&rdquo; I mean it literally. We jump
@@ -101,6 +94,8 @@ export function Mentorship() {
                   the person who built the system.
                 </p>
               </Reveal>
+              <MoreOnMobile>
+                <div className="space-y-5">
               <Reveal delay={200}>
                 <p>
                   &ldquo;Full-time support&rdquo; isn&rsquo;t a tagline. It
@@ -118,16 +113,19 @@ export function Mentorship() {
                   not be talked into joining anyway.
                 </p>
               </Reveal>
+                </div>
+              </MoreOnMobile>
             </div>
 
             <Reveal delay={320}>
-              <ul className="mt-9 space-y-3">
+              <ul className="mt-9 flex flex-wrap gap-2.5">
                 {items.map((it) => (
-                  <li key={it} className="flex items-start gap-3">
-                    <span className="mt-1 inline-flex h-5 w-5 items-center justify-center rounded-full bg-accent-soft text-accent">
-                      <Check size={14} />
-                    </span>
-                    <span className="text-[0.975rem] text-ink">{it}</span>
+                  <li
+                    key={it}
+                    className="inline-flex items-center gap-2 rounded-full border border-line bg-surface px-4 py-2 text-[0.875rem] text-ink"
+                  >
+                    <Check size={14} className="text-accent" />
+                    {it}
                   </li>
                 ))}
               </ul>
@@ -136,41 +134,31 @@ export function Mentorship() {
         </div>
 
         {/* ─────────────  Value pillars  ───────────── */}
-        <div className="mt-28 md:mt-36">
-          <div className="max-w-[760px]">
-            <Reveal>
-              <p className="label-mono">What you actually get</p>
-            </Reveal>
-            <Reveal delay={80}>
-              <h3 className="mt-5 font-display font-medium tracking-[-0.02em] leading-[1.05] text-[clamp(1.75rem,3.4vw,2.75rem)]">
-                Four things every week. Forever.
-              </h3>
-            </Reveal>
-            <Reveal delay={160}>
-              <p className="mt-5 text-[clamp(1rem,1.3vw,1.15rem)] leading-[1.55] text-ink-muted">
-                The mentorship isn&rsquo;t a vibe - it&rsquo;s a
-                schedule. Here&rsquo;s exactly what lands in your week, every
-                week.
-              </p>
-            </Reveal>
-          </div>
+        <div className="mt-28 md:mt-40">
+          <SectionHeading
+            eyebrow="What you actually get"
+            title="Four things every week. Forever."
+            intro="The mentorship isn’t a vibe - it’s a schedule. Here’s exactly what lands in your week, every week."
+          />
 
-          <div className="mt-14 grid md:grid-cols-2 gap-5">
+          <div className="mt-12 md:mt-16 grid gap-4 md:grid-cols-2 md:gap-5">
             {valuePillars.map((p, i) => {
               const Icon = p.icon;
               return (
-                <Reveal key={p.title} delay={i * 100}>
-                  <article className="group h-full flex flex-col rounded-2xl bg-surface hairline p-8 md:p-10 transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-soft)]">
-                    <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-accent-soft text-accent">
+                <Reveal key={p.title} delay={(i % 2) * 100}>
+                  <article className="group flex h-full flex-col rounded-3xl bg-surface hairline p-6 sm:p-9 md:p-10 transition-[box-shadow,transform] duration-500 ease-[var(--ease-out-expo)] hover:shadow-[var(--shadow-lift)] md:hover:-translate-y-1">
+                    <div className="flex items-center gap-4 md:block">
+                    <span className="inline-flex h-11 w-11 md:h-12 md:w-12 shrink-0 items-center justify-center rounded-xl md:rounded-2xl bg-accent-soft text-accent transition-colors duration-500 group-hover:bg-accent group-hover:text-white">
                       <Icon size={20} />
                     </span>
-                    <h4 className="mt-6 font-display text-[1.375rem] md:text-[1.5rem] font-semibold tracking-[-0.015em] leading-[1.2]">
+                    <h3 className="md:mt-7 font-display text-[1.375rem] md:text-[1.6rem] font-medium tracking-[-0.025em] leading-[1.2]">
                       {p.title}
-                    </h4>
-                    <p className="mt-4 text-[0.975rem] text-ink-muted leading-[1.65] flex-1">
+                    </h3>
+                    </div>
+                    <p className="mt-4 md:mt-3.5 flex-1 text-[0.975rem] leading-[1.7] text-ink-muted">
                       {p.body}
                     </p>
-                    <p className="mt-6 pt-5 border-t border-line label-mono">
+                    <p className="mt-5 md:mt-7 border-t border-line pt-4 md:pt-5 label-mono">
                       {p.meta}
                     </p>
                   </article>
@@ -180,138 +168,26 @@ export function Mentorship() {
           </div>
         </div>
 
+        {/* ─────────────  Week one  ───────────── */}
+        <div className="mt-28 md:mt-40">
+          <SectionHeading
+            eyebrow="A week with me"
+            title="Here’s what week one looks like."
+          />
+          <WeekTimeline />
 
-        {/* ─────────────  Process / week-in-the-life  ───────────── */}
-        <div className="mt-28 md:mt-36">
-          <div className="max-w-[760px]">
-            <Reveal>
-              <p className="label-mono">A week with me</p>
-            </Reveal>
-            <Reveal delay={80}>
-              <h3 className="mt-5 font-display font-medium tracking-[-0.02em] leading-[1.05] text-[clamp(1.75rem,3.4vw,2.75rem)]">
-                Here&rsquo;s what week one looks like.
-              </h3>
-            </Reveal>
-          </div>
-
-          <ol className="mt-14 grid md:grid-cols-4 gap-5">
-            {[
-              {
-                day: "Day 1",
-                title: "Onboarding call",
-                body: "We go deep on your business, your goals, and the next 90 days. You leave with a written plan.",
-              },
-              {
-                day: "Day 2",
-                title: "Inbox open",
-                body: "WhatsApp invite hits. Ask anything - supplier, listing, ad, or mindset.",
-              },
-              {
-                day: "Day 3–6",
-                title: "Daily back-and-forth",
-                body: "I review your work in-thread. Voice notes, screenshots, redlines - fast feedback, no waiting.",
-              },
-              {
-                day: "Day 7",
-                title: "Weekly 1-to-1",
-                body: "We screenshare. We move one number. Recording lands in your library by the next morning.",
-              },
-            ].map((s, i) => (
-              <Reveal key={s.day} delay={i * 100}>
-                <li className="relative h-full flex flex-col rounded-2xl bg-surface hairline p-7 md:p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-soft)]">
-                  <span className="font-mono text-[0.7rem] tracking-[0.14em] uppercase text-accent">
-                    {s.day}
-                  </span>
-                  <h4 className="mt-3 font-display text-[1.25rem] font-semibold tracking-[-0.015em] leading-[1.2]">
-                    {s.title}
-                  </h4>
-                  <p className="mt-3 text-[0.95rem] text-ink-muted leading-[1.6] flex-1">
-                    {s.body}
-                  </p>
-                </li>
-              </Reveal>
-            ))}
-          </ol>
-        </div>
-
-        {/* ─────────────  Pricetag block  ───────────── */}
-        <div className="mt-28 md:mt-36">
-          <div className="max-w-[760px]">
-            <Reveal>
-              <p className="label-mono">The program</p>
-            </Reveal>
-            <Reveal delay={80}>
-              <h3 className="mt-5 font-display font-medium tracking-[-0.02em] leading-[1.05] text-[clamp(1.75rem,3.4vw,2.75rem)]">
-                One program. Limited spots. No upsells.
-              </h3>
-            </Reveal>
-            <Reveal delay={160}>
-              <p className="mt-5 text-[clamp(1rem,1.3vw,1.15rem)] leading-[1.55] text-ink-muted">
-                Everything above - the calls, the templates, the
-                community, the lifetime updates - in one straightforward
-                program. We&rsquo;ll talk through the details together.
+          <Reveal>
+            <div className="mt-14 flex flex-col items-start gap-4 rounded-3xl bg-ink p-7 sm:p-9 md:flex-row md:items-center md:justify-between md:p-10">
+              <p className="max-w-[560px] font-display text-[1.25rem] md:text-[1.5rem] font-medium leading-[1.3] tracking-[-0.02em] text-white">
+                &ldquo;If one supplier negotiation, one PPC fix, or one flop
+                avoided pays for the program - you&rsquo;re already
+                ahead. Most students cross that line in their first
+                month.&rdquo;
               </p>
-            </Reveal>
-          </div>
-
-          <Reveal delay={220}>
-            <div className="mt-14 grid md:grid-cols-12 gap-6 items-stretch">
-              {/* Pricetag card */}
-              <div className="md:col-span-5">
-                <div className="relative h-full rounded-2xl bg-surface hairline p-8 md:p-10 shadow-[var(--shadow-lift)]">
-                  <span className="inline-flex items-center rounded-full bg-accent-soft px-3 py-1 text-[0.75rem] font-medium tracking-wide text-accent">
-                    Limited spots
-                  </span>
-                  <h4 className="mt-6 font-display text-[1.625rem] md:text-[1.875rem] font-semibold tracking-[-0.02em] leading-[1.15]">
-                    The Elite FBA Mentorship
-                  </h4>
-                  <p className="mt-3 text-[0.95rem] text-ink-muted leading-[1.55]">
-                    Full access to the course and mentorship. Direct 1-to-1s with
-                    Jakub, plus the team you&rsquo;ll build alongside your
-                    journey.
-                  </p>
-
-                  <a
-                    href="#apply"
-                    className="mt-9 inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-accent px-7 text-[0.95rem] font-medium text-white shadow-[0_1px_2px_rgba(10,10,10,0.06)] transition-all duration-200 hover:-translate-y-px hover:bg-accent-deep hover:shadow-[0_8px_24px_rgba(255,107,26,0.32)]"
-                  >
-                    Apply for a spot
-                    <ArrowRight size={16} />
-                  </a>
-                  <p className="mt-5 text-center font-mono text-[0.7rem] tracking-[0.1em] uppercase text-ink-subtle">
-                    Application required
-                  </p>
-                </div>
-              </div>
-
-              {/* Includes card */}
-              <div className="md:col-span-7">
-                <div className="h-full rounded-2xl bg-surface-alt hairline p-8 md:p-10">
-                  <p className="label-mono">Everything included</p>
-                  <ul className="mt-6 grid sm:grid-cols-2 gap-x-6 gap-y-3">
-                    {deliverables.map((d) => (
-                      <li key={d} className="flex items-start gap-3">
-                        <span className="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-accent-soft text-accent shrink-0">
-                          <Check size={14} />
-                        </span>
-                        <span className="text-[0.95rem] text-ink leading-[1.5]">
-                          {d}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <div className="mt-8 pt-8 border-t border-line">
-                    <p className="font-display text-[1.125rem] md:text-[1.25rem] font-medium tracking-[-0.01em] leading-[1.4] text-ink">
-                      &ldquo;If one supplier negotiation, one PPC fix, or one
-                      flop avoided pays for the program - you&rsquo;re
-                      already ahead. Most students cross that line in their
-                      first month.&rdquo;
-                    </p>
-                    <p className="mt-4 label-mono">- Jakub</p>
-                  </div>
-                </div>
-              </div>
+              <a href="#apply" className="btn btn-primary shrink-0">
+                Apply for a spot
+                <ArrowRight size={16} className="btn-arrow" />
+              </a>
             </div>
           </Reveal>
         </div>

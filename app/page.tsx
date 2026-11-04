@@ -1,6 +1,7 @@
 import { About } from "./components/about";
 import { Community } from "./components/community";
 import { Curriculum } from "./components/curriculum";
+import { FbaExplainer } from "./components/fba-explainer";
 import { Faq } from "./components/faq";
 import { FinalCta } from "./components/final-cta";
 import { Footer } from "./components/footer";
@@ -11,6 +12,7 @@ import { Pillars } from "./components/pillars";
 import { Pricing } from "./components/pricing";
 import { Problem } from "./components/problem";
 import { SocialProof } from "./components/social-proof";
+import { WhoFor } from "./components/who-for";
 
 export default function Home() {
   return (
@@ -19,12 +21,14 @@ export default function Home() {
       <main>
         <Hero />
         <SocialProof />
+        <FbaExplainer />
         <Problem />
         <Pillars />
         <Curriculum />
         <Mentorship />
         <Community />
         <About />
+        <WhoFor />
         <Pricing />
         <Faq />
         <FinalCta />

@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+﻿import type { Metadata, Viewport } from "next";
 import {
   Inter,
   Inter_Tight,
@@ -36,6 +36,26 @@ export const metadata: Metadata = {
   title: "Jakub - Real Amazon FBA Mentorship",
   description:
     "Direct 1-to-1 mentorship from a full-time Amazon seller. The Elite FBA system, taught personally - not a recycled guru course.",
+  // Share image comes from app/opengraph-image.jpg; on Vercel the absolute URL
+  // falls back to the production domain until a metadataBase is set.
+  openGraph: {
+    type: "website",
+    siteName: "EliteFBA",
+    locale: "en_GB",
+    title: "The Elite FBA System - 1-to-1 mentorship with Jakub",
+    description:
+      "The Amazon FBA system I actually use, taught by me, personally. Small, hand-picked group.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "The Elite FBA System - 1-to-1 mentorship with Jakub",
+    description:
+      "The Amazon FBA system I actually use, taught by me, personally. Small, hand-picked group.",
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#fafaf7",
 };
 
 export default function RootLayout({

@@ -1,5 +1,7 @@
 import { Check } from "./icons";
+import { MoreOnMobile } from "./more-on-mobile";
 import { Reveal } from "./reveal";
+import { SectionHeading } from "./section-heading";
 
 const items = [
   "Curated, small group",
@@ -8,97 +10,72 @@ const items = [
   "In-person meetups (not just online)",
 ];
 
+const cards = [
+  {
+    title: "No Gatekeeping",
+    body: "If a supplier is good, the team knows. We share contact info, negotiation threads, and pricing openly.",
+  },
+  {
+    title: "Real-Time Support",
+    body: "Launch day jitters or customs hold-ups? The group is active daily to troubleshoot problems in minutes, not days.",
+  },
+  {
+    title: "Shared Wins",
+    body: "We celebrate every milestone - from your first unit sold to your first £10k month. Business is better together.",
+  },
+  {
+    title: "Direct Feedback",
+    body: "Get honest eyes on your product candidates and listings before you spend a penny on inventory.",
+  },
+];
+
 export function Community() {
   return (
     <section
       id="community"
-      className="scroll-mt-20 md:scroll-mt-24 bg-surface-alt py-24 md:py-32 border-y border-line"
+      className="scroll-mt-20 md:scroll-mt-24 relative overflow-hidden bg-ink py-16 md:py-36 text-white"
     >
-      <div className="mx-auto max-w-[1280px] px-6 md:px-8">
-        <div className="max-w-[820px]">
-          <Reveal>
-            <p className="label-mono">06 / The team</p>
-          </Reveal>
-          <Reveal delay={80}>
-            <h2 className="mt-5 font-display font-medium tracking-[-0.02em] leading-[1.05] text-[clamp(2rem,4.5vw,4rem)]">
-              Business is lonely. Doing it together isn&rsquo;t.
-            </h2>
-          </Reveal>
-          <Reveal delay={160}>
-            <p className="mt-5 text-[clamp(1.05rem,1.4vw,1.25rem)] leading-[1.55] text-ink-muted">
-              The hardest part of building an Amazon business isn&rsquo;t the
-              work. It&rsquo;s doing it alone - at your laptop, at
-              midnight, wondering if anyone else is figuring this out too. So
-              we built a team.
-            </p>
-          </Reveal>
-        </div>
+      <div aria-hidden className="pointer-events-none absolute inset-0">
+        <div className="glow-orb -top-32 left-[10%] h-[420px] w-[420px] bg-accent/25" />
+        <div
+          className="glow-orb bottom-[-20%] right-[-5%] h-[480px] w-[480px] bg-accent/10"
+          style={{ animationDelay: "-7s" }}
+        />
+      </div>
 
-        <div className="mt-16 grid md:grid-cols-12 gap-10">
-          <div className="md:col-span-7">
-            <div className="grid sm:grid-cols-2 gap-5">
-              <Reveal delay={100}>
-                <div className="h-full rounded-2xl bg-surface hairline p-8 shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-lift)]">
-                  <div className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-accent-soft text-accent mb-6">
-                    <Check size={20} />
+      <div className="relative mx-auto max-w-[1280px] px-5 sm:px-6 md:px-8">
+        <SectionHeading
+          tone="dark"
+          index="06"
+          eyebrow="The team"
+          title="Business is lonely. Doing it together isn’t."
+          intro="The hardest part of building an Amazon business isn’t the work. It’s doing it alone - at your laptop, at midnight, wondering if anyone else is figuring this out too. So we built a team."
+        />
+
+        <div className="mt-14 md:mt-20 grid gap-12 lg:grid-cols-12 lg:gap-16">
+          <div className="lg:col-span-7 grid gap-4 sm:grid-cols-2">
+            {cards.map((c, i) => (
+              <Reveal key={c.title} delay={i * 90}>
+                <article className="group h-full rounded-3xl border border-white/10 bg-white/[0.04] p-6 md:p-8 transition-[background-color,border-color,transform] duration-500 ease-[var(--ease-out-expo)] hover:border-white/20 hover:bg-white/[0.07] md:hover:-translate-y-1">
+                  <div className="flex items-center gap-3.5 md:block">
+                    <span className="inline-flex h-9 w-9 md:h-10 md:w-10 shrink-0 items-center justify-center rounded-full bg-accent text-white">
+                      <Check size={17} />
+                    </span>
+                    <h3 className="md:mt-6 font-display text-[1.2rem] md:text-[1.25rem] font-medium tracking-[-0.02em]">
+                      {c.title}
+                    </h3>
                   </div>
-                  <h4 className="font-display text-[1.25rem] font-semibold tracking-[-0.015em] mb-3">
-                    No Gatekeeping
-                  </h4>
-                  <p className="text-[0.95rem] text-ink-muted leading-[1.6]">
-                    If a supplier is good, the team knows. We share contact
-                    info, negotiation threads, and pricing openly.
+                  <p className="mt-2.5 text-[0.95rem] leading-[1.65] text-white/60">
+                    {c.body}
                   </p>
-                </div>
+                </article>
               </Reveal>
-              <Reveal delay={200}>
-                <div className="h-full rounded-2xl bg-surface hairline p-8 shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-lift)]">
-                  <div className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-accent-soft text-accent mb-6">
-                    <Check size={20} />
-                  </div>
-                  <h4 className="font-display text-[1.25rem] font-semibold tracking-[-0.015em] mb-3">
-                    Real-Time Support
-                  </h4>
-                  <p className="text-[0.95rem] text-ink-muted leading-[1.6]">
-                    Launch day jitters or customs hold-ups? The group is active
-                    daily to troubleshoot problems in minutes, not days.
-                  </p>
-                </div>
-              </Reveal>
-              <Reveal delay={300}>
-                <div className="h-full rounded-2xl bg-surface hairline p-8 shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-lift)]">
-                  <div className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-accent-soft text-accent mb-6">
-                    <Check size={20} />
-                  </div>
-                  <h4 className="font-display text-[1.25rem] font-semibold tracking-[-0.015em] mb-3">
-                    Shared Wins
-                  </h4>
-                  <p className="text-[0.95rem] text-ink-muted leading-[1.6]">
-                    We celebrate every milestone - from your first unit sold to
-                    your first £10k month. Business is better together.
-                  </p>
-                </div>
-              </Reveal>
-              <Reveal delay={400}>
-                <div className="h-full rounded-2xl bg-surface hairline p-8 shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-lift)]">
-                  <div className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-accent-soft text-accent mb-6">
-                    <Check size={20} />
-                  </div>
-                  <h4 className="font-display text-[1.25rem] font-semibold tracking-[-0.015em] mb-3">
-                    Direct Feedback
-                  </h4>
-                  <p className="text-[0.95rem] text-ink-muted leading-[1.6]">
-                    Get honest eyes on your product candidates and listings
-                    before you spend a penny on inventory.
-                  </p>
-                </div>
-              </Reveal>
-            </div>
+            ))}
           </div>
 
-          <div className="md:col-span-5">
+          <div className="lg:col-span-5">
             <Reveal delay={120}>
-              <div className="space-y-5 text-[1rem] md:text-[1.05rem] leading-[1.7] text-ink-muted">
+              <div className="space-y-5 text-[1rem] md:text-[1.05rem] leading-[1.75] text-white/65">
                 <p>
                   Every member is hand-picked. We keep the group small on
                   purpose - small enough that I know everyone&rsquo;s
@@ -106,40 +83,29 @@ export function Community() {
                   stuck. There&rsquo;s no pyramid, no upsells, no
                   &ldquo;tiers.&rdquo;
                 </p>
+                <MoreOnMobile tone="dark">
                 <p>
                   What you actually get: people who&rsquo;ll text you when your
                   launch goes live, share suppliers without gatekeeping, and
                   pick you up when a product flops. We meet up occasionally in
                   person too - because the best stuff happens offline.
                 </p>
+                </MoreOnMobile>
               </div>
             </Reveal>
 
             <Reveal delay={220}>
-              <ul className="mt-8 space-y-3">
+              <ul className="mt-9 divide-y divide-white/10 border-y border-white/10">
                 {items.map((it) => (
-                  <li key={it} className="flex items-start gap-3">
-                    <span className="mt-1 inline-flex h-5 w-5 items-center justify-center rounded-full bg-accent-soft text-accent">
-                      <Check size={14} />
-                    </span>
-                    <span className="text-[0.975rem] text-ink">{it}</span>
+                  <li key={it} className="flex items-center gap-3 py-4">
+                    <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                    <span className="text-[0.975rem] text-white">{it}</span>
                   </li>
                 ))}
               </ul>
             </Reveal>
           </div>
         </div>
-
-        <Reveal delay={200}>
-          <figure className="mt-20 md:mt-24 max-w-[820px]">
-            <blockquote className="font-display text-[clamp(1.5rem,3vw,2.25rem)] font-medium tracking-[-0.015em] leading-[1.3] text-ink">
-              &ldquo;I joined for the system. I stayed for the team.&rdquo;
-            </blockquote>
-            <figcaption className="mt-4 label-mono">
-              - Placeholder testimonial, to be replaced with a real one
-            </figcaption>
-          </figure>
-        </Reveal>
       </div>
     </section>
   );
