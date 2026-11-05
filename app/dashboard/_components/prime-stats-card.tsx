@@ -18,18 +18,11 @@ const STATS = [
       "Industry analyses consistently estimate that Prime members spend two to three times more per year on Amazon than non-Prime shoppers. Higher repeat-purchase rates, larger basket sizes, faster replenishment.",
   },
   {
-    icon: "🔁",
-    value: "~95%",
-    label: "Annual retention",
-    detail:
-      "Once shoppers subscribe, they almost never cancel. Prime has one of the highest retention rates ever recorded for a paid consumer subscription, which means the audience compounds year on year.",
-  },
-  {
     icon: "📦",
-    value: "24h",
-    label: "Standard delivery",
+    value: "1-2 days",
+    label: "Free Prime delivery",
     detail:
-      "Prime promises one or two-day delivery on millions of items. In dense cities, same-day delivery is now the default expectation for Prime members on eligible products.",
+      "Prime members get free one-day or two-day delivery on millions of eligible items, and same-day delivery in some areas. That speed is what they expect when they see the badge.",
   },
   {
     icon: "🏠",
@@ -37,13 +30,6 @@ const STATS = [
     label: "UK households",
     detail:
       "More than half of UK households now hold a Prime membership. The badge is not a niche feature; it is the default expectation for the majority of British shoppers.",
-  },
-  {
-    icon: "🛒",
-    value: "70+",
-    label: "Orders per member / year",
-    detail:
-      "The average Prime member orders from Amazon more than once a week. That works out at roughly 70 to 80 orders a year, compared with around 10 for non-members.",
   },
 ] as const;
 
@@ -57,7 +43,7 @@ export function PrimeStatsCard() {
         📊 Prime by the Numbers · Tap any stat
       </p>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-5">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-5">
         {STATS.map((s, i) => {
           const isActive = activeIdx === i;
           return (

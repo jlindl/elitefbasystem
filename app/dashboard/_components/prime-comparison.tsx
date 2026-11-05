@@ -8,7 +8,7 @@ const comparisons = [
   },
   {
     category: "Customer Filter Visibility",
-    prime: "Visible to 80%+ of active buyers",
+    prime: "Shows up in Prime-filtered searches",
     nonPrime: 'Hidden from "Prime Only" filters',
     primeIcon: "👁️",
     nonPrimeIcon: "🙈",
