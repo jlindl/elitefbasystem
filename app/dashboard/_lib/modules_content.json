@@ -134,7 +134,7 @@
       },
       {
         "type": "callout",
-        "content": "⚠️ The 180-Day Penalty: if your stock sits in a warehouse for more than 180 days, Amazon charges severe Long-Term Storage Fees. This is why we use the Lean Model: we test with 10 to 12 units first. We never risk buying hundreds of units upfront without historical verification."
+        "content": "⚠️ The Aged Stock Penalty: on Amazon UK, if your stock sits in a warehouse for 241 days or more, Amazon adds an aged inventory surcharge on top of your normal storage fee, and it climbs the longer the stock sits. This is why we use the Lean Model: we test with 10 to 12 units first. We never risk buying hundreds of units upfront without historical verification."
       },
       {
         "type": "heading_2",
@@ -142,7 +142,7 @@
       },
       {
         "type": "paragraph",
-        "content": "The moment a customer purchases your product, Amazon does not immediately release the funds to your bank account. They hold them in a temporary reserve to ensure there are no immediate returns or chargebacks. Payouts are typically initiated every 14 days."
+        "content": "The moment a customer purchases your product, Amazon does not immediately release the funds to your bank account. Under its standard reserve policy (known as DD+7), the money only becomes available seven days after Amazon confirms the order has been delivered. That protects against immediate returns and chargebacks. Available funds are then paid out to your bank on Amazon's regular payout cycle, typically every 14 days, so plan your cash flow around a gap of two to three weeks between a sale and the money landing."
       },
       {
         "type": "paragraph",
@@ -242,7 +242,7 @@
       },
       {
         "type": "paragraph",
-        "content": "Over 80% of Amazon buyers filter search results strictly by \"Prime Only.\" If you handle your own shipping (FBM / Fulfillment by Merchant), your listing becomes completely invisible to Amazon's most active, highest-spending customers."
+        "content": "A large share of shoppers browse with the \"Prime\" delivery filter switched on, and Amazon's own search results favour fast, Prime-eligible offers. If you handle your own shipping (FBM / Fulfilment by Merchant), your listing drops out of those filtered results and becomes invisible to some of Amazon's most active, highest-spending customers."
       },
       {
         "type": "heading_3",
@@ -250,7 +250,7 @@
       },
       {
         "type": "paragraph",
-        "content": "Non-Prime sellers often have to lower their prices to get noticed. Because Prime members prioritize speed and reliability, they are consistently willing to pay a premium price. You can list a bundle for £19.99 and comfortably out-sell a non-Prime competitor offering a similar single item for less, simply because your product can be on their doorstep tomorrow morning."
+        "content": "Non-Prime sellers often have to lower their prices to get noticed. Because Prime members prioritise speed and reliability, they are consistently willing to pay a premium price. You can list a bundle for £19.99 and comfortably out-sell a non-Prime competitor offering a similar single item for less, simply because your product can be on their doorstep tomorrow morning."
       },
       {
         "type": "heading_2",
@@ -321,7 +321,7 @@
       },
       {
         "type": "paragraph",
-        "content": "The Calculation: for almost every everyday category we target in the Elite FBA framework (Grocery, Beauty, Home, Personal Care, and Toys), this is a flat 15% of the total gross amount the customer pays at checkout."
+        "content": "The Calculation: for most everyday categories we target in the Elite FBA framework (Grocery, Beauty, Home, Personal Care, and Toys), this is 15% of the total amount the customer pays at checkout once the price is above the category's lower band. Cheaper items pay less: Beauty, Health and Personal Care is 8% up to £10, Grocery and Gourmet is 5% up to £10, and Home Products are 8% up to £20. Most categories also have a minimum referral fee of £0.25 per item. Always check the current rate for your exact category in Seller Central before you price a bundle."
       },
       {
         "type": "callout",
@@ -357,7 +357,7 @@
       },
       {
         "type": "paragraph",
-        "content": "Peak Q4 Storage (October to December): during the holiday rush, millions of sellers flood the warehouses with inventory. To prevent gridlock and force slow-moving items out, Amazon triples their monthly storage fees."
+        "content": "Peak Q4 Storage (October to December): during the holiday rush, millions of sellers flood the warehouses with inventory. To prevent gridlock and force slow-moving items out, Amazon UK roughly doubles its monthly storage fee for standard-size products, from £0.76 to £1.51 per cubic foot."
       },
       {
         "type": "callout",
@@ -369,7 +369,7 @@
       },
       {
         "type": "paragraph",
-        "content": "Amazon breaks products down into incredibly strict dimensional size categories. Moving just 1mm past a size tier boundary can instantly bump your fulfilment fee up by £0.50 to £1.50 per unit. That single millimetre can completely wipe out your projected net profit."
+        "content": "Amazon breaks products down into strict dimensional and weight categories called size tiers. Moving just 1mm or a few grams past a tier boundary can bump your fulfilment fee up by roughly £0.20 to £1.10 per unit, and the biggest jump is from the envelope tiers into the parcel tiers. On a thin-margin bundle, that single millimetre can wipe out a large slice of your projected net profit."
       },
       {
         "type": "size_tier_ladder"
@@ -381,6 +381,10 @@
       {
         "type": "callout",
         "content": "⚠️ Operator Warning: if you bag items loosely and leave excess plastic flagging out from the sides, Amazon's automated laser scanners (Cubiscan machines) will measure that empty plastic flagging as part of the solid product volume. You will be up-charged into a higher parcel tier for shipping trapped air. Wrap your bundles tight, tap down excess corners, and pack them as densely as humanly possible."
+      },
+      {
+        "type": "callout",
+        "content": "💷 Low-Price FBA: Amazon UK charges a cheaper fulfilment fee on small, light products priced at £20 or less including VAT. In Beauty, Health and Personal Care, Grocery and Gourmet, and a few other categories the ceiling is £10 instead. The unit must also be no bigger than 35 × 25 × 12 cm and weigh no more than 400g. If your bundle sits just above a price ceiling, check whether a small price change moves it into the cheaper fee band."
       },
       {
         "type": "heading_2",
@@ -479,7 +483,7 @@
       },
       {
         "type": "callout",
-        "content": "📐 The Tier-Tripping Bundle: the components nest beautifully on paper, but the polybag adds 3mm of slack and pushes the finished pack into the Standard Parcel tier. An extra £1.50 per unit on every sale, forever. Mitigation: measure the prototype with calipers and confirm the tier before sending anything in."
+        "content": "📐 The Tier-Tripping Bundle: the components nest beautifully on paper, but the polybag adds 3mm of slack and pushes the finished pack out of the envelope tiers and into the Small Parcel tier. Up to about £1 extra per unit on every sale, forever. Mitigation: measure the prototype with calipers and confirm the tier before sending anything in."
       },
       {
         "type": "callout",
@@ -487,7 +491,7 @@
       },
       {
         "type": "callout",
-        "content": "❄️ The Q4 Crusher: a 25% margin in March becomes a 5% margin in November when Amazon triples storage fees. Mitigation: keep margins comfortably above 30% during validation, so peak season pressure still leaves something on the bone."
+        "content": "❄️ The Q4 Crusher: a healthy margin in March shrinks in November when Amazon UK roughly doubles storage fees and adds its peak-season fulfilment fee. Slow movers feel it most. Mitigation: keep margins comfortably above 30% during validation, so peak season pressure still leaves something on the bone."
       },
       {
         "type": "paragraph",

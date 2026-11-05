@@ -16,9 +16,9 @@ const BENEFITS = [
     id: "filter",
     icon: "👁️",
     title: "Invisible Filters",
-    headline: "Around 80% of buyers may never see you without it.",
+    headline: "Many buyers may never see you without it.",
     detail:
-      "Most shoppers leave the Prime-only filter switched on. If your product is not on FBA, your listing vanishes from those results entirely, no matter how cheap it is or how well it is reviewed. Mobile makes the effect even worse: the small screen rarely shows past the first few Prime results.",
+      "Plenty of shoppers browse with the Prime delivery filter switched on. If your product is not on FBA, your listing vanishes from those results entirely, no matter how cheap it is or how well it is reviewed. Mobile makes the effect even worse: the small screen rarely shows past the first few Prime results.",
     color: "amber",
   },
   {
