@@ -7,6 +7,7 @@ import {
   ChevronUp,
   LayoutGrid,
   MessageCircle,
+  Target,
   Users,
   Wrench,
   X,
@@ -22,6 +23,7 @@ type NavItem = {
 const primary: NavItem[] = [
   { label: "Dashboard", href: "/dashboard", Icon: LayoutGrid },
   { label: "Modules", href: "/dashboard/modules", Icon: BookOpen },
+  { label: "Missions", href: "/dashboard/missions", Icon: Target },
   { label: "My Tools", href: "/dashboard/tools", Icon: Wrench },
   { label: "AI Partner", href: "/dashboard#ai-partner", Icon: MessageCircle },
   { label: "The Team", href: "/dashboard/team", Icon: Users },
@@ -90,7 +92,9 @@ export function Sidebar({
         <nav className="px-3 py-4">
           <ul className="space-y-0.5">
             {primary.map(({ label, href, Icon }) => {
-              const active = pathname === href;
+              const active =
+                pathname === href ||
+                (href !== "/dashboard" && !href.includes("#") && pathname.startsWith(`${href}/`));
               return (
                 <li key={label}>
                   <Link

@@ -167,10 +167,8 @@ export function AccountHealthSetup() {
             const meta = PRIORITY_META[t.priority];
             return (
               <li key={t.id}>
-                <button
-                  type="button"
-                  onClick={() => setActiveId(t.id)}
-                  className={`w-full text-left rounded-xl border-2 p-3 transition-all duration-200 flex items-center gap-3 ${
+                <div
+                  className={`w-full rounded-xl border-2 p-3 transition-all duration-200 flex items-center gap-3 ${
                     isActive
                       ? "border-emerald-400 bg-emerald-50 ring-4 ring-emerald-300/20"
                       : "border-line bg-surface hover:border-ink/30"
@@ -178,13 +176,10 @@ export function AccountHealthSetup() {
                 >
                   <button
                     type="button"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      toggle(t.id);
-                    }}
-                    aria-label={`Mark ${t.title} ${
-                      isChecked ? "incomplete" : "complete"
-                    }`}
+                    role="checkbox"
+                    aria-checked={isChecked}
+                    onClick={() => toggle(t.id)}
+                    aria-label={`Done: ${t.title}`}
                     className={`flex-shrink-0 h-6 w-6 rounded-md border-2 flex items-center justify-center transition-colors duration-150 ${
                       isChecked
                         ? "bg-emerald-500 border-emerald-500 text-white"
@@ -197,24 +192,31 @@ export function AccountHealthSetup() {
                       </span>
                     )}
                   </button>
-                  <span className="text-xl leading-none flex-shrink-0">
-                    {t.icon}
-                  </span>
-                  <div className="flex-1 min-w-0">
-                    <p
-                      className={`font-display text-[0.88rem] font-semibold leading-tight ${
-                        isChecked ? "text-ink-muted line-through" : "text-ink"
-                      }`}
-                    >
-                      {t.title}
-                    </p>
-                    <span
-                      className={`mt-1 inline-flex h-4 px-1.5 items-center rounded-full font-mono text-[0.5rem] font-bold tracking-[0.08em] uppercase ${meta.pillBg} ${meta.pillText}`}
-                    >
-                      {meta.label}
+                  <button
+                    type="button"
+                    onClick={() => setActiveId(t.id)}
+                    aria-pressed={isActive}
+                    className="flex min-w-0 flex-1 items-center gap-3 text-left"
+                  >
+                    <span aria-hidden className="text-xl leading-none flex-shrink-0">
+                      {t.icon}
                     </span>
-                  </div>
-                </button>
+                    <span className="block min-w-0 flex-1">
+                      <span
+                        className={`block font-display text-[0.88rem] font-semibold leading-tight ${
+                          isChecked ? "text-ink-muted line-through" : "text-ink"
+                        }`}
+                      >
+                        {t.title}
+                      </span>
+                      <span
+                        className={`mt-1 inline-flex h-5 px-2 items-center rounded-full text-[0.6875rem] font-semibold ${meta.pillBg} ${meta.pillText}`}
+                      >
+                        {meta.label}
+                      </span>
+                    </span>
+                  </button>
+                </div>
               </li>
             );
           })}

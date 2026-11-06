@@ -1,259 +1,187 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { BookOpen } from "@/app/components/icons";
+import { ArrowRight, ChevronRight, Clock } from "@/app/components/icons";
 import { AppShell } from "../_components/app-shell";
-import { ModuleExamCard } from "../_components/module-exam-card";
-import { ModuleLock } from "../_components/module-lock";
-import { ModuleTabs } from "../_components/module-tabs";
+import { ProgressBar } from "../_components/ui/progress-bar";
+import { getCourse, type ModuleInfo } from "../_lib/course";
 import { getCurrentStudent } from "../_lib/get-student";
-import { Accordion } from "@/app/components/accordion";
-import { getPassedModules } from "../_lib/module-exam-results";
-import {
-  MODULE_EXAM_PASS_THRESHOLD,
-  MODULE_QUIZZES,
-} from "../_lib/module-quizzes";
-import {
-  groupBlocksIntoTabs,
-  hasLessonMarkers,
-  renderBlock,
-  splitVideoFromBlocks,
-  type Block,
-  type TabColor,
-} from "../_lib/modules-render";
-import { getCompletedTabs } from "../_lib/tab-completions";
-import modulesData from "../_lib/modules_content.json";
+import { formatDuration, lessonCount, moduleMinutes, moduleStatus } from "../_lib/module-status";
 
 export const metadata: Metadata = {
   title: "Modules - EliteFBA",
   description: "Your EliteFBA learning modules.",
 };
 
-const COLOR_STYLES: Record<
-  TabColor,
-  { card: string; iconBox: string; numeral: string }
-> = {
-  blue: {
-    card: "border-blue-200 bg-blue-50 hover:border-blue-300",
-    iconBox: "bg-blue-100 text-blue-700",
-    numeral: "text-blue-600",
-  },
-  purple: {
-    card: "border-purple-200 bg-purple-50 hover:border-purple-300",
-    iconBox: "bg-purple-100 text-purple-700",
-    numeral: "text-purple-600",
-  },
-  amber: {
-    card: "border-amber-200 bg-amber-50 hover:border-amber-300",
-    iconBox: "bg-amber-100 text-amber-700",
-    numeral: "text-amber-600",
-  },
-  lime: {
-    card: "border-lime-200 bg-lime-50 hover:border-lime-300",
-    iconBox: "bg-lime-100 text-lime-700",
-    numeral: "text-lime-600",
-  },
-  rose: {
-    card: "border-rose-200 bg-rose-50 hover:border-rose-300",
-    iconBox: "bg-rose-100 text-rose-700",
-    numeral: "text-rose-600",
-  },
-  cyan: {
-    card: "border-cyan-200 bg-cyan-50 hover:border-cyan-300",
-    iconBox: "bg-cyan-100 text-cyan-700",
-    numeral: "text-cyan-600",
-  },
-};
+function ModuleRow({ m, current }: { m: ModuleInfo; current: boolean }) {
+  const s = moduleStatus(m);
+  const total = lessonCount(m);
+  const minutes = moduleMinutes(m);
+  const pct = s.key === "passed" ? 100 : total ? Math.round((m.done / total) * 100) : 0;
 
-const DONE_CARD =
-  "border-emerald-400 bg-emerald-50 hover:border-emerald-500 ring-2 ring-emerald-400/40";
-const DONE_ICON_BOX = "bg-emerald-500 text-white";
-const DONE_NUMERAL = "text-emerald-600";
-const NEUTRAL_CARD = "border-line bg-surface hover:border-ink/20";
-const NEUTRAL_ICON_BOX = "bg-surface-alt text-ink";
-const NEUTRAL_NUMERAL = "text-ink-subtle";
+  return (
+    <li>
+      <Link
+        href={`/dashboard/modules/${m.id}`}
+        aria-current={current ? "step" : undefined}
+        className={`group relative flex items-center gap-4 rounded-2xl border bg-surface p-4 transition-[border-color,box-shadow,transform] duration-300 hover:-translate-y-0.5 hover:border-ink/30 hover:shadow-[var(--shadow-lift)] sm:gap-5 sm:p-5 ${
+          current ? "border-accent ring-2 ring-accent/25" : "border-line"
+        }`}
+      >
+        <span
+          aria-hidden
+          className={`inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl font-display text-[1.125rem] font-semibold tabular-nums sm:h-14 sm:w-14 sm:text-[1.25rem] ${
+            s.key === "passed" || s.key === "complete"
+              ? "bg-emerald-600 text-white"
+              : current
+                ? "bg-ink text-white"
+                : "bg-surface-alt text-ink ring-1 ring-line"
+          }`}
+        >
+          {s.key === "passed" || s.key === "complete" ? "✓" : m.number}
+        </span>
+
+        <span className="min-w-0 flex-1">
+          <span className="block text-[0.875rem] font-medium text-ink-muted">
+            Module {m.number}
+            {current && <span className="font-semibold text-orange-800"> · You are here</span>}
+          </span>
+          <h3 className="mt-0.5 font-display text-[1.125rem] font-semibold leading-snug text-ink sm:text-[1.25rem]">{m.title}</h3>
+          <span className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-[0.9375rem] text-ink-muted">
+            <span className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-[0.875rem] font-semibold ${s.cls}`}>
+              <span aria-hidden>{s.glyph}</span>
+              {s.label}
+            </span>
+            {total > 0 && (
+              <span className="tabular-nums">
+                {m.done} of {total} lessons done
+              </span>
+            )}
+            {minutes > 0 && (
+              <span className="inline-flex items-center gap-1.5">
+                <Clock size={15} /> {formatDuration(minutes)}
+              </span>
+            )}
+          </span>
+          {total > 0 && (
+            <span aria-hidden className="mt-3 block max-w-[420px]">
+              <ProgressBar percent={pct} tone={s.key === "passed" || s.key === "complete" ? "success" : "accent"} />
+            </span>
+          )}
+        </span>
+
+        <span
+          aria-hidden
+          className="hidden h-11 w-11 shrink-0 items-center justify-center rounded-full border border-line text-ink transition-colors duration-300 group-hover:border-ink group-hover:bg-ink group-hover:text-white sm:inline-flex"
+        >
+          <ChevronRight size={18} />
+        </span>
+      </Link>
+    </li>
+  );
+}
 
 export default async function ModulesPage() {
   const student = await getCurrentStudent();
-  const completed = await getCompletedTabs();
-  const passedModules = await getPassedModules();
+  const course = await getCourse();
+  const next = course.next;
 
-  const items = modulesData.map((mod, index) => {
-    const base = {
-      id: mod.id,
-      title: mod.name,
-      numeral: (index + 1).toString().padStart(2, "0"),
-      completed: passedModules.has(mod.id),
-    };
-
-    // JSON imports infer the colour as `string`; narrow to Block[] so the
-    // splitter/grouper types are happy. Runtime values are validated by the
-    // lesson_marker renderer if any unknown colour ever slips in.
-    const blocks = mod.blocks as Block[];
-
-    // Video + lesson-cards layout: used for Module 1 (legacy hardcoded
-    // sentinels) and for any module whose JSON contains lesson_marker blocks.
-    if (index === 0 || hasLessonMarkers(blocks)) {
-      const { videos, rest } = splitVideoFromBlocks(blocks);
-      const tabs = groupBlocksIntoTabs(rest);
-      const completedTabs = tabs.filter((t) =>
-        completed.has(`${mod.id}::${t.id}`),
-      ).length;
-      const moduleQuiz = MODULE_QUIZZES[mod.id];
-      const hasExam = !!moduleQuiz;
-
-      return {
-        ...base,
-        body: (
-          <div className="space-y-8">
-            {videos.map((v, i) => renderBlock(v, i))}
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {tabs.map((tab, tabIndex) => {
-                const isDone = completed.has(`${mod.id}::${tab.id}`);
-                const palette = tab.color ? COLOR_STYLES[tab.color] : null;
-
-                const cardClass = isDone
-                  ? DONE_CARD
-                  : palette
-                  ? palette.card
-                  : NEUTRAL_CARD;
-                const iconBoxClass = isDone
-                  ? DONE_ICON_BOX
-                  : palette
-                  ? palette.iconBox
-                  : NEUTRAL_ICON_BOX;
-                const numeralClass = isDone
-                  ? DONE_NUMERAL
-                  : palette
-                  ? palette.numeral
-                  : NEUTRAL_NUMERAL;
-
-                return (
-                  <a
-                    key={tab.id}
-                    href={`/dashboard/modules/${mod.id}/${tab.id}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`group relative flex flex-col gap-3 rounded-2xl border-2 p-5 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[var(--shadow-lift)] ${cardClass}`}
-                  >
-                    <div className="flex items-center justify-between">
-                      <span
-                        className={`inline-flex h-6 items-center rounded-full bg-white/80 px-2.5 font-mono text-[0.65rem] font-bold tracking-[0.14em] uppercase ${numeralClass}`}
-                      >
-                        Lesson {tabIndex + 1}
-                      </span>
-                      {isDone && (
-                        <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-emerald-500 text-[0.8rem] text-white">
-                          ✓
-                        </span>
-                      )}
-                    </div>
-
-                    <span
-                      className={`inline-flex h-10 w-10 items-center justify-center rounded-xl text-[1.25rem] ${iconBoxClass}`}
-                    >
-                      {tab.icon}
-                    </span>
-
-                    <div>
-                      <h3 className="font-display text-[1.05rem] font-semibold text-ink leading-snug">
-                        {tab.label}
-                      </h3>
-                      {tab.description && (
-                        <p className="mt-2 text-[0.85rem] text-ink-muted leading-relaxed">
-                          {tab.description}
-                        </p>
-                      )}
-                    </div>
-
-                    <span
-                      className={`mt-3 inline-flex items-center gap-1.5 self-start h-9 px-4 rounded-full font-mono text-[0.7rem] tracking-[0.1em] uppercase font-bold transition-all duration-200 group-hover:gap-2.5 ${
-                        isDone
-                          ? "bg-emerald-500 text-white"
-                          : "bg-ink text-white"
-                      }`}
-                    >
-                      {isDone ? "Review lesson" : "Start lesson"}
-                      <span aria-hidden>→</span>
-                    </span>
-                  </a>
-                );
-              })}
-            </div>
-
-            {hasExam && (
-              <ModuleExamCard
-                moduleId={mod.id}
-                moduleNumeral={(index + 1).toString()}
-                questionCount={moduleQuiz.length}
-                passPercent={Math.round(MODULE_EXAM_PASS_THRESHOLD * 100)}
-                completed={completedTabs}
-                total={tabs.length}
-              />
-            )}
-          </div>
-        ),
-      };
-    }
-
-    const tabs = groupBlocksIntoTabs(blocks);
-    const tabsBody = (
-      <ModuleTabs
-        tabs={tabs.map((tab) => ({
-          id: tab.id,
-          label: tab.label,
-          icon: tab.icon,
-          content: (
-            <div className="space-y-6 text-ink-muted">
-              {tab.blocks.map((block, i) => renderBlock(block, i))}
-            </div>
-          ),
-        }))}
-      />
-    );
-
-    // Modules 6-9 (index 5+) are gated behind a password.
-    return {
-      ...base,
-      body:
-        index >= 5 ? (
-          <ModuleLock>{tabsBody}</ModuleLock>
-        ) : (
-          tabsBody
-        ),
-    };
-  });
+  const core = course.modules.filter((m) => !m.locked);
+  const advanced = course.modules.filter((m) => m.locked);
+  const exams = course.modules.filter((m) => m.hasExam).length;
 
   return (
     <AppShell student={student}>
-      <div className="max-w-[1100px] mx-auto px-4 md:px-10 py-6 md:py-10 space-y-8">
-        <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
-          <div>
-            <h1 className="font-display text-[2rem] md:text-[2.5rem] font-medium tracking-[-0.025em] text-ink">
-              Learning Modules
-            </h1>
-            <p className="mt-2 text-[1rem] text-ink-muted">
-              Access all course content and track your progress.
-            </p>
-          </div>
-          <Link
-            href="/dashboard/tools/dictionary"
-            className="group inline-flex shrink-0 items-center gap-2 rounded-xl border border-line bg-surface px-5 py-3 text-[0.9rem] font-medium text-ink transition-colors duration-150 hover:bg-surface-alt focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
-          >
-            <BookOpen size={18} className="text-accent" />
-            Jargon Dictionary
-            <span
-              aria-hidden
-              className="transition-transform duration-150 group-hover:translate-x-0.5"
-            >
-              →
-            </span>
-          </Link>
-        </div>
+      <div className="mx-auto max-w-[960px] space-y-10 px-4 py-6 sm:px-6 md:px-10 md:py-10">
+        <header className="dash-rise" style={{ ["--i" as string]: 0 }}>
+          <p className="text-[0.9375rem] font-semibold text-orange-800">The course</p>
+          <h1 className="mt-1 font-display text-[2rem] font-semibold leading-[1.1] tracking-[-0.03em] text-ink md:text-[2.5rem]">
+            Learning modules
+          </h1>
+          <p className="mt-3 max-w-[60ch] text-[1.0625rem] leading-relaxed text-ink-muted">
+            Nine modules, from how Amazon FBA works to running a brand long-term. Work through them in order. Pick a module to see its
+            lessons, exam and practice missions.
+          </p>
+        </header>
 
-        <div className="rounded-2xl bg-surface hairline shadow-[var(--shadow-lift)] overflow-hidden">
-          <Accordion items={items} showNumeral />
-        </div>
+        {/* Where you are + overall progress */}
+        <section aria-labelledby="progress-heading" className="dash-rise grid gap-4 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]" style={{ ["--i" as string]: 1 }}>
+          <h2 id="progress-heading" className="sr-only">
+            Your progress
+          </h2>
+          {next ? (
+            <div className="flex flex-col rounded-3xl bg-ink p-6 text-white sm:p-7">
+              <p className="text-[0.9375rem] font-medium text-white/80">Pick up where you left off</p>
+              <p className="mt-3 text-[0.9375rem] text-white/80">
+                Module {next.module.number} · Lesson {next.lesson.number}
+              </p>
+              <p className="mt-1 font-display text-[1.375rem] font-semibold leading-snug">{next.lesson.label}</p>
+              <p className="mt-2 inline-flex items-center gap-1.5 text-[0.9375rem] text-white/80">
+                <Clock size={15} /> {next.lesson.minutes} min read
+              </p>
+              <div className="mt-6">
+                <Link href={next.lesson.href} className="btn btn-primary btn-aa">
+                  Continue lesson <ArrowRight size={16} className="btn-arrow" />
+                </Link>
+              </div>
+            </div>
+          ) : (
+            <div className="rounded-3xl bg-ink p-6 text-white sm:p-7">
+              <p className="font-display text-[1.375rem] font-semibold">Every open lesson is done 🎉</p>
+              <p className="mt-2 text-[0.9375rem] text-white/80">Take any exams you haven&rsquo;t passed, or ask Jakub about the advanced modules.</p>
+            </div>
+          )}
+
+          <div className="rounded-3xl border border-line bg-surface p-6 sm:p-7">
+            <p className="text-[0.9375rem] font-medium text-ink-muted">Course progress</p>
+            <p className="mt-2 font-display text-[2.25rem] font-semibold leading-none tracking-[-0.03em] text-ink tabular-nums">{course.percent}%</p>
+            <ProgressBar percent={course.percent} className="mt-4" ariaLabel="Course progress" />
+            <dl className="mt-5 grid grid-cols-2 gap-4 text-[0.9375rem]">
+              <div>
+                <dt className="text-ink-muted">Lessons done</dt>
+                <dd className="mt-0.5 font-semibold text-ink tabular-nums">
+                  {course.lessonsDone} of {course.lessonsTotal}
+                </dd>
+              </div>
+              <div>
+                <dt className="text-ink-muted">Exams passed</dt>
+                <dd className="mt-0.5 font-semibold text-ink tabular-nums">
+                  {course.modulesPassed} of {exams}
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </section>
+
+        <section aria-labelledby="core-heading" className="dash-rise" style={{ ["--i" as string]: 2 }}>
+          <h2 id="core-heading" className="font-display text-[1.5rem] font-semibold tracking-[-0.02em] text-ink">
+            Core course
+          </h2>
+          <p className="mt-1 text-[1rem] text-ink-muted">
+            Modules 1 to {core.length}. These are open to you now.
+          </p>
+          <ol className="mt-5 space-y-3">
+            {core.map((m) => (
+              <ModuleRow key={m.id} m={m} current={next?.module.id === m.id} />
+            ))}
+          </ol>
+        </section>
+
+        {advanced.length > 0 && (
+          <section id="advanced" aria-labelledby="advanced-heading" className="dash-rise scroll-mt-24" style={{ ["--i" as string]: 3 }}>
+            <h2 id="advanced-heading" className="font-display text-[1.5rem] font-semibold tracking-[-0.02em] text-ink">
+              Advanced modules
+            </h2>
+            <p className="mt-1 max-w-[60ch] text-[1rem] text-ink-muted">
+              Modules {advanced[0].number} to {advanced[advanced.length - 1].number}. Jakub gives you the password for these once
+              you&rsquo;ve built the foundations.
+            </p>
+            <ol className="mt-5 space-y-3" start={advanced[0].number}>
+              {advanced.map((m) => (
+                <ModuleRow key={m.id} m={m} current={false} />
+              ))}
+            </ol>
+          </section>
+        )}
       </div>
     </AppShell>
   );

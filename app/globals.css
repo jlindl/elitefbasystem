@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-@theme inline {
+@theme {
   --color-bg: #fafaf7;
   --color-surface: #ffffff;
   --color-surface-alt: #f4f2ec;
@@ -16,7 +16,9 @@
   --color-accent-soft: #fff1e8;
   --color-success: #1f7a4d;
   --color-success-soft: #e8f2ec;
+}
 
+@theme inline {
   --font-display: var(--font-display), ui-sans-serif, system-ui, sans-serif;
   --font-sans: var(--font-body), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-mono), ui-monospace, monospace;
@@ -146,6 +148,15 @@ main {
   .btn-secondary:hover {
     border-color: rgba(10, 10, 10, 0.18);
     box-shadow: 0 8px 20px -10px rgba(10, 10, 10, 0.18);
+  }
+
+  /* Deeper orange so white button text passes WCAG AA (5.2:1). */
+  .btn-primary.btn-aa {
+    background: #c2410c;
+  }
+
+  .btn-primary.btn-aa:hover {
+    background: #9a3412;
   }
 
   .btn-on-dark {
@@ -458,6 +469,64 @@ main {
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
 }
 
+.money-range.on-light {
+  background: linear-gradient(to right, var(--color-accent) var(--fill, 50%), var(--color-surface-deep) var(--fill, 50%));
+}
+
+.money-range.on-light::-webkit-slider-thumb {
+  box-shadow: 0 3px 10px rgba(10, 10, 10, 0.18);
+}
+
+/* ---------- Missions ---------- */
+@keyframes badge-pop {
+  0% { transform: scale(0.2) rotate(-25deg); opacity: 0; }
+  60% { transform: scale(1.15) rotate(6deg); opacity: 1; }
+  100% { transform: scale(1) rotate(0); }
+}
+
+@keyframes rays-spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes node-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(255, 107, 26, 0.45); }
+  70% { box-shadow: 0 0 0 18px rgba(255, 107, 26, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 107, 26, 0); }
+}
+
+@keyframes xp-bump {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.25); }
+  100% { transform: scale(1); }
+}
+
+@keyframes sheet-up {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  75% { transform: translateX(6px); }
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.badge-pop { animation: badge-pop 900ms var(--ease-out-expo) both; }
+.rays { animation: rays-spin 14s linear infinite; }
+.node-pulse { animation: node-pulse 2s ease-out infinite; }
+.xp-bump { animation: xp-bump 500ms var(--ease-out-expo); }
+.sheet-up { animation: sheet-up 380ms var(--ease-out-expo) both; }
+.bob { animation: bob 2.2s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .badge-pop, .rays, .node-pulse, .xp-bump, .sheet-up, .bob { animation: none; }
+}
+
 /* ---------- Utility: hairline divider ---------- */
 .hairline {
   border: 1px solid var(--color-line);
@@ -562,6 +631,280 @@ main {
   }
 }
 
+/* ---------- Dashboard surfaces ---------- */
+
+/* Dashboard palette: a slightly deeper page tone and firmer lines so white
+   cards stand out clearly. The marketing site keeps the lighter defaults. */
+.dash-theme {
+  --color-bg: #efebe3;
+  --color-surface-alt: #f3f0e9;
+  --color-surface-deep: #e3ded3;
+  --color-line: #dbd6ca;
+  --color-line-soft: #e7e3d9;
+  /* Darker secondary text so small labels pass WCAG AA on the warm background. */
+  --color-ink-subtle: #63625d;
+}
+
+/* Certificates keep their paper colours and linework when printed. */
+.certificate-sheet,
+.certificate-sheet * {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+/* Keyboard users can jump straight past the navigation. */
+.skip-link {
+  position: fixed;
+  left: 1rem;
+  top: 0.75rem;
+  z-index: 100;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.75rem;
+  background: var(--color-ink);
+  color: #fff;
+  font-weight: 600;
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: none;
+}
+
+body:has(.dash-theme) {
+  background-color: #efebe3;
+}
+
+@layer components {
+  /* A faint resting shadow under white cards; hover/open states still override it. */
+  .dash-theme :where(.rounded-2xl, .rounded-3xl, .rounded-\[1\.75rem\], .rounded-\[2rem\]).bg-surface.border {
+    box-shadow: 0 1px 2px rgba(10, 10, 10, 0.04), 0 6px 18px -12px rgba(10, 10, 10, 0.14);
+  }
+}
+
+/* Card that follows the cursor with a soft orange glow (vars set in the shell). */
+.spot {
+  position: relative;
+  isolation: isolate;
+}
+
+.spot::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: radial-gradient(
+    360px circle at var(--mx, 50%) var(--my, 50%),
+    rgba(255, 107, 26, 0.09),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 350ms ease;
+  pointer-events: none;
+}
+
+.spot-dark::before {
+  background: radial-gradient(
+    380px circle at var(--mx, 50%) var(--my, 50%),
+    rgba(255, 140, 60, 0.22),
+    transparent 60%
+  );
+}
+
+@media (hover: hover) {
+  .spot:hover::before {
+    opacity: 1;
+  }
+}
+
+/* Lift on hover. */
+.lift {
+  box-shadow: 0 1px 2px rgba(10, 10, 10, 0.04), 0 6px 18px -12px rgba(10, 10, 10, 0.14);
+  transition:
+    transform 450ms var(--ease-out-expo),
+    box-shadow 450ms var(--ease-out-expo),
+    border-color 250ms ease,
+    background-color 250ms ease;
+}
+
+@media (hover: hover) {
+  .lift:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lift);
+  }
+}
+
+.lift:active {
+  transform: translateY(0) scale(0.99);
+}
+
+/* Arrow that slides on parent hover. */
+.nudge {
+  transition: transform 400ms var(--ease-out-expo);
+}
+
+.group:hover .nudge {
+  transform: translateX(4px);
+}
+
+/* Staggered entrance for dashboard sections. */
+.dash-rise {
+  opacity: 0;
+  animation: dash-fade-up 700ms var(--ease-out-expo) forwards;
+  animation-delay: calc(var(--i, 0) * 70ms + 40ms);
+}
+
+/* Faint dotted grid used behind hero panels. */
+.dash-grid {
+  background-image: radial-gradient(rgba(10, 10, 10, 0.07) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+
+.dash-grid-dark {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+
+/* Lesson reading column. */
+.lesson-prose > * + * {
+  margin-top: 1.15rem;
+}
+
+/* A part's opening sentence reads as a lead-in. */
+.lesson-lead > p:first-child {
+  font-size: calc(1.25rem * var(--lesson-scale, 1));
+  line-height: 1.6;
+  color: var(--color-ink);
+}
+
+/* Reading options (the "Aa" menu in a lesson): text size and an easy-read font. */
+[data-lesson-size="l"] {
+  --lesson-scale: 1.125;
+}
+
+[data-lesson-size="xl"] {
+  --lesson-scale: 1.25;
+}
+
+[data-lesson-font="easy"] :is(.lesson-prose, .lesson-heading) {
+  font-family: var(--font-easy), var(--font-body), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* A printed lesson includes every part, not just the one on screen. */
+@media print {
+  /* In the base layer, so it outranks Tailwind's own [hidden] rule there. */
+  @layer base {
+    section[data-lesson-step][hidden] {
+      display: block !important;
+      content-visibility: visible !important;
+    }
+  }
+  .lesson-print-hide {
+    display: none !important;
+  }
+}
+
+/* Read aloud: the passage being spoken, and the bars in the player. */
+[data-reading] {
+  border-radius: 0.5rem;
+  background-color: rgba(255, 107, 26, 0.12);
+  box-shadow: 0 0 0 0.5rem rgba(255, 107, 26, 0.12);
+  transition: background-color 200ms ease, box-shadow 200ms ease;
+}
+
+.listen-bars {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.listen-bars > span {
+  width: 3px;
+  height: 100%;
+  border-radius: 2px;
+  background: #ff8a4c;
+  transform-origin: bottom;
+  animation: listen-bar 900ms ease-in-out infinite alternate;
+}
+
+.listen-bars > span:nth-child(2) { animation-delay: -300ms; }
+.listen-bars > span:nth-child(3) { animation-delay: -600ms; }
+.listen-bars > span:nth-child(4) { animation-delay: -150ms; }
+
+.listen-bars.is-paused > span {
+  animation-play-state: paused;
+}
+
+@keyframes listen-bar {
+  from { transform: scaleY(0.25); }
+  to { transform: scaleY(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .listen-bars > span {
+    animation: none;
+    transform: scaleY(0.6);
+  }
+}
+
+@keyframes ring-draw {
+  from { stroke-dashoffset: var(--ring-c); }
+}
+
+.ring-draw {
+  animation: ring-draw 1300ms var(--ease-out-expo) both;
+  animation-delay: 150ms;
+}
+
+@keyframes bar-grow {
+  from { transform: scaleX(0); }
+}
+
+.bar-grow {
+  transform-origin: left center;
+  animation: bar-grow 1100ms var(--ease-out-expo) both;
+  animation-delay: 150ms;
+}
+
+@keyframes pop-in {
+  0% { transform: scale(0.6); opacity: 0; }
+  60% { transform: scale(1.12); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+.pop-in {
+  animation: pop-in 520ms var(--ease-out-expo) both;
+}
+
+@keyframes dialog-in {
+  from { opacity: 0; transform: translateY(-8px) scale(0.98); }
+  to { opacity: 1; transform: none; }
+}
+
+.dialog-in {
+  animation: dialog-in 260ms var(--ease-out-expo) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dash-rise,
+  .pop-in,
+  .dialog-in,
+  .ring-draw,
+  .bar-grow {
+    animation: none;
+    opacity: 1;
+  }
+  .lift,
+  .nudge {
+    transition: none;
+  }
+  .lift:hover {
+    transform: none;
+  }
+}
+
 /* ---------- Enter animation (animate-in fade-in) ---------- */
 @keyframes ui-enter {
   from {
@@ -614,7 +957,8 @@ main {
 
 /* ---------- Focus rings ---------- */
 :focus-visible {
-  outline: 2px solid var(--color-accent);
+  /* Deep orange: clears 3:1 against light and dark surfaces (the brand orange doesn't). */
+  outline: 2px solid #c2410c;
   outline-offset: 2px;
   border-radius: 4px;
 }
@@ -645,4 +989,94 @@ main {
   .hl-word {
     color: var(--hl-lit, var(--color-ink));
   }
+}
+
+/* ---------- Jargon terms in lesson text ---------- */
+.term-link {
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: color-mix(in oklab, var(--color-accent) 80%, transparent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.22em;
+  transition: background-color 160ms ease, text-decoration-color 160ms ease;
+}
+
+.term-link:hover,
+.term-link[aria-expanded="true"] {
+  background-color: color-mix(in oklab, var(--color-accent) 12%, transparent);
+  text-decoration-style: solid;
+}
+
+.term-card {
+  top: 100%;
+  margin-top: 0.625rem;
+  /* translate (not transform) so the entrance animation can still use transform. */
+  translate: calc(-50% + var(--shift, 0px)) 0;
+  animation: dialog-in 200ms var(--ease-out-expo) both;
+}
+
+.term-card[data-above] {
+  top: auto;
+  bottom: 100%;
+  margin-top: 0;
+  margin-bottom: 0.625rem;
+}
+
+/* ---------- Ask Jakub composer ---------- */
+.ask-dialog[open] {
+  animation: sheet-up 380ms var(--ease-out-expo) both;
+}
+
+@media (min-width: 640px) {
+  .ask-dialog[open] {
+    animation: dialog-in 260ms var(--ease-out-expo) both;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .term-card,
+  .ask-dialog[open] {
+    animation: none;
+  }
+}
+
+/* ---------- Member card ---------- */
+.member-card-wrap {
+  container-type: inline-size;
+  perspective: 900px;
+}
+
+.member-card {
+  transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+  transform-style: preserve-3d;
+  transition: transform 420ms var(--ease-out-expo), box-shadow 420ms var(--ease-out-expo);
+  box-shadow: 0 30px 60px -28px rgba(10, 10, 10, 0.65), 0 2px 6px rgba(10, 10, 10, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.member-card-sheen {
+  background: radial-gradient(circle at var(--gx, 30%) var(--gy, 20%), rgba(255, 255, 255, 0.22), transparent 42%),
+    linear-gradient(115deg, transparent 30%, rgba(255, 214, 165, 0.14) 45%, rgba(173, 216, 255, 0.12) 52%, transparent 66%);
+  mix-blend-mode: screen;
+  transition: opacity 300ms ease;
+}
+
+.member-card-chip {
+  background: linear-gradient(135deg, #f6d98e 0%, #d6a64b 45%, #f1d082 70%, #b8862d 100%);
+  box-shadow: inset 0 0 0 1px rgba(60, 40, 5, 0.35);
+  background-image: linear-gradient(135deg, #f6d98e 0%, #d6a64b 45%, #f1d082 70%, #b8862d 100%),
+    linear-gradient(90deg, transparent 32%, rgba(60, 40, 5, 0.35) 33%, transparent 34%, transparent 66%, rgba(60, 40, 5, 0.35) 67%, transparent 68%);
+  background-blend-mode: multiply;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .member-card {
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Focus moved by script onto a non-interactive target (a heading, <main>) - announced,
+   but no ring, since there is nothing to operate. Interactive elements keep theirs. */
+[tabindex="-1"]:focus-visible {
+  outline: none;
 }

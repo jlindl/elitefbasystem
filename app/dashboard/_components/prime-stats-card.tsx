@@ -65,6 +65,7 @@ export function PrimeStatsCard() {
               key={i}
               type="button"
               onClick={() => setActiveIdx(i)}
+              aria-pressed={isActive}
               className={`rounded-2xl border-2 p-4 text-left transition-all duration-200 ${
                 isActive
                   ? "border-accent bg-accent-soft ring-4 ring-accent/20 -translate-y-0.5 shadow-md"
@@ -74,7 +75,7 @@ export function PrimeStatsCard() {
               <span className="text-2xl">{s.icon}</span>
               <p
                 className={`mt-1.5 font-display text-2xl md:text-[1.75rem] font-bold leading-tight ${
-                  isActive ? "text-accent" : "text-ink"
+                  isActive ? "text-orange-700" : "text-ink"
                 }`}
               >
                 {s.value}

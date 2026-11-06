@@ -175,8 +175,10 @@ export function BundlePrepChecklist() {
                       <button
                         type="button"
                         onClick={() => toggle(item.id)}
-                        aria-pressed={isDone}
-                        className={`mt-0.5 flex-shrink-0 h-5 w-5 rounded border-2 flex items-center justify-center transition-colors duration-150 ${
+                        role="checkbox"
+                        aria-checked={isDone}
+                        aria-label={`Done: ${item.label}`}
+                        className={`mt-0.5 flex-shrink-0 h-6 w-6 rounded border-2 flex items-center justify-center transition-colors duration-150 ${
                           isDone
                             ? "bg-emerald-500 border-emerald-500 text-white"
                             : "border-ink/20 bg-white hover:border-ink/40"

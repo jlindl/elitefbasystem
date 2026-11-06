@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Accordion } from "@/app/components/accordion";
 import { AppShell } from "../_components/app-shell";
+import { OpenSearch } from "../_components/open-search";
+import { PageHeader } from "../_components/ui/page-header";
 import { getCurrentStudent } from "../_lib/get-student";
 
 export const metadata: Metadata = {
@@ -184,50 +186,65 @@ export default async function HelpPage() {
 
   return (
     <AppShell student={student}>
-      <div className="max-w-[900px] mx-auto px-4 md:px-10 py-6 md:py-10 space-y-8">
-        <div>
-          <h1 className="font-display text-[2rem] md:text-[2.5rem] font-medium tracking-[-0.025em] text-ink">
-            Help
-          </h1>
-          <p className="mt-2 text-[1rem] text-ink-muted">
-            Stuck on something? Message Jakub directly, or browse the common
-            questions below.
-          </p>
-        </div>
+      <div className="mx-auto max-w-[1040px] space-y-8 px-4 py-6 sm:px-6 md:px-10 md:py-10">
+        <PageHeader eyebrow="Help" title="How can we help?" description="Message Jakub directly, search the course, or browse the questions members ask most." />
 
-        {/* Contact CTA */}
-        <div className="rounded-2xl border-2 border-line bg-gradient-to-br from-slate-50 via-surface to-emerald-50/40 p-6 md:p-7">
-          <h2 className="font-display text-[1.125rem] font-medium tracking-[-0.01em] text-ink">
-            Need a hand? Message Jakub
-          </h2>
-          <p className="mt-2 text-[0.9375rem] text-ink-muted leading-[1.55] max-w-[560px]">
-            For anything not covered below, such as a question about a product,
-            a listing, your account, or your next step, message Jakub directly
-            on WhatsApp. It&rsquo;s the fastest way to get unblocked.
-          </p>
-          <a
-            href={WHATSAPP_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-5 inline-flex items-center justify-center gap-2 rounded-xl bg-[#25D366] px-6 py-3.5 text-white font-medium text-[0.9375rem] transition-colors duration-150 hover:bg-[#1da851] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2"
-          >
-            <WhatsAppIcon size={18} />
-            Chat on WhatsApp
-          </a>
-          <p className="mt-3 font-mono text-[0.7rem] tracking-[0.08em] uppercase text-ink-subtle">
-            {WHATSAPP_DISPLAY}
-          </p>
-        </div>
+        <div className="dash-rise grid gap-3 md:grid-cols-[1.4fr_1fr]" style={{ ["--i" as string]: 1 }}>
+          <section className="relative overflow-hidden rounded-[2rem] bg-ink p-6 text-white sm:p-8">
+            <div aria-hidden className="dash-grid-dark absolute inset-0 opacity-70" />
+            <div aria-hidden className="absolute -bottom-24 -right-16 h-64 w-64 rounded-full" style={{ background: "radial-gradient(circle, rgba(37,211,102,0.3), transparent 65%)" }} />
+            <div className="relative">
+              <p className="font-mono text-[0.62rem] font-bold uppercase tracking-[0.16em] text-[#5ee08f]">● Direct line</p>
+              <h2 className="mt-2 font-display text-[1.75rem] font-semibold leading-tight tracking-[-0.03em]">Need a hand? Message Jakub.</h2>
+              <p className="mt-2 max-w-[460px] text-[0.95rem] leading-relaxed text-white/65">
+                A question about a product, a listing, your account or your next step - send the lesson you&rsquo;re on and you&rsquo;ll usually
+                hear back the same day.
+              </p>
+              <a
+                href={WHATSAPP_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex items-center gap-2 rounded-2xl bg-[#25D366] px-6 py-3.5 text-[0.95rem] font-semibold text-white shadow-[0_10px_24px_-12px_rgba(37,211,102,0.9)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1da851]"
+              >
+                <WhatsAppIcon size={18} /> Chat on WhatsApp
+              </a>
+              <p className="mt-3 font-mono text-[0.68rem] uppercase tracking-[0.1em] text-white/45">{WHATSAPP_DISPLAY}</p>
+            </div>
+          </section>
 
-        {/* FAQs */}
-        <div>
-          <h2 className="font-display text-[1.5rem] font-medium tracking-[-0.015em] text-ink">
-            Frequently asked questions
-          </h2>
-          <div className="mt-4 rounded-2xl bg-surface hairline shadow-[var(--shadow-lift)] overflow-hidden">
-            <Accordion items={faqs} />
+          <div className="grid gap-3">
+            <OpenSearch className="spot lift group flex items-center gap-4 rounded-3xl border border-line bg-surface p-5 text-left">
+              <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-surface-alt text-[1.25rem]" aria-hidden>🔎</span>
+              <span className="min-w-0 flex-1">
+                <span className="block font-display text-[1rem] font-semibold text-ink">Search the course</span>
+                <span className="block text-[0.82rem] text-ink-muted">Lessons, terms, suppliers · ⌘K</span>
+              </span>
+              <span aria-hidden className="nudge text-ink-subtle">→</span>
+            </OpenSearch>
+            {[
+              { href: "/dashboard/tools/dictionary", emoji: "📖", title: "Jargon dictionary", body: "Every term in plain English" },
+              { href: "/dashboard/modules", emoji: "📘", title: "Your modules", body: "Pick up where you left off" },
+            ].map((l) => (
+              <Link key={l.href} href={l.href} className="spot lift group flex items-center gap-4 rounded-3xl border border-line bg-surface p-5">
+                <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-surface-alt text-[1.25rem]" aria-hidden>{l.emoji}</span>
+                <span className="min-w-0 flex-1">
+                  <span className="block font-display text-[1rem] font-semibold text-ink">{l.title}</span>
+                  <span className="block text-[0.82rem] text-ink-muted">{l.body}</span>
+                </span>
+                <span aria-hidden className="nudge text-ink-subtle">→</span>
+              </Link>
+            ))}
           </div>
         </div>
+
+        <section className="dash-rise" style={{ ["--i" as string]: 2 }} aria-labelledby="faq">
+          <h2 id="faq" className="font-display text-[1.5rem] font-medium tracking-[-0.025em] text-ink">
+            Frequently asked questions
+          </h2>
+          <div className="mt-4 overflow-hidden rounded-3xl border border-line bg-surface shadow-[var(--shadow-soft)]">
+            <Accordion items={faqs} />
+          </div>
+        </section>
       </div>
     </AppShell>
   );

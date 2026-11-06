@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { buzz, fireConfetti } from "./confetti";
 
 export type QuizQuestion = {
   question: string;
@@ -9,176 +10,141 @@ export type QuizQuestion = {
   explanation?: string;
 };
 
-export function LessonQuiz({ questions }: { questions: QuizQuestion[] }) {
+/** Knowledge check: each answer is marked the moment you tap it. */
+export function LessonQuiz({ questions, headingLevel = 2 }: { questions: QuizQuestion[]; headingLevel?: 2 | 3 }) {
+  const Heading = headingLevel === 3 ? "h3" : "h2";
   const [answers, setAnswers] = useState<Record<number, number>>({});
-  const [submitted, setSubmitted] = useState(false);
+  const answered = Object.keys(answers).length;
+  const score = questions.reduce((a, q, i) => a + (answers[i] === q.correctIndex ? 1 : 0), 0);
+  const finished = answered === questions.length;
+  // Read out after each answer, since the result appears away from the button you pressed.
+  const [said, setSaid] = useState("");
+  const heading = useRef<HTMLHeadingElement>(null);
 
-  const allAnswered = Object.keys(answers).length === questions.length;
-  const score = submitted
-    ? questions.reduce(
-        (acc, q, i) => acc + (answers[i] === q.correctIndex ? 1 : 0),
-        0,
-      )
-    : 0;
-
-  function selectAnswer(qIdx: number, oIdx: number) {
-    if (submitted) return;
-    setAnswers((prev) => ({ ...prev, [qIdx]: oIdx }));
-  }
-
-  function submit() {
-    if (!allAnswered) return;
-    setSubmitted(true);
-    queueMicrotask(() => {
-      document
-        .getElementById("quiz-summary")
-        ?.scrollIntoView({ behavior: "smooth", block: "nearest" });
-    });
-  }
-
-  function reset() {
-    setSubmitted(false);
-    setAnswers({});
+  function pick(q: number, o: number) {
+    if (answers[q] !== undefined) return;
+    const next = { ...answers, [q]: o };
+    setAnswers(next);
+    const right = o === questions[q].correctIndex;
+    buzz(right ? 12 : 50);
+    let line = `${right ? "Correct." : "Not quite."} ${questions[q].explanation ?? ""}`;
+    if (Object.keys(next).length === questions.length) {
+      const total = questions.reduce((a, qq, i) => a + (next[i] === qq.correctIndex ? 1 : 0), 0);
+      line += ` That's all ${questions.length} answered: ${total} correct.`;
+      if (total === questions.length) setTimeout(() => fireConfetti({ originY: 0.7 }), 200);
+    }
+    setSaid(line.trim());
   }
 
   return (
-    <section className="mt-14 pt-8 border-t border-line">
-      <p className="font-mono text-[0.65rem] tracking-[0.14em] uppercase text-ink-subtle">
-        Knowledge check
+    <section className="!mt-16 rounded-3xl border border-line bg-surface p-5 sm:p-8" aria-labelledby="knowledge-check">
+      <p aria-live="polite" className="sr-only">
+        {said}
       </p>
-      <h2 className="mt-2 font-display text-[1.5rem] font-semibold tracking-[-0.02em] text-ink">
-        Did the key ideas land?
-      </h2>
-      <p className="mt-2 text-[0.95rem] text-ink-muted leading-relaxed">
-        Five quick questions. No grade, no penalty, just a way to make sure
-        the lesson stuck.
-      </p>
+      <div className="flex flex-wrap items-end justify-between gap-3">
+        <div>
+          <p className="text-[0.875rem] font-semibold text-orange-800"><span aria-hidden>🧠 </span>Knowledge check</p>
+          <Heading ref={heading} tabIndex={-1} id="knowledge-check" className="mt-1 font-display text-[1.5rem] font-semibold tracking-[-0.02em] text-ink outline-none">
+            Did the key ideas land?
+          </Heading>
+          <p className="mt-1 text-[0.92rem] text-ink-muted">Tap an answer - you&rsquo;ll see straight away if it&rsquo;s right. No grade, no penalty.</p>
+        </div>
+        <div role="img" className="flex items-center gap-1.5" aria-label={`${answered} of ${questions.length} answered`}>
+          {questions.map((q, i) => (
+            <span
+              key={i}
+              className={`h-2.5 w-6 rounded-full transition-colors duration-300 ${
+                answers[i] === undefined ? "bg-surface-deep" : answers[i] === q.correctIndex ? "bg-emerald-500" : "bg-rose-400"
+              }`}
+            />
+          ))}
+        </div>
+      </div>
 
-      <div className="mt-8 space-y-5">
-        {questions.map((q, qIdx) => {
-          const userChoice = answers[qIdx];
+      <ol className="mt-7 space-y-5">
+        {questions.map((q, qi) => {
+          const a = answers[qi];
+          const locked = a !== undefined;
           return (
-            <div
-              key={qIdx}
-              className="rounded-2xl border border-line bg-surface p-5"
-            >
-              <p className="font-medium text-ink leading-snug">
-                <span className="text-ink-subtle font-mono mr-2">
-                  Q{qIdx + 1}.
-                </span>
+            <li key={qi} className="rounded-2xl bg-surface-alt/50 p-4 sm:p-5">
+              <p className="font-medium leading-snug text-ink">
+                <span className="mr-2 font-mono text-[0.8rem] text-ink-subtle">Q{qi + 1}</span>
                 {q.question}
               </p>
-              <div className="mt-4 space-y-2">
-                {q.options.map((opt, oIdx) => {
-                  const isCorrect = submitted && oIdx === q.correctIndex;
-                  const isWrongUserChoice =
-                    submitted &&
-                    userChoice === oIdx &&
-                    oIdx !== q.correctIndex;
-                  const isUserChoice = userChoice === oIdx;
-
-                  let cls =
-                    "border-line bg-surface hover:border-ink/30 hover:bg-surface-alt";
-                  if (submitted) {
-                    if (isCorrect) cls = "border-emerald-400 bg-emerald-50";
-                    else if (isWrongUserChoice)
-                      cls = "border-rose-400 bg-rose-50";
-                    else cls = "border-line bg-surface opacity-50";
-                  } else if (isUserChoice) {
-                    cls = "border-accent bg-accent-soft";
-                  }
-
+              <div className="mt-4 grid gap-2">
+                {q.options.map((opt, oi) => {
+                  const correct = locked && oi === q.correctIndex;
+                  const wrong = locked && a === oi && oi !== q.correctIndex;
                   return (
                     <button
+                      key={oi}
                       type="button"
-                      key={oIdx}
-                      onClick={() => selectAnswer(qIdx, oIdx)}
-                      disabled={submitted}
-                      className={`w-full text-left flex items-center gap-3 px-4 py-3 rounded-xl border-2 transition-all duration-150 ${cls} ${
-                        submitted ? "cursor-default" : "cursor-pointer"
+                      onClick={() => pick(qi, oi)}
+                      // Not `disabled`: that would drop keyboard focus the moment you answer.
+                      aria-disabled={locked || undefined}
+                      className={`flex w-full items-center gap-3 rounded-xl border-2 px-4 py-3 text-left transition-all duration-200 ${
+                        correct
+                          ? "border-emerald-400 bg-emerald-50"
+                          : wrong
+                            ? "border-rose-300 bg-rose-50"
+                            : locked
+                              ? "border-transparent bg-surface opacity-55"
+                              : "border-line bg-surface hover:-translate-y-0.5 hover:border-ink/25 hover:shadow-[var(--shadow-soft)]"
                       }`}
                     >
                       <span
-                        className={`flex-shrink-0 h-5 w-5 rounded-full border-2 flex items-center justify-center ${
-                          isUserChoice ? "border-current" : "border-line"
+                        className={`inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-lg font-mono text-[0.72rem] font-bold ${
+                          correct ? "bg-emerald-700 text-white" : wrong ? "bg-rose-600 text-white" : "bg-surface-alt text-ink-muted"
                         }`}
                       >
-                        {isUserChoice && (
-                          <span className="h-2.5 w-2.5 rounded-full bg-current" />
-                        )}
+                        {correct ? "✓" : wrong ? "✗" : String.fromCharCode(65 + oi)}
                       </span>
-                      <span className="flex-1 text-[0.95rem] text-ink">
-                        {opt}
-                      </span>
-                      {isCorrect && (
-                        <span className="text-emerald-700 font-bold text-sm">
-                          ✓
-                        </span>
-                      )}
-                      {isWrongUserChoice && (
-                        <span className="text-rose-700 font-bold text-sm">
-                          ✗
-                        </span>
-                      )}
+                      <span className="flex-1 text-[0.95rem] text-ink">{opt}</span>
                     </button>
                   );
                 })}
               </div>
-              {submitted && q.explanation && (
-                <p className="mt-4 text-[0.85rem] text-ink-muted leading-relaxed border-l-2 border-line pl-3">
+              {locked && q.explanation && (
+                <p
+                  className={`animate-in mt-3 rounded-xl px-4 py-3 text-[0.88rem] leading-relaxed ${
+                    a === q.correctIndex ? "bg-emerald-50 text-emerald-950" : "bg-rose-50 text-rose-950"
+                  }`}
+                >
+                  <b>{a === q.correctIndex ? "Correct. " : "Not quite. "}</b>
                   {q.explanation}
                 </p>
               )}
-            </div>
+            </li>
           );
         })}
-      </div>
+      </ol>
 
-      <div
-        id="quiz-summary"
-        className="mt-8 flex flex-wrap items-center gap-4"
-      >
-        {!submitted ? (
-          <>
-            <button
-              type="button"
-              onClick={submit}
-              disabled={!allAnswered}
-              className="h-12 px-6 rounded-full bg-accent text-white text-[0.95rem] font-medium shadow-[0_1px_2px_rgba(10,10,10,0.06)] transition-all duration-200 hover:-translate-y-px hover:bg-accent-deep disabled:opacity-50 disabled:cursor-not-allowed disabled:translate-y-0"
-            >
-              Check answers
-            </button>
-            <p className="text-[0.85rem] text-ink-muted">
-              {Object.keys(answers).length} / {questions.length} answered
+      {finished && (
+        <div className="animate-in mt-6 flex flex-col items-start gap-4 rounded-2xl bg-ink p-5 text-white sm:flex-row sm:items-center">
+          <p className="text-[2rem]" aria-hidden>
+            {score === questions.length ? "🔥" : score >= questions.length / 2 ? "👏" : "📚"}
+          </p>
+          <div className="flex-1">
+            <p className="font-display text-[1.25rem] font-semibold">
+              {score}/{questions.length} correct
             </p>
-          </>
-        ) : (
-          <>
-            <p className="text-[1.05rem] font-medium text-ink">
-              You scored{" "}
-              <span
-                className={
-                  score === questions.length
-                    ? "text-emerald-700"
-                    : score >= questions.length / 2
-                    ? "text-ink"
-                    : "text-rose-700"
-                }
-              >
-                {score}
-              </span>{" "}
-              <span className="text-ink-muted">/ {questions.length}</span>
+            <p className="text-[0.88rem] text-white/65">
+              {score === questions.length ? "Flawless. You've got this lesson nailed." : "Have another look at the ones you missed, then try again."}
             </p>
-            <button
-              type="button"
-              onClick={reset}
-              className="h-11 px-5 rounded-full border border-line bg-surface text-ink text-[0.9rem] font-medium transition-all duration-200 hover:-translate-y-px hover:border-ink/30"
-            >
-              Try again
-            </button>
-          </>
-        )}
-      </div>
+          </div>
+          <button
+            type="button"
+            onClick={() => {
+              setAnswers({});
+              setSaid("");
+              heading.current?.focus();
+            }}
+            className="rounded-full border border-white/20 px-5 py-2.5 text-[0.88rem] font-medium transition-colors hover:bg-white hover:text-ink"
+          >
+            Try again
+          </button>
+        </div>
+      )}
     </section>
   );
 }

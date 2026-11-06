@@ -11,6 +11,9 @@ const base = (size: number): SVGProps<SVGSVGElement> => ({
   strokeWidth: 1.75,
   strokeLinecap: "round" as const,
   strokeLinejoin: "round" as const,
+  // Decorative by default; pass aria-hidden={false} plus a <title> for a meaningful icon.
+  "aria-hidden": true,
+  focusable: false,
 });
 
 export function ArrowRight({ size = 18, ...rest }: IconProps) {
@@ -316,6 +319,137 @@ export function TrendingUp({ size = 18, ...rest }: IconProps) {
     <svg {...base(size)} {...rest}>
       <path d="m3 17 6-6 4 4 8-8" />
       <path d="M15 7h6v6" />
+    </svg>
+  );
+}
+
+export function Target({ size = 18, ...rest }: IconProps) {
+  return (
+    <svg {...base(size)} {...rest}>
+      <circle cx="12" cy="12" r="9" />
+      <circle cx="12" cy="12" r="5" />
+      <circle cx="12" cy="12" r="1" />
+    </svg>
+  );
+}
+
+export function Clock({ size = 18, ...rest }: IconProps) {
+  return (
+    <svg {...base(size)} {...rest}>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 7v5l3 2" />
+    </svg>
+  );
+}
+
+export function Lock({ size = 18, ...rest }: IconProps) {
+  return (
+    <svg {...base(size)} {...rest}>
+      <rect x="5" y="11" width="14" height="10" rx="2" />
+      <path d="M8 11V7a4 4 0 0 1 8 0v4" />
+    </svg>
+  );
+}
+
+export function ChevronLeft({ size = 18, ...rest }: IconProps) {
+  return (
+    <svg {...base(size)} {...rest}>
+      <path d="m15 6-6 6 6 6" />
+    </svg>
+  );
+}
+
+export function ChevronDown({ size = 18, ...rest }: IconProps) {
+  return (
+    <svg {...base(size)} {...rest}>
+      <path d="m6 9 6 6 6-6" />
+    </svg>
+  );
+}
+
+export function ExternalLink({ size = 18, ...rest }: IconProps) {
+  return (
+    <svg {...base(size)} {...rest}>
+      <path d="M14 4h6v6" />
+      <path d="M20 4 10 14" />
+      <path d="M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5" />
+    </svg>
+  );
+}
+
+export function Sparkles({ size = 18, ...rest }: IconProps) {
+  return (
+    <svg {...base(size)} {...rest}>
+      <path d="M12 3v4M12 17v4M3 12h4M17 12h4" />
+      <path d="m6 6 2 2M16 16l2 2M6 18l2-2M16 8l2-2" />
+    </svg>
+  );
+}
+
+export function Trophy({ size = 18, ...rest }: IconProps) {
+  return (
+    <svg {...base(size)} {...rest}>
+      <path d="M8 4h8v5a4 4 0 0 1-8 0V4z" />
+      <path d="M8 6H5a3 3 0 0 0 3 4M16 6h3a3 3 0 0 1-3 4" />
+      <path d="M12 13v4M9 21h6M10 17h4" />
+    </svg>
+  );
+}
+
+export function GraduationCap({ size = 18, ...rest }: IconProps) {
+  return (
+    <svg {...base(size)} {...rest}>
+      <path d="m2 9 10-5 10 5-10 5L2 9z" />
+      <path d="M6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5" />
+      <path d="M22 9v5" />
+    </svg>
+  );
+}
+
+export function LogOut({ size = 18, ...rest }: IconProps) {
+  return (
+    <svg {...base(size)} {...rest}>
+      <path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3" />
+      <path d="M10 17l-5-5 5-5" />
+      <path d="M5 12h11" />
+    </svg>
+  );
+}
+
+export function Home({ size = 18, ...rest }: IconProps) {
+  return (
+    <svg {...base(size)} {...rest}>
+      <path d="M4 11 12 4l8 7" />
+      <path d="M6 10v10h12V10" />
+      <path d="M10 20v-5h4v5" />
+    </svg>
+  );
+}
+
+export function MoreHorizontal({ size = 18, ...rest }: IconProps) {
+  return (
+    <svg {...base(size)} {...rest}>
+      <circle cx="6" cy="12" r="1.2" />
+      <circle cx="12" cy="12" r="1.2" />
+      <circle cx="18" cy="12" r="1.2" />
+    </svg>
+  );
+}
+
+export function Flame({ size = 18, ...rest }: IconProps) {
+  return (
+    <svg {...base(size)} {...rest}>
+      <path d="M12 21c4 0 7-2.7 7-6.5 0-3.2-2-5.5-4-7.5-.3 2-1.3 3.2-2.5 3.8C12.5 7.5 11 5 8.5 3 8.7 6 5 8.6 5 14.5 5 18.3 8 21 12 21z" />
+    </svg>
+  );
+}
+
+export function Award({ size = 18, ...rest }: IconProps) {
+  return (
+    <svg {...base(size)} {...rest}>
+      <circle cx="12" cy="9" r="6" />
+      <path d="m9 14.2-1.6 7.3L12 19l4.6 2.5-1.6-7.3" />
+      <path d="m10.2 9 1.3 1.3 2.6-2.6" />
     </svg>
   );
 }

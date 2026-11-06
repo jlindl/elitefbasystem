@@ -1,14 +1,22 @@
 import "server-only";
 import { redirect } from "next/navigation";
+import { cache } from "react";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { validatePersonName } from "./person-name";
 
 export type Student = {
+  /** Supabase auth user id. */
+  id: string;
   firstName: string;
   fullName: string;
   initials: string;
   email: string;
   plan: string;
   hasAccess: boolean;
+  /** ISO timestamp the account was created. */
+  memberSince: string;
+  /** False when the name is only derived from the email address (no profile name saved yet). */
+  nameIsSet: boolean;
 };
 
 function deriveDisplay(fullName: string | null, email: string) {
@@ -22,7 +30,8 @@ function deriveDisplay(fullName: string | null, email: string) {
   return { displayName: name, firstName, initials };
 }
 
-export async function getCurrentStudent(): Promise<Student> {
+/** The signed-in student (redirects home if signed out). Shared by everything in one request. */
+export const getCurrentStudent = cache(async (): Promise<Student> => {
   const supabase = await createSupabaseServerClient();
   const {
     data: { user },
@@ -36,17 +45,20 @@ export async function getCurrentStudent(): Promise<Student> {
     .eq("id", user.id)
     .single();
 
-  const { displayName, firstName, initials } = deriveDisplay(
-    profile?.full_name ?? null,
-    user.email ?? "",
-  );
+  // Names saved before validation existed (e.g. at sign-up) only count if they pass it.
+  const checked = profile?.full_name ? validatePersonName(profile.full_name) : null;
+  const savedName = checked?.ok ? checked.name : null;
+  const { displayName, firstName, initials } = deriveDisplay(savedName, user.email ?? "");
 
   return {
+    id: user.id,
     firstName,
     fullName: displayName,
     initials,
     email: user.email ?? "",
     plan: profile?.has_access ? "Mentorship Member" : "Full Plan",
     hasAccess: !!profile?.has_access,
+    memberSince: user.created_at,
+    nameIsSet: !!savedName,
   };
-}
+});

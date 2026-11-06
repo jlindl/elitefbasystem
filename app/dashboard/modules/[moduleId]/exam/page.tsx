@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
+import { ChevronLeft } from "@/app/components/icons";
+import { SmoothScroll } from "@/app/components/smooth-scroll";
 import { ModuleExam } from "../../../_components/module-exam";
 import { getCurrentStudent } from "../../../_lib/get-student";
 import {
@@ -42,34 +44,34 @@ export default async function ModuleExamPage({ params }: { params: Params }) {
     (tabId) => !completed.has(`${moduleId}::${tabId}`),
   );
   if (missing.length > 0) {
-    redirect("/dashboard/modules");
+    redirect(`/dashboard/modules/${moduleId}`);
   }
 
   return (
-    <main className="min-h-screen bg-surface-alt">
-      <header className="sticky top-0 z-20 bg-bg/85 backdrop-blur-md border-b border-line">
-        <div className="mx-auto max-w-[860px] px-6 md:px-8 py-4 flex items-center gap-4">
+    <div className="dash-theme min-h-screen bg-bg">
+      <SmoothScroll />
+      <header className="sticky top-0 z-30 border-b border-line bg-bg/85 backdrop-blur-xl">
+        <div className="mx-auto flex max-w-[860px] items-center gap-3 px-4 py-3 sm:px-6">
           <Link
-            href="/dashboard/modules"
-            className="text-[0.85rem] text-ink-muted hover:text-ink transition-colors"
+            href={`/dashboard/modules/${moduleId}`}
+            className="inline-flex h-9 shrink-0 items-center gap-1.5 rounded-full border border-line bg-surface pl-2 pr-3.5 text-[0.85rem] font-medium text-ink transition-colors hover:border-ink/25"
           >
-            ← All modules
+            <ChevronLeft size={16} /> Module {moduleIndex + 1}
           </Link>
-          <span className="text-ink-subtle text-[0.85rem]">·</span>
-          <span className="font-mono text-[0.65rem] tracking-[0.1em] uppercase text-ink-subtle truncate">
-            {mod.name} · Final Exam
-          </span>
+          <p className="min-w-0 truncate text-[0.85rem] text-ink-muted">
+            <span className="text-ink-subtle">Module {moduleIndex + 1} ·</span> Final exam
+          </p>
         </div>
       </header>
-
-      <div className="mx-auto max-w-[860px] px-6 md:px-8 py-8 md:py-12">
+      <main className="mx-auto max-w-[860px] px-4 pb-24 pt-8 sm:px-6 md:pt-12">
         <ModuleExam
           questions={quiz}
           moduleId={moduleId}
           moduleName={mod.name}
+          moduleNumber={moduleIndex + 1}
           passThreshold={MODULE_EXAM_PASS_THRESHOLD}
         />
-      </div>
-    </main>
+      </main>
+    </div>
   );
 }

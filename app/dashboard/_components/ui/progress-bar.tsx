@@ -1,33 +1,19 @@
-﻿"use client";
-
-import { useEffect, useState, type CSSProperties } from "react";
-
-type ProgressBarProps = {
+﻿type ProgressBarProps = {
   percent: number;
   className?: string;
   ariaLabel?: string;
+  tone?: "accent" | "success" | "light";
 };
 
-export function ProgressBar({
-  percent,
-  className = "",
-  ariaLabel,
-}: ProgressBarProps) {
+/** Thin progress bar; the fill grows in on first paint. */
+export function ProgressBar({ percent, className = "", ariaLabel, tone = "accent" }: ProgressBarProps) {
   const target = Math.max(0, Math.min(100, percent));
-  const [width, setWidth] = useState(0);
-
-  useEffect(() => {
-    const id = window.requestAnimationFrame(() =>
-      window.requestAnimationFrame(() => setWidth(target)),
-    );
-    return () => window.cancelAnimationFrame(id);
-  }, [target]);
-
-  const fillStyle: CSSProperties = {
-    width: `${width}%`,
-    transition: "width 600ms cubic-bezier(0.22, 1, 0.36, 1)",
-  };
-
+  const fill =
+    tone === "success"
+      ? "bg-emerald-500"
+      : tone === "light"
+        ? "bg-gradient-to-r from-accent to-[#ffb347]"
+        : "bg-gradient-to-r from-accent to-[#ff8f4d]";
   return (
     <div
       role="progressbar"
@@ -35,9 +21,12 @@ export function ProgressBar({
       aria-valuemax={100}
       aria-valuenow={target}
       aria-label={ariaLabel}
-      className={`relative h-1 w-full rounded-full bg-line overflow-hidden ${className}`}
+      className={`relative h-2 w-full overflow-hidden rounded-full ${tone === "light" ? "bg-white/12" : "bg-surface-deep"} ${className}`}
     >
-      <div className="absolute inset-y-0 left-0 bg-accent" style={fillStyle} />
+      <div
+        className={`bar-grow absolute inset-y-0 left-0 rounded-full ${fill}`}
+        style={{ width: `${target}%` }}
+      />
     </div>
   );
 }

@@ -200,7 +200,7 @@ export function CaseStudy() {
         <p className="text-ink leading-relaxed">
           A bundle changes the equation completely. The moment you combine
           two or more standalone products into a single new pack, you have
-          created a brand-new product as far as Amazon's catalogue is
+          created a brand-new product as far as Amazon&rsquo;s catalogue is
           concerned. That new pack gets its own brand-new ASIN, you are the
           seller who built the listing, and from day one you are the only
           seller on it.
@@ -238,7 +238,7 @@ export function CaseStudy() {
           </div>
 
           <div className="relative rounded-xl border-2 border-emerald-300 bg-emerald-50 p-5">
-            <span className="absolute -top-2.5 right-4 inline-flex h-5 px-2 items-center rounded-full bg-emerald-500 text-white font-mono text-[0.55rem] font-bold tracking-[0.1em] uppercase shadow-sm">
+            <span className="absolute -top-2.5 right-4 inline-flex h-5 px-2 items-center rounded-full bg-emerald-700 text-white text-[0.6875rem] font-semibold shadow-sm">
               ✓ Our Play
             </span>
             <div className="flex items-center gap-2 mb-2">
@@ -275,7 +275,7 @@ export function CaseStudy() {
           The bundle itself does not need to be clever. A 3-pack of the same
           brand of lightbulbs, or two complementary everyday items packaged
           together in a single polybag, is enough to register as a brand-new
-          SKU in Amazon's catalogue. The mechanic that protects it is the
+          SKU in Amazon&rsquo;s catalogue. The mechanic that protects it is the
           uniqueness of the combination, not the cleverness of the idea.
           Once the listing is yours and you lock it down with the brand
           registry (Module 6), no competitor can muscle in. Every click,
@@ -327,10 +327,10 @@ export function CaseStudy() {
                   type="button"
                   onClick={() => setActiveId(p.id)}
                   className="group flex flex-col items-center text-center px-1"
-                  aria-label={`Phase ${p.id}: ${p.phase}`}
                   aria-current={isActive ? "step" : undefined}
                 >
-                  <div
+                  <span className="sr-only">Phase </span>
+                  <span
                     className={`relative h-12 w-12 rounded-full border-2 flex items-center justify-center font-display text-lg font-bold transition-all duration-300 ${
                       isActive
                         ? `${t.dotBg} text-white ${t.activeBorder} ring-4 ${t.ring} shadow-md scale-110`
@@ -339,19 +339,19 @@ export function CaseStudy() {
                         : "bg-surface text-ink-muted border-line group-hover:border-ink/40 group-hover:scale-105"
                     }`}
                   >
-                    {isPast ? "✓" : p.id}
-                  </div>
-
-                  <p
-                    className={`mt-3.5 font-display text-[0.9rem] md:text-[1rem] font-bold leading-tight transition-colors duration-200 ${
+                    {isPast ? <><span aria-hidden>✓</span><span className="sr-only">{p.id}</span></> : p.id}
+                  </span>
+                  <span className="sr-only">: </span>
+                  <span
+                    className={`mt-3.5 block font-display text-[0.9rem] md:text-[1rem] font-bold leading-tight transition-colors duration-200 ${
                       isActive || isPast
                         ? t.text
                         : "text-ink-muted group-hover:text-ink"
                     }`}
                   >
                     {p.phase}
-                  </p>
-
+                  </span>
+                  <span className="sr-only">, </span>
                   <span
                     className={`mt-1.5 inline-flex items-center gap-1 font-mono text-[0.6rem] tracking-[0.12em] uppercase rounded-full px-2 py-0.5 transition-colors duration-200 ${
                       isActive || isPast

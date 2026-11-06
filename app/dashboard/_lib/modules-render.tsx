@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { WorkflowDiagram } from "../_components/workflow-diagram";
 import { PrimeComparison } from "../_components/prime-comparison";
 import { AutomationTimeline } from "../_components/automation-timeline";
@@ -49,6 +50,8 @@ import { BoxSpecCard } from "../_components/box-spec-card";
 import { ShipmentWizard } from "../_components/shipment-wizard";
 import { LabelTypes } from "../_components/label-types";
 import { DeliveryTimeline } from "../_components/delivery-timeline";
+import { linkTerms, type GlossaryRun } from "./glossary";
+import modulesData from "./modules_content.json";
 
 export type Block = {
   type: string;
@@ -121,9 +124,19 @@ export type Tab = {
 // Render a list of blocks while assigning heading_2 elements the same unique,
 // de-duplicated ids that extractTocHeadings produces, so Table of Contents
 // anchor links resolve even when two headings share the same text.
-export function renderBlocks(blocks: Block[]) {
+export function renderBlocks(blocks: Block[], opts: { glossary?: GlossaryRun } = {}) {
   const seen = new Set<string>();
-  return blocks.map((block, i) => {
+  const out: ReactNode[] = [];
+  for (let i = 0; i < blocks.length; i++) {
+    const block = blocks[i];
+    // Consecutive list items become one real list, so screen readers announce "list, 4 items".
+    if (block.type === "bulleted_list_item" || block.type === "numbered_list_item") {
+      const run: { block: Block; i: number }[] = [];
+      while (i < blocks.length && blocks[i].type === block.type) run.push({ block: blocks[i], i: i++ });
+      i--;
+      out.push(renderList(block.type === "numbered_list_item", run, opts.glossary));
+      continue;
+    }
     if (block.type === "heading_2" && block.content) {
       let id = slugify(block.content);
       if (id) {
@@ -133,79 +146,125 @@ export function renderBlocks(blocks: Block[]) {
           id = `${slugify(block.content)}-${suffix}`;
         }
         seen.add(id);
-        return renderBlock(block, i, id);
+        out.push(renderBlock(block, i, id, opts.glossary));
+        continue;
       }
     }
-    return renderBlock(block, i);
-  });
+    out.push(renderBlock(block, i, undefined, opts.glossary));
+  }
+  return out;
 }
 
-export function renderBlock(block: Block, i: number, idOverride?: string) {
+/** Body text that follows the reader's text-size choice (Reading options in a lesson). */
+const SCALED = {
+  body: "text-[length:calc(1.0625rem*var(--lesson-scale,1))]",
+  small: "text-[length:calc(1rem*var(--lesson-scale,1))]",
+};
+
+function renderList(numbered: boolean, items: { block: Block; i: number }[], glossary?: GlossaryRun) {
+  const List = numbered ? "ol" : "ul";
+  return (
+    <List key={items[0].i} role="list" className="max-w-[68ch] space-y-2.5">
+      {items.map(({ block, i }, n) => (
+        <li key={i} data-read="" className={`flex gap-3 pl-1 ${SCALED.body} leading-[1.75] text-ink/85`}>
+          {numbered ? (
+            <span className="mt-[0.3em] inline-flex h-6 min-w-6 shrink-0 items-center justify-center rounded-md bg-accent-soft px-1 text-[0.8125rem] font-bold tabular-nums text-orange-800"
+            >
+              {n + 1}
+            </span>
+          ) : (
+            <span aria-hidden className="mt-[0.7em] h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+          )}
+          <span className="min-w-0">{linkTerms(block.content, glossary)}</span>
+        </li>
+      ))}
+    </List>
+  );
+}
+
+const CALLOUT_TONES: { match: RegExp; cls: string; label: string }[] = [
+  { match: /^(⚠️|⚠|🚨|❗|⛔)/u, cls: "border-amber-200 bg-amber-50 text-amber-950", label: "text-amber-800" },
+  { match: /^(💡|🧠|ℹ️)/u, cls: "border-sky-200 bg-sky-50 text-sky-950", label: "text-sky-800" },
+  { match: /^(🎯|🔥|⭐|🚀)/u, cls: "border-accent/30 bg-accent-soft text-ink", label: "text-orange-800" },
+  { match: /^(✅|✔️|👍|💪)/u, cls: "border-emerald-200 bg-emerald-50 text-emerald-950", label: "text-emerald-800" },
+  { match: /^(🛒|📦|🧾|💷|💰)/u, cls: "border-violet-200 bg-violet-50 text-violet-950", label: "text-violet-800" },
+];
+
+/** Splits "🎯 Title: body" into its emoji, optional short title and body. */
+function parseCallout(text: string) {
+  const m = text.match(/^(\p{Extended_Pictographic}(?:\uFE0F|\u200D\p{Extended_Pictographic})*)\s*/u);
+  const emoji = m?.[1] ?? "📌";
+  let body = m ? text.slice(m[0].length) : text;
+  let title: string | null = null;
+  const colon = body.indexOf(":");
+  if (colon > 0 && colon <= 42 && !/https?$/i.test(body.slice(0, colon))) {
+    title = body.slice(0, colon).trim();
+    body = body.slice(colon + 1).trim();
+  }
+  const tone =
+    CALLOUT_TONES.find((t) => t.match.test(emoji)) ?? { cls: "border-line bg-surface-alt text-ink", label: "text-ink-muted" };
+  return { emoji, title, body, tone };
+}
+
+/** Renders one content block. Pass a glossary run to link dictionary terms in its text. */
+export function renderBlock(block: Block, i: number, idOverride?: string, glossary?: GlossaryRun) {
   if (block.type === "paragraph") {
-    if (!block.content || block.content.trim() === "")
-      return <div key={i} className="h-4" />;
+    if (!block.content || block.content.trim() === "") return <div key={i} className="h-2" />;
     return (
-      <p key={i} className="text-ink leading-relaxed">
-        {block.content}
+      <p key={i} data-read="" className={`max-w-[70ch] ${SCALED.body} leading-[1.8] text-ink/85`}>
+        {linkTerms(block.content, glossary)}
       </p>
     );
   }
   if (block.type === "heading_1") {
     return (
-      <div key={i} className="pt-8 pb-4 border-b-2 border-slate-200">
-        <h1 className="text-2xl md:text-3xl font-display font-bold text-ink">
-          {block.content}
-        </h1>
-      </div>
+      <h2 key={i} className="!mt-14 max-w-[70ch] font-display text-[1.9rem] font-semibold tracking-[-0.03em] text-ink">
+        {block.content}
+      </h2>
     );
   }
   if (block.type === "heading_2") {
     const id = idOverride ?? (block.content ? slugify(block.content) : undefined);
     return (
-      <div
+      <h2
         key={i}
         id={id}
-        className="pt-6 pb-3 mt-4 bg-slate-50 px-4 py-3 rounded-lg border-l-4 border-accent scroll-mt-24"
+        className="group/h !mt-12 flex max-w-[70ch] scroll-mt-28 items-start gap-3 font-display text-[1.5rem] font-semibold leading-tight tracking-[-0.025em] text-ink md:text-[1.7rem]"
       >
-        <h2 className="text-xl font-bold text-ink">{block.content}</h2>
-      </div>
+        <span aria-hidden className="mt-[0.55em] h-[3px] w-5 shrink-0 rounded-full bg-accent" />
+        <span>{block.content}</span>
+      </h2>
     );
   }
   if (block.type === "heading_3") {
     const id = block.content ? slugify(block.content) : undefined;
     return (
-      <h3
-        key={i}
-        id={id}
-        className="text-lg font-bold mt-4 mb-2 text-ink flex items-center gap-2 scroll-mt-24"
-      >
-        <span>▸</span>
+      <h3 key={i} id={id} data-read="" className="lesson-heading !mt-10 max-w-[70ch] scroll-mt-28 font-display text-[length:calc(1.25rem*var(--lesson-scale,1))] font-semibold tracking-[-0.015em] text-ink">
         {block.content}
       </h3>
     );
   }
   if (block.type === "bulleted_list_item") {
     return (
-      <p key={i} className="pl-6 flex gap-3 text-ink">
-        <span className="flex-shrink-0 mt-1">•</span>
-        <span>{block.content}</span>
+      <p key={i} className="!mt-2.5 flex max-w-[68ch] gap-3 pl-1 text-[1.02rem] leading-[1.75] text-ink/85">
+        <span aria-hidden className="mt-[0.7em] h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+        <span>{linkTerms(block.content, glossary)}</span>
       </p>
     );
   }
   if (block.type === "numbered_list_item") {
     return (
-      <p key={i} className="pl-6 flex gap-3 text-ink">
-        <span className="flex-shrink-0">→</span>
-        <span>{block.content}</span>
+      <p key={i} className="!mt-2.5 flex max-w-[68ch] gap-3 pl-1 text-[1.02rem] leading-[1.75] text-ink/85">
+        <span aria-hidden className="mt-[0.2em] inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-md bg-accent-soft text-[0.7rem] font-bold text-accent">
+          →
+        </span>
+        <span>{linkTerms(block.content, glossary)}</span>
       </p>
     );
   }
   if (block.type === "quote") {
     return (
-      <blockquote
-        key={i}
-        className="border-l-4 border-accent pl-4 italic my-4 py-2 bg-slate-50 text-ink-muted rounded"
-      >
+      <blockquote key={i} data-read="" className="!my-8 max-w-[64ch] border-l-[3px] border-accent pl-6 font-serif text-[length:calc(1.35rem*var(--lesson-scale,1))] leading-[1.5] text-ink">
         {block.content}
       </blockquote>
     );
@@ -216,7 +275,7 @@ export function renderBlock(block: Block, i: number, idOverride?: string) {
       return (
         <div
           key={i}
-          className="relative aspect-video w-full max-w-4xl mx-auto rounded-xl overflow-hidden bg-black my-6 shadow-inner"
+          className="relative !my-8 aspect-video w-full overflow-hidden rounded-3xl bg-ink shadow-[0_24px_60px_-24px_rgba(10,10,10,0.5)] ring-1 ring-black/5"
         >
           {youTubeId ? (
             <iframe
@@ -224,38 +283,23 @@ export function renderBlock(block: Block, i: number, idOverride?: string) {
               title={block.content ?? "Module video"}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
+              loading="lazy"
               className="absolute inset-0 h-full w-full"
             />
           ) : (
-            <video
-              src={block.src}
-              controls
-              playsInline
-              preload="metadata"
-              className="absolute inset-0 h-full w-full"
-            />
+            <video src={block.src} controls playsInline preload="metadata" className="absolute inset-0 h-full w-full" />
           )}
         </div>
       );
     }
     return (
-      <div
-        key={i}
-        className="relative aspect-video w-full max-w-4xl mx-auto rounded-xl overflow-hidden bg-black/5 border border-black/10 flex items-center justify-center my-6 group cursor-pointer shadow-inner"
-      >
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
-        <div className="relative z-10 w-16 h-16 rounded-full bg-white/90 shadow-[0_0_20px_rgba(255,255,255,0.3)] flex items-center justify-center group-hover:scale-110 transition-transform duration-300 backdrop-blur-sm">
-          <svg
-            className="w-8 h-8 text-black ml-1"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-          >
+      <div key={i} className="relative !my-8 flex aspect-video w-full items-center justify-center overflow-hidden rounded-3xl bg-ink/5 ring-1 ring-black/5">
+        <span className="inline-flex h-16 w-16 items-center justify-center rounded-full bg-white shadow-lg">
+          <svg className="ml-1 h-7 w-7 text-ink" fill="currentColor" viewBox="0 0 24 24" aria-hidden>
             <path d="M8 5v14l11-7z" />
           </svg>
-        </div>
-        <div className="absolute bottom-4 left-4 text-white font-medium drop-shadow-md">
-          {block.content}
-        </div>
+        </span>
+        <span className="absolute bottom-4 left-5 text-[0.9rem] font-medium text-ink-muted">{block.content}</span>
       </div>
     );
   }
@@ -263,80 +307,60 @@ export function renderBlock(block: Block, i: number, idOverride?: string) {
     const src = block.src ?? block.content ?? "";
     const caption = block.src ? block.content : undefined;
     return (
-      <figure
-        key={i}
-        className="my-6 rounded-xl overflow-hidden border border-black/5 shadow-sm bg-white p-2"
-      >
-        <img
-          src={src}
-          alt={block.label ?? "Module image"}
-          className="w-full h-auto rounded-lg"
-        />
-        {caption && (
-          <figcaption className="px-3 py-3 text-[0.85rem] text-ink-muted leading-relaxed italic text-center">
-            {caption}
-          </figcaption>
-        )}
+      <figure key={i} className="!my-8 overflow-hidden rounded-3xl border border-line bg-surface p-2 shadow-[var(--shadow-soft)]">
+        {/* eslint-disable-next-line @next/next/no-img-element -- remote course images from Supabase storage */}
+        <img src={src} alt={block.label ?? caption ?? "Lesson image"} loading="lazy" className="h-auto w-full rounded-2xl" />
+        {caption && <figcaption className="px-3 py-3 text-center text-[0.85rem] leading-relaxed text-ink-muted">{caption}</figcaption>}
       </figure>
     );
   }
   if (block.type === "external_link") {
     const href = block.src ?? "";
+    let host = href;
+    try {
+      host = new URL(href).hostname.replace(/^www\./, "");
+    } catch {}
     return (
       <a
         key={i}
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className="my-6 flex items-center justify-between gap-4 rounded-xl border-2 border-violet-300 bg-violet-50 px-5 py-4 transition-colors duration-150 hover:bg-violet-100 hover:border-violet-400 no-underline"
+        className="spot lift group !my-6 flex max-w-[70ch] items-center gap-4 rounded-2xl border border-line bg-surface p-4 no-underline"
       >
-        <div className="min-w-0 flex-1">
-          <p className="font-display font-bold text-[0.95rem] text-violet-900 leading-tight">
-            {block.label ?? "Open link"}
-          </p>
-          <p className="font-mono text-[0.7rem] text-violet-700 leading-tight mt-1 truncate">
-            {href}
-          </p>
-          {block.description && (
-            <p className="text-[0.8rem] text-violet-800 leading-snug mt-1.5">
-              {block.description}
-            </p>
-          )}
-        </div>
-        <span
-          className="text-violet-600 text-xl flex-shrink-0"
-          aria-hidden="true"
-        >
+        <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-accent-soft font-display text-[1rem] font-semibold uppercase text-accent">
+          {host.charAt(0)}
+        </span>
+        <span className="min-w-0 flex-1">
+          <span className="block font-display text-[1rem] font-semibold leading-tight text-ink group-hover:text-accent">{block.label ?? "Open link"}</span>
+          {block.description && <span className="mt-0.5 block text-[0.85rem] leading-snug text-ink-muted">{block.description}</span>}
+          <span className="mt-1 block truncate font-mono text-[0.68rem] text-ink-subtle">{host}</span>
+        </span>
+        <span aria-hidden className="nudge shrink-0 text-[1.1rem] text-ink-subtle group-hover:text-accent">
           ↗
         </span>
       </a>
     );
   }
   if (block.type === "callout") {
+    const c = parseCallout(block.content ?? "");
     return (
-      <div
-        key={i}
-        className="my-6 p-5 rounded-xl bg-blue-50 border-2 border-blue-200 text-blue-900"
-      >
-        <p className="font-medium text-[0.95rem] leading-relaxed flex gap-3">
-          <span className="flex-shrink-0">⚠️</span>
-          <span>{block.content}</span>
-        </p>
-      </div>
+      <aside key={i} data-read="" className={`!my-8 flex max-w-[72ch] gap-4 rounded-2xl border p-5 ${c.tone.cls}`}>
+        <span aria-hidden className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/70 text-[1.25rem] shadow-sm">
+          {c.emoji}
+        </span>
+        <div className="min-w-0 pt-0.5">
+          {c.title && <p className={`text-[0.875rem] font-semibold tracking-[-0.005em] ${c.tone.label}`}>{c.title}</p>}
+          <p className={`${c.title ? "mt-1.5" : ""} ${SCALED.small} leading-[1.7]`}>{linkTerms(c.body, glossary)}</p>
+        </div>
+      </aside>
     );
   }
   if (block.type === "to_do") {
     return (
-      <div
-        key={i}
-        className="flex items-center gap-3 pl-4 my-2 p-3 rounded-lg bg-black/5 border border-black/5 hover:bg-black/10 transition-colors duration-200 cursor-pointer group"
-      >
-        <input
-          type="checkbox"
-          disabled
-          className="accent-accent w-4 h-4 rounded transition-transform duration-200 group-hover:scale-110"
-        />
-        <span className="font-medium">{block.content}</span>
+      <div key={i} data-read="" className="!mt-2.5 flex max-w-[68ch] items-start gap-3 rounded-xl border border-line bg-surface px-4 py-3">
+        <span aria-hidden className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-md border-2 border-line" />
+        <span className={`${SCALED.small} leading-relaxed text-ink`}>{linkTerms(block.content, glossary)}</span>
       </div>
     );
   }
@@ -486,6 +510,13 @@ function splitByLessonMarkers(blocks: Block[]): Tab[] {
     if (current) current.blocks.push(block);
   }
   return tabs;
+}
+
+/** A module's lessons, split the same way everywhere (Module 1 by topic, the rest by lesson markers). */
+export function lessonTabs(index: number): Tab[] {
+  const blocks = modulesData[index].blocks as Block[];
+  if (index === 0 || hasLessonMarkers(blocks)) return groupBlocksIntoTabs(splitVideoFromBlocks(blocks).rest);
+  return groupBlocksIntoTabs(blocks);
 }
 
 export function hasLessonMarkers(blocks: Block[]): boolean {

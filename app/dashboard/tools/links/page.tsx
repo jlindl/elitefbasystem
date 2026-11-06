@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import { AppShell } from "../../_components/app-shell";
 import { BackToTop } from "../../_components/back-to-top";
-import { UsefulLinks } from "../../_components/useful-links";
+import { LinkDirectory, type DirectoryItem } from "../../_components/link-directory";
+import { PageHeader } from "../../_components/ui/page-header";
 import { getCurrentStudent } from "../../_lib/get-student";
+import links from "../../_lib/useful-links.json";
 
 export const metadata: Metadata = {
   title: "Useful Links - EliteFBA",
-  description:
-    "Curated tools, suppliers, and resources referenced throughout the EliteFBA course.",
+  description: "Curated tools, suppliers, and resources referenced throughout the EliteFBA course.",
 };
 
 export default async function LinksPage() {
@@ -15,19 +16,13 @@ export default async function LinksPage() {
 
   return (
     <AppShell student={student}>
-      <div className="max-w-[1100px] mx-auto px-4 md:px-10 py-6 md:py-10 space-y-8">
-        <div>
-          <h1 className="font-display text-[2rem] md:text-[2.5rem] font-medium tracking-[-0.025em] text-ink">
-            Useful Links
-          </h1>
-          <p className="mt-2 text-[1rem] text-ink-muted max-w-[640px]">
-            Every tool, supplier, and resource referenced throughout the
-            course, in one place. Search or browse by category. Links open in
-            a new tab.
-          </p>
-        </div>
-
-        <UsefulLinks />
+      <div className="mx-auto max-w-[1240px] space-y-6 px-4 py-6 sm:px-6 md:px-10 md:py-10">
+        <PageHeader
+          eyebrow={`Toolkit · ${links.length} resources`}
+          title="Useful links"
+          description="Every tool and resource referenced throughout the course, in one place. Links open in a new tab."
+        />
+        <LinkDirectory items={links as DirectoryItem[]} noun="resource" placeholder="Search a tool or resource…" />
       </div>
       <BackToTop />
     </AppShell>

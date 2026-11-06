@@ -23,10 +23,10 @@ export function ModuleLock({ children }: { children: ReactNode }) {
   if (unlocked) return <>{children}</>;
 
   return (
-    <div className="flex flex-col items-center justify-center text-center py-12 px-4">
+    <div className="dash-grid relative flex flex-col items-center justify-center overflow-hidden rounded-3xl border border-dashed border-line bg-surface-alt/40 px-4 py-12 text-center">
       <span
         aria-hidden
-        className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-surface-alt text-[1.5rem]"
+        className="inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-surface text-[1.75rem] shadow-sm"
       >
         🔒
       </span>
@@ -34,7 +34,7 @@ export function ModuleLock({ children }: { children: ReactNode }) {
         This module is locked
       </h3>
       <p className="mt-2 text-[0.9375rem] text-ink-muted max-w-[380px]">
-        Enter the password to unlock this module.
+        Jakub unlocks this module when you&rsquo;re ready for it. Enter the password he gave you.
       </p>
 
       <form
@@ -51,18 +51,18 @@ export function ModuleLock({ children }: { children: ReactNode }) {
           placeholder="Password"
           aria-label="Module password"
           autoComplete="off"
-          className="flex-1 rounded-xl border border-line bg-surface px-4 py-3 text-[0.95rem] text-ink placeholder:text-ink-subtle focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+          className="flex-1 rounded-xl border border-line bg-surface px-4 py-3 text-[0.95rem] text-ink placeholder:text-ink-subtle focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-700"
         />
         <button
           type="submit"
-          className="inline-flex items-center justify-center rounded-xl bg-accent px-6 py-3 text-white font-medium text-[0.95rem] transition-colors duration-150 hover:bg-accent-deep focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
+          className="btn btn-primary btn-aa"
         >
           Unlock
         </button>
       </form>
 
       {error && (
-        <p className="mt-3 text-[0.85rem] text-accent-deep">
+        <p role="alert" className="mt-3 text-[0.9375rem] font-medium text-orange-800">
           Incorrect password. Please try again.
         </p>
       )}

@@ -3,6 +3,7 @@
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { validatePersonName } from "@/app/dashboard/_lib/person-name";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const MIN_PASSWORD = 8;
@@ -108,17 +109,15 @@ export async function signUpWithPassword(
   _prev: SignUpState,
   formData: FormData,
 ): Promise<SignUpState> {
-  const fullName = String(formData.get("full_name") ?? "").trim();
+  const nameCheck = validatePersonName(String(formData.get("full_name") ?? ""));
   const email = String(formData.get("email") ?? "").trim().toLowerCase();
   const password = String(formData.get("password") ?? "");
   const next = safeNext(formData.get("next"));
 
-  if (fullName.length < 3) {
-    return {
-      status: "error",
-      message: "Enter your full name (at least 3 characters).",
-    };
+  if (!nameCheck.ok) {
+    return { status: "error", message: nameCheck.error };
   }
+  const fullName = nameCheck.name;
   if (!EMAIL_RE.test(email)) {
     return { status: "error", message: "Enter a valid email address." };
   }

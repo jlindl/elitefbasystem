@@ -103,10 +103,8 @@ export function PreflightChecklist() {
             const isActive = activeId === item.id;
             return (
               <li key={item.id}>
-                <button
-                  type="button"
-                  onClick={() => setActiveId(item.id)}
-                  className={`w-full text-left rounded-xl border-2 p-3 transition-all duration-200 flex items-center gap-3 ${
+                <div
+                  className={`w-full rounded-xl border-2 p-3 transition-all duration-200 flex items-center gap-3 ${
                     isActive
                       ? "border-blue-400 bg-blue-50 ring-4 ring-blue-300/30"
                       : "border-line bg-surface hover:border-ink/30"
@@ -114,13 +112,10 @@ export function PreflightChecklist() {
                 >
                   <button
                     type="button"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      toggle(item.id);
-                    }}
-                    aria-label={`Mark ${item.title} ${
-                      isChecked ? "incomplete" : "complete"
-                    }`}
+                    role="checkbox"
+                    aria-checked={isChecked}
+                    onClick={() => toggle(item.id)}
+                    aria-label={`Ready: ${item.title}`}
                     className={`flex-shrink-0 h-6 w-6 rounded-md border-2 flex items-center justify-center transition-colors duration-150 ${
                       isChecked
                         ? "bg-emerald-500 border-emerald-500 text-white"
@@ -133,17 +128,24 @@ export function PreflightChecklist() {
                       </span>
                     )}
                   </button>
-                  <span className="text-xl leading-none flex-shrink-0">
-                    {item.icon}
-                  </span>
-                  <span
-                    className={`text-[0.9rem] font-display font-semibold leading-tight ${
-                      isChecked ? "text-ink-muted line-through" : "text-ink"
-                    }`}
+                  <button
+                    type="button"
+                    onClick={() => setActiveId(item.id)}
+                    aria-pressed={isActive}
+                    className="flex min-h-8 min-w-0 flex-1 items-center gap-3 text-left"
                   >
-                    {item.title}
-                  </span>
-                </button>
+                    <span aria-hidden className="text-xl leading-none flex-shrink-0">
+                      {item.icon}
+                    </span>
+                    <span
+                      className={`text-[0.9rem] font-display font-semibold leading-tight ${
+                        isChecked ? "text-ink-muted line-through" : "text-ink"
+                      }`}
+                    >
+                      {item.title}
+                    </span>
+                  </button>
+                </div>
               </li>
             );
           })}
