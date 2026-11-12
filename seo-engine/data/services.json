@@ -1,0 +1,363 @@
+{
+  "_readme": "Topics for Elite FBA's blog. Jack chose a mix (12 Nov 2026): mostly Amazon UK selling guides, some mentorship posts. Each service lists hand-written keywords per angle (a search a real person types), so the angle templates are only fallbacks. 'summary' is what the writer treats as true (only facts also in site.config.ts 'about', plus general Amazon know-how with no fee figures). 'category' groups the blog index (app/lib/blog-config.ts). One post per keyword, about 55 in all: at 3 a week that runs to about March 2027. Add keywords before then; npm run seo:generate -- --stats shows what is left.",
+  "services": [
+    {
+      "id": "start-fba",
+      "name": "Starting Amazon FBA",
+      "term": "amazon fba uk",
+      "keyword": "how to start amazon fba uk",
+      "category": "Getting started",
+      "summary": "Amazon FBA (Fulfilment by Amazon) means the seller buys the stock and sends it to Amazon's warehouses; Amazon stores it, picks, packs and delivers orders, and handles customer service and returns, and the seller keeps what is left after costs. Elite FBA's Module 1 starts from zero: how FBA works, how the money works, wholesale and bundling, and the lean model of validating small before scaling. Module 2 walks through opening a seller account screen by screen.",
+      "relatedPaths": [
+        "/#mentorship",
+        "/my-story"
+      ],
+      "angles": [
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6"
+      ],
+      "keywords": {
+        "a1": "how to start amazon fba uk",
+        "a2": "what is amazon fba",
+        "a3": "is amazon fba worth it uk",
+        "a4": "amazon fba for beginners uk",
+        "a5": "how does amazon fba work",
+        "a6": "amazon fba side hustle"
+      }
+    },
+    {
+      "id": "seller-account",
+      "name": "Amazon seller account",
+      "term": "amazon seller account",
+      "keyword": "how to open an amazon seller account uk",
+      "category": "Getting started",
+      "summary": "Opening an Amazon UK seller account: Individual or Professional plans (the trade-off between a per-item fee and a monthly subscription, and that the Buy Box needs a Professional account), the signup wizard, identity verification including the video call, and day-one account hygiene to avoid suspension. Elite FBA's Module 2 covers this screen by screen. Fees change, so readers check the current plan fees on Amazon's own pages.",
+      "relatedPaths": [
+        "/#mentorship"
+      ],
+      "angles": [
+        "a1",
+        "a2",
+        "a3",
+        "a4"
+      ],
+      "keywords": {
+        "a1": "how to open an amazon seller account uk",
+        "a2": "amazon individual vs professional seller account",
+        "a3": "amazon seller verification video call",
+        "a4": "amazon seller account suspended during verification"
+      }
+    },
+    {
+      "id": "product-research",
+      "name": "Product research",
+      "term": "amazon product research",
+      "keyword": "amazon fba product research uk",
+      "category": "Product research",
+      "summary": "Finding and validating products to sell on Amazon UK: what makes a viable product or bundle, sourcing from physical shops, online directories and wholesale suppliers, a step-by-step validation of demand, competition and price on Amazon before buying, and testing a small batch first. Elite FBA's Module 3 covers this, including a bundle opportunity test and approaching wholesale suppliers.",
+      "relatedPaths": [
+        "/#mentorship"
+      ],
+      "angles": [
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5"
+      ],
+      "keywords": {
+        "a1": "amazon fba product research uk",
+        "a2": "how to find products to sell on amazon uk",
+        "a3": "how to validate a product on amazon",
+        "a4": "what to sell on amazon fba uk",
+        "a5": "how much stock to buy for amazon fba first order"
+      }
+    },
+    {
+      "id": "bundling",
+      "name": "Bundling on Amazon",
+      "term": "amazon bundles",
+      "keyword": "how to create a bundle on amazon uk",
+      "category": "Product research",
+      "summary": "Bundling means combining products into a multi-pack or set that is listed as its own product on Amazon. Elite FBA teaches bundling as a core model: finding bundle opportunities, sourcing the parts, listing the bundle under a generic brand with a GTIN exemption, and preparing it so each unit is compliant. Amazon has rules on what makes a valid bundle, so readers check Amazon's current bundling policy.",
+      "relatedPaths": [
+        "/#mentorship"
+      ],
+      "angles": [
+        "a1",
+        "a2",
+        "a3",
+        "a4"
+      ],
+      "keywords": {
+        "a1": "how to create a bundle on amazon uk",
+        "a2": "amazon bundling strategy",
+        "a3": "amazon bundle policy rules",
+        "a4": "multipack listing amazon"
+      }
+    },
+    {
+      "id": "wholesale",
+      "name": "Wholesale sourcing",
+      "term": "amazon wholesale",
+      "keyword": "amazon fba wholesale uk",
+      "category": "Product research",
+      "summary": "Wholesale on Amazon means buying stock from wholesalers or distributors to resell. It covers finding UK wholesale suppliers, contacting and negotiating with them, opening trade accounts, checking whether a brand or category is gated, and why invoices from authorised suppliers matter. Elite FBA gives members its own supplier email and negotiation scripts.",
+      "relatedPaths": [
+        "/#mentorship"
+      ],
+      "angles": [
+        "a1",
+        "a2",
+        "a3",
+        "a4"
+      ],
+      "keywords": {
+        "a1": "amazon fba wholesale uk",
+        "a2": "how to find wholesale suppliers for amazon uk",
+        "a3": "how to email a wholesale supplier",
+        "a4": "amazon ungating categories uk"
+      }
+    },
+    {
+      "id": "listing",
+      "name": "Amazon listings",
+      "term": "amazon listing",
+      "keyword": "how to create an amazon listing",
+      "category": "Listings",
+      "summary": "Creating an Amazon listing that gets found and converts: the parts of a listing and the job each does, writing the title, bullet points and description (AI can give a first draft to edit), images, and going live. Elite FBA's Module 4 covers this, and members get Jakub's listing audits.",
+      "relatedPaths": [
+        "/#mentorship"
+      ],
+      "angles": [
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5"
+      ],
+      "keywords": {
+        "a1": "how to create an amazon listing",
+        "a2": "how to write amazon product title",
+        "a3": "how to write amazon bullet points",
+        "a4": "amazon listing images requirements",
+        "a5": "amazon listing suppressed how to fix"
+      }
+    },
+    {
+      "id": "gtin",
+      "name": "GTIN exemption",
+      "term": "gtin exemption",
+      "keyword": "amazon gtin exemption uk",
+      "category": "Listings",
+      "summary": "A GTIN exemption lets a seller list a product without a barcode (EAN or UPC), for example a generic-brand bundle. Elite FBA's Module 4 covers listing under a generic brand with a GTIN exemption. Amazon decides each request by category and brand, so readers check Amazon's current exemption rules in Seller Central Help.",
+      "relatedPaths": [
+        "/#mentorship"
+      ],
+      "angles": [
+        "a1",
+        "a2",
+        "a3"
+      ],
+      "keywords": {
+        "a1": "amazon gtin exemption uk",
+        "a2": "how to list on amazon without a barcode",
+        "a3": "generic brand amazon listing"
+      }
+    },
+    {
+      "id": "shipping",
+      "name": "Sending stock to Amazon",
+      "term": "fba shipment",
+      "keyword": "how to send stock to amazon fba uk",
+      "category": "Shipping to Amazon",
+      "summary": "Getting stock into Amazon's warehouses: preparing and polybagging units, the labels and suffocation warnings each unit needs, packing outer boxes and the heavy package rules, creating the shipment in Seller Central and tracking it until it is live. Elite FBA's Module 5 covers this end to end. Prep rules change, so readers check Amazon's current FBA packaging and prep requirements.",
+      "relatedPaths": [
+        "/#mentorship"
+      ],
+      "angles": [
+        "a1",
+        "a2",
+        "a3",
+        "a4"
+      ],
+      "keywords": {
+        "a1": "how to send stock to amazon fba uk",
+        "a2": "amazon fba prep requirements uk",
+        "a3": "amazon fba box labels",
+        "a4": "amazon fba polybag requirements"
+      }
+    },
+    {
+      "id": "fees",
+      "name": "Amazon FBA costs",
+      "term": "amazon fba fees",
+      "keyword": "amazon fba fees uk explained",
+      "category": "Getting started",
+      "summary": "The costs of selling with FBA in the UK, explained by type and never by figure: the seller plan subscription, referral fees, FBA fulfilment fees, storage fees, optional costs like advertising, plus VAT. How to work out whether a product leaves enough after all costs before buying stock. Fees change, so readers check the current figures with Amazon's fee pages and revenue calculator in Seller Central.",
+      "relatedPaths": [
+        "/#mentorship"
+      ],
+      "angles": [
+        "a1",
+        "a2",
+        "a3",
+        "a4"
+      ],
+      "keywords": {
+        "a1": "amazon fba fees uk explained",
+        "a2": "how much does it cost to start amazon fba uk",
+        "a3": "how to work out profit on amazon fba",
+        "a4": "amazon fba vat uk"
+      }
+    },
+    {
+      "id": "ppc",
+      "name": "Amazon PPC",
+      "term": "amazon ppc",
+      "keyword": "amazon ppc for beginners uk",
+      "category": "Brand and growth",
+      "summary": "Amazon PPC (Sponsored Products and other ads) for new sellers: campaign types, automatic and manual targeting, reading the search term report, and keeping spend under control. Elite FBA's Marketing module covers visibility, keywords and the tools that scale a brand, and members get recorded teardowns of real ad accounts.",
+      "relatedPaths": [
+        "/#mentorship"
+      ],
+      "angles": [
+        "a1",
+        "a2",
+        "a3",
+        "a4"
+      ],
+      "keywords": {
+        "a1": "amazon ppc for beginners uk",
+        "a2": "how to set up amazon sponsored products",
+        "a3": "amazon search term report explained",
+        "a4": "amazon product launch strategy"
+      }
+    },
+    {
+      "id": "brand",
+      "name": "Building an Amazon brand",
+      "term": "amazon brand",
+      "keyword": "how to build a brand on amazon uk",
+      "category": "Brand and growth",
+      "summary": "Moving from reselling to owning a brand on Amazon: knowing when you are ready, registering a trademark, Amazon Brand Registry and what it protects, and expanding beyond a single listing. Elite FBA's Launching a Brand, Expansion and Long-Term Maintenance modules cover this. Readers check Amazon's current Brand Registry requirements and the UK IPO for trademarks.",
+      "relatedPaths": [
+        "/#mentorship"
+      ],
+      "angles": [
+        "a1",
+        "a2",
+        "a3"
+      ],
+      "keywords": {
+        "a1": "how to build a brand on amazon uk",
+        "a2": "amazon brand registry uk",
+        "a3": "private label vs wholesale amazon"
+      }
+    },
+    {
+      "id": "mentorship",
+      "name": "Amazon FBA mentorship",
+      "term": "amazon fba mentor",
+      "keyword": "amazon fba mentor uk",
+      "category": "Mentorship",
+      "summary": "What a 1-to-1 Amazon FBA mentorship is and how to judge one: who the mentor is and whether they still sell, how often you get real time with them, what support you get between calls, and what is included. Elite FBA is a 1-to-1 mentorship with Jakub, a full-time Amazon UK seller: a weekly 1-to-1 call, direct messaging between calls, the 9-module course, his SOPs and scripts, teardowns and a private community, with limited places and no upsells.",
+      "relatedPaths": [
+        "/#mentorship",
+        "/#community",
+        "/my-story",
+        "/results"
+      ],
+      "angles": [
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5"
+      ],
+      "keywords": {
+        "a1": "amazon fba mentor uk",
+        "a2": "amazon fba course uk",
+        "a3": "amazon fba coaching uk",
+        "a4": "are amazon fba courses worth it",
+        "a5": "how to spot an amazon fba guru scam"
+      }
+    },
+    {
+      "id": "side-business",
+      "name": "FBA alongside a job",
+      "term": "amazon fba with a full time job",
+      "keyword": "amazon fba with a full time job",
+      "category": "Mentorship",
+      "summary": "Running an Amazon FBA business alongside a 9-5: why FBA suits it (Amazon handles storage, delivery and customer service), how to plan weekly time, and building slowly with savings rather than debt. Jakub built his business on the side of a 9-5 and only left once the income was steady enough to replace his salary; he does not promise anyone the same result.",
+      "relatedPaths": [
+        "/my-story",
+        "/#mentorship"
+      ],
+      "angles": [
+        "a1",
+        "a2",
+        "a3"
+      ],
+      "keywords": {
+        "a1": "amazon fba with a full time job",
+        "a2": "how many hours a week does amazon fba take",
+        "a3": "is amazon fba dead"
+      }
+    }
+  ],
+  "audiences": [
+    {
+      "id": "beginners",
+      "name": "beginners",
+      "singular": "beginner",
+      "kind": "primary",
+      "examples": "never sold online before, a few hundred pounds of savings, unsure whether FBA is real or hype, worried about getting the seller account suspended, not sure what to sell first"
+    },
+    {
+      "id": "side-hustlers",
+      "name": "people with a 9-5",
+      "singular": "person with a 9-5",
+      "kind": "secondary",
+      "examples": "evenings and weekends only, stock arriving at home, packing boxes on a Sunday, wanting something that runs while at work"
+    }
+  ],
+  "locationAngles": [],
+  "serviceAngles": [
+    {
+      "id": "a1",
+      "keyword": "{service}",
+      "angle": "Answer the question directly in the first paragraph, then cover the steps, the checks and the common mistakes, and what {audience} should do next."
+    },
+    {
+      "id": "a2",
+      "keyword": "{service}",
+      "angle": "Answer the question directly in the first paragraph, then cover the steps, the checks and the common mistakes, and what {audience} should do next."
+    },
+    {
+      "id": "a3",
+      "keyword": "{service}",
+      "angle": "Answer the question directly in the first paragraph, then cover the steps, the checks and the common mistakes, and what {audience} should do next."
+    },
+    {
+      "id": "a4",
+      "keyword": "{service}",
+      "angle": "Answer the question directly in the first paragraph, then cover the steps, the checks and the common mistakes, and what {audience} should do next."
+    },
+    {
+      "id": "a5",
+      "keyword": "{service}",
+      "angle": "Answer the question directly in the first paragraph, then cover the steps, the checks and the common mistakes, and what {audience} should do next."
+    },
+    {
+      "id": "a6",
+      "keyword": "{service}",
+      "angle": "Answer the question directly in the first paragraph, then cover the steps, the checks and the common mistakes, and what {audience} should do next."
+    }
+  ],
+  "excludePairs": []
+}

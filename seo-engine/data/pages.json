@@ -1,0 +1,33 @@
+{
+  "_readme": "Real pages articles may link to, besides /#apply (the contact path), the blog index and other posts, which the engine adds itself.",
+  "pages": [
+    {
+      "path": "/",
+      "label": "Elite FBA homepage: the 1-to-1 Amazon FBA mentorship with Jakub"
+    },
+    {
+      "path": "/#mentorship",
+      "label": "What the Elite FBA mentorship includes: weekly 1-to-1 calls, direct messaging, SOPs and teardowns"
+    },
+    {
+      "path": "/#community",
+      "label": "The Elite FBA private community"
+    },
+    {
+      "path": "/#faq",
+      "label": "Elite FBA questions: starting capital, beginners, doing it alongside a job"
+    },
+    {
+      "path": "/my-story",
+      "label": "Jakub's story: from a 9-5 to selling on Amazon full-time"
+    },
+    {
+      "path": "/results",
+      "label": "Elite FBA results page"
+    },
+    {
+      "path": "/contact",
+      "label": "Contact Elite FBA"
+    }
+  ]
+}
