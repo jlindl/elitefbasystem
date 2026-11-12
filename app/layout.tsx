@@ -34,6 +34,8 @@ const instrumentSerif = Instrument_Serif({
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://www.elitefba.co.uk"),
+  // Bing Webmaster Tools ownership (12 Nov 2026). Never remove, or the site loses verification.
+  verification: { other: { "msvalidate.01": "1259881950EFC4B8B0DB6AA11755EBE6" } },
   title: "Jakub - Real Amazon FBA Mentorship",
   description:
     "Direct 1-to-1 mentorship from a full-time Amazon seller. The Elite FBA system, taught personally - not a recycled guru course.",
