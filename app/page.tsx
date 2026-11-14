@@ -13,6 +13,13 @@ import { Pricing } from "./components/pricing";
 import { Problem } from "./components/problem";
 import { SocialProof } from "./components/social-proof";
 import { WhoFor } from "./components/who-for";
+import type { Metadata } from "next";
+
+// Self-referencing canonical (14 Nov 2026): without it Google treated
+// https://elitefba.co.uk/ as the main version and left the home page unindexed.
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 export default function Home() {
   return (
