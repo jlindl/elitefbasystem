@@ -167,15 +167,15 @@ export const MODULE_QUIZZES: Record<string, QuizQuestion[]> = {
       ],
       correctIndex: 2,
       explanation:
-        "Every FBA sale carries the same three layers: a 15% referral fee on the retail price, a flat FBA fulfilment fee based on size and weight, and a monthly storage fee per cubic foot.",
+        "Every FBA sale carries the same three layers: a referral fee on the retail price (15% in most of our categories), a flat FBA fulfilment fee based on size and weight, and a monthly storage fee per cubic foot.",
     },
     {
       question:
-        "In the everyday categories the Elite FBA framework targets, what is the referral fee percentage?",
+        "For a typical Elite FBA bundle priced above £20 in Beauty, Home, Grocery, Personal Care or Toys, what is the usual referral fee?",
       options: ["5%", "10%", "15%", "25%"],
       correctIndex: 2,
       explanation:
-        "In Grocery, Beauty, Home, Personal Care, and Toys, Amazon takes a flat 15% of the total retail price at checkout.",
+        "Above the lower price bands, these categories take 15% of the total price the customer pays. Cheaper items pay less (for example 8% for Beauty, Health and Personal Care up to £10, and 5% for Grocery up to £10), and there is usually a £0.25 minimum per item."
     },
     {
       question:
@@ -183,12 +183,12 @@ export const MODULE_QUIZZES: Record<string, QuizQuestion[]> = {
       options: [
         "They are waived for active sellers",
         "They stay the same",
-        "They roughly triple",
+        "They roughly double",
         "They are passed on to the buyer",
       ],
       correctIndex: 2,
       explanation:
-        "From October to December, Amazon triples monthly storage fees to push slow-moving inventory out and free up space for high-velocity stock during the holiday rush.",
+        "From October to December, Amazon UK roughly doubles monthly storage fees for standard-size products (from £0.76 to £1.51 per cubic foot) to push slow-moving inventory out and free up space during the holiday rush.",
     },
     {
       question:

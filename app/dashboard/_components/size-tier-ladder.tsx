@@ -4,40 +4,58 @@ import { useState } from "react";
 
 const TIERS = [
   {
-    id: "small-env",
-    name: "Small Envelope",
-    fee: "~£1.80",
-    dim: "Under 20 × 15 × 1 cm",
-    weight: "Up to 80g",
+    id: "light-env",
+    name: "Light Envelope",
+    fee: "£1.83-£2.08",
+    dim: "Up to 33 × 23 × 2.5 cm",
+    weight: "Up to 100g",
     tone: "green",
-    note: "Cheapest tier. Slim items like single-sachet products.",
+    note: "Cheapest tier. Slim, very light items such as a single sachet or a thin card product.",
   },
   {
     id: "std-env",
     name: "Standard Envelope",
-    fee: "~£2.40",
+    fee: "£2.10-£2.16",
     dim: "Up to 33 × 23 × 2.5 cm",
     weight: "Up to 460g",
     tone: "green",
-    note: "Most tightly-packed 2-pack and 3-pack bundles fit here.",
+    note: "Flat, tightly packed items that stay under 2.5 cm thick. Thicker bundles will not fit here.",
   },
   {
     id: "lrg-env",
     name: "Large Envelope",
-    fee: "~£2.85",
+    fee: "~£2.72",
     dim: "Up to 33 × 23 × 4 cm",
     weight: "Up to 960g",
     tone: "amber",
-    note: "Thicker bundles. Still envelope-class pricing.",
+    note: "Slightly thicker flat packs, such as a slim boxed set. Still envelope-class pricing.",
+  },
+  {
+    id: "xl-env",
+    name: "Extra-Large Envelope",
+    fee: "~£2.94",
+    dim: "Up to 33 × 23 × 6 cm",
+    weight: "Up to 960g",
+    tone: "amber",
+    note: "The last envelope tier. Go past 6 cm thick or 960g and you are into parcel pricing.",
+  },
+  {
+    id: "small-parcel",
+    name: "Small Parcel",
+    fee: "£2.91-£3.27",
+    dim: "Up to 35 × 25 × 12 cm",
+    weight: "Up to 3.9kg",
+    tone: "rose",
+    note: "Where most bottle multipacks land, such as a 3-pack of shampoo. Fees step up with weight.",
   },
   {
     id: "std-parcel",
     name: "Standard Parcel",
-    fee: "~£4.20+",
+    fee: "£2.94-£3.58",
     dim: "Up to 45 × 34 × 26 cm",
-    weight: "Up to 9kg",
+    weight: "Up to 11.9kg",
     tone: "rose",
-    note: "Boxy items. Fees climb fast as weight increases.",
+    note: "Boxy or heavier items. Anything bigger or heavier than this is oversize, with much higher fees.",
   },
 ] as const;
 
@@ -79,11 +97,11 @@ export function SizeTierLadder() {
         📏 Size Tier Ladder · Tap a tier
       </p>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-2.5 md:gap-3">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-2.5 md:gap-3">
         {TIERS.map((tier, i) => {
           const tone = TONES[tier.tone];
           const isActive = activeIdx === i;
-          const isBoundary = i === 3;
+          const isBoundary = i === 4;
           return (
             <button
               key={tier.id}
@@ -148,7 +166,7 @@ export function SizeTierLadder() {
       </div>
 
       <p className="mt-4 text-center text-[0.75rem] text-ink-subtle italic leading-snug">
-        Indicative UK FBA rates. Cross the boundary by a single millimetre and Amazon bills you for the next tier up.
+        Indicative UK FBA rates (standard, non-peak, 2026). Cross the boundary by a single millimetre and Amazon bills you for the next tier up.
       </p>
     </div>
   );
