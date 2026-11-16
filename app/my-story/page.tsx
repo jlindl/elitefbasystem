@@ -10,9 +10,10 @@ import { Reveal, RevealWords, ScrollHighlight } from "../components/reveal";
 import { ChapterRail } from "./chapter-rail";
 
 export const metadata: Metadata = {
-  title: "My Story - Jakub",
+  title: "My Story: how Amazon gave Jakub his life back | Elite FBA",
   description:
-    "How Amazon gave me my life back. A story in seven chapters - by Jakub.",
+    "How Amazon gave me my life back. Jakub's story in seven chapters: the early hustle, the corporate world, the spark and what came next.",
+  alternates: { canonical: "/my-story" },
 };
 
 const chapters = [
