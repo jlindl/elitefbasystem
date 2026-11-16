@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { Instagram, TikTok } from "./icons";
+import { PreferredSourceButton } from "./preferred-source-button";
 import { SignInModal } from "./sign-in-modal";
 
 // Absolute paths so the links also work from /results, /my-story and /contact.
@@ -133,6 +134,10 @@ export function Footer() {
             © {new Date().getFullYear()} Elite FBA. All rights reserved.
           </p>
           <div className="flex flex-col gap-x-6 gap-y-3 sm:flex-row sm:items-center">
+            <PreferredSourceButton
+              domain="elitefba.co.uk"
+              className="text-white/70 transition-colors hover:text-white"
+            />
             <p className="text-[0.85rem] text-white/45">
               Powered by{" "}
               <a
