@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 
 import { ApplyCta } from "../../components/blog/apply-cta";
 import { PostBody } from "../../components/blog/mdx";
+import { PreferredSourceCard } from "../../components/blog/preferred-source-card";
 import { PostCard } from "../../components/blog/post-card";
 import { PostJsonLd } from "../../components/blog/post-json-ld";
 import { Footer } from "../../components/footer";
@@ -89,6 +90,7 @@ export default async function PostPage({ params }: { params: Promise<Params> }) 
           <div className="mt-10">
             <PostBody source={post.body} />
           </div>
+          <PreferredSourceCard name="Elite FBA" domain="elitefba.co.uk" className="mt-10 text-ink" />
           <ApplyCta />
         </article>
 
