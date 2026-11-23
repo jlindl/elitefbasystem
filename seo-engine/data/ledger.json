@@ -55,6 +55,17 @@
       "slug": "amazon-gtin-exemption-uk-for-bundle-listings-without-a-barcode",
       "title": "Amazon GTIN exemption UK for bundle listings without a barcode",
       "targetKeyword": "amazon gtin exemption uk"
+    },
+    {
+      "date": "2026-11-23",
+      "type": "service",
+      "key": "service:shipping:beginners:a1",
+      "status": "generated",
+      "suggestedKeyword": "how to send stock to amazon fba uk",
+      "angle": "a1",
+      "slug": "how-to-send-stock-to-amazon-fba-uk-a-beginners-guide",
+      "title": "How to send stock to Amazon FBA UK: a beginner's guide",
+      "targetKeyword": "how to send stock to amazon fba uk"
     }
   ]
 }
